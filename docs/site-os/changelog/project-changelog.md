@@ -15,6 +15,12 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 4 Task 1: /industries/contractors
+
+- type: feat
+- changes: Built `/industries/contractors` hub page using the same 6-section pattern as `/industries/home-services`. Hero (with `arc` ConstellationGlyph) → Where contractors leak revenue (4 bullets) → The system contractors actually need (RelatedServicesGrid of 6 services) → Contractor trades we work with (4 featured + 11 compact `IndustrySubCard`s, all `comingSoon`) → FAQ (5 questions) → CTASection. Schema: WebPage + BreadcrumbList (Home > Industries > Contractors) + FAQPage. No Service / AggregateRating / Review / LocalBusiness / Organization / Product / Offer. Visible `<summary>` text and FAQPage `Question.name` strings consume the same `FAQS` array (byte-identical). Verified locally — `tsc --noEmit` clean, `next build` clean (23 static routes), `/industries/contractors` → 200, 15 sub-vertical card headings rendered (4 featured + 11 compact). Do-not-invent honored — no stats, ratings, testimonials, guarantees, or invented client results.
+- files: `app/industries/contractors/page.tsx`
+
 ## 2026-05-20 — Phase 4 Task 0: cleanup + IndustrySubCard + /industries/home-services
 
 - type: feat
