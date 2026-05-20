@@ -15,6 +15,12 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 3 Task 13: /competitor-review-benchmarking
+
+- type: feat
+- changes: Built `/competitor-review-benchmarking` service page using the existing `ServicePageTemplate` with the `grid` glyph variant. Schema emitted: WebPage + BreadcrumbList (Home > Services > Competitor Review Benchmarking) + Service + FAQPage (5 questions; visible `<summary>` text and schema `Question.name` strings consume the same `faqs` array). No AggregateRating / Review / LocalBusiness / Organization / Product / Offer — confirmed `@type:"Review"` count is 0 despite slug containing "review". `areaServed` still omitted on the Service block pending content-needed 1.3. Verified locally — `tsc --noEmit` clean, `next build` clean (20 static routes), `/competitor-review-benchmarking` → 200. Do-not-invent honored — no stats, ratings, testimonials, guarantees, or pricing.
+- files: `app/competitor-review-benchmarking/page.tsx`
+
 ## 2026-05-20 — Phase 3 Task 12: /local-seo-aeo
 
 - type: feat
