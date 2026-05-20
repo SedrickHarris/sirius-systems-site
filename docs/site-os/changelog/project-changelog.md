@@ -15,6 +15,12 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 3 Task 6: /lead-generation-automation
+
+- type: feat
+- changes: Built `/lead-generation-automation` service page using the existing `ServicePageTemplate` with the `orbit` glyph variant. Schema emitted: WebPage + BreadcrumbList (Home > Services > Lead Generation Automation) + Service + FAQPage (5 questions; visible `<summary>` text and schema `Question.name` strings consume the same `faqs` array). No AggregateRating / Review / LocalBusiness / Organization / Product / Offer. `areaServed` still omitted on the Service block pending content-needed 1.3. Verified locally — `tsc --noEmit` clean, `next build` clean (13 static routes), `/lead-generation-automation` → 200. Do-not-invent honored — no stats, ratings, testimonials, guarantees, or pricing.
+- files: `app/lead-generation-automation/page.tsx`
+
 ## 2026-05-20 — Phase 3 Task 5: /appointment-booking-automation
 
 - type: feat
