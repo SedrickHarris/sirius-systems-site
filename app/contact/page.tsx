@@ -132,11 +132,10 @@ export default function ContactPage() {
                   options={[
                     { value: '', label: 'Select industry' },
                     { value: 'home-services', label: 'Home Services' },
-                    { value: 'cleaning', label: 'Cleaning' },
-                    { value: 'junk-removal', label: 'Junk Removal' },
-                    { value: 'real-estate', label: 'Real Estate' },
                     { value: 'contractors', label: 'Contractors' },
-                    { value: 'coaches-consultants', label: 'Coaches / Consultants' },
+                    { value: 'professional-services', label: 'Professional Services' },
+                    { value: 'auto-services', label: 'Auto Services' },
+                    { value: 'beauty-wellness', label: 'Beauty & Wellness' },
                     { value: 'other', label: 'Other' },
                   ]}
                 />

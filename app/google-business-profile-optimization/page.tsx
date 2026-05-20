@@ -64,7 +64,7 @@ const PAGE = {
     'smart-websites',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services', 'junk-removal', 'contractors'],
+  industryFit: ['home-services', 'contractors'],
   faqs: [
     {
       q: 'What is Google Business Profile optimization?',

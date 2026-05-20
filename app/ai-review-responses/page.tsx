@@ -62,7 +62,7 @@ const PAGE = {
     'competitor-review-benchmarking',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services', 'cleaning-companies', 'contractors'],
+  industryFit: ['home-services', 'contractors'],
   faqs: [
     {
       q: 'What are AI review responses?',

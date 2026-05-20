@@ -63,7 +63,7 @@ const PAGE = {
     'review-automation',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['cleaning-companies', 'real-estate', 'coaches-consultants'],
+  industryFit: ['home-services', 'professional-services'],
   faqs: [
     {
       q: 'What is CRM automation for a service business?',

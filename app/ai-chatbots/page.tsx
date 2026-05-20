@@ -62,7 +62,7 @@ const PAGE = {
     'crm-automation',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['cleaning-companies', 'real-estate', 'coaches-consultants'],
+  industryFit: ['home-services', 'professional-services'],
   faqs: [
     {
       q: 'What is an AI chatbot for a service business?',

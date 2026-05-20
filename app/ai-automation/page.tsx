@@ -63,7 +63,7 @@ const PAGE = {
     'lead-generation-automation',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services', 'cleaning-companies', 'contractors'],
+  industryFit: ['home-services', 'contractors'],
   faqs: [
     {
       q: 'What is AI automation for a local service business?',

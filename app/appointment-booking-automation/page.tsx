@@ -64,7 +64,7 @@ const PAGE = {
     'smart-websites',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services', 'cleaning-companies', 'coaches-consultants'],
+  industryFit: ['home-services', 'professional-services'],
   faqs: [
     {
       q: 'What is appointment booking automation?',
