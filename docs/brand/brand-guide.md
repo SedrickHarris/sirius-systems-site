@@ -100,11 +100,13 @@ When real colors arrive, update this table, the Tailwind config, and search the 
 
 ### Placeholder pair
 
-- **Display:** Inter (variable) — fallbacks: `system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`
-- **Body:** Inter (variable) — same fallbacks
+- **Display:** Bricolage Grotesque (variable, optical sizing) — fallbacks: `ui-sans-serif, system-ui, sans-serif`
+- **Body:** Inter (variable) — fallbacks: `ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`
 - **Mono:** `ui-monospace, "SF Mono", Menlo, Consolas, monospace`
 
-When real pair arrives, update Tailwind theme + font loading + this file.
+Both are placeholders. Bricolage was picked as the display placeholder because it has optical sizing (looks refined at hero scale, readable at card-title scale), reads as confident-but-not-techy, and is distinctive enough that the site doesn't look like every other Inter-everywhere AI-startup template. Inter is kept for body because it's a quiet workhorse that won't fight the display face.
+
+When the real pair arrives, update Tailwind theme (`tailwind.config.ts` → `fontFamily.display` + `fontFamily.sans`), the Google Fonts imports in `app/layout.tsx`, and this section.
 
 ### Scale
 

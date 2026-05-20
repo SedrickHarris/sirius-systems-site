@@ -81,9 +81,10 @@ This project ships only what is verifiable. The full list of things that must ne
 - [x] Repository created
 - [x] Site OS scaffolding committed
 - [x] Foundation docs populated
-- [x] Next.js app scaffolded (App Router + TS + Tailwind + MDX, global shell only)
-- [ ] Service pages built
-- [ ] Industry pages built
+- [x] Next.js app scaffolded (App Router + TS + Tailwind + MDX, global shell)
+- [x] Core pages built (`/`, `/about`, `/services`, `/contact`)
+- [ ] Service pages built (14)
+- [ ] Industry pages built (7)
 - [ ] Blog system built
 - [ ] Prelaunch QA pass
 - [ ] Cloudflare Pages deploy
