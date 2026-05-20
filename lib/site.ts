@@ -5,9 +5,12 @@ export const SITE = {
   name: 'Sirius Systems',
   url: 'https://siriussys.io',
   shortTagline: 'AI Automation, Smart Sites, Reputation Systems',
-  // Working positioning — pending client confirmation (content-needed 1.12).
+  // Official positioning (confirmed per docs/brand/brand-skill.md, 2026-05-20).
+  // The full canonical positioning line is long; this trim fits within the
+  // 140–160 char meta-description target. The full version lives in
+  // docs/brand/brand-guide.md §1 and is what gets quoted in long-form copy.
   description:
-    'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses. One platform, end-to-end growth.',
+    'Sirius Systems helps local service businesses capture more leads, respond faster, automate follow-up, book more appointments, and improve reviews.',
   founder: 'Sedrick Harris',
   social: {
     facebook: 'https://www.facebook.com/SiriusSys.io/',

@@ -23,7 +23,7 @@ These must be answered before the site can ship.
 | 1.9 | Privacy Policy (text or "use generated template") | `/privacy` page |
 | 1.10 | Terms of Service (text or "use generated template") | `/terms` page |
 | 1.11 | Founder bio (2–4 sentences) + headshot | `/about` |
-| 1.12 | Final positioning line (one sentence) | `/` hero, meta description |
+| 1.12 | ~~Final positioning line~~ — **RESOLVED 2026-05-20**, see `docs/brand/brand-skill.md` | `/` hero, meta description |
 
 ## 2. Important — needed for full feature scope
 
@@ -98,4 +98,4 @@ Statuses: `BLOCKED` (waiting on client), `RECEIVED` (in hand), `RESOLVED` (in `c
 - `BLOCKED` 1.6–1.8 Brand colors + type — 2026-05-20
 - `BLOCKED` 1.9–1.10 Privacy + Terms — 2026-05-20
 - `BLOCKED` 1.11 Founder bio + headshot — 2026-05-20
-- `BLOCKED` 1.12 Final positioning line — 2026-05-20
+- `RESOLVED` 1.12 Final positioning line — 2026-05-20 (delivered via `docs/brand/brand-skill.md`; long-form in `brand.md` + `docs/brand/brand-guide.md` §1; trimmed meta in `lib/site.ts`)

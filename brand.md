@@ -8,11 +8,17 @@ Quick-reference summary. The full brand guide lives at [`docs/brand/brand-guide.
 
 **Sirius Systems**
 
-## One-line positioning (working draft — needs client confirmation)
+## Positioning (confirmed)
 
-> Sirius Systems builds AI-powered automation, smart websites, and reputation systems that help local service businesses capture more leads, book more jobs, and grow without adding headcount.
+The canonical brand statement (used in long-form copy, capability decks, AI/sales context):
 
-This line is a placeholder. Replace it once the client has signed off on official positioning (tracked in `docs/site-os/inputs/content-needed-from-client.md`).
+> Sirius Systems is an AI automation, smart website, reputation, and local business growth systems company for service-based businesses.
+
+The canonical positioning sentence (used in the about page, sales conversations, long meta where space allows):
+
+> Sirius Systems helps local businesses capture more leads, respond faster, automate follow-up, book more appointments, improve reviews, and connect their website, CRM, messaging, and growth systems into one streamlined platform.
+
+Both are sourced from `docs/brand/brand-skill.md` (client-confirmed 2026-05-20). The home hero uses a punchier framing that points to the same idea; that headline lives in `app/page.tsx`.
 
 ## Audience (working)
 

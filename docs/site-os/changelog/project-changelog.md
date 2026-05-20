@@ -15,6 +15,20 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Brand skill file ingested: positioning + personality + status colors
+
+- type: docs / brand
+- author: Sirius Systems / Claude Code
+- changes: Client delivered the canonical "Sirius Systems Brand Skill File" — brand statement, positioning, 8 personality traits, visual direction language, and an expanded palette. Saved verbatim and threaded into the existing brand system.
+  - **New file**: `docs/brand/brand-skill.md` holds the spec exactly as delivered + a mapping table showing which existing files each section flows into. When the client revises this file, the table tells future-me where to re-sync.
+  - **Positioning RESOLVED** (content-needed item 1.12). Brand statement + full positioning sentence now live in `brand.md` (positioning section flipped from "working draft" to "confirmed") and `docs/brand/brand-guide.md` §1. The meta-description-trimmed version landed in `lib/site.ts` `SITE.description` — drops the "website, CRM, messaging, growth systems" enumeration because the 160-char meta slot can't carry it.
+  - **Brand personality (8 traits)** integrated into `docs/brand/brand-guide.md` §2 ahead of the existing voice rules. The previous 4-trait Voice list re-cast as "Voice rules (how the 8 traits show up in writing)" so existing copy guidance survives unchanged.
+  - **Status colors added to the theme** — `success: #22C55E` and `warning: #F59E0B` in `tailwind.config.ts`. `Error` in the brand-skill file is the same hex as the existing `destructive` token; commented to make the dual-name relationship explicit (`destructive` stays as the active token, no code changes needed for the third color).
+  - **Visual direction language expanded** in `brand-guide.md` §7. Brand-skill's six visual pillars (electric yellow star outline, electric blue AI/human figure, near-black background, high-contrast dark theme, clean AI automation feel, strong but controlled glow accents) now lead the imagery direction section. Added explicit "No text inside images" rule.
+  - **Content-needed checklist** updated — item 1.12 marked RESOLVED with cross-reference; status tracker entry flipped from BLOCKED to RESOLVED.
+- files: `docs/brand/brand-skill.md` (new), `docs/brand/brand-guide.md`, `brand.md`, `tailwind.config.ts`, `lib/site.ts`, `docs/site-os/inputs/content-needed-from-client.md`
+- notes: No UI changes; no page copy changed. Hero headline kept as-is — the new positioning is the support paragraph framing, the hero stays punchy. Verified locally: typecheck clean, next build clean (7 static routes, no bundle-size change — the new success/warning tokens add CSS classes but no actual class usage yet so the production CSS is unchanged). Items still pending from `content-needed-from-client.md`: 1.1 phone, 1.2 email, 1.3 service area, 1.4 legal name, 1.5 logo SVG, 1.8 type pair, 1.9–1.10 privacy + terms, 1.11 founder bio + headshot.
+
 ## 2026-05-20 — Brand refresh: dark theme + yellow/blue palette confirmed
 
 - type: feat / brand

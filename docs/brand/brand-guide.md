@@ -18,22 +18,44 @@ The full brand reference. The root `brand.md` is a one-pager; this is the workin
 ### Tagline
 **TBD** — pending client decision. Until then, no tagline is shipped anywhere a tagline would appear (header lockup, OG cards, footer).
 
-### Positioning (working — confirm with client)
-> Sirius Systems builds AI-powered automation, smart websites, and reputation systems that help local service businesses capture more leads, book more jobs, and grow without adding headcount.
+### Positioning (confirmed)
 
-Once confirmed, this line becomes the source-of-truth one-liner used in:
-- Home hero
-- Meta description fallback
-- About page intro
+The official positioning from `docs/brand/brand-skill.md`:
+
+> Sirius Systems helps local businesses capture more leads, respond faster, automate follow-up, book more appointments, improve reviews, and connect their website, CRM, messaging, and growth systems into one streamlined platform.
+
+This is the canonical long-form positioning. Three places it shows up:
+
+- **Long-form** (about-page intro, capability decks, sales copy): use the full sentence verbatim.
+- **Meta description** (`SITE.description` in `lib/site.ts`): a trimmed version that fits ≤160 chars — drops "and connect their website, CRM, messaging, and growth systems into one streamlined platform" because the meta slot can't carry it.
+- **Hero headline**: the positioning sentence is a description, NOT a headline. The hero uses a punchier framing ("Stop losing leads, reviews, and revenue to manual work.") with the positioning as the supporting paragraph.
+
+Brand statement (one-line context for AI/sales tools):
+
+> Sirius Systems is an AI automation, smart website, reputation, and local business growth systems company for service-based businesses.
 
 ## 2. Voice & tone
 
-### Voice (consistent across the brand)
+### Brand personality (the 8 traits)
 
-- **Confident** — assert what works without hedging. "This is how X works" rather than "We think X might help."
-- **Plainspoken** — short sentences, plain words. We sell technical capability to non-technical buyers; never make them feel dumb.
+From `docs/brand/brand-skill.md`:
+
+1. **Modern** — current vocabulary, current tools, no enterprise-era jargon.
+2. **Technical but easy to understand** — we sell technical capability to non-technical buyers. Use the right word, then translate it.
+3. **Confident** — assert what works without hedging. "This is how X works" rather than "We think X might help."
+4. **Helpful** — every piece of copy should leave the reader with something useful even if they don't buy.
+5. **Conversion-focused** — every section has a job. Drift toward the action.
+6. **Trust-building** — we sell trust services. Honesty about limits builds it; fluff destroys it.
+7. **Futuristic without feeling cold** — yes to AI, automation, "systems" language. No to "synergy", "leverage", or sci-fi pastiche.
+8. **Professional for small business owners** — the audience is owner-operators of local service businesses, not Fortune 500 buyers. Speak like you respect them as operators, not like you're talking down or talking past them.
+
+### Voice rules (how the 8 traits show up in writing)
+
 - **Outcome-first** — lead with what it does for the business, not what it is internally. "Books appointments while you're on the roof" > "Multi-agent LLM with calendar integration."
+- **Plain words for hard ideas** — if a sentence needs three readings, rewrite it.
 - **Honest about limits** — when something is hard, say so. We sell trust services; oversell undoes us.
+- **No hype superlatives** — "best", "#1", "leading", "trusted by thousands" — unless documented. See `do-not-invent-rules.md`.
+- **Conversion-aware, not pushy** — one primary CTA per section, no urgency theater.
 
 ### Tone (varies by surface)
 
@@ -91,7 +113,9 @@ The Sirius Systems palette is derived from the official logo. These values are c
 | `muted` | `#8B93A7` | Caption / meta / placeholder text. |
 | `border` | `#2A2F3A` | Hairline borders, card edges. |
 | `border-strong` | `#3F4654` | Hover / emphasis border, button outlines. |
-| `destructive` | `#EF4444` | Errors and destructive actions only. |
+| `success` | `#22C55E` | Form success, positive confirmation. White text on top. |
+| `warning` | `#F59E0B` | Validation warning, non-fatal alert. Dark text on top (yellow-orange is high luminance). |
+| `destructive` / "Error" | `#EF4444` | Errors and destructive actions only. `destructive` is the active token name; `Error` in the brand-skill file refers to this same hex. |
 
 ### Color use rules
 
@@ -163,10 +187,22 @@ When real logo arrives:
 
 ## 7. Imagery direction
 
+From `docs/brand/brand-skill.md`, the visual identity rests on six pillars:
+
+- **Electric yellow star outline** — the focal mark; matches the brand's primary yellow at the star core. Use sparingly.
+- **Electric blue AI/human figure** — secondary mark; matches secondary blue. Used where we depict the system in action.
+- **Near-black background** — `#050505` everywhere, not navy, not slate.
+- **High-contrast dark theme** — text and chrome push toward the bright end of the scale.
+- **Clean AI automation feel** — geometric, sharp, modern. No retrofuturistic clutter.
+- **Strong but controlled glow accents** — blue radial glows behind cards, never yellow.
+
+Operating rules:
+
 - **No stock photo clichés** — handshake, laptop on coffee table, "diverse team smiling at whiteboard."
-- **Lean into abstract / geometric / "stellar" motifs** — Sirius is a star; the brand can use that visual cue without going corny.
+- **Lean into abstract / geometric / "stellar" motifs** — Sirius is a star; the brand uses that visual cue directly via the star mark.
 - **Prefer AI-generated heroes** where licensing of stock isn't worth it; image prompts live in `docs/brand/image-prompt-bank.md`.
 - **People photos** require permission. No invented faces.
+- **No text inside images.** Page copy carries the words.
 
 ## 8. UI / UX direction
 

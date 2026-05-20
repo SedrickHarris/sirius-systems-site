@@ -72,9 +72,21 @@ const config: Config = {
         border: '#2A2F3A',
         'border-strong': '#3F4654',
 
+        // Status colors per docs/brand/brand-skill.md.
+        // `destructive` is the historical Tailwind/shadcn token name; it doubles
+        // as the brand's "Error" token (same hex). Use `destructive` in
+        // component code — both names point to #EF4444.
         destructive: {
           DEFAULT: '#EF4444',
           foreground: '#FFFFFF',
+        },
+        success: {
+          DEFAULT: '#22C55E',
+          foreground: '#FFFFFF',
+        },
+        warning: {
+          DEFAULT: '#F59E0B',
+          foreground: '#050505',
         },
       },
       fontFamily: {
