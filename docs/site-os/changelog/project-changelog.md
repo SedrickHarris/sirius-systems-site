@@ -15,6 +15,13 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 4 Task 3: /industries/auto-services
+
+- type: feat
+- changes: Built `/industries/auto-services` hub page using the established 6-section industry pattern. Hero (with `wave` ConstellationGlyph) → Where auto shops lose business (4 bullets) → The service stack for auto businesses (RelatedServicesGrid of 6 services) → Shop types we work with (4 featured + 8 compact `IndustrySubCard`s, all `comingSoon`) → FAQ (5 questions) → CTASection. Schema: WebPage + BreadcrumbList (Home > Industries > Auto Services) + FAQPage. No Service / AggregateRating / Review / LocalBusiness / Organization / Product / Offer. Visible `<summary>` text and FAQPage `Question.name` strings consume the same `FAQS` array (byte-identical). Verified locally — `tsc --noEmit` clean, `next build` clean (25 static routes), `/industries/auto-services` → 200, 12 sub-vertical headings rendered. Do-not-invent honored.
+- files: `app/industries/auto-services/page.tsx`
+- notes: FAQ Q5 (shop-management software integrations) carries a `TODO` comment for client confirmation — the visible answer is intentionally non-committal ("It depends on the software", "we evaluate during onboarding") until the client confirms which platforms they support.
+
 ## 2026-05-20 — Phase 4 Task 2: /industries/professional-services
 
 - type: feat
