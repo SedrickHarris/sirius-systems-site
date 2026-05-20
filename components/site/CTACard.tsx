@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 export function CTACard() {
   return (
     <aside className="relative overflow-hidden rounded-2xl border border-border bg-surface/70 p-7 backdrop-blur-sm md:p-8">
-      <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-secondary/15 blur-3xl" />
       <div className="relative">
         <div className="font-mono text-[11px] uppercase tracking-eyebrow text-accent">
           Strategy Session

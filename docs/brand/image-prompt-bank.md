@@ -10,7 +10,7 @@ Reusable AI image-generation prompts for the website's hero, section, and blog i
 
 ```
 Style: modern, minimal, geometric, dark surface. Slightly futuristic but restrained — not sci-fi pastiche. High contrast. Crisp edges. Tasteful use of glow. No people. No text. No logos. No watermarks. No stock-photo cliches. Aspect ratio matches the slot.
-Color palette: deep navy / near-black background (#0B0F19), high-contrast neutrals, single accent color (TBD — placeholder #0EA5E9 sky-blue) used sparingly for highlight points. Subtle starfield or constellation cue is allowed but not required.
+Color palette: near-black background (#050505) with elevated dark surface (#121218). Two-color accent system — PRIMARY YELLOW (#F2EA00) used very sparingly for the single most important focal point (a star core, an apex node, a beacon tip); SECONDARY BLUE (#1468FF) for supporting accents (constellation lines, secondary nodes, atmospheric glows). Yellow appears at most once per image; blue carries the rest. Subtle starfield or constellation cue is allowed but not required.
 Mood: confident, technical, calm.
 ```
 
@@ -185,7 +185,7 @@ Subject: three separate node clusters in the top half, merging into a single int
 When a page has no specific image:
 
 ```
-Subject: the Sirius Systems wordmark (placeholder until logo arrives) centered, on a deep navy field with a faint constellation pattern behind. Accent line under the wordmark in #0EA5E9 (placeholder accent).
+Subject: the Sirius Systems wordmark (placeholder until logo arrives) centered, on a near-black field (#050505) with a faint constellation pattern behind. Yellow (#F2EA00) accent line under the wordmark — the only yellow element. Optional blue (#1468FF) star-burst mark to the left of the wordmark.
 Aspect: 1200x630.
 ```
 

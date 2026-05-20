@@ -62,10 +62,13 @@ These exist in the same operator's ecosystem and inspire the service catalog, bu
 - No hype superlatives ("best", "#1", "guaranteed") unless the claim is documented and provable
 - No invented numbers — see `docs/site-os/inputs/do-not-invent-rules.md`
 
-## Visual direction (initial direction — refine in brand guide)
+## Visual direction (colors confirmed)
 
-- Modern, dark-leaning surface with sharp accent color (TBD — pending client decision)
-- Geometric, slightly futuristic — the "Sirius" star reference can inform iconography
-- High-contrast type, generous whitespace, no stock-photo clichés
+- **Dark theme throughout.** Near-black surface (`#050505`) with elevated card panels (`#121218`).
+- **Two-color accent system:**
+  - **PRIMARY YELLOW** (`#F2EA00`) — reserved exclusively for primary CTAs and the brand mark.
+  - **SECONDARY BLUE** (`#1468FF`) — every supporting accent: section labels, eyebrows, link underlines, focus rings, decorative SVG, atmospheric glows.
+- **Geometric, slightly futuristic** — the "Sirius" star reference informs the brand mark (a 4-point yellow star with a blue core).
+- **High-contrast type**, generous whitespace, no stock-photo clichés.
 
-Final colors, type pairs, logo treatments, and motion language are defined in `docs/brand/brand-guide.md` and `docs/brand/motion-guidelines.md`.
+Type pair, logo treatments, and motion language are still being finalized — see `docs/brand/brand-guide.md` and `docs/brand/motion-guidelines.md`. The full color palette + usage rules live in `docs/brand/brand-guide.md` §3.

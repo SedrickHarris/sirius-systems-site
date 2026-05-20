@@ -65,7 +65,7 @@ export default function HomePage() {
                 Book a discovery call
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
-              <Link href="/services" className="btn-ghost">
+              <Link href="/services" className="btn-secondary">
                 See all 14 services
               </Link>
             </div>

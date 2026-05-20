@@ -64,7 +64,7 @@ export default function AboutPage() {
 
           {/* Trust/values card */}
           <aside className="card relative overflow-hidden p-7 md:p-8">
-            <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-secondary/15 blur-3xl" />
             <div className="relative">
               <div className="font-mono text-[11px] uppercase tracking-eyebrow text-accent">
                 What we won&rsquo;t do
@@ -156,7 +156,7 @@ export default function AboutPage() {
                   <em>
                     Full bio + headshot pending &mdash; tracked at
                     {' '}
-                    <code className="rounded bg-secondary/60 px-1 py-0.5 text-xs text-secondary-foreground">
+                    <code className="code-badge">
                       docs/site-os/inputs/content-needed-from-client.md
                     </code>
                     {' '}item 1.11.

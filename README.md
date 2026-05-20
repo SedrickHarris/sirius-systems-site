@@ -111,4 +111,4 @@ npm run typecheck # tsc --noEmit
 npm run lint      # next lint
 ```
 
-Brand colors and type are placeholders (`tailwind.config.ts`) until the client confirms — search for `PLACEHOLDER` to find swap points.
+**Brand colors are confirmed** — palette derived from the official logo lives in `tailwind.config.ts` (full table + usage rules in `docs/brand/brand-guide.md` §3). The site is dark-theme by default: near-black canvas, primary yellow CTAs, secondary blue accents. Type pair is still a placeholder (Bricolage Grotesque + Inter); search the repo for `PLACEHOLDER` to find swap points.

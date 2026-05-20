@@ -88,7 +88,7 @@ export default function ContactPage() {
 
           {/* Right: Form */}
           <aside className="card relative overflow-hidden p-7 md:p-8">
-            <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-secondary/15 blur-3xl" />
             <div className="relative">
               <div className="font-mono text-[11px] uppercase tracking-eyebrow text-accent">
                 Strategy Session

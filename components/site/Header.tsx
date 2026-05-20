@@ -75,19 +75,25 @@ export function Header() {
   )
 }
 
-// Tiny brand mark — a small constellation glyph until the real logo lands.
+// Brand mark — Sirius four-point star burst.
+// Yellow body + blue core matches the brand palette in docs/brand/brand-guide.md §3.
+// This is the working placeholder until the real logo SVG lands
+// (content-needed-from-client.md item 1.5).
 function SiriusMark() {
   return (
     <svg
       width="22"
       height="22"
-      viewBox="0 0 22 22"
+      viewBox="0 0 24 24"
       aria-hidden
-      className="text-accent"
     >
-      <circle cx="11" cy="11" r="2.5" fill="currentColor" />
-      <circle cx="11" cy="11" r="9" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.45" fill="none" />
-      <circle cx="11" cy="11" r="5.5" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.65" fill="none" />
+      {/* 4-point star (Sirius reference), filled with PRIMARY YELLOW */}
+      <path
+        d="M12 1.5 L13.6 10.4 L22.5 12 L13.6 13.6 L12 22.5 L10.4 13.6 L1.5 12 L10.4 10.4 Z"
+        className="fill-primary"
+      />
+      {/* Inner accent — SECONDARY BLUE */}
+      <circle cx="12" cy="12" r="1.75" className="fill-secondary" />
     </svg>
   )
 }

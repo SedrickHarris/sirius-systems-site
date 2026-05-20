@@ -67,32 +67,47 @@ Once confirmed, this line becomes the source-of-truth one-liner used in:
 - Sentence case for headlines, not title case ("Smart websites for local service businesses").
 - Exceptions: brand name, product names, proper nouns (Google Business Profile, etc.).
 
-## 3. Color (TBD — placeholders)
+## 3. Color (confirmed)
 
-> The actual brand colors are blocked on the client (items 1.6 + 1.7 in `content-needed-from-client.md`). Until they arrive, the Tailwind theme uses the placeholders below. Every placeholder location in code is flagged with the literal token `PLACEHOLDER` — search the repo for that string (currently in `tailwind.config.ts` and `app/layout.tsx`) to find every swap point when real values arrive.
+The Sirius Systems palette is derived from the official logo. These values are confirmed and live in `tailwind.config.ts` as the active brand tokens. They are no longer placeholders — content-needed items 1.6 + 1.7 are resolved.
 
-### Placeholder palette (replace on confirmation)
+### Palette
 
-| Token | Hex (placeholder) | Use |
-|-------|-------------------|-----|
-| `primary` | `#0EA5E9` | CTAs, links, key accents |
-| `primary-foreground` | `#FFFFFF` | Text on primary |
-| `secondary` | `#1E293B` | Section backgrounds (dark) |
-| `secondary-foreground` | `#F8FAFC` | Text on secondary |
-| `background` | `#0B0F19` | Page background (dark-leaning theme) |
-| `foreground` | `#F8FAFC` | Body text |
-| `muted` | `#94A3B8` | De-emphasized text, meta |
-| `accent` | `#22D3EE` | Hover, focus rings |
-| `destructive` | `#EF4444` | Errors, destructive actions |
-| `border` | `#1F2937` | Hairlines |
-
-When real colors arrive, update this table, the Tailwind config, and search the codebase for the placeholder hex values.
+| Token | Hex | Use |
+|-------|-----|-----|
+| `background` | `#050505` | Page background. The default canvas everywhere. |
+| `background-alt` | `#0B0B0F` | Alternating section backgrounds for vertical rhythm. |
+| `surface` | `#121218` | Card / panel surface — sits on top of `background`. |
+| `surface-2` | `#181824` | Elevated surface; chip / code-badge backgrounds. |
+| `primary` | `#F2EA00` | **YELLOW.** Reserved for primary CTAs and the brand mark. |
+| `primary-foreground` | `#050505` | Dark text on yellow CTA — required for AA contrast. |
+| `primary-hover` | `#FFF04A` | Yellow CTA hover state (lighter, not darker). |
+| `secondary` | `#1468FF` | **BLUE.** Supporting accent — section labels, eyebrows, link underlines, focus rings, decorative SVG strokes, atmospheric glows. Also the secondary CTA button color. |
+| `secondary-foreground` | `#F5F7FA` | Light text on the blue secondary CTA. |
+| `secondary-hover` | `#3A82FF` | Blue secondary CTA hover state. |
+| `accent` | `#1468FF` | Alias to `secondary`. Existing `text-accent` / `ring-accent` usages all resolve to the same blue. |
+| `foreground` | `#F5F7FA` | Body text. |
+| `muted-foreground` | `#B7C0D1` | De-emphasized body text. |
+| `muted` | `#8B93A7` | Caption / meta / placeholder text. |
+| `border` | `#2A2F3A` | Hairline borders, card edges. |
+| `border-strong` | `#3F4654` | Hover / emphasis border, button outlines. |
+| `destructive` | `#EF4444` | Errors and destructive actions only. |
 
 ### Color use rules
 
-- **Primary** is reserved for CTAs and the brand mark. Don't paint sections in primary.
-- **One primary CTA per viewport** — secondary actions are ghost buttons.
+- **Yellow = action.** `bg-primary` appears only on the single primary CTA per viewport, and on the brand mark. Never used as an atmospheric tint, on dot fills, hover surfaces, section labels, or anywhere else where it would dilute the "this is the action" signal.
+- **Blue = support.** `text-accent`, `bg-secondary`, `ring-accent`, `fill-accent` all carry the workhorse supporting accent role — eyebrows, links, dots, focus rings, atmospheric glows, decorative SVG.
+- **The home hero is the canonical yellow + blue CTA pairing** (primary yellow, secondary blue). Avoid using both colors on the same visual element.
+- **One primary CTA per viewport.** Additional actions are blue (when prominent) or ghost / link styling (when subtle).
 - **Body text never on a non-tested background** — verify contrast ≥ 4.5:1.
+- **No yellow text in body copy.** Yellow renders correctly only when paired with dark text on the button surface.
+
+### Working with the tokens in code
+
+- Buttons: `.btn-primary` (yellow), `.btn-secondary` (blue), `.btn-ghost` (transparent), `.btn-outline` (bordered).
+- Inline code references: use the `.code-badge` utility (surface-2 background) — never `bg-secondary` directly, which would render bright blue.
+- Atmospheric blur glows behind cards: `bg-secondary/15 blur-3xl` (NOT `bg-primary/X` — yellow is for actions only).
+- Focus ring: `:focus-visible` ships a 2px `ring-accent` ring globally. Don't override per-component without a replacement.
 
 ## 4. Type (TBD — placeholders)
 

@@ -66,7 +66,7 @@ export function GoogleReviewsSection({
 function NeutralTrustFallback() {
   return (
     <div className="card relative overflow-hidden p-7 md:p-9">
-      <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-secondary/15 blur-3xl" />
       <div className="relative">
         <div className="font-mono text-[11px] uppercase tracking-eyebrow text-accent">
           About reviews on this site

@@ -15,6 +15,24 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Brand refresh: dark theme + yellow/blue palette confirmed
+
+- type: feat / brand
+- author: Sirius Systems / Claude Code
+- changes: Applied the official Sirius Systems brand palette (derived from the logo) across theme tokens, shared UI, and core pages. The site is now dark-theme by default with a two-color accent system — yellow for primary actions, blue for everything supporting.
+  - **Palette confirmed (no longer PLACEHOLDER):** background `#050505`, background-alt `#0B0B0F`, surface `#121218`, surface-2 `#181824`, primary yellow `#F2EA00` (hover `#FFF04A`), secondary blue `#1468FF` (hover `#3A82FF`), foreground `#F5F7FA`, muted-foreground `#B7C0D1`, muted `#8B93A7`, border `#2A2F3A`, border-strong `#3F4654`. All tokens land in `tailwind.config.ts`; full table in `docs/brand/brand-guide.md` §3.
+  - **Buttons:** `.btn-primary` (yellow, dark text, lighter on hover), `.btn-secondary` (blue, light text), `.btn-ghost` (transparent), `.btn-outline` (bordered). Added `.code-badge` utility for inline code references — replaces the previous `bg-secondary` pattern (which would now render bright blue) with a neutral surface-2 background.
+  - **Atmospheric glows are blue, never yellow.** `glow-accent` and `glow-accent-soft` updated to `rgb(20 104 255 / 0.12)` / `rgb(20 104 255 / 0.07)`. All `bg-primary/X blur-3xl` glow backgrounds in `CTACard`, `GoogleReviewsSection`, and the About / Services / Contact page hero cards switched to `bg-secondary/X` so yellow remains exclusive to action surfaces.
+  - **Brand mark redesigned:** the placeholder `SiriusMark` in the header is now a 4-point Sirius star burst — yellow body with a blue core — using `fill-primary` and `fill-secondary` so it inherits theme changes automatically. Still a placeholder until the real logo SVG lands (content-needed 1.5).
+  - **ConstellationGlyph color constants** migrated from sky-blue cyan to the new blue (`#1468FF`); added a `HIGHLIGHT` constant (yellow `#F2EA00`) used at the focal point of the `beacon` variant only, matching the brand rule that yellow marks the single most important node.
+  - **Home hero now ships the canonical yellow + blue CTA pairing** the brief asked for: primary `Book a discovery call` (yellow) + secondary `See all 14 services` (blue), no longer ghost.
+  - **Review avatar** background switched from `bg-secondary` (now blue, too loud) to `bg-surface-2` (neutral).
+  - **Layout viewport `themeColor`** updated to `#050505`.
+  - **Docs updated:** `brand.md` Visual direction section now reads "colors confirmed"; `docs/brand/brand-guide.md` §3 fully rewritten with the official palette + usage rules + working-with-tokens guidance; `docs/brand/image-prompt-bank.md` style baseline + default OG card prompt updated for the new palette; `docs/brand/motion-guidelines.md` notes that yellow hover gets *lighter* (the "brightening star" intuition); `README.md` brand note updated.
+  - **Type pair remains a placeholder** (Bricolage Grotesque + Inter — content-needed 1.8 still open). Logo SVG also still pending (1.5). No other content-needed items moved.
+- files: `tailwind.config.ts`, `app/globals.css`, `app/layout.tsx`, `app/{page,about,services,contact}/page.tsx`, `components/site/{Header,ConstellationGlyph,CTACard}.tsx`, `components/reviews/{GoogleReviewsSection,GoogleReviewCard}.tsx`, `brand.md`, `docs/brand/{brand-guide,image-prompt-bank,motion-guidelines}.md`, `README.md`
+- notes: No invented claims introduced. No testimonials, ratings, or reviews — the Google Reviews module still renders the neutral trust fallback until verified data lands. No Review/AggregateRating JSON-LD. Accessibility preserved: yellow CTA text contrast ≥ 4.5:1 (dark on yellow), blue CTA ≥ 4.5:1, focus ring still visible globally.
+
 ## 2026-05-20 — Google Reviews module (cards + carousel + neutral fallback)
 
 - type: feat

@@ -199,7 +199,7 @@ export default function ServicesPage() {
             </div>
 
             <aside className="card relative overflow-hidden p-7 md:p-8">
-              <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/15 blur-3xl" />
+              <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-secondary/20 blur-3xl" />
               <div className="relative">
                 <div className="font-mono text-[11px] uppercase tracking-eyebrow text-accent">
                   What you get

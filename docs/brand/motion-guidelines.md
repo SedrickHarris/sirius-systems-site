@@ -35,7 +35,9 @@ Use these named tokens in code (Tailwind config or CSS vars). Don't hand-type du
 ## 3. Allowed motion patterns
 
 ### Hover
-- Buttons: background color + subtle elevation (shadow), 150ms ease-out.
+- Buttons: background color shifts to the hover token, 150ms ease-out.
+  - PRIMARY YELLOW button: hovers to a **lighter** yellow (`primary-hover`, `#FFF04A`). The yellow palette gets brighter on hover, not darker — this matches how a glowing star intensifies rather than dims.
+  - SECONDARY BLUE button: hovers to a lighter blue (`secondary-hover`, `#3A82FF`).
 - Links in body copy: underline appears (or color shifts), 100ms.
 - Cards: 1–2px lift + faint shadow, 200ms.
 

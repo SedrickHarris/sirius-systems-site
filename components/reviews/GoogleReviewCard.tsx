@@ -13,7 +13,7 @@ export function GoogleReviewCard({ review }: { review: Review }) {
       <header className="flex items-start gap-3">
         <div
           aria-hidden
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border-strong bg-secondary font-display text-sm font-semibold text-foreground"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border-strong bg-surface-2 font-display text-sm font-semibold text-foreground"
         >
           {initial}
         </div>

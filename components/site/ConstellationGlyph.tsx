@@ -5,9 +5,15 @@
 
 type Variant = 'orbit' | 'pulse' | 'wave' | 'grid' | 'beacon' | 'arc'
 
-const STROKE = 'rgb(148 163 184 / 0.45)'
-const ACCENT = 'rgb(14 165 233 / 0.95)'
-const ACCENT_SOFT = 'rgb(14 165 233 / 0.30)'
+// Hex values mirror the brand tokens in tailwind.config.ts.
+// STROKE = neutral mid-tone for thin lines / inactive dots.
+// ACCENT = SECONDARY BLUE (#1468FF). Used for focal nodes / single bright points.
+// HIGHLIGHT = PRIMARY YELLOW (#F2EA00). Reserved for the single most important
+//             node in a glyph variant — used sparingly, matches CTA semantics.
+const STROKE = 'rgb(139 147 167 / 0.5)'
+const ACCENT = 'rgb(20 104 255 / 0.95)'
+const ACCENT_SOFT = 'rgb(20 104 255 / 0.30)'
+const HIGHLIGHT = 'rgb(242 234 0 / 0.95)'
 
 export function ConstellationGlyph({
   variant = 'orbit',
@@ -93,7 +99,8 @@ export function ConstellationGlyph({
       {variant === 'beacon' && (
         <g>
           <circle cx="60" cy="40" r="20" fill="url(#cg-glow)" />
-          <circle cx="60" cy="40" r="3.5" fill={ACCENT} />
+          {/* Capstone variant — uses HIGHLIGHT yellow at the focal point */}
+          <circle cx="60" cy="40" r="3.5" fill={HIGHLIGHT} />
           <line x1="60" y1="14" x2="60" y2="66" stroke={STROKE} strokeWidth="0.5" />
           <line x1="34" y1="40" x2="86" y2="40" stroke={STROKE} strokeWidth="0.5" />
         </g>
