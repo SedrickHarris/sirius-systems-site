@@ -15,6 +15,13 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 4 Task 2: /industries/professional-services
+
+- type: feat
+- changes: Built `/industries/professional-services` hub page using the established 6-section industry pattern. Hero (with `pulse` ConstellationGlyph) → Where professional service firms lose clients (4 bullets) → The client acquisition and retention stack (RelatedServicesGrid of 6 services) → Practice types we work with (4 featured + 11 compact `IndustrySubCard`s, all `comingSoon`) → FAQ (5 questions) → CTASection. Schema: WebPage + BreadcrumbList (Home > Industries > Professional Services) + FAQPage. No Service / AggregateRating / Review / LocalBusiness / Organization / Product / Offer. Visible `<summary>` text and FAQPage `Question.name` strings consume the same `FAQS` array (byte-identical). Verified locally — `tsc --noEmit` clean, `next build` clean (24 static routes), `/industries/professional-services` → 200, 15 sub-vertical headings rendered. Do-not-invent honored — no stats, ratings, testimonials, guarantees, or invented client results.
+- files: `app/industries/professional-services/page.tsx`
+- notes: Two FAQ answers are intentionally guarded against overpromising and need client confirmation before final publish — flagged as `TODO` comments in the file: Q2 (HIPAA compliance — depends on the specific tools selected; no blanket guarantee) and Q4 (scheduling-system integrations — depends on which platform the client uses). The visible answer copy is honest and non-committal; the TODOs are for sharpening once integration choices are confirmed.
+
 ## 2026-05-20 — Phase 4 Task 1: /industries/contractors
 
 - type: feat
