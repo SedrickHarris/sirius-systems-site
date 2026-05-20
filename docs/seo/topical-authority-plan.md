@@ -9,16 +9,24 @@ The strategy for becoming the go-to result for AI automation + reputation system
 Search engines (and AI answer engines) reward sites that are obviously *about* a small number of things. Sirius Systems is about three:
 
 ### Pillar 1 — AI automation for local service businesses
-Subtopics: chatbots, voicebots, CRM automation, lead generation, appointment booking, smart websites.
-Hub pages: `/ai-automation`, `/ai-chatbots`, `/ai-voicebots`, `/crm-automation`, `/appointment-booking-automation`, `/lead-generation-automation`, `/smart-websites`.
+Subtopics: chatbots, voicebots, CRM automation, lead generation, appointment booking.
+Hub pages: `/ai-automation`, `/ai-chatbots`, `/ai-voicebots`, `/crm-automation`, `/appointment-booking-automation`, `/lead-generation-automation`.
 
 ### Pillar 2 — Reputation systems for local service businesses
 Subtopics: review automation, AI review responses, competitor benchmarking, reputation management.
 Hub pages: `/reputation-management`, `/review-automation`, `/ai-review-responses`, `/competitor-review-benchmarking`.
 
-### Pillar 3 — Local SEO + AEO + GBP for local service businesses
-Subtopics: Google Business Profile optimization, local SEO, AEO (Answer Engine Optimization), schema, NAP consistency.
-Hub pages: `/google-business-profile-optimization`, `/local-seo-aeo`.
+### Pillar 3 — Smart websites + Local SEO + AEO + GBP for local service businesses
+Subtopics: smart websites, Google Business Profile optimization, local SEO, AEO (Answer Engine Optimization), schema, NAP consistency.
+Hub pages: `/smart-websites`, `/google-business-profile-optimization`, `/local-seo-aeo`.
+
+> **Naming note.** The Pillar/Cluster letters in this file are the **blog topical-authority** taxonomy. The Group A/B/C letters in `site-build-plan.md` are the **service-page UI** taxonomy. They cover the same content but the letters do **not** all match across files:
+>
+> - Cluster A (AI automation) ↔ Group A (AI & automation) — letters match
+> - Cluster B (Reputation systems) ↔ Group C (Reputation) — letters differ
+> - Cluster C (Smart websites + Local SEO + AEO + GBP) ↔ Group B (Smart websites & local SEO) — letters differ
+>
+> The order differs by design: clusters are ordered by topic gravity for SEO (AI first, reputation second); groups are ordered by buyer journey for UI (AI first, supporting/SEO services next, reputation last). If you see "Cluster B" or "Group B" in a doc, check this table.
 
 ### Capstone
 `/all-in-one-business-growth-system` is the cross-pillar offer. It links to and is linked from all three pillars.
@@ -31,8 +39,8 @@ Hub pages: `/google-business-profile-optimization`, `/local-seo-aeo`.
                                 ▲
               ┌─────────────────┼─────────────────┐
               │                 │                 │
-       Pillar 1: AI       Pillar 2: Reputation   Pillar 3: Local SEO/AEO/GBP
-       (6 hub pages)      (4 hub pages)          (2 hub pages)
+       Pillar 1: AI       Pillar 2: Reputation   Pillar 3: Smart sites + Local SEO/AEO/GBP
+       (6 hub pages)      (4 hub pages)          (3 hub pages)
               │                 │                 │
               ▼                 ▼                 ▼
        Blog spokes        Blog spokes        Blog spokes
@@ -51,13 +59,12 @@ Hub pages: `/google-business-profile-optimization`, `/local-seo-aeo`.
 
 ### Cluster A — AI automation
 - Hub: `/ai-automation` (head term)
-- Sub-hubs: `/ai-chatbots`, `/ai-voicebots`, `/crm-automation`, `/lead-generation-automation`, `/smart-websites`, `/appointment-booking-automation`
-- Spoke topics (blog posts, 8–12 over first 6 months):
+- Sub-hubs: `/ai-chatbots`, `/ai-voicebots`, `/crm-automation`, `/lead-generation-automation`, `/appointment-booking-automation`
+- Spoke topics (blog posts, 7–10 over first 6 months):
   - "What an AI chatbot actually does for a service business"
   - "Voicebot vs. answering service: cost, quality, missed-call recovery"
   - "Why most CRMs go unused — and what to automate first"
   - "Lead generation automation: from form fill to first call in under 5 minutes"
-  - "Smart website vs. brochure site: 7 differences that change revenue"
   - "Appointment booking flows that don't lose the lead between yes and calendar"
   - "Where AI breaks down in local service — and what to do about it"
   - "The right order to automate a service business: lead → book → follow up → review"
@@ -73,10 +80,11 @@ Hub pages: `/google-business-profile-optimization`, `/local-seo-aeo`.
   - "Replying to negative reviews: a template that doesn't sound like a template"
   - "Review velocity vs. review count: what Google actually cares about"
 
-### Cluster C — Local SEO + AEO + GBP
+### Cluster C — Smart websites + Local SEO + AEO + GBP
 - Hub: `/local-seo-aeo`
-- Sub-hub: `/google-business-profile-optimization`
-- Spoke topics (blog posts, 6–10):
+- Sub-hubs: `/smart-websites`, `/google-business-profile-optimization`
+- Spoke topics (blog posts, 7–11):
+  - "Smart website vs. brochure site: 7 differences that change revenue"
   - "Google Business Profile checklist for service businesses"
   - "Local SEO vs. AEO: ranking in search vs. ranking in AI answers"
   - "Why NAP consistency still matters (and where it usually breaks)"

@@ -69,7 +69,7 @@ Once confirmed, this line becomes the source-of-truth one-liner used in:
 
 ## 3. Color (TBD — placeholders)
 
-> The actual brand colors are blocked on the client (items 1.6 + 1.7 in `content-needed-from-client.md`). Until they arrive, the Tailwind theme uses the placeholders below. Components built before colors are confirmed include a `// TODO color` comment referencing this section.
+> The actual brand colors are blocked on the client (items 1.6 + 1.7 in `content-needed-from-client.md`). Until they arrive, the Tailwind theme uses the placeholders below. Every placeholder location in code is flagged with the literal token `PLACEHOLDER` — search the repo for that string (currently in `tailwind.config.ts` and `app/layout.tsx`) to find every swap point when real values arrive.
 
 ### Placeholder palette (replace on confirmation)
 

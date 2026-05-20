@@ -26,7 +26,7 @@ Three clusters mirror the three pillars:
 
 - **Cluster A — AI Automation** (hub: `/ai-automation`)
 - **Cluster B — Reputation Systems** (hub: `/reputation-management`)
-- **Cluster C — Local SEO + AEO + GBP** (hub: `/local-seo-aeo`)
+- **Cluster C — Smart Websites + Local SEO + AEO + GBP** (hub: `/local-seo-aeo`; sub-hub `/smart-websites`)
 
 Plus a small **Capstone** category for cross-cluster pieces (positioning, philosophy, the founder's perspective).
 

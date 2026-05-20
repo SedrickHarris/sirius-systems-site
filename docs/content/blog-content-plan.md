@@ -29,7 +29,6 @@ Ordered by priority (= conversion potential × ranking opportunity, top-down).
 | Voicebot vs. answering service: cost, quality, missed-call recovery | `chatbots-voicebots` | "ai voicebot vs answering service" |
 | Why most CRMs go unused — and what to automate first | `crm-and-booking` | "crm automation for service business" |
 | Lead generation automation: from form fill to first call in under 5 minutes | `ai-automation` | "lead generation automation" |
-| Smart website vs. brochure site: 7 differences that change revenue | `ai-automation` | "smart website for service business" |
 | Appointment booking flows that don't lose the lead between yes and calendar | `crm-and-booking` | "appointment booking automation" |
 | Where AI breaks down in local service — and what to do about it | `ai-automation` | "ai limitations small business" |
 | The right order to automate a service business: lead → book → follow up → review | `ai-automation` | "how to automate service business" |
@@ -45,10 +44,11 @@ Ordered by priority (= conversion potential × ranking opportunity, top-down).
 | Review velocity vs. review count: what Google actually cares about | `reputation` | "review velocity local seo" |
 | Recovering reputation after a bad year | `reputation` | "fix bad online reputation" |
 
-## 4. Cluster C — Local SEO + AEO + GBP (post backlog)
+## 4. Cluster C — Smart Websites + Local SEO + AEO + GBP (post backlog)
 
 | Working title | Category | Target query |
 |---------------|----------|--------------|
+| Smart website vs. brochure site: 7 differences that change revenue | `ai-automation` | "smart website for service business" |
 | Local SEO vs. AEO: ranking in search vs. ranking in AI answers | `aeo` | "local seo vs aeo" / "answer engine optimization" |
 | Why NAP consistency still matters (and where it usually breaks) | `local-seo` | "nap consistency seo" |
 | Schema markup that actually moves the needle for local businesses | `local-seo` | "schema markup local business" |
