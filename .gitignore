@@ -16,6 +16,7 @@ yarn-error.log*
 # Build output
 .next/
 out/
+.vercel/
 dist/
 build/
 *.tsbuildinfo
