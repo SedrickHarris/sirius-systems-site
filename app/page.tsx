@@ -8,6 +8,7 @@ import { ProcessStep } from '@/components/site/ProcessStep'
 import { FAQ } from '@/components/site/FAQ'
 import { IndustryChip } from '@/components/site/IndustryChip'
 import { CTASection } from '@/components/site/CTASection'
+import { GoogleReviewsSection } from '@/components/reviews/GoogleReviewsSection'
 import { JsonLdScript } from '@/components/site/JsonLdScript'
 import { SERVICE_GROUPS, servicesByGroup } from '@/lib/services'
 import { INDUSTRIES } from '@/lib/industries'
@@ -316,12 +317,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ───────── Who we help ───────── */}
+      {/* ───────── What people say (Google reviews) ───────── */}
       <section className="border-b border-border bg-surface/30">
+        <div className="container-page py-20 md:py-24">
+          <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:items-start lg:gap-16">
+            <div>
+              <SectionLabel index="06" label="What people say" />
+              <h2 className="mt-6 max-w-md text-balance font-display text-3xl leading-tight tracking-tight md:text-4xl lg:text-5xl">
+                Real reviews. When they&rsquo;re real.
+              </h2>
+              <p className="mt-5 max-w-md text-sm leading-relaxed text-muted md:text-base">
+                Reviews shown here are pulled from our Google Business Profile
+                &mdash; not retyped, not edited, not invented. If there&rsquo;s
+                nothing to show yet, this section says so.
+              </p>
+            </div>
+            <GoogleReviewsSection variant="carousel" />
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── Who we help ───────── */}
+      <section className="border-b border-border">
         <div className="container-page py-20 md:py-24">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:items-end">
             <div>
-              <SectionLabel index="06" label="Who we help" />
+              <SectionLabel index="07" label="Who we help" />
               <h2 className="mt-6 max-w-md text-balance font-display text-3xl leading-tight tracking-tight md:text-4xl">
                 Six industries we know well.
               </h2>
@@ -352,9 +373,9 @@ export default function HomePage() {
       </section>
 
       {/* ───────── Why Sirius Systems ───────── */}
-      <section className="border-b border-border">
+      <section className="border-b border-border bg-surface/30">
         <div className="container-page py-20 md:py-24">
-          <SectionLabel index="07" label="Why Sirius Systems" />
+          <SectionLabel index="08" label="Why Sirius Systems" />
           <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-16 lg:grid-cols-3">
             {[
               {
@@ -385,9 +406,9 @@ export default function HomePage() {
       </section>
 
       {/* ───────── Process ───────── */}
-      <section className="border-b border-border bg-surface/30">
+      <section className="border-b border-border">
         <div className="container-page py-20 md:py-24">
-          <SectionLabel index="08" label="How it works" />
+          <SectionLabel index="09" label="How it works" />
           <h2 className="mt-6 max-w-2xl text-balance font-display text-3xl leading-tight tracking-tight md:text-4xl lg:text-5xl">
             Three steps. No surprises.
           </h2>
@@ -413,11 +434,11 @@ export default function HomePage() {
       </section>
 
       {/* ───────── FAQ ───────── */}
-      <section className="border-b border-border">
+      <section className="border-b border-border bg-surface/30">
         <div className="container-page py-20 md:py-24">
           <div className="grid gap-12 md:grid-cols-[1fr_2fr]">
             <div>
-              <SectionLabel index="09" label="Questions" />
+              <SectionLabel index="10" label="Questions" />
               <h2 className="mt-6 font-display text-3xl leading-tight tracking-tight md:text-4xl lg:text-5xl">
                 Common ones, real answers.
               </h2>

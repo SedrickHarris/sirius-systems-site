@@ -1,0 +1,13 @@
+{
+  "verified": false,
+  "lastVerifiedAt": null,
+  "source": "google-business-profile",
+  "placeId": null,
+  "placeUrl": null,
+  "summary": {
+    "averageRating": null,
+    "totalReviewCount": null,
+    "lastFetchedAt": null
+  },
+  "reviews": []
+}
