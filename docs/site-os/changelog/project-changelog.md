@@ -15,6 +15,13 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 4 Task 4: /industries/beauty-wellness (industry hubs complete)
+
+- type: feat
+- changes: Built `/industries/beauty-wellness` hub page using the established 6-section industry pattern. Hero (with `beacon` ConstellationGlyph) → What's keeping your calendar from being full (4 bullets) → The automation stack for beauty and wellness (RelatedServicesGrid of 6 services) → Business types we work with (4 featured + 8 compact `IndustrySubCard`s, all `comingSoon`) → FAQ (5 questions) → CTASection. Schema: WebPage + BreadcrumbList (Home > Industries > Beauty & Wellness) + FAQPage. No Service / AggregateRating / Review / LocalBusiness / Organization / Product / Offer. Visible `<summary>` text and FAQPage `Question.name` strings consume the same `FAQS` array (byte-identical). Verified locally — `tsc --noEmit` clean, `next build` clean (26 static routes), `/industries/beauty-wellness` → 200, 12 sub-vertical headings rendered. Do-not-invent honored — no stats, ratings, testimonials, guarantees, or invented results. No TODOs this page.
+- files: `app/industries/beauty-wellness/page.tsx`
+- notes: **All 5 industry hub pages now built** — `/industries/{home-services, contractors, professional-services, auto-services, beauty-wellness}`. The `/industries` index page is the last remaining route in the industry tree; it's still a planned route (the IndustryFitStrip and Footer link to it; it will 404 until built). Glyph variants used across the five hubs for visual variety: home-services=orbit, contractors=arc, professional-services=pulse, auto-services=wave, beauty-wellness=beacon.
+
 ## 2026-05-20 — Phase 4 Task 3: /industries/auto-services
 
 - type: feat
