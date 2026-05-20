@@ -15,6 +15,20 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 3 start: service page template + /ai-automation
+
+- type: feat
+- author: Sirius Systems / Claude Code
+- changes: Built the shared service-page system and shipped `/ai-automation` as the first instance.
+  - **Template** (`components/site/ServicePageTemplate.tsx`): 9 sections — Hero, Definition (AEO-quotable, border-left accent), Problem framing, How it works, What you get (feature checklist in surface card), Outcomes (per-card with Zap icon), Related services, Industry fit, FAQ, Bottom CTA. All copy lives in the `ServicePageData` prop; the template owns presentation. Hero uses the same two-column pattern as core pages with `ConstellationGlyph` in a 4:3 surface panel (grid + glow atmosphere).
+  - **Sub-components**: `HowItWorksSteps` (numbered steps, reuses existing `ProcessStep`), `RelatedServicesGrid` (looks up slugs against the canonical `SERVICES` catalog, silently skips missing slugs so catalog edits can't break a service page), `IndustryFitStrip` (chip row + inclusive fallback CTA paragraph for prospects whose industry isn't listed).
+  - **Schema** (`lib/schema.ts`): added `serviceSchema({ slug, name, description })` per the brief signature. Emits Service JSON-LD with `provider: { '@id': '${SITE.url}/#organization' }` as a forward reference; the Organization JSON-LD itself is still blocked on legal name (content-needed 1.4) per `schema-plan.md` §2. `areaServed` is intentionally omitted with a TODO comment pending content-needed 1.3.
+  - **`/ai-automation`** is live as a static route. Schema emitted: WebPage + BreadcrumbList (Home > Services > AI Automation) + Service + FAQPage. FAQ has 5 questions; visible H3 text and schema `Question.name` strings consume the same `faqs` array, guaranteeing identical content (apostrophes are HTML-escaped in body serialization to `&#x27;` but kept literal in JSON-LD; validators normalize).
+  - **`SectionLabel.tsx`**: widened `tone` type to `'default' | 'muted' | 'accent'` so the template can call `tone="muted"` explicitly per the brief. `'default'` and `'muted'` render identically (text-muted); the addition is purely semantic clarity. No visual change on existing pages.
+  - **CTASection API**: the brief specified `ctaLabel`/`ctaHref` props; the existing `CTASection` takes `primary={{ label, href }}` instead. Template maps `ctaSectionLabel` and `'/contact'` into the existing prop structure rather than introducing duplicate aliases — same effect, no API drift.
+- files: `components/site/{ServicePageTemplate,HowItWorksSteps,RelatedServicesGrid,IndustryFitStrip,SectionLabel}.tsx`, `lib/schema.ts`, `app/ai-automation/page.tsx`
+- notes: Verified locally — `tsc --noEmit` clean, `next build` clean (8 static routes), `/ai-automation` → 200, schema audit confirms only the four allowed types are emitted and none of the forbidden ones (Review, AggregateRating, LocalBusiness, Organization, Product, Offer). Do-not-invent honored throughout — no testimonials, ratings, pricing, or invented client results on the page or in the page data. 13 more service pages to instantiate against the same template; each is now a ~100-line copy-only data file.
+
 ## 2026-05-20 — Brand skill file ingested: positioning + personality + status colors
 
 - type: docs / brand

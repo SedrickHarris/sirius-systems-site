@@ -1,7 +1,6 @@
 // JSON-LD helpers. Every emit respects docs/seo/schema-plan.md and
 // docs/site-os/inputs/do-not-invent-rules.md. No AggregateRating / Review.
-// No LocalBusiness until NAP is confirmed. No Service blocks until those
-// pages exist (Phase 3).
+// No LocalBusiness until NAP is confirmed.
 
 import { SITE } from '@/lib/site'
 import type { QA } from '@/lib/faq'
@@ -60,6 +59,28 @@ export function faqPage(items: QA[]): JsonLd {
         text: item.a,
       },
     })),
+  }
+}
+
+export function serviceSchema({
+  slug,
+  name,
+  description,
+}: {
+  slug: string
+  name: string
+  description: string
+}): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE.url}/${slug}#service`,
+    serviceType: name,
+    name,
+    description,
+    provider: { '@id': `${SITE.url}/#organization` },
+    // TODO: add areaServed when content-needed 1.3 resolves
+    url: `${SITE.url}/${slug}`,
   }
 }
 

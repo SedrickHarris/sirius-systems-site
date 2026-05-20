@@ -8,7 +8,7 @@ export function SectionLabel({
 }: {
   index: string
   label: string
-  tone?: 'default' | 'accent'
+  tone?: 'default' | 'muted' | 'accent'
 }) {
   return (
     <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-eyebrow">
