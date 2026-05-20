@@ -15,6 +15,12 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 3 Task 9: /review-automation
+
+- type: feat
+- changes: Built `/review-automation` service page using the existing `ServicePageTemplate` with the `arc` glyph variant. Schema emitted: WebPage + BreadcrumbList (Home > Services > Review Automation) + Service + FAQPage (5 questions; visible `<summary>` text and schema `Question.name` strings consume the same `faqs` array). No AggregateRating / Review / LocalBusiness / Organization / Product / Offer — confirmed `@type:"Review"` count is 0 despite the slug containing "review". `areaServed` still omitted on the Service block pending content-needed 1.3. Verified locally — `tsc --noEmit` clean, `next build` clean (16 static routes), `/review-automation` → 200. Do-not-invent honored — no stats, ratings, testimonials, guarantees, or pricing.
+- files: `app/review-automation/page.tsx`
+
 ## 2026-05-20 — Phase 3 Task 8: /reputation-management
 
 - type: feat
