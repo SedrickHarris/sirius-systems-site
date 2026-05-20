@@ -15,6 +15,12 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 3 Task 2: /ai-chatbots
+
+- type: feat
+- changes: Built `/ai-chatbots` service page using the existing `ServicePageTemplate` with the `pulse` glyph variant. Schema emitted: WebPage + BreadcrumbList (Home > Services > AI Chatbots) + Service + FAQPage (5 questions; visible `<summary>` text and schema `Question.name` strings consume the same `faqs` array so they remain identical). No AggregateRating / Review / LocalBusiness / Organization / Product / Offer. `areaServed` still omitted on the Service block pending content-needed 1.3. Verified locally — `tsc --noEmit` clean, `next build` clean (9 static routes), `/ai-chatbots` → 200. Do-not-invent honored — no stats, ratings, testimonials, guarantees, or pricing.
+- files: `app/ai-chatbots/page.tsx`
+
 ## 2026-05-20 — Phase 3 start: service page template + /ai-automation
 
 - type: feat
