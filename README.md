@@ -81,7 +81,7 @@ This project ships only what is verifiable. The full list of things that must ne
 - [x] Repository created
 - [x] Site OS scaffolding committed
 - [x] Foundation docs populated
-- [ ] Next.js app scaffolded
+- [x] Next.js app scaffolded (App Router + TS + Tailwind + MDX, global shell only)
 - [ ] Service pages built
 - [ ] Industry pages built
 - [ ] Blog system built
@@ -89,3 +89,25 @@ This project ships only what is verifiable. The full list of things that must ne
 - [ ] Cloudflare Pages deploy
 
 Track progress in `docs/site-os/changelog/project-changelog.md`.
+
+---
+
+## Local development
+
+After cloning, install and run:
+
+```sh
+npm install
+npm run dev      # http://localhost:3000
+```
+
+Other scripts:
+
+```sh
+npm run build     # production build
+npm run start     # serve the build
+npm run typecheck # tsc --noEmit
+npm run lint      # next lint
+```
+
+Brand colors and type are placeholders (`tailwind.config.ts`) until the client confirms — search for `PLACEHOLDER` to find swap points.
