@@ -15,6 +15,12 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 3 Task 11: /google-business-profile-optimization
+
+- type: feat
+- changes: Built `/google-business-profile-optimization` service page using the existing `ServicePageTemplate` with the `beacon` glyph variant. Schema emitted: WebPage + BreadcrumbList (Home > Services > Google Business Profile Optimization) + Service + FAQPage (5 questions; visible `<summary>` text and schema `Question.name` strings consume the same `faqs` array). No AggregateRating / Review / LocalBusiness / Organization / Product / Offer — `LocalBusiness` confirmed 0 even though the page is *about* Google Business Profile (which is the same conceptual entity). `areaServed` still omitted on the Service block pending content-needed 1.3. Verified locally — `tsc --noEmit` clean, `next build` clean (18 static routes), `/google-business-profile-optimization` → 200. Do-not-invent honored — no stats, ratings, testimonials, guarantees, or pricing.
+- files: `app/google-business-profile-optimization/page.tsx`
+
 ## 2026-05-20 — Phase 3 Task 10: /ai-review-responses
 
 - type: feat
