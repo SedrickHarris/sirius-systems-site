@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 const GROUP_VISUAL: Record<string, { Icon: typeof Workflow; tagline: string }> = {
   ai: {
     Icon: Workflow,
-    tagline: 'Capture, qualify, book, follow up — without manual work.',
+    tagline: 'Capture, qualify, book, follow up: without manual work.',
   },
   'web-seo': {
     Icon: LayoutDashboard,
@@ -88,7 +88,7 @@ export default function ServicesPage() {
             </h1>
             <p className="mt-7 hero-copy">
               Pick one to start. Pick the whole engine. The pieces are designed
-              to compound &mdash; the more of them you run, the less manual the
+              to compound: the more of them you run, the less manual the
               business feels.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -102,7 +102,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* On this page — TOC card */}
+          {/* On this page: TOC card */}
           <aside aria-label="Service groups on this page" className="card-glass">
             <span className="section-eyebrow text-[color:var(--blue-light)]">
               On this page
@@ -144,7 +144,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ───────── Group A — AI & Automation (light) ───────── */}
+      {/* ───────── Group A: AI & Automation (light) ───────── */}
       <section id="ai" className="section-light section-padding scroll-mt-20">
         <div className="site-container">
           <div className="content-medium">
@@ -165,7 +165,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ───────── Group B — Smart Websites & Local SEO (soft) ───────── */}
+      {/* ───────── Group B: Smart Websites & Local SEO (soft) ───────── */}
       <section
         id="web-seo"
         className="section-soft section-padding scroll-mt-20"
@@ -188,7 +188,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ───────── Group C — Reputation Systems (light) ───────── */}
+      {/* ───────── Group C: Reputation Systems (light) ───────── */}
       <section
         id="reputation"
         className="section-light section-padding scroll-mt-20"
@@ -268,7 +268,7 @@ export default function ServicesPage() {
             <h2 className="mt-5 section-heading">Built for these five.</h2>
             <p className="mt-5 section-copy">
               Each industry page maps the most useful services for that
-              business shape &mdash; not all fourteen, the right four or five.
+              business shape: not all fourteen, the right four or five.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -305,7 +305,7 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
               Map your current setup. Walk away with the order of operations
-              for the system &mdash; whether or not we work together.
+              for the system, whether or not we work together.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link href="/contact" className="btn-primary">

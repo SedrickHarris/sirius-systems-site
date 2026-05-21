@@ -18,7 +18,7 @@ export const SITE = {
     github: 'https://github.com/SedrickHarris/sirius-systems-site',
     gbp: 'https://share.google/TUgLZOpTwsYaHLaLZ',
   },
-  // Sister brands in the ecosystem — NOT presented as Sirius Systems on this site.
+  // Sister brands in the ecosystem: NOT presented as Sirius Systems on this site.
   // Listed here only so internal tooling has a single source. Do not import these
   // into header/footer/page UI without explicit approval.
   ecosystem: {

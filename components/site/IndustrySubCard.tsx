@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 
 // Sub-vertical card used on industry hub pages. Renders the specific trades
-// within an industry — Plumbing, HVAC, etc. inside /industries/home-services.
+// within an industry: Plumbing, HVAC, etc. inside /industries/home-services.
 //
 // Behavior:
 //   - href + !comingSoon  → wraps in <Link>, card-hover styles

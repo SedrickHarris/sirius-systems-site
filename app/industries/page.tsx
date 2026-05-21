@@ -16,7 +16,7 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 import { INDUSTRIES } from '@/lib/industries'
 
 const META = {
-  title: 'Industries We Serve — Local Business Automation | Sirius Systems',
+  title: 'Industries We Serve: Local Business Automation | Sirius Systems',
   description:
     'Sirius Systems builds AI automation, booking systems, and reputation management for home service businesses, contractors, professional services, auto shops, and beauty and wellness businesses.',
   slug: 'industries',
@@ -45,11 +45,11 @@ const FAQS = [
   },
   {
     q: 'Do you have experience with my specific trade or practice type?',
-    a: 'We work across a wide range of local service businesses. The automation systems — booking, follow-up, reviews, CRM — apply consistently across trades and practice types. Visit the industry page for your group to see the specific services that map to your business.',
+    a: 'We work across a wide range of local service businesses. The automation systems: booking, follow-up, reviews, CRM: apply consistently across trades and practice types. Visit the industry page for your group to see the specific services that map to your business.',
   },
   {
     q: "What if my industry isn't listed?",
-    a: "The listed industries represent the most common business types we work with. If your business isn't listed, get in touch — if you're a local service business that depends on appointments, reviews, and local search, the system likely applies.",
+    a: "The listed industries represent the most common business types we work with. If your business isn't listed, get in touch: if you're a local service business that depends on appointments, reviews, and local search, the system likely applies.",
   },
 ]
 
@@ -91,7 +91,7 @@ export default function IndustriesIndexPage() {
             Built for the Businesses That Show Up and Do the Work
           </h1>
           <p className="mt-7 hero-copy">
-            Sirius Systems is built for local service businesses &mdash; not
+            Sirius Systems is built for local service businesses. Not
             enterprise SaaS, not e-commerce. Every system we build is designed
             around the way trades, practices, shops, and studios actually run.
           </p>
@@ -168,8 +168,8 @@ export default function IndustriesIndexPage() {
             </h2>
             <div className="mt-8 space-y-5 section-copy">
               <p>
-                Every local service business shares the same core problems
-                &mdash; leads that go unanswered, jobs that don&rsquo;t turn
+                Every local service business shares the same core problems:
+                leads that go unanswered, jobs that don&rsquo;t turn
                 into reviews, and manual processes that don&rsquo;t scale. The
                 system we build addresses those in every industry.
               </p>

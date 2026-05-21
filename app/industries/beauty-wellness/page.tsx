@@ -9,7 +9,7 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 const DATA: IndustryPageData = {
   slug: 'beauty-wellness',
   metaTitle:
-    'Beauty & Wellness Automation — Booking, Reviews & AI | Sirius Systems',
+    'Beauty & Wellness Automation: Booking, Reviews & AI | Sirius Systems',
   metaDescription:
     'Appointment booking automation, rebooking flows, review systems, and AI chatbots for salons, med spas, personal trainers, day spas, and other beauty and wellness businesses.',
   eyebrow: 'Beauty & Wellness',
@@ -27,7 +27,7 @@ const DATA: IndustryPageData = {
     'No-shows drain revenue because reminders are sent manually, inconsistently, or not at all.',
     "New clients book once and don't return because there's no rebooking system prompting them at the right interval.",
     'Happy clients leave without leaving a review because asking in person feels awkward and no one follows up.',
-    'Booking requires a DM, a phone call, or a text — friction that costs you clients who go to whoever is easier to book.',
+    'Booking requires a DM, a phone call, or a text: friction that costs you clients who go to whoever is easier to book.',
   ],
   systemsHeadline: 'The automation stack for beauty and wellness',
   serviceSlugs: [
@@ -62,7 +62,7 @@ const DATA: IndustryPageData = {
     },
     {
       q: 'How does the rebooking automation work?',
-      a: 'After an appointment is completed, the system sends a follow-up message at the interval you configure — typically 4 to 6 weeks for most beauty services. The message includes a direct booking link. This runs automatically without any manual step from you or your staff.',
+      a: 'After an appointment is completed, the system sends a follow-up message at the interval you configure: typically 4 to 6 weeks for most beauty services. The message includes a direct booking link. This runs automatically without any manual step from you or your staff.',
     },
     {
       q: 'How do you reduce no-shows?',

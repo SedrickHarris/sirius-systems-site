@@ -7,7 +7,7 @@ export type QA = { q: string; a: string }
 export const HOME_FAQ: QA[] = [
   {
     q: "What does Sirius Systems actually do?",
-    a: "We build the system that captures, qualifies, books, and follows up on leads for a local service business — AI automation, smart websites, and reputation systems running together. You can adopt one piece or the whole engine.",
+    a: "We build the system that captures, qualifies, books, and follows up on leads for a local service business: AI automation, smart websites, and reputation systems running together. You can adopt one piece or the whole engine.",
   },
   {
     q: "Is this for small businesses or larger ones?",
@@ -19,11 +19,11 @@ export const HOME_FAQ: QA[] = [
   },
   {
     q: "How long does it take to get something live?",
-    a: "Depends on the scope. A standalone piece — a chatbot, review automation, or a smart-site rebuild — can land in two to four weeks. The full integrated system is a multi-month engagement.",
+    a: "Depends on the scope. A standalone piece: a chatbot, review automation, or a smart-site rebuild: can land in two to four weeks. The full integrated system is a multi-month engagement.",
   },
   {
     q: "What does the discovery call look like?",
-    a: "Twenty minutes. We ask where leads, reviews, and follow-up are leaking, and you leave with a map of the gaps and the order of operations — whether or not we end up working together.",
+    a: "Twenty minutes. We ask where leads, reviews, and follow-up are leaking, and you leave with a map of the gaps and the order of operations: whether or not we end up working together.",
   },
 ]
 

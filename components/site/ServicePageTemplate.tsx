@@ -59,7 +59,7 @@ export function ServicePageTemplate(data: ServicePageData) {
 
   return (
     <>
-      {/* ───────── S00 — Hero (dark deep + selective glass card) ───────── */}
+      {/* ───────── S00: Hero (dark deep + selective glass card) ───────── */}
       <section className="section-deep section-padding relative overflow-hidden">
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
@@ -78,7 +78,7 @@ export function ServicePageTemplate(data: ServicePageData) {
             </div>
           </div>
 
-          {/* Selective glass — hero summary card */}
+          {/* Selective glass: hero summary card */}
           <aside aria-label="What this service delivers" className="card-glass">
             <span className="section-eyebrow text-[color:var(--blue-light)]">
               What this delivers
@@ -87,9 +87,9 @@ export function ServicePageTemplate(data: ServicePageData) {
               {heroHighlights.map((feature) => {
                 // Pull the lead phrase before the em-dash; if there's no
                 // em-dash, fall back to the whole sentence.
-                const split = feature.split(' — ')
+                const split = feature.split(': ')
                 const lead = split[0]
-                const rest = split.slice(1).join(' — ')
+                const rest = split.slice(1).join(': ')
                 return (
                   <li key={feature} className="flex items-start gap-3">
                     <Check
@@ -99,7 +99,7 @@ export function ServicePageTemplate(data: ServicePageData) {
                     <span className="text-sm leading-relaxed text-white/90">
                       <span className="font-semibold text-white">{lead}</span>
                       {rest && (
-                        <span className="text-white/70"> — {rest}</span>
+                        <span className="text-white/70">: {rest}</span>
                       )}
                     </span>
                   </li>
@@ -110,7 +110,7 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S01 — Definition (AEO-quotable, light) ───────── */}
+      {/* ───────── S01: Definition (AEO-quotable, light) ───────── */}
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -122,7 +122,7 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S02 — Problem framing (soft) ───────── */}
+      {/* ───────── S02: Problem framing (soft) ───────── */}
       <section className="section-soft section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -147,7 +147,7 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S03 — What you get / features (light) ───────── */}
+      {/* ───────── S03: What you get / features (light) ───────── */}
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -176,7 +176,7 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S04 — Outcomes (soft) ───────── */}
+      {/* ───────── S04: Outcomes (soft) ───────── */}
       <section className="section-soft section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -203,7 +203,7 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S05 — How it works (slate dark) ───────── */}
+      {/* ───────── S05: How it works (slate dark) ───────── */}
       <section className="section-slate section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -226,7 +226,7 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S06 — Related services (light) ───────── */}
+      {/* ───────── S06: Related services (light) ───────── */}
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -252,7 +252,7 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S07 — Industry fit (soft) ───────── */}
+      {/* ───────── S07: Industry fit (soft) ───────── */}
       <section className="section-soft section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -267,9 +267,9 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S08 — FAQ (light)
+      {/* ───────── S08: FAQ (light)
           Visible Q text consumes the same `data.faqs` array as the
-          FAQPage JSON-LD on the page — byte-identical. ───────── */}
+          FAQPage JSON-LD on the page: byte-identical. ───────── */}
       <section className="section-light section-padding">
         <div className="site-container grid gap-12 md:grid-cols-[1fr_2fr]">
           <div>
@@ -280,7 +280,7 @@ export function ServicePageTemplate(data: ServicePageData) {
         </div>
       </section>
 
-      {/* ───────── S09 — Final CTA (light section wrapping cta-deep) ───────── */}
+      {/* ───────── S09: Final CTA (light section wrapping cta-deep) ───────── */}
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="cta-deep">

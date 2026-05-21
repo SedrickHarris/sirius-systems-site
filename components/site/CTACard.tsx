@@ -16,7 +16,7 @@ export function CTACard() {
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
           Tell us where your leads, reviews, or follow-up are leaking. We&rsquo;ll
-          map a system in twenty minutes &mdash; yours to take with you whether
+          map a system in twenty minutes, yours to take with you whether
           we work together or not.
         </p>
         <ul className="mt-6 space-y-3 text-sm">

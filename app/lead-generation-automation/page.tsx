@@ -6,18 +6,18 @@ import { webPage, breadcrumbList, serviceSchema, faqPage } from '@/lib/schema'
 const PAGE = {
   slug: 'lead-generation-automation',
   metaTitle:
-    'Lead Generation Automation for Service Businesses — Sirius Systems',
+    'Lead Generation Automation for Service Businesses | Sirius Systems',
   metaDescription:
-    'Lead generation automation that connects paid, organic, and referral funnels directly to your CRM and booking flow — built for local service businesses.',
+    'Lead generation automation that connects paid, organic, and referral funnels directly to your CRM and booking flow: built for local service businesses.',
   eyebrow: 'Lead Generation',
   headline: 'More leads. Less chasing. No manual hand-off.',
   subheadline:
-    'Lead generation automation connects every inbound channel — paid ads, organic search, referrals, social — directly to your CRM and booking flow so no lead waits, leaks, or gets lost.',
+    'Lead generation automation connects every inbound channel: paid ads, organic search, referrals, social: directly to your CRM and booking flow so no lead waits, leaks, or gets lost.',
   glyphVariant: 'orbit' as const,
   definition:
-    'Lead generation automation for service businesses means connecting your marketing channels to your CRM and follow-up system so that every inbound lead — regardless of source — is captured, qualified, and actioned without manual intervention.',
+    'Lead generation automation for service businesses means connecting your marketing channels to your CRM and follow-up system so that every inbound lead: regardless of source: is captured, qualified, and actioned without manual intervention.',
   problems: [
-    "Leads from paid ads land on a form and wait hours for a follow-up — by then they've moved on.",
+    "Leads from paid ads land on a form and wait hours for a follow-up: by then they've moved on.",
     "You're paying for traffic that converts into inquiries your team doesn't have time to work.",
     'Different lead sources feed different inboxes and nothing connects to your CRM consistently.',
     "You don't know which channels are producing booked jobs versus just producing clicks.",
@@ -25,15 +25,15 @@ const PAGE = {
   steps: [
     {
       label: 'Audit your lead sources',
-      body: 'We map every channel currently sending leads to your business — paid search, organic, Google Business Profile, referral, social — and identify where leads enter, where they go next, and where they drop out.',
+      body: 'We map every channel currently sending leads to your business: paid search, organic, Google Business Profile, referral, social: and identify where leads enter, where they go next, and where they drop out.',
     },
     {
       label: 'Unify the intake',
-      body: 'We connect each channel to a single intake system — every lead, regardless of source, lands in your CRM with source tracking, contact details, and the context needed to follow up intelligently.',
+      body: 'We connect each channel to a single intake system: every lead, regardless of source, lands in your CRM with source tracking, contact details, and the context needed to follow up intelligently.',
     },
     {
       label: 'Wire the follow-up',
-      body: 'As soon as a lead enters the system, automated sequences start — an immediate acknowledgment, a qualification message, a booking prompt. The speed and content of each sequence is tuned to the source and the service.',
+      body: 'As soon as a lead enters the system, automated sequences start: an immediate acknowledgment, a qualification message, a booking prompt. The speed and content of each sequence is tuned to the source and the service.',
     },
     {
       label: 'Track what converts',
@@ -41,18 +41,18 @@ const PAGE = {
     },
   ],
   features: [
-    'Multi-channel lead capture — pulls leads from paid ads, organic, GBP, referral, and social',
-    'Instant CRM entry — every lead lands in your pipeline with source data attached',
-    'Immediate follow-up sequences — first touchpoint fires within seconds of lead capture',
-    'Lead qualification automation — filters and scores leads before they reach your team',
-    'Source tracking — ties booked jobs back to the channel that produced them',
-    'Duplicate detection — prevents the same lead from entering the pipeline twice',
-    'Form and landing page integration — connects existing or new capture points to the flow',
-    'Reporting — pipeline view by source, stage, and outcome',
+    'Multi-channel lead capture: pulls leads from paid ads, organic, GBP, referral, and social',
+    'Instant CRM entry: every lead lands in your pipeline with source data attached',
+    'Immediate follow-up sequences: first touchpoint fires within seconds of lead capture',
+    'Lead qualification automation: filters and scores leads before they reach your team',
+    'Source tracking: ties booked jobs back to the channel that produced them',
+    'Duplicate detection: prevents the same lead from entering the pipeline twice',
+    'Form and landing page integration: connects existing or new capture points to the flow',
+    'Reporting: pipeline view by source, stage, and outcome',
   ],
   outcomes: [
     'Every lead gets a response in seconds, regardless of when or where they came in.',
-    'Your team works qualified leads — not raw inquiries that may not even be a fit.',
+    'Your team works qualified leads: not raw inquiries that may not even be a fit.',
     'You know which channels are producing revenue, not just traffic.',
     'Leads from paid campaigns convert at a higher rate because the follow-up is immediate.',
     'Nothing leaks between your marketing stack and your CRM.',
@@ -68,7 +68,7 @@ const PAGE = {
   faqs: [
     {
       q: 'What is lead generation automation for a service business?',
-      a: 'It means connecting your marketing channels — paid ads, organic search, referrals, social — to your CRM and follow-up system so that every inbound lead is captured, qualified, and actioned automatically, without someone manually moving it.',
+      a: 'It means connecting your marketing channels: paid ads, organic search, referrals, social: to your CRM and follow-up system so that every inbound lead is captured, qualified, and actioned automatically, without someone manually moving it.',
     },
     {
       q: 'Does this replace my existing marketing channels?',
@@ -76,15 +76,15 @@ const PAGE = {
     },
     {
       q: 'How quickly does a new lead get a follow-up?',
-      a: 'The first automated touchpoint fires within seconds of a lead entering the system. Speed matters — leads contacted within the first few minutes convert at a significantly higher rate than those who wait hours.',
+      a: 'The first automated touchpoint fires within seconds of a lead entering the system. Speed matters: leads contacted within the first few minutes convert at a significantly higher rate than those who wait hours.',
     },
     {
       q: 'Can it handle leads from Google Ads and organic search differently?',
-      a: 'Yes. We configure source-specific sequences — a lead from a paid ad gets a different immediate response than a referral or an organic search visitor. The intent and context differ, so the follow-up should too.',
+      a: 'Yes. We configure source-specific sequences: a lead from a paid ad gets a different immediate response than a referral or an organic search visitor. The intent and context differ, so the follow-up should too.',
     },
     {
       q: 'How do I know which channels are actually producing booked jobs?',
-      a: 'We configure source tracking from first touch through to closed job in your CRM. You get a clear view of which channels produce revenue, not just leads — so you can make informed decisions about where to invest.',
+      a: 'We configure source tracking from first touch through to closed job in your CRM. You get a clear view of which channels produce revenue, not just leads: so you can make informed decisions about where to invest.',
     },
   ],
 }

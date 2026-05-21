@@ -8,14 +8,14 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 
 const DATA: IndustryPageData = {
   slug: 'auto-services',
-  metaTitle: 'Auto Services Automation — Booking, Reviews & CRM | Sirius Systems',
+  metaTitle: 'Auto Services Automation: Booking, Reviews & CRM | Sirius Systems',
   metaDescription:
     'Appointment booking automation, AI chatbots, review systems, and CRM for auto repair shops, detailers, tire shops, body shops, and other auto service businesses.',
   eyebrow: 'Auto Services',
   headline:
     'Customers Search for a Shop Online. Your System Should Close Them Before They Move On.',
   subheadline:
-    'Auto service businesses win or lose on speed and reputation. We build the system that captures the inquiry, books the appointment, sends the reminder, and earns the review — running automatically between jobs.',
+    'Auto service businesses win or lose on speed and reputation. We build the system that captures the inquiry, books the appointment, sends the reminder, and earns the review: running automatically between jobs.',
   heroHighlights: [
     'Online booking from any device, in seconds',
     'Service reminders + rebooking automation',
@@ -26,7 +26,7 @@ const DATA: IndustryPageData = {
   problems: [
     "A customer searches for a shop, lands on your site, and leaves because there's no fast way to book or ask a question.",
     'Appointment slots go unfilled because the booking process requires a phone call during business hours.',
-    'Jobs get completed without a review request — and the competitor down the street with 200 more reviews keeps winning the search.',
+    'Jobs get completed without a review request: and the competitor down the street with 200 more reviews keeps winning the search.',
     "Repeat customers drift away because there's no system to bring them back for oil changes, seasonal service, or follow-up work.",
   ],
   systemsHeadline: 'The service stack for auto businesses',
@@ -64,15 +64,15 @@ const DATA: IndustryPageData = {
     },
     {
       q: 'Can customers book appointments online through this system?',
-      a: 'Yes. The booking automation puts a real-time scheduling link on your website and in any automated message — so customers can book without calling during business hours. The appointment goes directly into your calendar.',
+      a: 'Yes. The booking automation puts a real-time scheduling link on your website and in any automated message: so customers can book without calling during business hours. The appointment goes directly into your calendar.',
     },
     {
       q: 'How do you help with repeat business and retention?',
-      a: 'The CRM and automation stack tracks customers and their service history, then triggers follow-up at the right interval — oil change reminders, seasonal service prompts, or a simple check-in. That sequence brings customers back without you manually tracking it.',
+      a: 'The CRM and automation stack tracks customers and their service history, then triggers follow-up at the right interval: oil change reminders, seasonal service prompts, or a simple check-in. That sequence brings customers back without you manually tracking it.',
     },
     {
       q: 'How does review automation work for an auto shop?',
-      a: 'After each job closes, the system sends a review request by text with a direct link to your Google Business Profile. The timing is configurable — typically same day or next day. No manual step required from the shop.',
+      a: 'After each job closes, the system sends a review request by text with a direct link to your Google Business Profile. The timing is configurable: typically same day or next day. No manual step required from the shop.',
     },
     {
       q: 'Do you integrate with shop management software?',

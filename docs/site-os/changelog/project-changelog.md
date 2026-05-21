@@ -15,6 +15,17 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Em-dash sweep: all public-facing instances removed
+
+- type: fix
+- changes: Removed every em-dash (`&mdash;` HTML entity + the literal ` — ` U+2014 character) from public-facing source — `app/`, `components/`, `lib/` — per the Site Master copy rule. 451 total instances across 40 files. Applied as three layers:
+  - **Layer 1 (script, mechanical, 435 fixes)**: a Node.js script classified each em-dash by syntactic context and applied safe rewrites. (a) Title separator ` — Sirius Systems` → ` | Sirius Systems` (14 hits, all `metaTitle` values and the home `title.default` template). (b) Single-line string literals (feature arrays, oneLiners, FAQ answers, meta descriptions, body strings): ` — ` → `: ` (393 hits). (c) Code comment lines starting with `//`, `*`, or `/*`: ` — ` → `: ` (28 hits).
+  - **Layer 2 (script, JSX block comments, 36 fixes)**: a second pass widened the comment regex to catch `{/* ... */}` JSX block comments (Stage 3 section dividers like `{/* S00 — Hero */}`) and the JSX text expression in `ServicePageTemplate.tsx:102` (` — {rest}` → `: {rest}`).
+  - **Layer 3 (manual per-rule judgment, 26 fixes)**: every remaining `&mdash;` was in JSX prose where mechanical replacement would have produced ungrammatical or unclear copy. Each was fixed by reading surrounding context and applying Rule A (sentence break/aside → period or colon), Rule B (cause/effect → period + new sentence or comma + "so"), or Rule D (JSX prose). Most became periods (new sentence) or commas (continuation); a few became colons where the dash introduced a list. No invented content added.
+  - **`ServicePageTemplate.tsx` split logic updated**: per the brief, the hero summary card's split separator changed from `feature.split(' — ')` to `feature.split(': ')`. The output `<span> — {rest}</span>` is now `<span>: {rest}</span>`. All 14 service-page feature arrays were updated to the colon separator by Layer 1, so the new split logic correctly recovers `lead` and `rest`. Verified on `/ai-chatbots`: feature renders as **24/7 availability**: responds instantly at any hour...
+- files: All public-facing source files (`app/**/*.{ts,tsx}`, `components/**/*.{ts,tsx}`, `lib/**/*.{ts,tsx}`) plus this changelog. 40 files changed; verified via grep that 0 ` — ` and 0 `&mdash;` remain in those directories. Internal docs (`docs/`) retain em-dashes per Rule E — explicitly out of scope.
+- notes: typecheck clean, build clean, 25 page HTMLs prerendered (+sitemap.xml + robots.txt = 27 routes). FAQ visible text and `FAQPage` JSON-LD remain byte-identical because both layers source the question/answer strings from the same `lib/faq.ts` arrays — the sweep modified both surfaces at once by construction. Sweep scripts (`scripts/em-dash-sweep.mjs` + `scripts/em-dash-sweep-pass2.mjs`) ran once and were deleted before commit; the `scripts/` directory was removed too. No schema, metadata, sitemap, robots, CSS, or component logic changed beyond the explicitly-listed `ServicePageTemplate` split-separator update.
+
 ## 2026-05-20 — Dark brand restoration + content audit fixes
 
 - type: style + docs

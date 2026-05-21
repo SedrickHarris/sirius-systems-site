@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import type { Service } from '@/lib/services'
 
-// Lucide icon per service group. Keeps the card lean — one glyph that says
+// Lucide icon per service group. Keeps the card lean: one glyph that says
 // "automation pillar" / "web pillar" / "reputation pillar" / "capstone"
 // instead of a unique icon per service.
 const ICON_FOR_GROUP: Record<Service['group'], typeof Workflow> = {

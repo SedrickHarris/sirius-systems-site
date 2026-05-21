@@ -42,7 +42,7 @@ const PROCESS = [
   {
     num: '02',
     title: 'Build',
-    body: "We scope the system to the leaks — not the catalog. Sometimes that's one piece. Sometimes the whole engine.",
+    body: "We scope the system to the leaks: not the catalog. Sometimes that's one piece. Sometimes the whole engine.",
   },
   {
     num: '03',
@@ -79,7 +79,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-7 hero-copy">
               {SITE.name} exists to do one thing well: capture, qualify, book,
-              and follow up &mdash; for local service businesses that have
+              and follow up. For local service businesses that have
               outgrown a website-only setup.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -93,7 +93,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* What we won't do — selective glass trust card */}
+          {/* What we won't do: selective glass trust card */}
           <aside aria-label="Things Sirius Systems will not do" className="card-glass">
             <span className="section-eyebrow text-[color:var(--blue-light)]">
               What we won&rsquo;t do
@@ -133,7 +133,7 @@ export default function AboutPage() {
             <div className="mt-8 max-w-2xl space-y-5 section-copy">
               <p>
                 Owner-operators in home services, contractors, professional
-                services, auto shops, beauty and wellness &mdash; the same
+                services, auto shops, beauty and wellness: the same
                 pattern. Three subscriptions for tools that don&rsquo;t talk to
                 each other. Missed-call voicemails that never get a callback.
                 Reviews piling up faster than anyone can respond. A CRM with
@@ -142,7 +142,7 @@ export default function AboutPage() {
               </p>
               <p>
                 {SITE.name} was built to collapse that mess into a single
-                growth system &mdash; AI automation, smart websites, and
+                growth system: AI automation, smart websites, and
                 reputation work that actually compounds, run by one operator
                 who can explain every piece in plain English.
               </p>
@@ -164,7 +164,7 @@ export default function AboutPage() {
                 <p>
                   Founder and operator of {SITE.name}. Builds AI automation,
                   smart websites, and reputation systems for local service
-                  businesses &mdash; the same kind of operators he grew up
+                  businesses, the same kind of operators he grew up
                   around.
                 </p>
                 <p className="text-sm text-[color:var(--text-muted)]">
@@ -200,7 +200,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Headshot placeholder — soft card on light section */}
+            {/* Headshot placeholder: soft card on light section */}
             <div className="card-subtle relative aspect-[4/5] overflow-hidden">
               <div className="absolute inset-0 bg-grid-faint bg-grid-32 opacity-60" />
               <div className="relative flex h-full items-end p-6">
@@ -234,12 +234,12 @@ export default function AboutPage() {
               <p>
                 Typically $250k&ndash;$5M in annual revenue, 1&ndash;25
                 employees, stretched thin on follow-up, reviews, and
-                scheduling. Technical enough to know what a CRM is &mdash; not
+                scheduling. Technical enough to know what a CRM is, not
                 technical enough to debug an API. That&rsquo;s the right fit.
               </p>
               <p>
                 If you&rsquo;re enterprise, or pre-revenue, or shopping for the
-                cheapest agency on Upwork &mdash; we&rsquo;re not the right
+                cheapest agency on Upwork. We&rsquo;re not the right
                 fit, and we&rsquo;ll say so on the call.
               </p>
             </div>
@@ -278,7 +278,7 @@ export default function AboutPage() {
               <p>
                 Sedrick also operates ClickVSG, Sirius Site Studio, and Review
                 Scraper. They share a worldview about how local service
-                businesses should be built &mdash; they are not the same brand
+                businesses should be built. They are not the same brand
                 as {SITE.name}, and nothing on this site is a claim about their
                 work or vice-versa.
               </p>
@@ -328,7 +328,7 @@ export default function AboutPage() {
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
               Walk away knowing what to automate first, what to leave alone,
-              and the right order of operations &mdash; whether or not we work
+              and the right order of operations, whether or not we work
               together.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">

@@ -2,7 +2,7 @@ import { ServiceCard } from './ServiceCard'
 import { SERVICES } from '@/lib/services'
 
 // Looks up each slug in the canonical service catalog and renders the
-// shared ServiceCard. Skips silently when a slug isn't found — so editing
+// shared ServiceCard. Skips silently when a slug isn't found: so editing
 // the catalog later can't break a service page that references a removed
 // slug (the link just disappears, no crash).
 export function RelatedServicesGrid({ slugs }: { slugs: string[] }) {

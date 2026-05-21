@@ -10,7 +10,7 @@ import { IndustrySubCard } from './IndustrySubCard'
 //   3 soft recommended systems  →  4 light sub-verticals (use cases)
 //   5 soft FAQ                  →  6 light section wrapping a cta-deep panel
 //
-// No workflow visual — that lives on the home page where it belongs.
+// No workflow visual: that lives on the home page where it belongs.
 // Hub pages stay focused on industry-specific problem + solution + trade
 // coverage so they don't duplicate site-wide framing.
 
@@ -40,7 +40,7 @@ export interface IndustryPageData {
 export function IndustryPageTemplate(data: IndustryPageData) {
   return (
     <>
-      {/* ───────── S00 — Hero (dark deep + selective glass card) ───────── */}
+      {/* ───────── S00: Hero (dark deep + selective glass card) ───────── */}
       <section className="section-deep section-padding relative overflow-hidden">
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
@@ -75,7 +75,7 @@ export function IndustryPageTemplate(data: IndustryPageData) {
         </div>
       </section>
 
-      {/* ───────── S01 — Pain points (light) ───────── */}
+      {/* ───────── S01: Pain points (light) ───────── */}
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -100,7 +100,7 @@ export function IndustryPageTemplate(data: IndustryPageData) {
         </div>
       </section>
 
-      {/* ───────── S02 — Recommended systems (soft) ───────── */}
+      {/* ───────── S02: Recommended systems (soft) ───────── */}
       <section className="section-soft section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -124,7 +124,7 @@ export function IndustryPageTemplate(data: IndustryPageData) {
         </div>
       </section>
 
-      {/* ───────── S03 — Sub-verticals (light) ───────── */}
+      {/* ───────── S03: Sub-verticals (light) ───────── */}
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="content-medium">
@@ -137,7 +137,7 @@ export function IndustryPageTemplate(data: IndustryPageData) {
             )}
           </div>
 
-          {/* Tier 1 — Featured */}
+          {/* Tier 1: Featured */}
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {data.featured.map((trade) => (
               <IndustrySubCard
@@ -150,7 +150,7 @@ export function IndustryPageTemplate(data: IndustryPageData) {
             ))}
           </div>
 
-          {/* Tier 2 — Compact */}
+          {/* Tier 2: Compact */}
           {data.compact.length > 0 && (
             <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {data.compact.map((trade) => (
@@ -167,7 +167,7 @@ export function IndustryPageTemplate(data: IndustryPageData) {
         </div>
       </section>
 
-      {/* ───────── S04 — FAQ (soft) ───────── */}
+      {/* ───────── S04: FAQ (soft) ───────── */}
       <section className="section-soft section-padding">
         <div className="site-container grid gap-12 md:grid-cols-[1fr_2fr]">
           <div>
@@ -178,7 +178,7 @@ export function IndustryPageTemplate(data: IndustryPageData) {
         </div>
       </section>
 
-      {/* ───────── S05 — CTA panel (light wrapping cta-deep) ───────── */}
+      {/* ───────── S05: CTA panel (light wrapping cta-deep) ───────── */}
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="cta-deep">

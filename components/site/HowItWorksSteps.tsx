@@ -1,7 +1,7 @@
 import { ProcessStep } from './ProcessStep'
 
 // Numbered how-it-works steps. Each step renders as the shared ProcessStep
-// component — keeps the visual language consistent with /, /about, /contact
+// component: keeps the visual language consistent with /, /about, /contact
 // (same "01" / "02" badge format in accent blue).
 export function HowItWorksSteps({
   steps,

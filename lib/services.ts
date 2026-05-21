@@ -1,4 +1,4 @@
-// Canonical service catalog. Single source of truth — every page that
+// Canonical service catalog. Single source of truth: every page that
 // references services pulls from here. Slugs and grouping mirror
 // docs/seo/url-strategy.md §3 and docs/site-os/inputs/site-build-plan.md §3.
 
@@ -12,7 +12,7 @@ export type Service = {
 }
 
 export const SERVICES: Service[] = [
-  // Group A — AI & automation
+  // Group A: AI & automation
   {
     slug: 'ai-automation',
     name: 'AI Automation',
@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
     group: 'ai',
   },
 
-  // Group B — Smart websites & local SEO
+  // Group B: Smart websites & local SEO
   {
     slug: 'smart-websites',
     name: 'Smart Websites',
@@ -60,17 +60,17 @@ export const SERVICES: Service[] = [
   {
     slug: 'google-business-profile-optimization',
     name: 'Google Business Profile',
-    oneLiner: 'NAP, categories, services, posts, photos, Q&A — fully optimized for local visibility.',
+    oneLiner: 'NAP, categories, services, posts, photos, Q&A: fully optimized for local visibility.',
     group: 'web-seo',
   },
   {
     slug: 'local-seo-aeo',
     name: 'Local SEO & AEO',
-    oneLiner: 'Rank in Google AND in AI answer engines — ChatGPT, Perplexity, AI Overviews.',
+    oneLiner: 'Rank in Google AND in AI answer engines: ChatGPT, Perplexity, AI Overviews.',
     group: 'web-seo',
   },
 
-  // Group C — Reputation
+  // Group C: Reputation
   {
     slug: 'reputation-management',
     name: 'Reputation Management',
@@ -80,7 +80,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'review-automation',
     name: 'Review Automation',
-    oneLiner: 'Right customer, right time, right channel — without spamming or sounding scripted.',
+    oneLiner: 'Right customer, right time, right channel: without spamming or sounding scripted.',
     group: 'reputation',
   },
   {
@@ -92,7 +92,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'competitor-review-benchmarking',
     name: 'Competitor Benchmarking',
-    oneLiner: 'See how your reviews stack up against your top 5 local rivals — and where to push next.',
+    oneLiner: 'See how your reviews stack up against your top 5 local rivals: and where to push next.',
     group: 'reputation',
   },
 
@@ -114,7 +114,7 @@ export const SERVICE_GROUPS: {
   {
     id: 'ai',
     label: 'AI & Automation',
-    blurb: 'Chatbots, voicebots, CRM, booking, and lead-gen — wired into one system that runs while you work.',
+    blurb: 'Chatbots, voicebots, CRM, booking, and lead-gen: wired into one system that runs while you work.',
     hubSlug: 'ai-automation',
   },
   {

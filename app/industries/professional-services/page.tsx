@@ -9,9 +9,9 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 const DATA: IndustryPageData = {
   slug: 'professional-services',
   metaTitle:
-    'Professional Services Automation — AI Chatbots, Booking & Reviews | Sirius Systems',
+    'Professional Services Automation: AI Chatbots, Booking & Reviews | Sirius Systems',
   metaDescription:
-    'AI chatbots, appointment booking automation, CRM, and reputation management for professional service firms — law, dental, medical, accounting, and more.',
+    'AI chatbots, appointment booking automation, CRM, and reputation management for professional service firms: law, dental, medical, accounting, and more.',
   eyebrow: 'Professional Services',
   headline: 'More Qualified Appointments. Less Time Chasing Them.',
   subheadline:
@@ -19,15 +19,15 @@ const DATA: IndustryPageData = {
   heroHighlights: [
     'Online intake + consultation booking, 24/7',
     'No-show reduction with timed reminders',
-    'AI chatbot that routes — never gives advice',
+    'AI chatbot that routes: never gives advice',
     'Review requests after every completed appointment',
   ],
   problemHeadline: 'Where professional service firms lose clients',
   problems: [
-    'Inquiry forms get submitted after hours and sit unanswered until morning — the prospect has already moved on.',
+    'Inquiry forms get submitted after hours and sit unanswered until morning: the prospect has already moved on.',
     "Phone tag replaces the consultation booking process, wasting staff time and losing clients who won't chase you back.",
     'No-shows burn capacity because reminders are manual, inconsistent, or nonexistent.',
-    'Reviews accumulate slowly because asking feels awkward — but competitors with more reviews win more searches.',
+    'Reviews accumulate slowly because asking feels awkward: but competitors with more reviews win more searches.',
   ],
   systemsHeadline: 'The client acquisition and retention stack',
   serviceSlugs: [
@@ -58,12 +58,12 @@ const DATA: IndustryPageData = {
     { name: 'Tutoring & Test Prep', blurb: 'Enrollment automation and session booking for tutoring and test prep businesses.' },
     { name: 'Coaching & Consulting', blurb: 'Discovery call booking automation and CRM follow-up for coaches and consultants.' },
   ],
-  // FAQ — Q2 (HIPAA) + Q4 (integrations) are intentionally non-committal
+  // FAQ: Q2 (HIPAA) + Q4 (integrations) are intentionally non-committal
   // until client confirms which platforms are supported.
   faqs: [
     {
       q: 'What kinds of professional service businesses do you work with?',
-      a: 'We work with licensed professionals and service firms — attorneys, dentists, medical practices, accountants, financial advisors, therapists, and more. If your business depends on scheduled appointments and local reputation, the system applies.',
+      a: 'We work with licensed professionals and service firms: attorneys, dentists, medical practices, accountants, financial advisors, therapists, and more. If your business depends on scheduled appointments and local reputation, the system applies.',
     },
     {
       q: 'Is this HIPAA-compliant for medical and mental health practices?',
@@ -71,7 +71,7 @@ const DATA: IndustryPageData = {
     },
     {
       q: 'How does the AI chatbot handle sensitive inquiries in a professional setting?',
-      a: 'The chatbot is configured to qualify and route — not to provide advice or answer clinical and legal questions. It captures the inquiry, collects context, and routes to the right staff member or booking flow. The system is scoped and tested before going live.',
+      a: 'The chatbot is configured to qualify and route: not to provide advice or answer clinical and legal questions. It captures the inquiry, collects context, and routes to the right staff member or booking flow. The system is scoped and tested before going live.',
     },
     {
       q: 'Can this integrate with the scheduling system we already use?',
@@ -79,7 +79,7 @@ const DATA: IndustryPageData = {
     },
     {
       q: 'How do you handle no-show reduction?',
-      a: 'The system sends automated appointment reminders by text and email at intervals you configure — typically 24 hours and 2 hours before the appointment. Confirmed appointments see significantly fewer no-shows than those managed manually.',
+      a: 'The system sends automated appointment reminders by text and email at intervals you configure: typically 24 hours and 2 hours before the appointment. Confirmed appointments see significantly fewer no-shows than those managed manually.',
     },
   ],
 }

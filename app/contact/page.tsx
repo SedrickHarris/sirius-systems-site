@@ -27,7 +27,7 @@ const NEXT_STEPS = [
   {
     num: '01',
     title: 'Reply within one business day',
-    body: "You'll hear back to confirm a 20-minute slot — usually the same day, never longer than the next business day.",
+    body: "You'll hear back to confirm a 20-minute slot: usually the same day, never longer than the next business day.",
   },
   {
     num: '02',
@@ -69,7 +69,7 @@ export default function ContactPage() {
           </h1>
           <p className="mt-7 hero-copy">
             Tell us where leads, reviews, or follow-up are leaking. We&rsquo;ll
-            map a system in twenty minutes &mdash; yours to take with you
+            map a system in twenty minutes, yours to take with you
             whether we work together or not.
           </p>
           <div className="mt-10">
@@ -85,7 +85,7 @@ export default function ContactPage() {
       <section id="book" className="section-light section-padding scroll-mt-20">
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
 
-          {/* Left — alt contact + framing copy */}
+          {/* Left: alt contact + framing copy */}
           <div>
             <span className="section-eyebrow">Strategy session</span>
             <h2 className="mt-5 section-heading">
@@ -125,7 +125,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — premium form card */}
+          {/* Right: premium form card */}
           <aside aria-label="Strategy session request form" className="card-premium p-7 md:p-8">
             <span className="section-eyebrow">Book the audit</span>
             <h2 className="mt-4 font-display text-2xl leading-tight tracking-tight md:text-[1.75rem]">
@@ -184,7 +184,7 @@ export default function ContactPage() {
                 className="btn-primary w-full"
                 disabled
                 aria-disabled="true"
-                title="Form endpoint pending — see content-needed-from-client.md item 2.5"
+                title="Form endpoint pending: see content-needed-from-client.md item 2.5"
               >
                 Request the audit
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -237,7 +237,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ───────── Trust micro-line (soft) — small finale, no full CTA ───────── */}
+      {/* ───────── Trust micro-line (soft): small finale, no full CTA ───────── */}
       <section className="section-soft section-padding-sm">
         <div className="site-container content-medium text-center">
           <p className="inline-flex items-center gap-2 text-sm text-[color:var(--text-body)]">
@@ -251,7 +251,7 @@ export default function ContactPage() {
 }
 
 // ─────────────────────────────────────────────
-// Form field — same shape as Stage 2, restyled for light premium surface.
+// Form field: same shape as Stage 2, restyled for light premium surface.
 // ─────────────────────────────────────────────
 type FieldProps = {
   id: string

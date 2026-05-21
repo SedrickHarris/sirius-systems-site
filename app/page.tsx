@@ -31,7 +31,7 @@ export const metadata = {
 }
 
 // ─── Hero dashboard panel data ──────────────────────────────────────
-// Illustrative pipeline rows — show HOW the system works, not real
+// Illustrative pipeline rows: show HOW the system works, not real
 // client metrics. No invented stats, no fabricated client results.
 const HERO_PIPELINE = [
   { time: '12:42 PM', event: 'New lead captured',         status: 'Done' },
@@ -70,7 +70,7 @@ export default function HomePage() {
         data={[
           webPage({
             url: '/',
-            name: `${SITE.name} — ${SITE.shortTagline}`,
+            name: `${SITE.name}: ${SITE.shortTagline}`,
             description: SITE.description,
           }),
           faqPage(HOME_FAQ),
@@ -82,7 +82,7 @@ export default function HomePage() {
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
 
-          {/* Left — copy + CTA stack */}
+          {/* Left: copy + CTA stack */}
           <div>
             <span className="section-eyebrow">Sirius Systems</span>
 
@@ -92,8 +92,8 @@ export default function HomePage() {
 
             <p className="mt-7 hero-copy">
               Sirius Systems builds AI automation, smart websites, and
-              reputation systems for local service businesses &mdash;
-              capture more leads, book more jobs, earn more reviews, without
+              reputation systems for local service businesses. Capture
+              more leads, book more jobs, earn more reviews, without
               adding headcount.
             </p>
 
@@ -114,7 +114,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Right — dashboard panel (selective glass, hero-only) */}
+          {/* Right: dashboard panel (selective glass, hero-only) */}
           <aside aria-label="Sample automation pipeline" className="dashboard-panel">
             <header className="flex items-center justify-between gap-4 pb-3">
               <span className="dashboard-label">Live Pipeline · Today</span>
@@ -165,8 +165,8 @@ export default function HomePage() {
           <div className="content-medium text-center">
             <span className="section-eyebrow">Where the money leaks</span>
             <h2 className="mt-5 section-heading">
-              Three problems most local service businesses live with &mdash;
-              until they don&rsquo;t.
+              Three problems most local service businesses live with. Until
+              they don&rsquo;t.
             </h2>
           </div>
 
@@ -175,7 +175,7 @@ export default function HomePage() {
               {
                 pill: 'Missed inbound',
                 title: 'Leads call when you’re on a job.',
-                body: "And don't call back. Voicemail-only is a daily revenue leak — same-day buyers go to whoever picked up.",
+                body: "And don't call back. Voicemail-only is a daily revenue leak: same-day buyers go to whoever picked up.",
               },
               {
                 pill: 'Reputation drift',
@@ -185,7 +185,7 @@ export default function HomePage() {
               {
                 pill: 'CRM theater',
                 title: 'Your CRM has 8,000 contacts and nothing on autopilot.',
-                body: 'Tools paid for, never used. The follow-up that would book the next job lives in someone’s head — or doesn’t.',
+                body: 'Tools paid for, never used. The follow-up that would book the next job lives in someone’s head: or doesn’t.',
               },
             ].map((card) => (
               <article key={card.pill} className="card-feature hover-lift">
@@ -218,7 +218,7 @@ export default function HomePage() {
               {
                 num: '01',
                 title: 'AI &amp; Automation',
-                body: 'Chatbots, voicebots, CRM and booking automation, lead generation — wired into one system that runs while you work.',
+                body: 'Chatbots, voicebots, CRM and booking automation, lead generation: wired into one system that runs while you work.',
                 bullets: [
                   'Missed-call text-back inside 60 seconds',
                   'CRM + booking automation, end-to-end',
@@ -293,12 +293,12 @@ export default function HomePage() {
               One connected workflow. Six things that stop slipping.
             </h2>
             <p className="mt-5 section-copy">
-              Every lead enters one system and moves through it automatically
-              &mdash; from first contact to a review that earns the next job.
+              Every lead enters one system and moves through it automatically,
+              from first contact to a review that earns the next job.
             </p>
           </div>
 
-          {/* Mobile / tablet — grid (no flow lines) */}
+          {/* Mobile / tablet: grid (no flow lines) */}
           <div className="mt-14 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:hidden">
             {WORKFLOW.map((step, i) => {
               const Icon = step.icon
@@ -314,7 +314,7 @@ export default function HomePage() {
             })}
           </div>
 
-          {/* Desktop — horizontal flow with connecting lines */}
+          {/* Desktop: horizontal flow with connecting lines */}
           <ol className="mt-14 hidden lg:flex items-start gap-2">
             {WORKFLOW.map((step, i) => {
               const Icon = step.icon
@@ -351,7 +351,7 @@ export default function HomePage() {
             <p className="mt-5 section-copy">
               Every local service business is one missed call, one slow reply,
               one forgotten follow-up away from losing a job to whoever moved
-              faster. AI automation closes that gap &mdash; answering in your
+              faster. AI automation closes that gap: answering in your
               voice, routing leads to your CRM, and booking the job while
               you&rsquo;re still on the ladder.
             </p>
@@ -415,8 +415,8 @@ export default function HomePage() {
               A site that does work, not just one that looks good.
             </h2>
             <p className="mt-5 section-copy">
-              Smart websites capture, qualify, book, and follow up &mdash;
-              wired into Google Business Profile, local SEO, and AEO so you
+              Smart websites capture, qualify, book, and follow up, wired
+              into Google Business Profile, local SEO, and AEO so you
               show up in both classic search and AI answer engines. Same
               engine, three surfaces.
             </p>
@@ -439,7 +439,7 @@ export default function HomePage() {
               More reviews. Better responses. Real benchmarking.
             </h2>
             <p className="mt-5 section-copy">
-              Reputation isn&rsquo;t a star rating &mdash; it&rsquo;s a system.
+              Reputation isn&rsquo;t a star rating. It&rsquo;s a system.
               Ask the right customer at the right time, respond to every review
               on-brand, and benchmark against the five competitors actually
               pulling attention away from you.
@@ -521,7 +521,7 @@ export default function HomePage() {
               <h3 className="mt-5 card-title">Local service businesses</h3>
               <p className="mt-2 card-copy">
                 Don&rsquo;t see your industry? Any local service business
-                qualifies &mdash; the system applies the same way.
+                qualifies. The system applies the same way.
               </p>
               <Link href="/contact" className="btn-link mt-5">
                 Ask if it fits your business
@@ -547,12 +547,12 @@ export default function HomePage() {
               {
                 num: '01',
                 title: 'Audit',
-                body: 'A twenty-minute walkthrough of where leads, reviews, and follow-up are leaking. You leave with a map — whether or not we work together.',
+                body: 'A twenty-minute walkthrough of where leads, reviews, and follow-up are leaking. You leave with a map: whether or not we work together.',
               },
               {
                 num: '02',
                 title: 'Build',
-                body: 'We wire the system. Smart site, AI automation, reputation flows, GBP — whichever pieces fit. Nothing speculative; everything mapped to a leak.',
+                body: 'We wire the system. Smart site, AI automation, reputation flows, GBP: whichever pieces fit. Nothing speculative; everything mapped to a leak.',
               },
               {
                 num: '03',
@@ -580,7 +580,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-5 section-copy">
               We sell trust services. Faking trust signals on a site that
-              sells trust services is a credibility failure &mdash; so we
+              sells trust services is a credibility failure, so we
               don&rsquo;t. Real proof gets added when verified. Until then,
               this section tells you what we won&rsquo;t do.
             </p>
@@ -599,7 +599,7 @@ export default function HomePage() {
             </ul>
           </div>
 
-          {/* Live Google reviews surface — currently renders the neutral
+          {/* Live Google reviews surface: currently renders the neutral
               trust fallback per docs/site-os/inputs/do-not-invent-rules.md.
               When verified GBP data lands, this surface automatically swaps
               to real review cards. */}

@@ -71,7 +71,7 @@ export function Header() {
   )
 }
 
-// Brand mark — Sirius four-point star. Yellow star (`fill-primary`) with
+// Brand mark: Sirius four-point star. Yellow star (`fill-primary`) with
 // a blue core (`fill-secondary`). Placeholder until the real logo lands
 // (content-needed-from-client.md item 1.5).
 function SiriusMark() {

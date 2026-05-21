@@ -8,15 +8,15 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 
 const DATA: IndustryPageData = {
   slug: 'home-services',
-  metaTitle: 'Home Services Automation — AI, Booking & Reviews | Sirius Systems',
+  metaTitle: 'Home Services Automation: AI, Booking & Reviews | Sirius Systems',
   metaDescription:
-    'AI automation, missed-call recovery, appointment booking, and review systems for home service businesses — plumbers, HVAC, roofers, landscapers, and 16 more trades.',
+    'AI automation, missed-call recovery, appointment booking, and review systems for home service businesses: plumbers, HVAC, roofers, landscapers, and 16 more trades.',
   eyebrow: 'Home Services',
   headline: 'Stop Losing Jobs to the Business That Answered First',
   subheadline:
-    "Home service businesses run lean. When a lead calls and gets voicemail, they call the next name on the list. We build the system that answers, qualifies, books, and follows up — so you stop leaving jobs on the table.",
+    "Home service businesses run lean. When a lead calls and gets voicemail, they call the next name on the list. We build the system that answers, qualifies, books, and follows up: so you stop leaving jobs on the table.",
   heroHighlights: [
-    'Missed-call recovery — text-back within 60 seconds',
+    'Missed-call recovery: text-back within 60 seconds',
     'Booking automation across web, voice, and SMS',
     'Review requests after every completed job',
     'Local search + GBP visibility you actually own',
@@ -24,7 +24,7 @@ const DATA: IndustryPageData = {
   problemHeadline: "What's leaking revenue right now",
   problems: [
     'Calls go to voicemail after hours and the lead books a competitor before 8 AM.',
-    'Estimates get sent and never followed up on — the job goes to whoever called back first.',
+    'Estimates get sent and never followed up on: the job goes to whoever called back first.',
     'Happy customers finish the job without leaving a review because no one asked at the right moment.',
     "The website generates traffic but doesn't capture, qualify, or route leads anywhere useful.",
   ],
@@ -142,13 +142,13 @@ const DATA: IndustryPageData = {
         'Booking automation and review flows for home inspectors building a referral reputation.',
     },
   ],
-  // FAQs — same array drives the visible FAQ rendering and the FAQPage
+  // FAQs: same array drives the visible FAQ rendering and the FAQPage
   // JSON-LD on the page. Q3 timing language is intentionally non-specific
   // pending client confirmation.
   faqs: [
     {
       q: 'What types of home service businesses do you work with?',
-      a: 'We work with any trade or service that operates locally — plumbers, HVAC companies, roofers, landscapers, cleaners, electricians, pest control operators, and more. If your business depends on phone calls, appointments, and local reputation, the system applies.',
+      a: 'We work with any trade or service that operates locally: plumbers, HVAC companies, roofers, landscapers, cleaners, electricians, pest control operators, and more. If your business depends on phone calls, appointments, and local reputation, the system applies.',
     },
     {
       q: 'Do I need to already have a CRM or website?',
@@ -156,15 +156,15 @@ const DATA: IndustryPageData = {
     },
     {
       q: 'How quickly can you set up the missed-call and booking automation?',
-      a: "Setup time depends on what's already in place. A standalone missed-call text-back and booking link can typically be operational in days. A full system buildout with CRM, automations, and review flows takes longer — we scope it during the discovery call.",
+      a: "Setup time depends on what's already in place. A standalone missed-call text-back and booking link can typically be operational in days. A full system buildout with CRM, automations, and review flows takes longer: we scope it during the discovery call.",
     },
     {
       q: 'Will this work for a solo operator or only larger businesses?',
-      a: 'Both. A solo plumber benefits from missed-call recovery and automated review requests the same way a 10-truck HVAC company does. The system scales — you start with the pieces that address your biggest leak and add from there.',
+      a: 'Both. A solo plumber benefits from missed-call recovery and automated review requests the same way a 10-truck HVAC company does. The system scales: you start with the pieces that address your biggest leak and add from there.',
     },
     {
       q: 'What does the automation actually replace?',
-      a: "Mostly the manual tasks that fall through the cracks — following up on estimates, texting customers when you're running late, asking for a review after the job, responding to leads after hours. The automation handles those consistently so you're focused on the work, not the admin.",
+      a: "Mostly the manual tasks that fall through the cracks: following up on estimates, texting customers when you're running late, asking for a review after the job, responding to leads after hours. The automation handles those consistently so you're focused on the work, not the admin.",
     },
   ],
 }

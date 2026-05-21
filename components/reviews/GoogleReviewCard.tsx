@@ -2,7 +2,7 @@ import { Star, ArrowUpRight } from 'lucide-react'
 import type { Review } from '@/lib/google-reviews'
 
 // Single Google review card. Never renders unless caller passes a verified
-// Review — gating lives in lib/google-reviews.ts and GoogleReviewsSection.
+// Review: gating lives in lib/google-reviews.ts and GoogleReviewsSection.
 export function GoogleReviewCard({ review }: { review: Review }) {
   const initial =
     review.authorInitial ?? review.authorName.charAt(0).toUpperCase()

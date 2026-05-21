@@ -20,13 +20,12 @@ export function IndustryFitStrip({ slugs }: { slugs: string[] }) {
         </div>
       )}
       <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
-        Don&rsquo;t see your industry? Any local service business qualifies
-        &mdash;{' '}
+        Don&rsquo;t see your industry? Any local service business qualifies.{' '}
         <Link
           href="/contact"
           className="link-underline inline-flex items-center gap-1 text-foreground"
         >
-          get in touch
+          Get in touch
           <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
         </Link>
         .

@@ -1,12 +1,12 @@
 import type { MetadataRoute } from 'next'
 import { SITE } from '@/lib/site'
 
-// Required with `output: 'export'` in next.config.mjs — Next defaults
+// Required with `output: 'export'` in next.config.mjs: Next defaults
 // MetadataRoute handlers to dynamic; static export needs them prerendered.
 export const dynamic = 'force-static'
 
 // All static routes the site currently ships. The shape mirrors what each
-// page's `metadata.alternates.canonical` declares — so a sitemap entry
+// page's `metadata.alternates.canonical` declares: so a sitemap entry
 // always points at the canonical URL form, not a variant.
 //
 // NOTE: `/privacy` and `/terms` are intentionally OMITTED. Those routes
@@ -26,7 +26,7 @@ const ROUTES: { path: string; priority: number; changeFrequency: Freq }[] = [
   { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' },
 
-  // Service — capstone elevated to 0.9; everything else at 0.8.
+  // Service: capstone elevated to 0.9; everything else at 0.8.
   { path: '/ai-automation', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/ai-chatbots', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/ai-voicebots', priority: 0.8, changeFrequency: 'monthly' },
@@ -42,7 +42,7 @@ const ROUTES: { path: string; priority: number; changeFrequency: Freq }[] = [
   { path: '/competitor-review-benchmarking', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/all-in-one-business-growth-system', priority: 0.9, changeFrequency: 'monthly' },
 
-  // Industries — index at 0.8, hubs at 0.7
+  // Industries: index at 0.8, hubs at 0.7
   { path: '/industries', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/home-services', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/industries/contractors', priority: 0.7, changeFrequency: 'monthly' },
@@ -50,7 +50,7 @@ const ROUTES: { path: string; priority: number; changeFrequency: Freq }[] = [
   { path: '/industries/auto-services', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/industries/beauty-wellness', priority: 0.7, changeFrequency: 'monthly' },
 
-  // Utility — /privacy and /terms omitted, see note above.
+  // Utility: /privacy and /terms omitted, see note above.
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

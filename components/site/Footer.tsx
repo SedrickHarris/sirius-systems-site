@@ -3,10 +3,10 @@ import { SITE } from '@/lib/site'
 import { SERVICES } from '@/lib/services'
 import { INDUSTRIES } from '@/lib/industries'
 
-// Footer — dark canvas, var(--bg-alt) one degree warmer than the page bg
+// Footer: dark canvas, var(--bg-alt) one degree warmer than the page bg
 // so it reads as a discrete section without breaking dark continuity.
 
-// Curated, not exhaustive — see docs/seo/internal-linking-plan.md §5.
+// Curated, not exhaustive: see docs/seo/internal-linking-plan.md §5.
 const FEATURED_SERVICES = [
   'ai-automation',
   'ai-voicebots',

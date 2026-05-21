@@ -5,7 +5,7 @@ import { Header } from '@/components/site/Header'
 import { Footer } from '@/components/site/Footer'
 import { SITE } from '@/lib/site'
 
-// PLACEHOLDER fonts — Bricolage Grotesque (display) + Inter (body) stand in
+// PLACEHOLDER fonts: Bricolage Grotesque (display) + Inter (body) stand in
 // until the client confirms the real type pair (content-needed 1.8).
 // See docs/brand/brand-guide.md §4. Search "PLACEHOLDER" to find swap points.
 const display = Bricolage_Grotesque({
@@ -23,7 +23,7 @@ const body = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — ${SITE.shortTagline}`,
+    default: `${SITE.name}: ${SITE.shortTagline}`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,

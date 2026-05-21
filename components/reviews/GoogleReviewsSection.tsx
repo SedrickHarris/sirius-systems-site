@@ -77,13 +77,13 @@ function NeutralTrustFallback() {
         </h3>
         <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
           When our Google Business Profile is connected, this section fills in
-          with actual reviews &mdash; pulled live, dated, and linked to the
+          with actual reviews, pulled live, dated, and linked to the
           source. Until then it stays empty on purpose: no invented testimonials,
           no stock-photo &ldquo;clients,&rdquo; no &ldquo;representative&rdquo; quotes.
         </p>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
-          You can see the {SITE.name} Google Business Profile directly &mdash;
-          that&rsquo;s the same data this section will surface once we&rsquo;re
+          You can see the {SITE.name} Google Business Profile directly.
+          That&rsquo;s the same data this section will surface once we&rsquo;re
           cleared to publish.
         </p>
         <a
