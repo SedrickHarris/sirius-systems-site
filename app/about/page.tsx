@@ -232,7 +232,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-5 section-copy">
               <p>
-                Typically $250k&ndash;$5M in annual revenue, 1&ndash;25
+                Typically $250k to $5M in annual revenue, 1 to 25
                 employees, stretched thin on follow-up, reviews, and
                 scheduling. Technical enough to know what a CRM is, not
                 technical enough to debug an API. That&rsquo;s the right fit.

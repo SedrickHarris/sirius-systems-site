@@ -26,7 +26,7 @@ export type Review = {
   authorName: string
   /** Optional override for the avatar initial; defaults to authorName[0]. */
   authorInitial?: string
-  /** 1–5 integer rating. */
+  /** 1 to 5 integer rating. */
   rating: 1 | 2 | 3 | 4 | 5
   /** Exact review body text. Do not paraphrase. */
   text: string

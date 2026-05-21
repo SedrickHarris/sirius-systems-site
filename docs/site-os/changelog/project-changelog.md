@@ -15,6 +15,19 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — En-dash sweep (follow-up to em-dash sweep)
+
+- type: fix
+- changes: Follow-up sweep covering en-dashes (`–` U+2013 and `&ndash;`) and a stray end-of-line em-dash that the prior em-dash sweep regex missed. Brief expanded the public-facing copy rule to disallow en-dash substitutes (Rule E). All hits were number ranges or a comment dash at EOL:
+  - `lib/google-reviews.ts:29`: JSDoc `1–5 integer rating` → `1 to 5 integer rating`
+  - `lib/site.ts:10`: comment `140–160 char meta-description target` → `140 to 160 char meta-description target`
+  - `app/ai-automation/page.tsx:27`: body string `3–5 automation gaps` → `3 to 5 automation gaps`
+  - `app/ai-automation/page.tsx:78`: FAQ answer `2–4 weeks` → `2 to 4 weeks`
+  - `app/about/page.tsx:235`: body `$250k&ndash;$5M ... 1&ndash;25 employees` → `$250k to $5M ... 1 to 25 employees`
+  - `components/reviews/GoogleReviewsSection.tsx:20`: comment ending `block —` (em-dash at EOL, missed by the prior `' — '` regex which required trailing space) → `block,`
+- files: `lib/google-reviews.ts`, `lib/site.ts`, `app/ai-automation/page.tsx`, `app/about/page.tsx`, `components/reviews/GoogleReviewsSection.tsx`, `docs/site-os/changelog/project-changelog.md`
+- notes: Number ranges replaced with "to" (the English range word), which is the natural restructure for `X–Y` patterns. Brief's Rule E options (period, colon, restructure) — period/colon don't work for numeric ranges; "to" is the restructure. typecheck clean, build clean, 25 page HTMLs prerendered (27 routes counting sitemap + robots). FAQ JSON-LD Question.name strings remain byte-identical to visible H3 text (same source array). All 4 grep variants (`&mdash;`, `&ndash;`, `—`, `–`) return 0 hits across `app/`, `components/`, `lib/`. Internal `docs/` untouched per Rule F.
+
 ## 2026-05-20 — Em-dash sweep: all public-facing instances removed
 
 - type: fix

@@ -24,7 +24,7 @@ const PAGE = {
   steps: [
     {
       label: 'Map the gaps',
-      body: 'We audit your current lead flow: where leads come in, where they drop off, what happens manually. Most businesses have 3–5 automation gaps we can close in the first session.',
+      body: 'We audit your current lead flow: where leads come in, where they drop off, what happens manually. Most businesses have 3 to 5 automation gaps we can close in the first session.',
     },
     {
       label: 'Build the triggers',
@@ -75,7 +75,7 @@ const PAGE = {
     },
     {
       q: 'How long does it take to set up?',
-      a: "A basic missed-call and lead follow-up system can be live in under a week. More complex setups: full pipeline automation, multi-channel sequences, voicebot integration: take 2–4 weeks depending on what's already in place.",
+      a: "A basic missed-call and lead follow-up system can be live in under a week. More complex setups: full pipeline automation, multi-channel sequences, voicebot integration: take 2 to 4 weeks depending on what's already in place.",
     },
     {
       q: 'Will the automated messages sound like a robot?',

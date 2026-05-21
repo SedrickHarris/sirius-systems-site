@@ -7,7 +7,7 @@ export const SITE = {
   shortTagline: 'AI Automation, Smart Sites, Reputation Systems',
   // Official positioning (confirmed per docs/brand/brand-skill.md, 2026-05-20).
   // The full canonical positioning line is long; this trim fits within the
-  // 140–160 char meta-description target. The full version lives in
+  // 140 to 160 char meta-description target. The full version lives in
   // docs/brand/brand-guide.md §1 and is what gets quoted in long-form copy.
   description:
     'Sirius Systems helps local service businesses capture more leads, respond faster, automate follow-up, book more appointments, and improve reviews.',

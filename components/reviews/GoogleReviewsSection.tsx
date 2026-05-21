@@ -17,7 +17,7 @@ import { SITE } from '@/lib/site'
 //      where visual movement helps conversion (default)
 //   - `variant="grid"` for roomier, trust-heavy pages (/about, deep pages)
 //
-// If no verified reviews exist, this renders the neutral trust block —
+// If no verified reviews exist, this renders the neutral trust block,
 // which is a positive, on-brand statement about WHY there are no reviews
 // to show (we don't fake them), with a direct link to the live GBP.
 //
