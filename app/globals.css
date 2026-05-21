@@ -2,24 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════════════════════════
+   Sirius Systems — Premium AI infrastructure design system (Stage 1)
+   Foundation only. Pages aren't restructured in this stage; they
+   inherit the new look because the class names they already use
+   (.btn-primary, .card, .container-page, text-accent, etc.) and the
+   underlying Tailwind tokens have been re-pointed at the new palette.
+
+   Design ratio targeted by the system:
+     60% clean premium solid    (default body, .section-light, .section-soft)
+     20% dark gradient depth    (.section-dark/-deep/-slate/-gradient/-grid/-radial)
+     10% dashboard/system viz   (.dashboard-* + .system-* primitives)
+     10% selective glass accent (.card-glass — accent layer, not default)
+
+   Brand tokens live in :root as CSS variables AND in tailwind.config.ts
+   colors. The two are numerically aligned so a single page can mix
+   Tailwind utilities and globals.css classes without color drift.
+   ═══════════════════════════════════════════════════════════════════ */
+
 @layer base {
+  :root {
+    /* ─── Navy depth ─── */
+    --navy-midnight: #061426;
+    --navy-primary:  #0B1F3A;
+    --navy-slate:    #102B4F;
+
+    /* ─── System blues ─── */
+    --blue-system:   #0066FF;
+    --blue-light:    #1D7CFF;
+
+    /* ─── Earned accents (use sparingly) ─── */
+    --accent-teal:   #00B8A9;
+    --accent-gold:   #D6A84F;
+
+    /* ─── Surfaces ─── */
+    --bg-white:      #FFFFFF;
+    --bg-page:       #F7F9FC;
+    --border-soft:   #E5E7EB;
+    --border-strong: #9CA3AF;
+
+    /* ─── Text ─── */
+    --text-charcoal: #111827;
+    --text-body:     #4B5563;
+    --text-muted:    #6B7280;
+    --text-on-dark:  #FFFFFF;
+    --text-on-dark-soft: rgb(255 255 255 / 0.78);
+
+    /* ─── Status ─── */
+    --status-success: #22C55E;
+    --status-warning: #F59E0B;
+    --status-error:   #EF4444;
+
+    /* ─── Motion + shape ─── */
+    --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+    --radius-card:   1rem;
+    --radius-panel:  1.25rem;
+    --shadow-card:   0 1px 2px rgb(17 24 39 / 0.04), 0 14px 30px -16px rgb(17 24 39 / 0.12);
+    --shadow-lift:   0 2px 4px rgb(17 24 39 / 0.06), 0 22px 48px -24px rgb(17 24 39 / 0.22);
+  }
+
   html {
-    color-scheme: dark;
+    color-scheme: light;
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    background-color: var(--bg-page);
+    color: var(--text-charcoal);
+    @apply antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1, 'ss01' 1;
   }
-  ::selection {
-    @apply bg-primary text-primary-foreground;
-  }
-  :focus-visible {
-    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-background;
-  }
-  h1, h2, h3, h4 {
-    @apply font-display tracking-tight;
-  }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; color: var(--text-charcoal); }
+  ::selection { background-color: var(--blue-system); color: var(--text-on-dark); }
+  :focus-visible { outline: 2px solid var(--blue-system); outline-offset: 2px; }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after {
@@ -31,76 +86,495 @@
 }
 
 @layer components {
-  /* Buttons.
-   * - .btn-primary  — YELLOW. The single primary action on any viewport.
-   *                   Dark text on yellow gives the highest contrast pairing
-   *                   we have. Reserve for the one CTA per viewport per
-   *                   docs/brand/brand-guide.md §3.
-   * - .btn-secondary — BLUE. Used alongside primary when the user spec asks
-   *                    for both a yellow and blue CTA (e.g. home hero).
-   * - .btn-ghost     — transparent, surface hover. Tertiary affordances.
-   * - .btn-outline   — bordered, no fill. Used sparingly.
-   */
-  .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-fast ease-out-soft;
+  /* ─── 3. Containers & spacing ─── */
+  .site-container {
+    @apply mx-auto w-full;
+    padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+    max-width: 1400px;
+  }
+  .container-page  { @apply site-container; }   /* legacy alias */
+  .container-wide  { @apply site-container; }   /* legacy alias */
+  .container-prose { max-width: 720px; margin-inline: auto; padding-inline: 1.5rem; }
+
+  .content-narrow  { max-width: 720px;  margin-inline: auto; }
+  .content-medium  { max-width: 960px;  margin-inline: auto; }
+  .content-wide    { max-width: 1200px; margin-inline: auto; }
+
+  .section-padding-sm { padding-block: clamp(2.5rem, 5vw, 4rem); }
+  .section-padding    { padding-block: clamp(4rem, 8vw, 7rem); }
+  .section-padding-lg { padding-block: clamp(5.5rem, 11vw, 9rem); }
+
+  /* ─── 2. Section backgrounds ─── */
+  .section-light  { background-color: var(--bg-white); color: var(--text-charcoal); }
+  .section-soft   { background-color: var(--bg-page);  color: var(--text-charcoal); }
+  .section-dark   { background-color: var(--navy-primary);  color: var(--text-on-dark); }
+  .section-deep   { background-color: var(--navy-midnight); color: var(--text-on-dark); }
+  .section-slate  { background-color: var(--navy-slate);    color: var(--text-on-dark); }
+
+  .section-gradient {
+    background: linear-gradient(180deg, var(--navy-primary) 0%, var(--navy-midnight) 100%);
+    color: var(--text-on-dark);
+  }
+  .section-gradient-blue {
+    background: linear-gradient(135deg, var(--navy-primary) 0%, var(--blue-system) 100%);
+    color: var(--text-on-dark);
+  }
+  .section-grid {
+    background-color: var(--navy-midnight);
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+    color: var(--text-on-dark);
+  }
+  .section-radial {
+    background:
+      radial-gradient(ellipse at top, rgb(0 102 255 / 0.18) 0%, transparent 55%),
+      var(--navy-midnight);
+    color: var(--text-on-dark);
+  }
+
+  /* Dark-section descendant text fixes ----------------------- */
+  .section-dark, .section-deep, .section-slate,
+  .section-gradient, .section-gradient-blue,
+  .section-grid, .section-radial {
+    & h1, & h2, & h3, & h4 { color: var(--text-on-dark); }
+  }
+
+  /* ─── 4. Typography helpers ─── */
+  .section-eyebrow {
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--blue-system);
+    font-weight: 600;
+  }
+  .section-heading {
+    font-size: clamp(1.875rem, 3.6vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  .section-copy {
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.65;
+    color: var(--text-body);
+    text-wrap: pretty;
+  }
+  .hero-heading {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  .hero-copy {
+    font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--text-body);
+    max-width: 56ch;
+  }
+  .card-title {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .card-copy {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text-body);
+  }
+
+  /* Dark-section copy treatments -------------------------- */
+  .section-dark .section-copy, .section-deep .section-copy, .section-slate .section-copy,
+  .section-gradient .section-copy, .section-gradient-blue .section-copy,
+  .section-grid .section-copy, .section-radial .section-copy,
+  .section-dark .hero-copy, .section-deep .hero-copy, .section-slate .hero-copy,
+  .section-gradient .hero-copy, .section-gradient-blue .hero-copy,
+  .section-grid .hero-copy, .section-radial .hero-copy,
+  .section-dark .card-copy, .section-deep .card-copy, .section-slate .card-copy,
+  .section-gradient .card-copy, .section-gradient-blue .card-copy,
+  .section-grid .card-copy, .section-radial .card-copy {
+    color: var(--text-on-dark-soft);
+  }
+
+  /* ─── 5. Buttons ─── */
+  .btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 150ms var(--ease-out-soft),
+                color           150ms var(--ease-out-soft),
+                border-color    150ms var(--ease-out-soft),
+                transform       150ms var(--ease-out-soft),
+                box-shadow      150ms var(--ease-out-soft);
+    white-space: nowrap;
+    border: 1px solid transparent;
   }
   .btn-primary {
-    @apply btn bg-primary text-primary-foreground hover:bg-primary-hover;
+    @apply btn-base;
+    background-color: var(--blue-system);
+    color: var(--text-on-dark);
+    box-shadow: 0 1px 0 rgb(0 0 0 / 0.04), 0 8px 24px -8px rgb(0 102 255 / 0.45);
   }
-  .btn-secondary {
-    @apply btn bg-secondary text-secondary-foreground hover:bg-secondary-hover;
+  .btn-primary:hover { background-color: var(--blue-light); }
+  .btn-primary:focus-visible { outline-offset: 3px; }
+
+  .btn-secondary-dark {
+    @apply btn-base;
+    background-color: var(--navy-primary);
+    color: var(--text-on-dark);
   }
+  .btn-secondary-dark:hover { background-color: var(--navy-slate); }
+
+  .btn-secondary-light {
+    @apply btn-base;
+    background-color: var(--bg-white);
+    color: var(--text-charcoal);
+    border-color: var(--border-soft);
+  }
+  .btn-secondary-light:hover {
+    border-color: var(--text-charcoal);
+    box-shadow: 0 1px 0 rgb(17 24 39 / 0.06);
+  }
+
+  /* Legacy `.btn-secondary` alias — same surface as -dark */
+  .btn-secondary { @apply btn-secondary-dark; }
+
   .btn-ghost {
-    @apply btn text-foreground hover:bg-surface;
+    @apply btn-base;
+    color: var(--text-charcoal);
+    background-color: transparent;
   }
-  .btn-outline {
-    @apply btn border border-border-strong text-foreground hover:border-foreground/50;
+  .btn-ghost:hover { background-color: var(--border-soft); }
+
+  /* On dark sections, .btn-ghost flips foreground & hover surface */
+  .section-dark .btn-ghost, .section-deep .btn-ghost, .section-slate .btn-ghost,
+  .section-gradient .btn-ghost, .section-gradient-blue .btn-ghost,
+  .section-grid .btn-ghost, .section-radial .btn-ghost {
+    color: var(--text-on-dark);
   }
+  .section-dark .btn-ghost:hover, .section-deep .btn-ghost:hover, .section-slate .btn-ghost:hover,
+  .section-gradient .btn-ghost:hover, .section-gradient-blue .btn-ghost:hover,
+  .section-grid .btn-ghost:hover, .section-radial .btn-ghost:hover {
+    background-color: rgb(255 255 255 / 0.08);
+  }
+
+  /* Legacy `.btn-outline` alias */
+  .btn-outline { @apply btn-secondary-light; }
+
+  .btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--blue-system);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: border-color 150ms var(--ease-out-soft), color 150ms var(--ease-out-soft);
+  }
+  .btn-link:hover { border-bottom-color: var(--blue-system); }
+
+  /* ─── 6. Cards ─── */
+  .card-base {
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    transition: transform   200ms var(--ease-out-soft),
+                box-shadow  200ms var(--ease-out-soft),
+                border-color 200ms var(--ease-out-soft);
+  }
+  .card-solid {
+    @apply card-base;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-soft);
+    color: var(--text-charcoal);
+    box-shadow: 0 1px 0 rgb(17 24 39 / 0.04);
+  }
+  .card-premium {
+    @apply card-base;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-soft);
+    color: var(--text-charcoal);
+    box-shadow: var(--shadow-card);
+  }
+  .card-feature {
+    @apply card-base;
+    padding: 2rem;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-soft);
+    color: var(--text-charcoal);
+    box-shadow: 0 1px 2px rgb(17 24 39 / 0.04), 0 18px 44px -22px rgb(17 24 39 / 0.18);
+  }
+  .card-subtle {
+    @apply card-base;
+    background-color: var(--bg-page);
+    border: 1px solid var(--border-soft);
+    color: var(--text-charcoal);
+  }
+  .card-dark {
+    @apply card-base;
+    background-color: var(--navy-primary);
+    border: 1px solid rgb(255 255 255 / 0.06);
+    color: var(--text-on-dark);
+  }
+  .card-glass {
+    @apply card-base;
+    background-color: rgb(255 255 255 / 0.05);
+    border: 1px solid rgb(255 255 255 / 0.10);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: var(--text-on-dark);
+  }
+
+  /* Legacy `.card` alias → resolves to .card-solid so existing pages
+     keep rendering. Stage 2 should migrate explicit usages to the
+     specific variant they need (.card-premium / .card-feature / etc).
+  */
+  .card        { @apply card-solid; }
+  .card-hover  { @apply hover-lift; }
+
+  /* ─── 7. Badges / pills ─── */
+  .badge-base {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+  .badge-premium {
+    @apply badge-base;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-soft);
+    color: var(--text-charcoal);
+  }
+  .badge-blue {
+    @apply badge-base;
+    background-color: rgb(0 102 255 / 0.10);
+    color: var(--blue-system);
+  }
+  .badge-gold {
+    @apply badge-base;
+    background-color: rgb(214 168 79 / 0.14);
+    color: var(--accent-gold);
+  }
+  .badge-dark {
+    @apply badge-base;
+    background-color: var(--navy-primary);
+    color: var(--text-on-dark);
+  }
+  .workflow-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    border-radius: 9999px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-soft);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    color: var(--text-charcoal);
+  }
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 9999px;
+    background-color: rgb(0 184 169 / 0.12);
+    color: var(--accent-teal);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .status-pill::before {
+    content: '';
+    width: 0.4375rem;
+    height: 0.4375rem;
+    border-radius: 9999px;
+    background-color: var(--accent-teal);
+  }
+
+  /* ─── 8. CTA panels ─── */
+  .cta-panel-inner {
+    padding: clamp(2.25rem, 5vw, 4rem);
+    border-radius: var(--radius-panel);
+  }
+  .cta-deep {
+    @apply cta-panel-inner;
+    background: linear-gradient(160deg, var(--navy-primary) 0%, var(--navy-midnight) 100%);
+    color: var(--text-on-dark);
+  }
+  .cta-blue {
+    @apply cta-panel-inner;
+    background: linear-gradient(135deg, var(--blue-system) 0%, var(--blue-light) 100%);
+    color: var(--text-on-dark);
+  }
+  .cta-light {
+    @apply cta-panel-inner;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-soft);
+    color: var(--text-charcoal);
+  }
+
+  /* ─── 9. Dashboard / system visuals ─── */
+  .dashboard-panel {
+    border-radius: 0.875rem;
+    background-color: rgb(255 255 255 / 0.04);
+    border: 1px solid rgb(255 255 255 / 0.10);
+    padding: 1rem 1.125rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  /* Light surface variant — drops the blur, uses solid surface */
+  .section-light .dashboard-panel, .section-soft .dashboard-panel {
+    background-color: var(--bg-white);
+    border-color: var(--border-soft);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: var(--shadow-card);
+  }
+  .dashboard-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding-block: 0.5rem;
+    border-bottom: 1px solid rgb(255 255 255 / 0.08);
+    font-size: 0.8125rem;
+  }
+  .dashboard-row:last-child { border-bottom: 0; }
+  .section-light .dashboard-row, .section-soft .dashboard-row {
+    border-bottom-color: var(--border-soft);
+  }
+  .dashboard-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--accent-teal);
+    flex-shrink: 0;
+  }
+  .dashboard-label {
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgb(255 255 255 / 0.55);
+  }
+  .section-light .dashboard-label, .section-soft .dashboard-label {
+    color: var(--text-body);
+  }
+  .dashboard-value {
+    font-weight: 600;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  .system-flow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .system-flow-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue-system), transparent);
+  }
+  .system-node {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-soft);
+    color: var(--text-charcoal);
+    box-shadow: 0 1px 0 rgb(17 24 39 / 0.04);
+    flex-shrink: 0;
+  }
+  .section-dark .system-node, .section-deep .system-node, .section-slate .system-node,
+  .section-gradient .system-node, .section-gradient-blue .system-node,
+  .section-grid .system-node, .section-radial .system-node {
+    background-color: var(--navy-slate);
+    border-color: rgb(255 255 255 / 0.12);
+    color: var(--text-on-dark);
+  }
+
+  /* ─── 10. Hover / focus / motion ─── */
+  .hover-lift  { transition: transform 200ms var(--ease-out-soft), box-shadow 200ms var(--ease-out-soft); }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+  .hover-glow  { transition: box-shadow 200ms var(--ease-out-soft); }
+  .hover-glow:hover {
+    box-shadow: 0 0 0 1px rgb(0 102 255 / 0.30), 0 14px 32px -10px rgb(0 102 255 / 0.30);
+  }
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--blue-system);
+    outline-offset: 2px;
+  }
+  .transition-premium {
+    transition: background-color 200ms var(--ease-out-soft),
+                color           200ms var(--ease-out-soft),
+                border-color    200ms var(--ease-out-soft),
+                transform       200ms var(--ease-out-soft),
+                box-shadow      200ms var(--ease-out-soft),
+                opacity         200ms var(--ease-out-soft);
+  }
+
+  /* ─── Legacy utility holdovers — kept for backward compat ───
+     Existing components reference these. They remain functional
+     here so the site keeps rendering through Stage 2 migration.
+  */
   .link-underline {
-    @apply underline decoration-1 underline-offset-4 decoration-border-strong transition-colors duration-fast ease-out-soft hover:decoration-foreground;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--border-strong);
+    transition: text-decoration-color 150ms var(--ease-out-soft);
   }
-  .card {
-    @apply rounded-2xl border border-border bg-surface/60 backdrop-blur-sm;
-  }
-  .card-hover {
-    @apply transition-colors duration-base ease-out-soft hover:border-border-strong hover:bg-surface;
-  }
-  /* Neutral inline-code badge. Replaces previous `bg-secondary` usage —
-   * with blue now reserved for accents, code badges stay neutral.
-   */
+  .link-underline:hover { text-decoration-color: var(--text-charcoal); }
   .code-badge {
-    @apply rounded bg-surface-2 px-1.5 py-0.5 font-mono text-[0.85em] text-foreground/90;
+    display: inline;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+    background-color: var(--bg-page);
+    border: 1px solid var(--border-soft);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    color: var(--text-charcoal);
   }
 }
 
 @layer utilities {
-  .container-prose {
-    @apply mx-auto max-w-3xl px-6;
-  }
-  .container-page {
-    @apply mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-10;
-  }
-  .container-wide {
-    @apply mx-auto w-full max-w-[1400px] px-6 md:px-8 lg:px-10;
-  }
   .text-balance { text-wrap: balance; }
-  .text-pretty { text-wrap: pretty; }
+  .text-pretty  { text-wrap: pretty; }
 
-  /* Atmospheric layers.
-   *
-   * Glows are BLUE (#1468FF) — the supporting accent color. Yellow is
-   * reserved for action surfaces and is NEVER used as an atmospheric tint.
-   * Always pair with overflow-hidden on the parent.
-   */
+  /* Atmospheric utilities retained for components that still use them.
+     The hex stays blue-system rather than the old cyan. */
   .glow-accent {
-    background: radial-gradient(circle at 70% 30%, rgb(20 104 255 / 0.12), transparent 50%);
+    background: radial-gradient(circle at 70% 30%, rgb(0 102 255 / 0.10), transparent 50%);
   }
   .glow-accent-soft {
-    background: radial-gradient(circle at 50% 0%, rgb(20 104 255 / 0.07), transparent 60%);
+    background: radial-gradient(circle at 50% 0%, rgb(0 102 255 / 0.06), transparent 60%);
   }
-
-  /* Subtle grain texture — CSS-only, no asset request. */
   .bg-noise {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 }

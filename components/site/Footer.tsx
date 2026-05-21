@@ -3,6 +3,9 @@ import { SITE } from '@/lib/site'
 import { SERVICES } from '@/lib/services'
 import { INDUSTRIES } from '@/lib/industries'
 
+// Dark navy footer — site-wide visual punctuation regardless of which
+// section background closed the page. Inherits section-deep typography.
+
 // Curated, not exhaustive — see docs/seo/internal-linking-plan.md §5.
 const FEATURED_SERVICES = [
   'ai-automation',
@@ -19,42 +22,42 @@ export function Footer() {
   ).filter(Boolean) as typeof SERVICES
 
   return (
-    <footer className="relative mt-20 border-t border-border bg-background">
-      <div className="absolute inset-0 -z-10 bg-grid-faint bg-grid-48 opacity-30" />
-      <div className="container-page py-16">
+    <footer className="section-deep border-t border-[color:var(--border-soft)]/10">
+      <div className="site-container py-16">
         <div className="grid gap-12 md:grid-cols-12">
+
           {/* Brand column */}
           <div className="md:col-span-4">
-            <p className="font-display text-xl tracking-tight text-foreground">
+            <p className="font-display text-xl font-semibold tracking-tight text-white">
               {SITE.name}
             </p>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">
               {SITE.description}
             </p>
             <div className="mt-6 flex flex-wrap gap-3 text-xs">
               <a
                 href={SITE.social.facebook}
-                className="text-muted hover:text-foreground"
                 target="_blank"
                 rel="noreferrer"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Facebook
               </a>
-              <span aria-hidden className="text-border-strong">·</span>
+              <span aria-hidden className="text-white/25">·</span>
               <a
                 href={SITE.social.gbp}
-                className="text-muted hover:text-foreground"
                 target="_blank"
                 rel="noreferrer"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 Google Business
               </a>
-              <span aria-hidden className="text-border-strong">·</span>
+              <span aria-hidden className="text-white/25">·</span>
               <a
                 href={SITE.social.github}
-                className="text-muted hover:text-foreground"
                 target="_blank"
                 rel="noreferrer"
+                className="text-white/65 transition-colors hover:text-white"
               >
                 GitHub
               </a>
@@ -63,7 +66,7 @@ export function Footer() {
 
           {/* Services column */}
           <div className="md:col-span-3">
-            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-muted">
+            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-white/55">
               Services
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -71,7 +74,7 @@ export function Footer() {
                 <li key={s.slug}>
                   <Link
                     href={`/${s.slug}`}
-                    className="text-foreground/85 hover:text-foreground"
+                    className="text-white/80 transition-colors hover:text-white"
                   >
                     {s.name}
                   </Link>
@@ -80,9 +83,9 @@ export function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-muted hover:text-foreground"
+                  className="text-white/55 transition-colors hover:text-white"
                 >
-                  See all 14 →
+                  See all 14 &rarr;
                 </Link>
               </li>
             </ul>
@@ -90,7 +93,7 @@ export function Footer() {
 
           {/* Industries column */}
           <div className="md:col-span-3">
-            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-muted">
+            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-white/55">
               Industries
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -98,7 +101,7 @@ export function Footer() {
                 <li key={i.slug}>
                   <Link
                     href={`/industries/${i.slug}`}
-                    className="text-foreground/85 hover:text-foreground"
+                    className="text-white/80 transition-colors hover:text-white"
                   >
                     {i.name}
                   </Link>
@@ -109,32 +112,27 @@ export function Footer() {
 
           {/* Company column */}
           <div className="md:col-span-2">
-            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-muted">
+            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-white/55">
               Company
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
-                <Link href="/about" className="text-foreground/85 hover:text-foreground">
+                <Link href="/about" className="text-white/80 transition-colors hover:text-white">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-foreground/85 hover:text-foreground">
+                <Link href="/contact" className="text-white/80 transition-colors hover:text-white">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-foreground/85 hover:text-foreground">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-muted hover:text-foreground">
+                <Link href="/privacy" className="text-white/55 transition-colors hover:text-white">
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-muted hover:text-foreground">
+                <Link href="/terms" className="text-white/55 transition-colors hover:text-white">
                   Terms
                 </Link>
               </li>
@@ -142,17 +140,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-border pt-8 text-xs text-muted md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/55 md:flex-row md:items-center md:justify-between">
           <p>
             &copy; {year} {SITE.name}.{' '}
-            <span className="text-muted/70">
+            <span className="text-white/40">
               {/* TODO: replace with confirmed legal business name (content-needed 1.4) */}
               Legal name pending confirmation.
             </span>
           </p>
-          <p className="text-muted/70">
-            Built by Sedrick Harris.
-          </p>
+          <p className="text-white/40">Built by Sedrick Harris.</p>
         </div>
       </div>
     </footer>
