@@ -53,7 +53,7 @@ Categories shown on `/blog` filter UI (and used as `category` field in MDX front
 
 Tags are secondary, lightweight, and used for related-post suggestions. Aim for 2–5 tags per post. Suggested baseline:
 
-- `home-services`, `cleaning`, `junk-removal`, `real-estate`, `contractors`, `coaches`
+- `home-services`, `contractors`, `professional-services`, `auto-services`, `beauty-wellness`
 - `ai`, `chatbot`, `voicebot`, `crm`, `booking`, `lead-gen`, `smart-website`
 - `reviews`, `reputation`, `competitor-benchmarking`, `gbp`, `local-seo`, `aeo`, `schema`
 - `playbook`, `checklist`, `how-to`, `case-study`, `opinion`
@@ -143,3 +143,4 @@ Each pillar post → social posts (LinkedIn / IG), an email summary, and potenti
 | Date | Change |
 |------|--------|
 | 2026-05-20 | Initial blog strategy — categories, tags, post types, launch cohort, cadence. |
+| 2026-05-20 | Industry-tag taxonomy aligned with the 5 confirmed industry hubs. Deprecated tags (`cleaning`, `junk-removal`, `real-estate`, `coaches`) removed; replaced with the slug-aligned set. Posts targeting a former vertical now tag the new hub (e.g., a cleaning-business post tags `home-services`). |

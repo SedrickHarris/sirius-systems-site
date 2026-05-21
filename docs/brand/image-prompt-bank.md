@@ -124,29 +124,24 @@ Subject: two side-by-side constellation clusters of unequal size, with a thin co
 Subject: a stylized roofline silhouette constructed entirely of constellation lines, with one bright node at the doorway. No literal house or tools.
 ```
 
-### `/industries/cleaning-companies`
-```
-Subject: a clean, perfectly geometric circle with subtle radial lines — abstract reference to "spotless" without being literal.
-```
-
-### `/industries/junk-removal`
-```
-Subject: a tight constellation cluster on the left "removed" to reveal clear negative space on the right. Compositional movement left-to-right.
-```
-
-### `/industries/real-estate`
-```
-Subject: a stylized open-door arch rendered in constellation lines, light coming through. Abstract, no key or sign.
-```
-
 ### `/industries/contractors`
 ```
 Subject: a precise blueprint-style grid with one node highlighted, suggesting precision and planning. No literal tools.
 ```
 
-### `/industries/coaches-consultants`
+### `/industries/professional-services`
 ```
-Subject: a small central node with three thin orbital lines around it — sense of guided motion. Confident, restrained.
+Subject: a clean horizontal bar of constellation lines anchored by a single bright node — abstract reference to a signature, a deliberate line of work, a confident decision. No literal briefcases, pens, or scales.
+```
+
+### `/industries/auto-services`
+```
+Subject: an abstract circular composition — concentric arcs of constellation lines orbiting a single bright center node. Suggests rotation and motion without rendering a literal wheel or rotor.
+```
+
+### `/industries/beauty-wellness`
+```
+Subject: a calm radial composition — soft concentric rings of constellation light radiating outward from a single bright center node. Restrained and balanced. No literal mirrors, scissors, or wellness icons.
 ```
 
 ## 5. Blog featured-image template
@@ -219,3 +214,4 @@ For every generated image:
 | Date | Change |
 |------|--------|
 | 2026-05-20 | Initial prompt bank — style baseline, hero prompts for every Phase 1 page, blog image template, OG default. |
+| 2026-05-20 | Industry hero prompts rewritten for the 5 confirmed hubs. Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` prompts removed. New prompts added for `professional-services`, `auto-services`, `beauty-wellness`. Note: §1 style baseline still references the deprecated yellow/blue palette — separate doc-sweep task to align with the current light + system-blue + navy brand. |

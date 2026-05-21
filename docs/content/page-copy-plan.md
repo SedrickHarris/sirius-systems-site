@@ -39,7 +39,7 @@ Structural templates for every Phase 1 page. These are the **outline shapes** co
    - Each card: name + 1-line description + link
 
 5. **Industries** (compact row)
-   - 6 industry chips → link to `/industries/<slug>`
+   - 5 industry chips → link to `/industries/<slug>`
 
 6. **Process** (3 steps)
    - Step 1: Audit — what's leaking
@@ -98,7 +98,7 @@ Structural templates for every Phase 1 page. These are the **outline shapes** co
 ### Form fields (Phase 1)
 - Name (required)
 - Business name (required)
-- Industry (select — the 6 industries + "Other")
+- Industry (select — the 5 industry hubs + "Other")
 - Email (required)
 - Phone (optional)
 - Biggest current bottleneck (textarea, optional)
@@ -144,7 +144,7 @@ Every service page follows the same shape so they read consistently and so the b
 - No invented client examples
 - "How it works" must describe a real mechanism (if unsure, omit specifics)
 
-## 7. Industry page template (×6)
+## 7. Industry page template (×5)
 
 1. **Hero**
    - Headline: industry-specific ("Automation that fits a home-services business")
@@ -168,7 +168,7 @@ Every service page follows the same shape so they read consistently and so the b
 ## 8. Industries index `/industries`
 
 1. **Hero** — one sentence + supporting line
-2. **Industry cards** — all 6, brief description each, link to industry page
+2. **Industry cards** — all 5, brief description each, link to industry page
 3. **Note** — "Don't see your industry? We work with any local service business — get in touch."
 4. **CTA**
 
@@ -220,3 +220,4 @@ Before any page ships, run it against `docs/site-os/inputs/do-not-invent-rules.m
 | Date | Change |
 |------|--------|
 | 2026-05-20 | Initial templates — Home, About, Services, Contact, service template, industry template, capstone, blog index, utility. |
+| 2026-05-20 | Industry taxonomy collapsed from 6 to 5 hubs — "×6" / "all 6" / "6 industry chips" / "6 industries" updated. |

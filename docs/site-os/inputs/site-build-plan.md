@@ -13,7 +13,7 @@ The master plan that drives the build. Everything else in `/docs` either feeds i
 
 ## 2. Target audience
 
-Primary: **owner-operators of local service businesses** in the six confirmed industries (home services, cleaning, junk removal, real estate, contractors, coaches and consultants). Typically:
+Primary: **owner-operators of local service businesses** in the five confirmed industry hubs (home services, contractors, professional services, auto services, beauty and wellness). Typically:
 
 - $250k–$5M annual revenue
 - 1–25 employees
@@ -72,14 +72,13 @@ Secondary: **agency partners** who might whitelabel or refer (not the primary au
 - `/competitor-review-benchmarking`
 - `/all-in-one-business-growth-system`
 
-### Industry (7)
+### Industry (6)
 - `/industries`
 - `/industries/home-services`
-- `/industries/cleaning-companies`
-- `/industries/junk-removal`
-- `/industries/real-estate`
 - `/industries/contractors`
-- `/industries/coaches-consultants`
+- `/industries/professional-services`
+- `/industries/auto-services`
+- `/industries/beauty-wellness`
 
 ### Blog (system)
 - `/blog`
@@ -89,7 +88,7 @@ Secondary: **agency partners** who might whitelabel or refer (not the primary au
 - `/privacy`
 - `/terms`
 
-**Total Phase 1 pages:** 4 + 14 + 7 + (blog index + N posts) + 2 = **~27 static routes + blog posts**
+**Total Phase 1 pages:** 4 + 14 + 6 + (blog index + N posts) + 2 = **~26 static routes + blog posts**
 
 ## 5. Phase plan
 
@@ -115,7 +114,7 @@ Secondary: **agency partners** who might whitelabel or refer (not the primary au
 - Schema.org `Service` JSON-LD on each
 
 ### Phase 4 — Industry pages
-- 1 index + 6 industry pages
+- 1 index + 5 industry hub pages
 - Each maps which services apply, with internal links
 
 ### Phase 5 — Blog system
@@ -181,3 +180,4 @@ content/blog-publishing-checklist.md ─► every post before publish
 | Date | Change |
 |------|--------|
 | 2026-05-20 | Initial plan: phase 0–7, page list locked, URL slugs aligned with brief, scope boundaries set. |
+| 2026-05-20 | Industry taxonomy confirmed: 5 hubs (`home-services`, `contractors`, `professional-services`, `auto-services`, `beauty-wellness`). Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` — folded into `home-services` and `professional-services`. Total Phase 1 page count drops by 1. |

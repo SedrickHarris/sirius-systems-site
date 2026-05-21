@@ -12,7 +12,7 @@ Rules and maps for how pages link to each other. Internal linking is how we tell
 4. **Every blog post links to at least 2 service or industry pages** (the cluster hub + one related).
 5. **Every service page links to the capstone** (`/all-in-one-business-growth-system`).
 6. **The capstone page links back to all three pillar hubs** (`/ai-automation`, `/reputation-management`, `/local-seo-aeo`).
-7. **`/services` links to all 14 service pages.** `/industries` links to all 6 industry pages.
+7. **`/services` links to all 14 service pages.** `/industries` links to all 5 industry hub pages.
 8. **Anchor text is descriptive**, not "click here" / "learn more". Use the destination's keyword phrase or a clean variant.
 9. **Footer has a single curated set of links** — not the full page list. The footer is not the sitemap.
 10. **No more than ~10 in-body internal links per page**, to avoid link dilution.
@@ -130,35 +130,11 @@ For each service page, the recommended internal links (in priority order):
 For each industry page, the most relevant services (in priority order). These are the service links each industry page should include.
 
 ### `/industries/home-services`
-1. `/ai-voicebots` (missed-call recovery is huge for home services)
+1. `/ai-voicebots` (missed-call recovery is huge for home services, cleaning, junk removal)
 2. `/appointment-booking-automation`
 3. `/review-automation`
 4. `/lead-generation-automation`
 5. `/google-business-profile-optimization`
-6. `/all-in-one-business-growth-system`
-
-### `/industries/cleaning-companies`
-1. `/appointment-booking-automation`
-2. `/crm-automation` (recurring contracts)
-3. `/review-automation`
-4. `/ai-chatbots`
-5. `/smart-websites`
-6. `/all-in-one-business-growth-system`
-
-### `/industries/junk-removal`
-1. `/ai-voicebots` (same-day inbound)
-2. `/lead-generation-automation`
-3. `/appointment-booking-automation`
-4. `/review-automation`
-5. `/google-business-profile-optimization`
-6. `/all-in-one-business-growth-system`
-
-### `/industries/real-estate`
-1. `/ai-chatbots`
-2. `/crm-automation`
-3. `/lead-generation-automation`
-4. `/smart-websites`
-5. `/review-automation`
 6. `/all-in-one-business-growth-system`
 
 ### `/industries/contractors`
@@ -169,11 +145,27 @@ For each industry page, the most relevant services (in priority order). These ar
 5. `/google-business-profile-optimization`
 6. `/all-in-one-business-growth-system`
 
-### `/industries/coaches-consultants`
-1. `/ai-chatbots`
+### `/industries/professional-services`
+1. `/ai-chatbots` (consultation triage for legal, real estate, coaching)
+2. `/crm-automation`
+3. `/lead-generation-automation`
+4. `/appointment-booking-automation`
+5. `/smart-websites`
+6. `/all-in-one-business-growth-system`
+
+### `/industries/auto-services`
+1. `/ai-voicebots` (shop phones run constantly)
 2. `/appointment-booking-automation`
-3. `/crm-automation`
+3. `/review-automation`
 4. `/lead-generation-automation`
+5. `/google-business-profile-optimization`
+6. `/all-in-one-business-growth-system`
+
+### `/industries/beauty-wellness`
+1. `/appointment-booking-automation` (rebooking + no-show reduction)
+2. `/ai-chatbots`
+3. `/crm-automation`
+4. `/review-automation`
 5. `/smart-websites`
 6. `/all-in-one-business-growth-system`
 
@@ -196,7 +188,7 @@ Anchor text rules:
 Footer should NOT mirror the full sitemap. Curate:
 
 - **Services column** — 5 of the 14, rotated/chosen for highest-converting (TBD after launch data)
-- **Industries column** — all 6 (it's a short list)
+- **Industries column** — all 5 (it's a short list)
 - **Resources column** — `/blog`, top 2–3 cornerstone posts
 - **Company column** — `/about`, `/contact`, `/privacy`, `/terms`
 - **Social row** — Facebook, GBP (only verified surfaces)
@@ -225,3 +217,4 @@ Footer should NOT mirror the full sitemap. Curate:
 | Date | Change |
 |------|--------|
 | 2026-05-20 | Initial linking maps for all 14 services + 6 industries + capstone + blog cluster rules. |
+| 2026-05-20 | Industry-to-service maps rewritten for the 5 confirmed hubs. Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` removed; their service-relevance folded into `home-services` and `professional-services`. |

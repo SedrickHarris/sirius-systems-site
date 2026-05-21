@@ -100,31 +100,27 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/industries`
 - **Title:** `Industries We Serve | Sirius Systems`
-- **Description:** `Sirius Systems builds AI automation and reputation systems for home services, cleaning, junk removal, real estate, contractors, coaches & consultants.`
+- **Description:** `Sirius Systems builds AI automation, booking systems, and reputation management for home services, contractors, professional services, auto services, and beauty and wellness businesses.`
 
 ### `/industries/home-services`
 - **Title:** `Home Services Marketing & Automation | Sirius Systems`
-- **Description:** `AI automation, smart websites, and reputation systems built for home service businesses — capture more leads, book more jobs, earn more reviews.`
-
-### `/industries/cleaning-companies`
-- **Title:** `Cleaning Company Marketing & Automation | Sirius Systems`
-- **Description:** `Cleaning companies use Sirius Systems for AI booking, review automation, and a smart website that turns inquiries into recurring contracts.`
-
-### `/industries/junk-removal`
-- **Title:** `Junk Removal Marketing & Automation | Sirius Systems`
-- **Description:** `Junk removal businesses use Sirius Systems to capture same-day leads, route the right crew, and earn reviews after every haul.`
-
-### `/industries/real-estate`
-- **Title:** `Real Estate Marketing & Automation | Sirius Systems`
-- **Description:** `AI automation and reputation systems for real estate professionals — lead capture, follow-up, and a smart site that books showings without manual chase.`
+- **Description:** `AI automation, smart websites, and reputation systems built for home service trades — plumbing, HVAC, electrical, cleaning, junk removal, roofing, and more.`
 
 ### `/industries/contractors`
 - **Title:** `Contractor Marketing & Automation | Sirius Systems`
 - **Description:** `Contractors use Sirius Systems for AI lead capture, automated quoting follow-up, and review systems that build trust faster than any ad.`
 
-### `/industries/coaches-consultants`
-- **Title:** `Coach & Consultant Marketing Automation | Sirius Systems`
-- **Description:** `AI automation, smart websites, and reputation systems for coaches and consultants — book qualified discovery calls without manual outreach.`
+### `/industries/professional-services`
+- **Title:** `Professional Services Automation | Sirius Systems`
+- **Description:** `AI automation, smart sites, and reputation systems for real estate, legal, accounting, coaching, consulting, and medical practices — capture and qualify leads automatically.`
+
+### `/industries/auto-services`
+- **Title:** `Auto Services Marketing & Automation | Sirius Systems`
+- **Description:** `AI voicebots, appointment booking, and reputation systems for auto repair shops, body shops, detailing, and tire shops — capture more calls, book more service.`
+
+### `/industries/beauty-wellness`
+- **Title:** `Beauty & Wellness Automation & Booking | Sirius Systems`
+- **Description:** `Appointment booking, rebooking flows, review systems, and AI chatbots for salons, spas, fitness studios, and other beauty and wellness businesses.`
 
 ---
 
@@ -169,3 +165,4 @@ OG image generation strategy lives in `docs/brand/image-prompt-bank.md`.
 | Date | Change |
 |------|--------|
 | 2026-05-20 | Initial drafts for all Phase 1 pages. Refine in QA pass after final positioning line is confirmed. |
+| 2026-05-20 | Industry metadata rewritten for the 5 confirmed hubs. Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` removed. New title/description drafts added for `professional-services`, `auto-services`, `beauty-wellness`. |

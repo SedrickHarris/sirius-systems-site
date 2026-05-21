@@ -65,14 +65,13 @@ Every page in `site-build-plan.md` Phase 1 ships:
 - [ ] `/competitor-review-benchmarking`
 - [ ] `/all-in-one-business-growth-system`
 
-### Industries (7)
+### Industries (6)
 - [ ] `/industries`
 - [ ] `/industries/home-services`
-- [ ] `/industries/cleaning-companies`
-- [ ] `/industries/junk-removal`
-- [ ] `/industries/real-estate`
 - [ ] `/industries/contractors`
-- [ ] `/industries/coaches-consultants`
+- [ ] `/industries/professional-services`
+- [ ] `/industries/auto-services`
+- [ ] `/industries/beauty-wellness`
 
 ### Blog
 - [ ] `/blog`
@@ -129,7 +128,7 @@ Per `docs/seo/internal-linking-plan.md`:
 - [ ] Every industry page links to its mapped service set
 - [ ] Every blog post links to at least 2 relevant service or industry pages
 - [ ] `/services` links to all 14 service pages
-- [ ] `/industries` links to all 6 industry pages
+- [ ] `/industries` links to all 5 industry hub pages
 - [ ] No broken internal links (run a crawl)
 
 ## 8. Performance

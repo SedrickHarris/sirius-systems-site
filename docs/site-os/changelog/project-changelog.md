@@ -15,6 +15,13 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Industry taxonomy confirmed and docs updated
+
+- type: docs
+- changes: Updated planning docs to reflect the approved industry taxonomy change — from the original 7 industry slugs (`home-services`, `cleaning-companies`, `junk-removal`, `real-estate`, `contractors`, `coaches-consultants`, plus index) to the 5 deployed hubs (`home-services`, `contractors`, `professional-services`, `auto-services`, `beauty-wellness`, plus index). The 4 deprecated slugs never went live so no 301 redirects are required. Deprecated slugs documented in `url-strategy.md` so future readers know what was removed and where each former vertical maps now. Per the brief's "no references in any doc file" gate, the sweep extended beyond the 3 explicitly-named files to the other forward-looking specs that still carried deprecated slugs (`internal-linking-plan.md`, `metadata-draft.md`, `image-prompt-bank.md`, `blog-strategy.md`, `prelaunch-checklist.md`). Historical entries in this changelog were left untouched — they document what was true at the time. No code changes; build and typecheck still pass clean.
+- files: `docs/seo/url-strategy.md`, `docs/content/page-copy-plan.md`, `docs/site-os/inputs/site-build-plan.md`, `docs/seo/internal-linking-plan.md`, `docs/seo/metadata-draft.md`, `docs/brand/image-prompt-bank.md`, `docs/seo/blog-strategy.md`, `docs/site-os/qa/prelaunch-checklist.md`, `docs/site-os/changelog/project-changelog.md`
+- notes: Remaining audit follow-ups for a future doc sweep: (1) `image-prompt-bank.md` §1 style baseline still references the deprecated yellow/blue palette — needs alignment with the current light + system-blue + navy brand; (2) `brand-skill.md` and `brand-guide.md` still describe the older brand identity.
+
 ## 2026-05-20 — Stage 4: polish + QA pass
 
 - type: fix

@@ -56,17 +56,25 @@ The authoritative URL map for the site. Every slug listed here is the **only** v
 | `/competitor-review-benchmarking` | C |
 | `/all-in-one-business-growth-system` | Capstone (A+B+C) |
 
-### Industries (1 + 6)
+### Industries (1 + 5)
 
 | Slug | Notes |
 |------|-------|
-| `/industries` | Index — all 6 industry pages |
-| `/industries/home-services` | |
-| `/industries/cleaning-companies` | |
-| `/industries/junk-removal` | |
-| `/industries/real-estate` | |
-| `/industries/contractors` | |
-| `/industries/coaches-consultants` | "coaches-consultants" not "coaches-and-consultants" — keep slug compact |
+| `/industries` | Index — all 5 industry hub pages |
+| `/industries/home-services` | Absorbs former `/industries/cleaning-companies` and `/industries/junk-removal`. Covers plumbing, HVAC, electrical, cleaning, junk removal, roofing, landscaping, and similar trades. |
+| `/industries/contractors` | General contractors, remodelers, builders, specialty contractors. |
+| `/industries/professional-services` | Absorbs former `/industries/real-estate` and `/industries/coaches-consultants`. Covers real estate, legal, accounting, coaching, consulting, and medical practices. |
+| `/industries/auto-services` | Auto repair, body shops, detailing, tire shops, and similar. |
+| `/industries/beauty-wellness` | Salons, barbershops, med spas, day spas, fitness studios, personal training, and similar. |
+
+**Deprecated industry slugs** (not published, do not link to, no 301 needed — these never went live):
+
+| Deprecated slug | Replaced by |
+|-----------------|-------------|
+| `/industries/cleaning-companies` | `/industries/home-services` |
+| `/industries/junk-removal` | `/industries/home-services` |
+| `/industries/real-estate` | `/industries/professional-services` |
+| `/industries/coaches-consultants` | `/industries/professional-services` |
 
 ### Blog (system)
 
@@ -115,3 +123,4 @@ When any doc references a URL — page copy plan, metadata draft, schema plan, i
 | Date | Change |
 |------|--------|
 | 2026-05-20 | Initial map — 4 core + 14 service + 7 industry + blog + 2 utility. Canonical host TBD pending client (default: bare `siriussys.io`). |
+| 2026-05-20 | Industry taxonomy confirmed: collapsed from 7 industry slugs to 5 hubs (`home-services`, `contractors`, `professional-services`, `auto-services`, `beauty-wellness`). Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` — none published, so no 301 redirects required. |
