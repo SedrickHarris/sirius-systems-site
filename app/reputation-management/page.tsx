@@ -9,9 +9,9 @@ const PAGE = {
   metaDescription:
     'Reputation management that earns more reviews, handles the hard ones, and keeps your local search visibility strong. Built for local service businesses by Sirius Systems.',
   eyebrow: 'Reputation Management',
-  headline: 'Your reputation is your pipeline. Treat it like one.',
+  headline: 'Your reputation is being built right now. The question is whether you are building it or ignoring it.',
   subheadline:
-    'For local service businesses, reviews are the first thing a potential customer checks and the last thing most businesses manage consistently. We build the system that keeps your reputation working for you.',
+    'Every completed job is an opportunity to earn a review, respond to feedback, and strengthen your position in local search. Most businesses let those opportunities pass.',
   glyphVariant: 'beacon' as const,
   definition:
     'Reputation management for local service businesses means systematically earning new reviews, responding to existing ones, monitoring what is being said across platforms, and using that signal to strengthen local search visibility.',

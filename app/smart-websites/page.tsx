@@ -11,7 +11,7 @@ const PAGE = {
   eyebrow: 'Smart Websites',
   headline: 'Your website should book jobs. Not just describe them.',
   subheadline:
-    'A smart website is built around what happens after someone lands on it: a lead captured, a question answered, an appointment booked. Not just a page that sits there.',
+    'Your current site describes your services. A smart website captures leads, books jobs, and feeds your CRM while you are out working.',
   glyphVariant: 'grid' as const,
   definition:
     'A smart website for a service business is a site built with lead capture, qualification, and booking integrated from the ground up: connected to your CRM, chatbot, and follow-up system so that visitor activity converts to booked jobs automatically.',

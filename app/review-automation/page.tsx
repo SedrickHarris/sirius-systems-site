@@ -9,9 +9,9 @@ const PAGE = {
   metaDescription:
     'Review automation that asks the right customer at the right time on the right channel: without spamming or sounding scripted. Built for local service businesses.',
   eyebrow: 'Review Automation',
-  headline: 'More reviews. Zero manual asking.',
+  headline: 'You are completing jobs that never turn into reviews. That is a system problem.',
   subheadline:
-    'Review automation sends requests at the moment a customer is most likely to respond: right after a completed job: on the channel they actually use, in a message that sounds like your business.',
+    'Review automation sends the ask at the right moment, on the right channel, every time a job closes. Review volume grows with your job volume.',
   glyphVariant: 'arc' as const,
   definition:
     'Review automation for service businesses means triggering review requests automatically after a completed job: via SMS or email: so that asking for reviews happens consistently every time, not only when someone remembers.',

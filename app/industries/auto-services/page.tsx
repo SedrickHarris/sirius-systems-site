@@ -13,7 +13,7 @@ const DATA: IndustryPageData = {
     'Appointment booking automation, AI chatbots, review systems, and CRM for auto repair shops, detailers, tire shops, body shops, and other auto service businesses.',
   eyebrow: 'Auto Services',
   headline:
-    'Customers Search for a Shop Online. Your System Should Close Them Before They Move On.',
+    'Customers are searching for a shop right now. Your system should close them before they move on.',
   subheadline:
     'Auto service businesses win or lose on speed and reputation. We build the system that captures the inquiry, books the appointment, sends the reminder, and earns the review: running automatically between jobs.',
   heroHighlights: [

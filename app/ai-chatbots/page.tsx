@@ -11,7 +11,7 @@ const PAGE = {
   eyebrow: 'AI Chatbots',
   headline: 'A chatbot that books jobs. Not just answers questions.',
   subheadline:
-    'An AI chatbot trained on your services, your pricing questions, and your booking flow: so every website visitor gets an instant, on-brand response at any hour.',
+    'Website visitors who get no answer at 9pm book somewhere else. A chatbot makes sure that does not happen.',
   glyphVariant: 'pulse' as const,
   definition:
     'An AI chatbot for service businesses is a conversational widget on your website that qualifies visitors, answers service and pricing questions, and books appointments: without a human on the other end.',

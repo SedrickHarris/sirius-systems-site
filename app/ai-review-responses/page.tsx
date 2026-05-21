@@ -9,9 +9,9 @@ const PAGE = {
   metaDescription:
     'On-brand AI-assisted replies to every review: positive or hard: at scale. Never leave a review unanswered again. Built for local service businesses by Sirius Systems.',
   eyebrow: 'AI Review Responses',
-  headline: 'Every review answered. In your voice. At scale.',
+  headline: 'Every review deserves a response. Most businesses do not have time to write them.',
   subheadline:
-    'Unanswered reviews signal to potential customers that no one is paying attention. AI review responses keep every review acknowledged: positive ones thanked, hard ones handled: without your team writing each one manually.',
+    'AI review responses mean no review sits unanswered. Positive ones get acknowledged, hard ones get handled in your voice, without you writing each one.',
   glyphVariant: 'pulse' as const,
   definition:
     'AI review responses for service businesses means using an AI system trained on your brand voice to draft replies to every incoming review: positive, neutral, or negative: so that no review goes unanswered and every response sounds like it came from your business.',

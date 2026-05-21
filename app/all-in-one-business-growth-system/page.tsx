@@ -10,9 +10,9 @@ const PAGE = {
   metaDescription:
     'One system that connects AI automation, reputation management, and local SEO: so your local service business captures more leads, earns more reviews, and ranks where customers search.',
   eyebrow: 'The Full System',
-  headline: 'Every piece connected. One system that runs your growth.',
+  headline: 'Stop running three systems that do not talk to each other. Run one.',
   subheadline:
-    "Most businesses run their lead capture, reviews, and local SEO as separate efforts that don't talk to each other. The Sirius Systems growth system connects all three into one operation: so each piece makes the others stronger.",
+    'AI automation, smart websites, and reputation systems built to work as one engine. Leads get captured, jobs get booked, and reviews keep coming without separate tools and separate logins.',
   glyphVariant: 'beacon' as const,
   definition:
     'The Sirius Systems all-in-one business growth system is a connected stack of AI automation, reputation management, and local SEO built specifically for local service businesses: designed so that leads, reviews, and search visibility compound together rather than operating in isolation.',

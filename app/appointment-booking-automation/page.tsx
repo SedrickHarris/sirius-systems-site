@@ -12,7 +12,7 @@ const PAGE = {
   eyebrow: 'Appointment Booking',
   headline: 'From inquiry to confirmed appointment. Without you in the loop.',
   subheadline:
-    'Booking automation connects your website, chatbot, voicebot, and CRM so that a qualified lead can go from first contact to scheduled job: automatically, at any hour.',
+    'Every unconfirmed inquiry is a job that might not happen. Booking automation closes that gap without you in the loop.',
   glyphVariant: 'arc' as const,
   definition:
     'Appointment booking automation for service businesses means connecting your lead capture, calendar, and confirmation system so that bookings happen without a human coordinating each one: from the first inquiry to the confirmed slot.',

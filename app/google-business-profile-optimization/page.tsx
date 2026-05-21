@@ -12,7 +12,7 @@ const PAGE = {
   headline:
     'The first thing customers see. Most businesses set it up once and forget it.',
   subheadline:
-    'Your Google Business Profile drives more local search visibility than almost any other single asset. An incomplete or stale profile loses rankings and leads to competitors who maintain theirs.',
+    'An optimized GBP puts your business in front of people searching for exactly what you do, in the area you serve, at the moment they are ready to book.',
   glyphVariant: 'beacon' as const,
   definition:
     'Google Business Profile optimization means fully configuring and actively maintaining your GBP listing: categories, services, attributes, photos, posts, Q&A, and review responses: so that Google surfaces your business prominently in local search and Maps results.',

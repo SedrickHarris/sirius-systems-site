@@ -15,6 +15,25 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Headline and subheadline spec alignment
+
+- type: copy
+- changes: Updated `headline` and `subheadline` fields across 10 service pages and 2 industry pages to meet Site Master spec: outcome-first framing, buyer-problem lead, sentence case, no em-dashes or en-dashes in replacement copy. 18 total string replacements across 12 files. No structural, schema, metadata (`metaTitle`/`metaDescription`), or CSS changes; `definition`, `problems`, `steps`, `features`, `outcomes`, `relatedSlugs`, `industryFit`, and `faqs` fields all untouched. The Stage 1-3 `glyphVariant` field and component logic are also untouched.
+  - `/ai-chatbots`: subheadline replaced (problem-led: "Website visitors who get no answer at 9pm book somewhere else...").
+  - `/crm-automation`: headline + subheadline (problem-led: "Leads are slipping because no one followed up. Fix that."; outcome-led subheadline).
+  - `/appointment-booking-automation`: subheadline (problem-led: "Every unconfirmed inquiry is a job that might not happen..."). Existing headline already passed spec.
+  - `/smart-websites`: subheadline (contrastive: "Your current site describes your services. A smart website..."). Existing headline already passed spec.
+  - `/google-business-profile-optimization`: subheadline (outcome-led: "An optimized GBP puts your business in front of people..."). Existing headline already passed spec.
+  - `/local-seo-aeo`: headline + subheadline (parallel structure: "Show up in Google. Show up in AI answers. Both matter now.").
+  - `/reputation-management`: headline + subheadline.
+  - `/review-automation`: headline + subheadline (problem-led: "You are completing jobs that never turn into reviews. That is a system problem.").
+  - `/ai-review-responses`: headline + subheadline.
+  - `/all-in-one-business-growth-system`: headline + subheadline (action-led: "Stop running three systems that do not talk to each other. Run one.").
+  - `/industries/professional-services`: headline (sentence case correction only — "More Qualified..." → "More qualified...").
+  - `/industries/auto-services`: headline (sentence case + tense — "Customers Search... Online" → "Customers are searching for a shop right now...").
+- files: `app/ai-chatbots/page.tsx`, `app/crm-automation/page.tsx`, `app/appointment-booking-automation/page.tsx`, `app/smart-websites/page.tsx`, `app/google-business-profile-optimization/page.tsx`, `app/local-seo-aeo/page.tsx`, `app/reputation-management/page.tsx`, `app/review-automation/page.tsx`, `app/ai-review-responses/page.tsx`, `app/all-in-one-business-growth-system/page.tsx`, `app/industries/professional-services/page.tsx`, `app/industries/auto-services/page.tsx`, `docs/site-os/changelog/project-changelog.md`
+- notes: Verified — build clean, 25 page HTMLs prerender (27 routes counting sitemap.xml + robots.txt), typecheck clean. All 4 dash variants (`&mdash;`, `&ndash;`, `—`, `–`) still return 0 hits across `app/`, `components/`, `lib/`. Pages confirmed passing spec and left unchanged per the brief: `/ai-automation`, `/ai-voicebots`, `/appointment-booking-automation` (headline only), `/lead-generation-automation` (entirely), `/google-business-profile-optimization` (headline only), `/smart-websites` (headline only), `/competitor-review-benchmarking`, `/industries/contractors`, `/industries/beauty-wellness`, `/industries/home-services`. No invented claims introduced — every replacement is descriptive of capability without metric or guarantee.
+
 ## 2026-05-20 — En-dash sweep (follow-up to em-dash sweep)
 
 - type: fix

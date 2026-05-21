@@ -9,9 +9,9 @@ const PAGE = {
   metaDescription:
     'Local SEO and AEO that ranks your business in Google search, Google Maps, and AI answer engines: ChatGPT, Perplexity, and AI Overviews. Built for local service businesses.',
   eyebrow: 'Local SEO & AEO',
-  headline: 'Rank where your customers search. Including where AI answers.',
+  headline: 'Show up in Google. Show up in AI answers. Both matter now.',
   subheadline:
-    'Local SEO puts your business in front of customers searching on Google. AEO: answer engine optimization: puts it in front of customers asking AI. Both matter now.',
+    'Customers are searching on Google and asking AI. If you are not optimized for both, you are invisible to half your market.',
   glyphVariant: 'wave' as const,
   definition:
     'Local SEO and AEO for service businesses means optimizing your web presence to rank in Google local search and Maps results, and structuring your content so AI answer engines: ChatGPT, Perplexity, Google AI Overviews: cite your business when customers ask relevant questions.',

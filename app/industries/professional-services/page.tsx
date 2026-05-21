@@ -13,7 +13,7 @@ const DATA: IndustryPageData = {
   metaDescription:
     'AI chatbots, appointment booking automation, CRM, and reputation management for professional service firms: law, dental, medical, accounting, and more.',
   eyebrow: 'Professional Services',
-  headline: 'More Qualified Appointments. Less Time Chasing Them.',
+  headline: 'More qualified appointments. Less time chasing them.',
   subheadline:
     "Professional service firms lose potential clients to slow response times, phone tag, and no-shows. We build the system that captures inquiries instantly, qualifies them automatically, books the consultation, and follows up so you don't have to.",
   heroHighlights: [

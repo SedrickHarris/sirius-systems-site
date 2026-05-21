@@ -9,9 +9,9 @@ const PAGE = {
   metaDescription:
     'CRM automation that moves leads through your pipeline without manual follow-up: built and configured for local service businesses by Sirius Systems.',
   eyebrow: 'CRM Automation',
-  headline: 'Your CRM should work for you. Not the other way around.',
+  headline: 'Leads are slipping because no one followed up. Fix that.',
   subheadline:
-    'Most service businesses have a CRM that holds data but does nothing with it. We wire it to your lead flow so pipeline stages update, follow-ups fire, and nothing sits idle.',
+    'CRM automation means your pipeline moves on its own. Stages update, follow-ups fire, and nothing sits waiting for someone to remember to act.',
   glyphVariant: 'grid' as const,
   definition:
     'CRM automation for service businesses means configuring your customer relationship management system to move leads through stages, trigger follow-up sequences, and update records automatically: based on actions taken, not manual entry.',
