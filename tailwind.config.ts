@@ -1,12 +1,12 @@
 import type { Config } from 'tailwindcss'
 import typography from '@tailwindcss/typography'
 
-// Sirius Systems — Premium AI infrastructure design system (Stage 1).
-// Replaces the previous dark + yellow + blue brand. Tokens here back both
-// Tailwind utility classes (bg-primary / text-foreground / etc.) and the
-// CSS-variable-based design system defined in app/globals.css. Keeping
-// them numerically aligned is what lets a single page render coherently
-// when it mixes Tailwind utilities and globals.css classes.
+// Sirius Systems — Dark brand token map (restored to canonical brand-skill.md).
+// The Stage 1-4 light/navy theme has been replaced with the confirmed
+// dark + yellow + blue palette. Tokens here back Tailwind utility classes
+// (bg-primary / text-foreground / etc.) and the CSS-variable system in
+// app/globals.css. Both layers are kept numerically aligned so pages can
+// mix Tailwind utilities and globals.css classes without color drift.
 const config: Config = {
   content: [
     './app/**/*.{ts,tsx,md,mdx}',
@@ -26,70 +26,38 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // ─── Surfaces ─────────────────────────
-        // Default page is light premium (60% of the design ratio).
-        background: '#FFFFFF',
-        'background-alt': '#F7F9FC',
-        foreground: '#111827',
+        background:         '#050505',
+        'background-alt':   '#0B0B0F',
+        surface:            '#121218',
+        'surface-2':        '#181824',
 
-        // ─── Primary action — bright system blue ──
         primary: {
-          DEFAULT: '#0066FF',
-          foreground: '#FFFFFF',
-          hover: '#1D7CFF',
+          DEFAULT:          '#F2EA00',
+          foreground:       '#050505',
+          hover:            '#FFF04A',
         },
 
-        // ─── Secondary — deep navy (dark sections + secondary CTAs) ──
         secondary: {
-          DEFAULT: '#061426',
-          foreground: '#FFFFFF',
-          hover: '#102B4F',
+          DEFAULT:          '#1468FF',
+          foreground:       '#F5F7FA',
+          hover:            '#3A82FF',
         },
 
-        // ─── Accent alias (resolves to primary blue) ──
-        // Keeping this token so existing `text-accent` / `bg-accent`
-        // usages across components continue to work, now in the new
-        // brand color rather than the previous cyan/yellow.
         accent: {
-          DEFAULT: '#0066FF',
-          foreground: '#FFFFFF',
+          DEFAULT:          '#1468FF',
+          foreground:       '#F5F7FA',
         },
 
-        // ─── Navy depth tokens (for dark sections / system visuals) ──
-        navy: {
-          midnight: '#061426',
-          DEFAULT: '#0B1F3A',
-          slate: '#102B4F',
-        },
+        foreground:         '#F5F7FA',
+        'muted-foreground': '#B7C0D1',
+        muted:              '#8B93A7',
 
-        // ─── Lighter blue (gradients, decorative accents) ──
-        'blue-light': '#1D7CFF',
+        border:             '#2A2F3A',
+        'border-strong':    '#3F4654',
 
-        // ─── Earned accents (use sparingly) ──
-        teal: '#00B8A9',
-        gold: '#D6A84F',
-
-        // ─── Muted text ──
-        muted: {
-          DEFAULT: '#9CA3AF',
-          foreground: '#4B5563',
-        },
-
-        // ─── Card/panel surface (light) ──
-        surface: {
-          DEFAULT: '#FFFFFF',
-          foreground: '#111827',
-        },
-        'surface-2': '#F7F9FC',
-
-        // ─── Hairlines ──
-        border: '#E5E7EB',
-        'border-strong': '#9CA3AF',
-
-        // ─── Status ──
-        destructive: { DEFAULT: '#EF4444', foreground: '#FFFFFF' },
-        success: { DEFAULT: '#22C55E', foreground: '#FFFFFF' },
-        warning: { DEFAULT: '#F59E0B', foreground: '#111827' },
+        success:     { DEFAULT: '#22C55E', foreground: '#050505' },
+        warning:     { DEFAULT: '#F59E0B', foreground: '#050505' },
+        destructive: { DEFAULT: '#EF4444', foreground: '#F5F7FA' },
       },
       fontFamily: {
         display: [

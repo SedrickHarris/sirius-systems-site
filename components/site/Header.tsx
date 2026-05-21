@@ -14,11 +14,18 @@ const NAV = [
 export function Header() {
   const pathname = usePathname()
   return (
-    <header className="sticky top-0 z-30 border-b border-[color:var(--border-soft)] bg-white/90 backdrop-blur-md">
+    <header
+      className="sticky top-0 z-30 border-b"
+      style={{
+        backgroundColor: 'var(--bg)',
+        borderColor: 'var(--border)',
+      }}
+    >
       <div className="site-container flex h-16 items-center justify-between gap-6">
         <Link
           href="/"
-          className="group inline-flex items-center gap-2.5 text-[color:var(--text-charcoal)]"
+          className="group inline-flex items-center gap-2.5"
+          style={{ color: 'var(--text)' }}
         >
           <SiriusMark />
           <span className="font-display text-base font-semibold tracking-tight">
@@ -34,17 +41,20 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? 'page' : undefined}
-                className={`relative font-medium transition-colors duration-fast ease-out-soft ${
-                  active
-                    ? 'text-[color:var(--text-charcoal)]'
-                    : 'text-[color:var(--text-body)] hover:text-[color:var(--text-charcoal)]'
-                }`}
+                className="relative font-medium transition-colors duration-fast"
+                style={{
+                  color: active ? 'var(--yellow)' : 'var(--text-muted)',
+                }}
               >
                 {item.label}
                 {active && (
                   <span
                     aria-hidden
-                    className="absolute -bottom-[21px] left-0 right-0 h-px bg-[color:var(--blue-system)]"
+                    className="absolute -bottom-[21px] left-0 right-0"
+                    style={{
+                      height: '2px',
+                      backgroundColor: 'var(--yellow)',
+                    }}
                   />
                 )}
               </Link>
@@ -61,10 +71,9 @@ export function Header() {
   )
 }
 
-// Brand mark — Sirius four-point star.
-// Yellow → blue palette shift was applied in Stage 1; star is now blue
-// (`fill-primary`) with a navy-midnight core (`fill-secondary`). Placeholder
-// until the real logo SVG lands (content-needed-from-client.md item 1.5).
+// Brand mark — Sirius four-point star. Yellow star (`fill-primary`) with
+// a blue core (`fill-secondary`). Placeholder until the real logo lands
+// (content-needed-from-client.md item 1.5).
 function SiriusMark() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden>

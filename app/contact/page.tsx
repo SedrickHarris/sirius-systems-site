@@ -275,7 +275,7 @@ function Field({
   options,
 }: FieldProps) {
   const base =
-    'mt-2 w-full rounded-lg border border-[color:var(--border-soft)] bg-white px-4 py-3 text-sm text-[color:var(--text-charcoal)] placeholder:text-[color:var(--text-muted)] focus:border-[color:var(--blue-system)] focus:outline-none focus:ring-1 focus:ring-[color:var(--blue-system)]'
+    'mt-2 w-full rounded-lg border border-[color:var(--border-soft)] bg-[color:var(--surface)] px-4 py-3 text-sm text-[color:var(--text-charcoal)] placeholder:text-[color:var(--text-muted)] focus:border-[color:var(--blue-system)] focus:outline-none focus:ring-1 focus:ring-[color:var(--blue-system)]'
 
   return (
     <div>

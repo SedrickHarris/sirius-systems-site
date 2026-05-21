@@ -3,8 +3,8 @@ import { SITE } from '@/lib/site'
 import { SERVICES } from '@/lib/services'
 import { INDUSTRIES } from '@/lib/industries'
 
-// Dark navy footer — site-wide visual punctuation regardless of which
-// section background closed the page. Inherits section-deep typography.
+// Footer — dark canvas, var(--bg-alt) one degree warmer than the page bg
+// so it reads as a discrete section without breaking dark continuity.
 
 // Curated, not exhaustive — see docs/seo/internal-linking-plan.md §5.
 const FEATURED_SERVICES = [
@@ -22,42 +22,57 @@ export function Footer() {
   ).filter(Boolean) as typeof SERVICES
 
   return (
-    <footer className="section-deep border-t border-[color:var(--border-soft)]/10">
+    <footer
+      className="border-t"
+      style={{
+        backgroundColor: 'var(--bg-alt)',
+        borderColor: 'var(--border)',
+      }}
+    >
       <div className="site-container py-16">
         <div className="grid gap-12 md:grid-cols-12">
 
           {/* Brand column */}
           <div className="md:col-span-4">
-            <p className="font-display text-xl font-semibold tracking-tight text-white">
+            <p
+              className="font-display text-xl font-semibold tracking-tight"
+              style={{ color: 'var(--text)' }}
+            >
               {SITE.name}
             </p>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/70">
+            <p
+              className="mt-3 max-w-xs text-sm leading-relaxed"
+              style={{ color: 'var(--text-muted)' }}
+            >
               {SITE.description}
             </p>
-            <div className="mt-6 flex flex-wrap gap-3 text-xs">
+            <div className="mt-6 flex flex-wrap items-center gap-3 text-xs">
               <a
                 href={SITE.social.facebook}
                 target="_blank"
                 rel="noreferrer"
-                className="text-white/65 transition-colors hover:text-white"
+                className="transition-colors hover:[color:var(--text)]"
+                style={{ color: 'var(--text-muted)' }}
               >
                 Facebook
               </a>
-              <span aria-hidden className="text-white/25">·</span>
+              <span aria-hidden style={{ color: 'var(--text-faint)' }}>·</span>
               <a
                 href={SITE.social.gbp}
                 target="_blank"
                 rel="noreferrer"
-                className="text-white/65 transition-colors hover:text-white"
+                className="transition-colors hover:[color:var(--text)]"
+                style={{ color: 'var(--text-muted)' }}
               >
                 Google Business
               </a>
-              <span aria-hidden className="text-white/25">·</span>
+              <span aria-hidden style={{ color: 'var(--text-faint)' }}>·</span>
               <a
                 href={SITE.social.github}
                 target="_blank"
                 rel="noreferrer"
-                className="text-white/65 transition-colors hover:text-white"
+                className="transition-colors hover:[color:var(--text)]"
+                style={{ color: 'var(--text-muted)' }}
               >
                 GitHub
               </a>
@@ -66,7 +81,10 @@ export function Footer() {
 
           {/* Services column */}
           <div className="md:col-span-3">
-            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-white/55">
+            <p
+              className="font-mono text-[11px] uppercase tracking-eyebrow"
+              style={{ color: 'var(--text-faint)' }}
+            >
               Services
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -74,7 +92,8 @@ export function Footer() {
                 <li key={s.slug}>
                   <Link
                     href={`/${s.slug}`}
-                    className="text-white/80 transition-colors hover:text-white"
+                    className="transition-colors hover:[color:var(--text)]"
+                    style={{ color: 'var(--text-muted)' }}
                   >
                     {s.name}
                   </Link>
@@ -83,7 +102,8 @@ export function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-white/55 transition-colors hover:text-white"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-faint)' }}
                 >
                   See all 14 &rarr;
                 </Link>
@@ -93,7 +113,10 @@ export function Footer() {
 
           {/* Industries column */}
           <div className="md:col-span-3">
-            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-white/55">
+            <p
+              className="font-mono text-[11px] uppercase tracking-eyebrow"
+              style={{ color: 'var(--text-faint)' }}
+            >
               Industries
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -101,7 +124,8 @@ export function Footer() {
                 <li key={i.slug}>
                   <Link
                     href={`/industries/${i.slug}`}
-                    className="text-white/80 transition-colors hover:text-white"
+                    className="transition-colors hover:[color:var(--text)]"
+                    style={{ color: 'var(--text-muted)' }}
                   >
                     {i.name}
                   </Link>
@@ -112,17 +136,28 @@ export function Footer() {
 
           {/* Company column */}
           <div className="md:col-span-2">
-            <p className="font-mono text-[11px] uppercase tracking-eyebrow text-white/55">
+            <p
+              className="font-mono text-[11px] uppercase tracking-eyebrow"
+              style={{ color: 'var(--text-faint)' }}
+            >
               Company
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
-                <Link href="/about" className="text-white/80 transition-colors hover:text-white">
+                <Link
+                  href="/about"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-white/80 transition-colors hover:text-white">
+                <Link
+                  href="/contact"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
                   Contact
                 </Link>
               </li>
@@ -134,15 +169,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/55 md:flex-row md:items-center md:justify-between">
+        <div
+          className="mt-14 flex flex-col gap-3 border-t pt-8 text-xs md:flex-row md:items-center md:justify-between"
+          style={{ borderColor: 'var(--border)', color: 'var(--text-faint)' }}
+        >
           <p>
             &copy; {year} {SITE.name}.{' '}
-            <span className="text-white/40">
+            <span style={{ color: 'var(--text-faint)' }}>
               {/* TODO: replace with confirmed legal business name (content-needed 1.4) */}
               Legal name pending confirmation.
             </span>
           </p>
-          <p className="text-white/40">Built by Sedrick Harris.</p>
+          <p style={{ color: 'var(--text-faint)' }}>Built by Sedrick Harris.</p>
         </div>
       </div>
     </footer>
