@@ -15,6 +15,13 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 4 Task 6: robots.ts + sitemap.ts
+
+- type: feat
+- changes: Added `app/robots.ts` and `app/sitemap.ts` using the Next.js App Router `MetadataRoute` conventions. Both required `export const dynamic = 'force-static'` to compile under `output: 'export'` — without it the build errored on "/sitemap.xml" and "/robots.txt" route data collection. Sitemap covers **24 static routes**: 4 core (`/`, `/about`, `/services`, `/contact`), 14 service pages, 6 industries (index + 5 hubs). Priorities scaled per brief (root 1.0, capstone + `/services` 0.9, other services + `/about` + `/contact` 0.8, industry hubs 0.7); `changeFrequency` weekly for `/`, monthly for everything else. `lastModified` resolves at build time. Robots policy: `User-Agent: *` / `Allow: /` / `Disallow: /api/` (defensive — no API routes exist today) / `Host:` + `Sitemap:` from `SITE.url`. Verified locally — `tsc --noEmit` clean, `next build` clean (24 page routes + `/robots.txt` + `/sitemap.xml`, all `○` static-prerendered), `out/robots.txt` and `out/sitemap.xml` generated, runtime `/robots.txt` → 200 (`content-type: text/plain`), `/sitemap.xml` → 200 (`content-type: application/xml`), 24 `<url>` entries in the sitemap, zero references to deprecated industry slugs.
+- files: `app/sitemap.ts`, `app/robots.ts`
+- notes: **Brief deviation flagged**: brief listed 26 routes including `/privacy` and `/terms`. Both were excluded — neither page exists on disk yet (copy blocked on content-needed 1.9 + 1.10). Pointing search engines at 404 URLs from the sitemap is a negative crawl signal. Both should be added back in the same commit that ships the actual `/privacy` and `/terms` pages. **Blog dynamic routes deferred to Phase 5** per brief.
+
 ## 2026-05-20 — Phase 4 Task 5: /industries index page (industry tree complete)
 
 - type: feat
