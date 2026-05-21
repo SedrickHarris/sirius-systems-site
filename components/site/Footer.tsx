@@ -126,16 +126,10 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link href="/privacy" className="text-white/55 transition-colors hover:text-white">
-                  Privacy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-white/55 transition-colors hover:text-white">
-                  Terms
-                </Link>
-              </li>
+              {/* /privacy and /terms routes don't exist yet (copy blocked
+                  on content-needed-from-client.md items 1.9 + 1.10). Footer
+                  links removed so we don't ship broken hrefs in the meantime.
+                  Restore both list items when the pages land. */}
             </ul>
           </div>
         </div>

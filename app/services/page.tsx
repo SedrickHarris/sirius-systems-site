@@ -93,7 +93,7 @@ export default function ServicesPage() {
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link href="/contact" className="btn-primary">
-                Map your system in 20 min
+                Book a discovery call
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
               <Link href={`/${capstone.slug}`} className="btn-ghost">

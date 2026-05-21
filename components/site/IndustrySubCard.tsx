@@ -58,7 +58,7 @@ export function IndustrySubCard({
           />
         ) : (
           comingSoon && (
-            <span className="shrink-0 rounded-full border border-border bg-surface-2 px-2 py-0.5 font-mono text-[10px] uppercase tracking-eyebrow text-muted">
+            <span className="shrink-0 rounded-full border border-border bg-surface-2 px-2 py-0.5 font-mono text-[10px] uppercase tracking-eyebrow text-muted-foreground">
               Coming soon
             </span>
           )

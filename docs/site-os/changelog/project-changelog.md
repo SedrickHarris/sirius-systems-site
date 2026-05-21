@@ -15,6 +15,16 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Stage 4: polish + QA pass
+
+- type: fix
+- changes: Refinement-only pass after Stages 1-3. No redesign, no new style system, no metadata/schema/sitemap/robots/config changes. Three targeted fixes:
+  - **Footer broken links removed**: `/privacy` and `/terms` were referenced in the footer of every page but the routes don't exist (copy blocked on content-needed 1.9 + 1.10). 16 broken-link references site-wide. Comment left in `Footer.tsx` marking where to restore the items when the pages ship.
+  - **`/services` hero CTA aligned**: button label changed from "Map your system in 20 min" (outlier) to "Book a discovery call" — matches `/`, `/about`, and the `ServicePageTemplate` default. Bottom CTAs across the site already use "Book the audit" consistently.
+  - **`IndustrySubCard` "Coming soon" pill contrast fix**: `text-muted` (`#9CA3AF`) on the `bg-surface-2` (`#F7F9FC`) pill was ~2.54:1 — below WCAG AA. Changed to `text-muted-foreground` (`#4B5563`) — ~7:1. Affects 74 sub-vertical cards across the 5 industry hub pages.
+- files: `components/site/Footer.tsx`, `components/site/IndustrySubCard.tsx`, `app/services/page.tsx`
+- notes: Validated via `npm run build` (clean, 27 routes prerender). Lint same interactive-setup gate as prior stages. Brief sections **explicitly verified clean and not touched**: dark section variation (heroes use `section-deep`, processes use `section-slate`, home workflow uses `section-radial`, all CTA panels use gradient `cta-deep` — varied without being chaotic); glass usage (~22 actual `card-glass` instances across ~20 pages ≈ 1/page in hero summary slots — selective per brief); H1 audit (1 per page, verified in Stage 3); schema audit (no `Review`/`AggregateRating` anywhere, correct allowed schemas per page type). **Intentionally not changed**: `/about` final CTA framing ("Twenty minutes. A real audit. No pitch.") — the operator-voice framing matches the page's content and adds welcome variation; industry-hub hero CTAs ("Build My System") — empowerment framing is industry-page-appropriate; wayfinding CTAs ("Find My Industry", "Jump to the form") — different intent than the audit-booking CTA; header active-underline geometry — recalculated and confirmed correct for the h-16 header; focus ring color on dark sections — passes WCAG 3:1 minimum (3.76:1).
+
 ## 2026-05-20 — Stage 3: interior pages onto the premium design system
 
 - type: feat
