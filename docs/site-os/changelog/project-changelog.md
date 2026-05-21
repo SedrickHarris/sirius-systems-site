@@ -15,6 +15,13 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Phase 4 Task 5: /industries index page (industry tree complete)
+
+- type: feat
+- changes: Built `/industries` index page — the hub-list entry point that pairs with the 5 industry hub pages already shipped. Sections: Hero ("Built for the Businesses That Show Up and Do the Work" + primary CTA scrolling to the hub grid) → Hub grid (5 cards, one per `INDUSTRIES` entry, each linking to `/industries/<slug>` with a static `SUB_VERTICAL_COUNT` badge — `20 trades`, `15 specialties`, `15 practice types`, `12 shop types`, `12 business types`) → How it works (two-paragraph honest framing — same system, tuned to your industry) → FAQ (3 questions) → CTASection. Schema: WebPage + BreadcrumbList (Home > Industries) + FAQPage (3 Q byte-identical to visible). No Service / AggregateRating / Review / LocalBusiness / Organization / Product / Offer. Verified locally — `tsc --noEmit` clean, `next build` clean (27 static routes), `/industries` → 200, all 5 hub routes still → 200, every hub-card href maps to a real route, **zero** occurrences of deprecated slugs (`cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants`) on the rendered page. Do-not-invent honored — no stats, no testimonials, no fabricated industry-coverage numbers (the "20 trades / 15 specialties / etc." counts mirror the actual `IndustrySubCard` counts on each hub page, not invented marketing claims).
+- files: `app/industries/page.tsx`
+- notes: **Industry tree complete** — `/industries` index + 5 hub pages all live. Stale references to the deprecated industry slugs still exist in planning docs (`docs/seo/url-strategy.md`, `docs/seo/internal-linking-plan.md`, `docs/seo/metadata-draft.md`, `docs/brand/image-prompt-bank.md`, `docs/seo/blog-strategy.md`, `docs/site-os/inputs/site-build-plan.md`, `docs/site-os/qa/prelaunch-checklist.md`) — these are pre-collapse historical artifacts. Suggest a follow-up docs-sweep task to reconcile them with the new 5-hub taxonomy before launch QA; the most launch-critical is the prelaunch checklist (it currently lists routes that don't exist).
+
 ## 2026-05-20 — Phase 4 Task 4: /industries/beauty-wellness (industry hubs complete)
 
 - type: feat
