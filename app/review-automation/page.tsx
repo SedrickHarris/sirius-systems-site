@@ -63,7 +63,7 @@ const PAGE = {
     'google-business-profile-optimization',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services'],
+  industryFit: ['home-services', 'contractors'],
   faqs: [
     {
       q: 'What is review automation for a service business?',

@@ -15,6 +15,15 @@ Format per entry:
 
 ---
 
+## 2026-05-20 — Body copy targeted fixes
+
+- type: copy
+- changes: Two targeted body copy corrections, both pre-confirmed against current file state before editing.
+  1. **`/review-automation` `industryFit` data omission fixed**: array expanded from `['home-services']` to `['home-services', 'contractors']`. Review automation applies equally to contractors whose jobs complete with a clear review-able moment. Every other related service page (e.g. `/ai-review-responses`, `/reputation-management`) already lists both. Slug `'contractors'` confirmed present in `lib/industries.ts` (line 22) before the change was applied. Effect: contractors hub now also surfaces as a related industry chip on `/review-automation`, and the new entry is picked up by `IndustryFitStrip` automatically without any template change.
+  2. **`/all-in-one-business-growth-system` final step body rewrite**: the "One system, one view" step body changed from product-stack description ("Everything runs through a unified stack: one place to see your pipeline, your review activity, and your search visibility...") to buyer-outcome framing ("You see one pipeline, one review feed, and one search snapshot without logging into three different tools..."). Same meaning, addressed at the buyer rather than describing the stack. The "30-minute check-in" reference is a descriptive pattern (what a manual cross-dashboard sweep typically takes), not a metric or sourced claim, and "30-minute" is a compound-modifier hyphen, not a dash.
+- files: `app/review-automation/page.tsx`, `app/all-in-one-business-growth-system/page.tsx`, `docs/site-os/changelog/project-changelog.md`
+- notes: typecheck clean, build clean, 25 page HTMLs prerender (27 routes counting sitemap.xml + robots.txt). All 4 dash variants (`&mdash;`, `&ndash;`, `—`, `–`) still return 0 hits across `app/`, `components/`, `lib/`. No headline, subheadline, `metaTitle`, `metaDescription`, `definition`, `problems`, `steps[].label`, `features`, `outcomes`, `relatedSlugs`, or `faqs` fields changed beyond the explicit two strings above. No CSS or component changes.
+
 ## 2026-05-20 — Headline and subheadline spec alignment
 
 - type: copy

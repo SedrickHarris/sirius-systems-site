@@ -39,7 +39,7 @@ const PAGE = {
     },
     {
       label: 'One system, one view',
-      body: 'Everything runs through a unified stack: one place to see your pipeline, your review activity, and your search visibility. No switching between tools. No manual reconciliation. No gaps between systems.',
+      body: 'You see one pipeline, one review feed, and one search snapshot without logging into three different tools to get the picture. What used to require a 30-minute check-in across separate dashboards happens in one view.',
     },
   ],
   featuresHeadline: 'What the system includes',
