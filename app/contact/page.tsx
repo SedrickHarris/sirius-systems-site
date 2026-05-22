@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 import { FAQ } from '@/components/site/FAQ'
 import { BookingEmbed } from '@/components/site/BookingEmbed'
+import { ContactFormEmbed } from '@/components/site/ContactFormEmbed'
 import { JsonLdScript } from '@/components/site/JsonLdScript'
 import { CONTACT_FAQ } from '@/lib/faq'
 import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
@@ -203,6 +204,10 @@ export default function ContactPage() {
               </p>
             </form>
           </aside>
+        </div>
+
+        <div className="site-container mt-12 lg:mt-16">
+          <ContactFormEmbed />
         </div>
 
         <div className="site-container mt-12 lg:mt-16">

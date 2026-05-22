@@ -20,6 +20,7 @@ export function BookingEmbed() {
         id="Qn4ugo4iZ8ZJ8eaxX1c4_1779408415920"
       />
       <Script
+        id="ghl-form-embed"
         src="https://link.siriussys.io/js/form_embed.js"
         strategy="afterInteractive"
       />
