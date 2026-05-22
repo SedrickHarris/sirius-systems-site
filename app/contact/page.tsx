@@ -104,9 +104,10 @@ export default function ContactPage() {
                 <span className="font-mono text-[10px] uppercase tracking-eyebrow text-[color:var(--text-muted)]">
                   Phone
                 </span>
-                {/* TODO: replace with confirmed publishable phone (content-needed 1.1) */}
-                <p className="mt-2 font-display text-base text-[color:var(--text-muted)]">
-                  Pending confirmation
+                <p className="mt-2 font-display text-base">
+                  <a href={SITE.contact.phone.href} className="link-underline">
+                    {SITE.contact.phone.display}
+                  </a>
                 </p>
                 <p className="mt-2 text-xs leading-relaxed text-[color:var(--text-muted)]">
                   Booking the audit is currently the fastest path to a reply.
@@ -116,9 +117,10 @@ export default function ContactPage() {
                 <span className="font-mono text-[10px] uppercase tracking-eyebrow text-[color:var(--text-muted)]">
                   Email
                 </span>
-                {/* TODO: replace with confirmed publishable email (content-needed 1.2) */}
-                <p className="mt-2 font-display text-base text-[color:var(--text-muted)]">
-                  Pending confirmation
+                <p className="mt-2 font-display text-base">
+                  <a href={SITE.contact.email.href} className="link-underline">
+                    {SITE.contact.email.display}
+                  </a>
                 </p>
                 <p className="mt-2 text-xs leading-relaxed text-[color:var(--text-muted)]">
                   Reply within one business day to every audit request.

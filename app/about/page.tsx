@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -159,22 +160,34 @@ export default function AboutPage() {
             <div>
               <h2 className="section-heading">Sedrick Harris.</h2>
               <div className="mt-8 max-w-xl space-y-4 section-copy">
-                {/* TODO: replace with the confirmed founder bio when client
-                    provides (content-needed-from-client.md item 1.11). */}
                 <p>
-                  Founder and operator of {SITE.name}. Builds AI automation,
-                  smart websites, and reputation systems for local service
-                  businesses, the same kind of operators he grew up
-                  around.
+                  Sedrick is the founder of Sirius Systems, an AI automation
+                  and smart website company built to help businesses capture
+                  more leads, respond faster, and grow with less manual work.
                 </p>
-                <p className="text-sm text-[color:var(--text-muted)]">
-                  <em>
-                    Full bio + headshot pending. Tracked at{' '}
-                    <code className="code-badge">
-                      docs/site-os/inputs/content-needed-from-client.md
-                    </code>
-                    {' '}item 1.11.
-                  </em>
+                <p>
+                  With a background in digital marketing, SEO, website
+                  strategy, automation, and AI-powered business systems,
+                  Sedrick helps business owners turn their websites into
+                  active growth tools instead of static online brochures. His
+                  work focuses on practical solutions that improve visibility,
+                  lead generation, customer follow-up, online reviews, and
+                  day-to-day business operations.
+                </p>
+                <p>
+                  Sedrick created Sirius Systems to give businesses access to
+                  the same type of automation, search visibility, and customer
+                  engagement tools that larger companies use, but in a way
+                  that is simple, clear, and built around real business
+                  outcomes.
+                </p>
+                <p>
+                  His approach combines smart website design, AI chatbots, AI
+                  voice assistants, review automation, CRM workflows, and SEO
+                  strategy into one connected system. The goal is simple: help
+                  business owners stop missing opportunities, build trust
+                  faster, and create a more reliable path from website visitor
+                  to booked customer.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3 text-sm">
@@ -200,12 +213,15 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Headshot placeholder: soft card on light section */}
+            {/* Founder headshot */}
             <div className="card-subtle relative aspect-[4/5] overflow-hidden">
-              <div className="absolute inset-0 bg-grid-faint bg-grid-32 opacity-60" />
-              <div className="relative flex h-full items-end p-6">
-                <span className="badge-premium">Headshot pending</span>
-              </div>
+              <Image
+                src="/images/founder/sedrick-harris-founder.webp"
+                alt="Sedrick Harris, founder of Sirius Systems"
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover object-top"
+              />
             </div>
           </div>
         </div>

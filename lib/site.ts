@@ -12,6 +12,16 @@ export const SITE = {
   description:
     'Sirius Systems helps local service businesses capture more leads, respond faster, automate follow-up, book more appointments, and improve reviews.',
   founder: 'Sedrick Harris',
+  contact: {
+    email: {
+      display: 'info@siriussys.io',
+      href: 'mailto:info@inbox.siriussys.io',
+    },
+    phone: {
+      display: '+1 727-222-3424',
+      href: 'tel:+17272223424',
+    },
+  },
   social: {
     facebook: 'https://www.facebook.com/SiriusSys.io/',
     instagramFounder: 'https://www.instagram.com/sedrick.h.harris/',
