@@ -205,7 +205,7 @@ export default function ServicesPage() {
               competitors actually pulling attention away from you.
             </p>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {servicesByGroup('reputation').map((s) => (
               <ServiceCard key={s.slug} service={s} />
             ))}
