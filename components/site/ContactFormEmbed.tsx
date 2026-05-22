@@ -12,23 +12,23 @@ export function ContactFormEmbed() {
       style={{
         borderColor: 'var(--border)',
         backgroundColor: 'var(--surface)',
-        minHeight: '492px',
+        minHeight: '420px',
       }}
     >
       <iframe
         src="https://link.siriussys.io/widget/form/BHqYGk6NAbu58Q68tSRk"
         style={{
           width: '100%',
-          // Floor matches GHL's declared data-height so we don't reserve
-          // more vertical space than the form actually paints. Larger
-          // floors expose the GHL document's own white body background
-          // below the form content. form_embed.js will expand the iframe
-          // upward from here as needed via postMessage.
-          minHeight: '492px',
+          // Two-column form layout (set in GHL Form Builder) renders
+          // shorter than GHL's data-height=492 declares. Lower floor so
+          // we don't reserve vertical space the form doesn't paint;
+          // form_embed.js will expand the iframe upward from here via
+          // postMessage if the actual form ends up taller.
+          minHeight: '420px',
           border: 'none',
           borderRadius: '3px',
           display: 'block',
-          backgroundColor: 'var(--surface)',
+          backgroundColor: 'var(--surface-2)',
         }}
         id="inline-BHqYGk6NAbu58Q68tSRk"
         data-layout="{'id':'INLINE'}"
