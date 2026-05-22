@@ -19,11 +19,12 @@ export function ContactFormEmbed() {
         src="https://link.siriussys.io/widget/form/BHqYGk6NAbu58Q68tSRk"
         style={{
           width: '100%',
-          // min-height floor (data-height=492 from GHL, +breathing room
-          // for the two-column layout) until form_embed.js autosizes.
-          // Avoids the collapsed-height bug from height:100% when the
-          // parent has no defined height.
-          minHeight: '560px',
+          // Floor matches GHL's declared data-height so we don't reserve
+          // more vertical space than the form actually paints. Larger
+          // floors expose the GHL document's own white body background
+          // below the form content. form_embed.js will expand the iframe
+          // upward from here as needed via postMessage.
+          minHeight: '492px',
           border: 'none',
           borderRadius: '3px',
           display: 'block',
