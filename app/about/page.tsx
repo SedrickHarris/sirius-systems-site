@@ -73,7 +73,7 @@ export default function AboutPage() {
       <section className="section-deep section-padding relative overflow-hidden">
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
-          <div>
+          <div className="motion-fade-up">
             <span className="section-eyebrow">About</span>
             <h1 className="mt-6 hero-heading">
               A growth system, not an agency layer.

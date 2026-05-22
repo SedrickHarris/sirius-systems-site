@@ -635,6 +635,66 @@
     border: 1px solid var(--border);
     color: var(--text-muted);
   }
+
+  /* ─── Motion utilities ───
+     Subtle, premium, performance-safe motion. Only transform + opacity
+     are animated. No new colors, backgrounds, or layout. The global
+     prefers-reduced-motion block at the top of this file already tames
+     animation/transition durations; the explicit override below makes
+     reduced-motion behavior unambiguous for these utilities. */
+  @keyframes motion-fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .motion-fade-up {
+    animation: motion-fade-up 480ms var(--ease-out) both;
+    animation-delay: var(--motion-delay, 0ms);
+  }
+
+  .motion-stagger > * {
+    animation: motion-fade-up 480ms var(--ease-out) both;
+  }
+  .motion-stagger > *:nth-child(1) { animation-delay:  60ms; }
+  .motion-stagger > *:nth-child(2) { animation-delay: 120ms; }
+  .motion-stagger > *:nth-child(3) { animation-delay: 180ms; }
+  .motion-stagger > *:nth-child(4) { animation-delay: 240ms; }
+  .motion-stagger > *:nth-child(5) { animation-delay: 300ms; }
+  .motion-stagger > *:nth-child(6) { animation-delay: 360ms; }
+  .motion-stagger > *:nth-child(n + 7) { animation-delay: 420ms; }
+
+  .motion-hover-lift {
+    transition: transform 200ms var(--ease-out);
+  }
+  .motion-hover-lift:hover { transform: translateY(-2px); }
+
+  .motion-icon-shift {
+    transition: transform 180ms var(--ease-out);
+  }
+  .motion-icon-shift:hover,
+  .group:hover .motion-icon-shift {
+    transform: translateX(2px);
+  }
+
+  .motion-soft-scale {
+    transition: transform 200ms var(--ease-out);
+  }
+  .motion-soft-scale:hover { transform: scale(1.02); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .motion-fade-up,
+    .motion-stagger > * {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .motion-hover-lift:hover,
+    .motion-icon-shift:hover,
+    .group:hover .motion-icon-shift,
+    .motion-soft-scale:hover {
+      transform: none !important;
+    }
+  }
 }
 
 @layer utilities {

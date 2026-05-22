@@ -81,7 +81,7 @@ export default function ServicesPage() {
       <section className="section-deep section-padding relative overflow-hidden">
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
-          <div>
+          <div className="motion-fade-up">
             <span className="section-eyebrow">Services</span>
             <h1 className="mt-6 hero-heading">
               Fourteen services. One operator. One system.
@@ -157,7 +157,7 @@ export default function ServicesPage() {
               how to wire them together.
             </p>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="motion-stagger mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {servicesByGroup('ai').map((s) => (
               <ServiceCard key={s.slug} service={s} />
             ))}
@@ -180,7 +180,7 @@ export default function ServicesPage() {
               search and answer engines.
             </p>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="motion-stagger mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {servicesByGroup('web-seo').map((s) => (
               <ServiceCard key={s.slug} service={s} />
             ))}
@@ -205,7 +205,7 @@ export default function ServicesPage() {
               competitors actually pulling attention away from you.
             </p>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="motion-stagger mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {servicesByGroup('reputation').map((s) => (
               <ServiceCard key={s.slug} service={s} />
             ))}

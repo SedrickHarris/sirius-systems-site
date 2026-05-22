@@ -64,7 +64,7 @@ export default function ContactPage() {
       {/* ───────── Hero (dark) ───────── */}
       <section className="section-deep section-padding relative overflow-hidden">
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
-        <div className="site-container">
+        <div className="site-container motion-fade-up">
           <span className="section-eyebrow">Contact</span>
           <h1 className="mt-6 hero-heading max-w-3xl">
             Twenty minutes. A real audit. No pitch.

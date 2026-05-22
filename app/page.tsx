@@ -83,7 +83,7 @@ export default function HomePage() {
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
 
           {/* Left: copy + CTA stack */}
-          <div>
+          <div className="motion-fade-up">
             <span className="section-eyebrow">Sirius Systems</span>
 
             <h1 className="mt-6 hero-heading">
