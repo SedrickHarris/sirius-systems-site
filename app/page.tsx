@@ -80,7 +80,7 @@ export default function HomePage() {
       {/* ───────────────── 1. HERO ───────────────── */}
       <section className="section-deep section-padding-lg relative overflow-hidden">
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
-        <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+        <div className="site-container grid items-start gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
 
           {/* Left: copy + CTA stack */}
           <div className="motion-fade-up">
