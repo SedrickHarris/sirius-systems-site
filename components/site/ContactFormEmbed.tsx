@@ -17,7 +17,18 @@ export function ContactFormEmbed() {
     >
       <iframe
         src="https://link.siriussys.io/widget/form/BHqYGk6NAbu58Q68tSRk"
-        style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+        style={{
+          width: '100%',
+          // min-height floor (data-height=492 from GHL, +breathing room
+          // for the two-column layout) until form_embed.js autosizes.
+          // Avoids the collapsed-height bug from height:100% when the
+          // parent has no defined height.
+          minHeight: '560px',
+          border: 'none',
+          borderRadius: '3px',
+          display: 'block',
+          backgroundColor: 'var(--surface)',
+        }}
         id="inline-BHqYGk6NAbu58Q68tSRk"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
