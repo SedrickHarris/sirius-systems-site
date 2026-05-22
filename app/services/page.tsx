@@ -276,7 +276,7 @@ export default function ServicesPage() {
               <Link
                 key={i.slug}
                 href={`/industries/${i.slug}`}
-                className="badge-premium hover-lift inline-flex items-center gap-2 px-4 py-2"
+                className="badge-premium inline-flex items-center gap-2 px-4 py-2 transition-colors duration-fast hover:border-border-strong hover:bg-surface-2"
               >
                 {i.name}
                 <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />

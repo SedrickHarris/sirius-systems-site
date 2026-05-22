@@ -30,7 +30,7 @@ export function Footer() {
       }}
     >
       <div className="site-container py-16">
-        <div className="grid gap-12 md:grid-cols-12">
+        <div className="grid gap-10 md:grid-cols-12 md:gap-12">
 
           {/* Brand column */}
           <div className="md:col-span-4">

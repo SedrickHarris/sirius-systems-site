@@ -274,15 +274,14 @@ function Field({
   rows,
   options,
 }: FieldProps) {
-  const base =
-    'mt-2 w-full rounded-lg border border-[color:var(--border-soft)] bg-[color:var(--surface)] px-4 py-3 text-sm text-[color:var(--text-charcoal)] placeholder:text-[color:var(--text-muted)] focus:border-[color:var(--blue-system)] focus:outline-none focus:ring-1 focus:ring-[color:var(--blue-system)]'
+  const base = 'field'
 
   return (
     <div>
-      <label htmlFor={id} className="text-xs font-semibold text-[color:var(--text-charcoal)]">
+      <label htmlFor={id} className="field-label">
         {label}
         {required && (
-          <span className="ml-1 text-[color:var(--blue-system)]" aria-hidden>
+          <span className="ml-1" style={{ color: 'var(--blue)' }} aria-hidden>
             *
           </span>
         )}

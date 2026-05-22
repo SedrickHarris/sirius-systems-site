@@ -5,7 +5,7 @@ import type { QA } from '@/lib/faq'
 // Visible Q/A pairs match the FAQPage JSON-LD on the same page.
 export function FAQ({ items }: { items: QA[] }) {
   return (
-    <div className="divide-y divide-border border-y border-border">
+    <div className="divide-y divide-border-strong border-y border-border-strong">
       {items.map((item) => (
         <details
           key={item.q}

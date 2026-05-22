@@ -32,12 +32,10 @@ export function IndustrySubCard({
   const isFeatured = size === 'featured'
 
   const base = isFeatured
-    ? 'group relative flex h-full flex-col rounded-2xl border border-border bg-surface p-6 md:p-7'
-    : 'group relative flex h-full flex-col rounded-2xl border border-border bg-surface p-5'
+    ? 'card group relative flex h-full flex-col p-6 md:p-7'
+    : 'card group relative flex h-full flex-col p-5'
 
-  const hoverLink = isFeatured
-    ? 'transition-colors duration-base ease-out-soft hover:border-border-strong'
-    : 'transition-colors duration-base ease-out-soft hover:bg-surface-2'
+  const hoverLink = 'transition-colors duration-base ease-out-soft'
 
   const titleClass = isFeatured
     ? 'font-display text-xl leading-tight tracking-tight md:text-2xl'

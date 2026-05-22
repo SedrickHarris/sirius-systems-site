@@ -1,8 +1,9 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Menu, X } from 'lucide-react'
 import { SITE } from '@/lib/site'
 
 const NAV = [
@@ -13,6 +14,25 @@ const NAV = [
 
 export function Header() {
   const pathname = usePathname()
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
   return (
     <header
       className="sticky top-0 z-30 border-b"
@@ -21,7 +41,7 @@ export function Header() {
         borderColor: 'var(--border)',
       }}
     >
-      <div className="site-container flex h-16 items-center justify-between gap-6">
+      <div className="site-container flex h-16 items-center justify-between gap-4 md:gap-6">
         <Link
           href="/"
           className="group inline-flex items-center gap-2.5"
@@ -62,11 +82,75 @@ export function Header() {
           })}
         </nav>
 
-        <Link href="/contact" className="btn-primary text-xs">
-          Book a call
-          <ArrowRight className="h-3.5 w-3.5" aria-hidden />
-        </Link>
+        <div className="flex items-center gap-2 md:gap-3">
+          <Link href="/contact" className="btn-primary text-xs">
+            Book a call
+            <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+          </Link>
+
+          <button
+            type="button"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors md:hidden"
+            style={{
+              borderColor: 'var(--border-strong)',
+              color: 'var(--text)',
+              backgroundColor: open ? 'var(--surface)' : 'transparent',
+            }}
+          >
+            {open ? <X className="h-4 w-4" aria-hidden /> : <Menu className="h-4 w-4" aria-hidden />}
+          </button>
+        </div>
       </div>
+
+      {open && (
+        <>
+          <div
+            aria-hidden
+            onClick={() => setOpen(false)}
+            className="fixed inset-0 top-16 z-20 md:hidden"
+            style={{ backgroundColor: 'rgb(0 0 0 / 0.45)' }}
+          />
+          <nav
+            id="mobile-nav"
+            aria-label="Primary mobile"
+            className="absolute left-0 right-0 top-full z-30 border-b md:hidden"
+            style={{
+              backgroundColor: 'var(--bg)',
+              borderColor: 'var(--border)',
+            }}
+          >
+            <ul className="site-container flex flex-col gap-1 py-3">
+              {NAV.map((item) => {
+                const active = pathname?.startsWith(item.href)
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      aria-current={active ? 'page' : undefined}
+                      className="flex items-center justify-between rounded-lg px-3 py-3 text-base font-medium transition-colors"
+                      style={{
+                        color: active ? 'var(--yellow)' : 'var(--text)',
+                        backgroundColor: active ? 'var(--surface)' : 'transparent',
+                      }}
+                    >
+                      <span>{item.label}</span>
+                      <ArrowRight
+                        className="h-4 w-4"
+                        aria-hidden
+                        style={{ color: active ? 'var(--yellow)' : 'var(--text-muted)' }}
+                      />
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </nav>
+        </>
+      )}
     </header>
   )
 }

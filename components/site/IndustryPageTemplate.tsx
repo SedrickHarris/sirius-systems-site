@@ -138,7 +138,7 @@ export function IndustryPageTemplate(data: IndustryPageData) {
           </div>
 
           {/* Tier 1: Featured */}
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {data.featured.map((trade) => (
               <IndustrySubCard
                 key={trade.name}
