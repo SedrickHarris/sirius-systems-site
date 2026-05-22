@@ -80,7 +80,7 @@ export default function HomePage() {
       {/* ───────────────── 1. HERO ───────────────── */}
       <section className="section-deep section-padding-lg relative overflow-hidden">
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
-        <div className="site-container grid items-start gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+        <div className="site-container grid items-start gap-12 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-16">
 
           {/* Left: copy + CTA stack */}
           <div className="motion-fade-up">
@@ -115,7 +115,7 @@ export default function HomePage() {
           </div>
 
           {/* Right: dashboard panel (selective glass, hero-only) */}
-          <aside aria-label="Sample automation pipeline" className="dashboard-panel">
+          <aside aria-label="Sample automation pipeline" className="dashboard-panel lg:p-7 xl:p-8">
             <header className="flex items-center justify-between gap-4 pb-3">
               <span className="dashboard-label">Live Pipeline · Today</span>
               <span className="status-pill">Live</span>
@@ -300,7 +300,7 @@ export default function HomePage() {
           </div>
 
           {/* Mobile / tablet: grid (no flow lines) */}
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:hidden">
+          <div className="mt-14 grid grid-cols-2 gap-6 md:grid-cols-3 md:gap-8 lg:hidden">
             {WORKFLOW.map((step, i) => {
               const Icon = step.icon
               return (
