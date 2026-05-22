@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ArrowRight, Menu, X } from 'lucide-react'
@@ -47,7 +48,13 @@ export function Header() {
           className="group inline-flex items-center gap-2.5"
           style={{ color: 'var(--text)' }}
         >
-          <SiriusMark />
+          <Image
+            src="/images/brand/sirius-systems-logo.webp"
+            alt="Sirius Systems logo"
+            width={24}
+            height={24}
+            priority
+          />
           <span className="font-display text-base font-semibold tracking-tight">
             {SITE.name}
           </span>
@@ -155,17 +162,3 @@ export function Header() {
   )
 }
 
-// Brand mark: Sirius four-point star. Yellow star (`fill-primary`) with
-// a blue core (`fill-secondary`). Placeholder until the real logo lands
-// (content-needed-from-client.md item 1.5).
-function SiriusMark() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden>
-      <path
-        d="M12 1.5 L13.6 10.4 L22.5 12 L13.6 13.6 L12 22.5 L10.4 13.6 L1.5 12 L10.4 10.4 Z"
-        className="fill-primary"
-      />
-      <circle cx="12" cy="12" r="1.75" className="fill-secondary" />
-    </svg>
-  )
-}
