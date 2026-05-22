@@ -127,9 +127,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-        </div>
-
-        <div className="site-container mt-12 lg:mt-16">
+          {/* Right: Website Contact Form embed (live GHL widget) */}
           <ContactFormEmbed />
         </div>
 
