@@ -11,11 +11,11 @@ export function ContactFormEmbed() {
       className="overflow-hidden rounded-2xl border"
       style={{
         borderColor: 'var(--border)',
-        backgroundColor: 'var(--surface)',
-        minHeight: '420px',
+        background: 'transparent',
       }}
     >
       <iframe
+        allowTransparency={true}
         src="https://link.siriussys.io/widget/form/BHqYGk6NAbu58Q68tSRk"
         style={{
           width: '100%',
@@ -28,7 +28,8 @@ export function ContactFormEmbed() {
           border: 'none',
           borderRadius: '3px',
           display: 'block',
-          backgroundColor: 'var(--surface-2)',
+          background: 'transparent',
+          colorScheme: 'dark',
         }}
         id="inline-BHqYGk6NAbu58Q68tSRk"
         data-layout="{'id':'INLINE'}"

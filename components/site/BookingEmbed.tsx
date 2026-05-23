@@ -10,20 +10,20 @@ export function BookingEmbed() {
       className="overflow-hidden rounded-2xl border"
       style={{
         borderColor: 'var(--border)',
-        backgroundColor: 'var(--surface)',
+        background: 'transparent',
       }}
     >
       <iframe
+        allowTransparency={true}
         src="https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4"
         style={{
           width: '100%',
           border: 'none',
           overflow: 'hidden',
           minHeight: '720px',
-          // iframe element fallback color (shown during load and in any
-          // region the embedded document leaves transparent); does not
-          // override the GHL document's own background.
-          backgroundColor: 'var(--surface)',
+          display: 'block',
+          background: 'transparent',
+          colorScheme: 'dark',
         }}
         scrolling="no"
         id="Qn4ugo4iZ8ZJ8eaxX1c4_1779408415920"
