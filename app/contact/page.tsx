@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 import { FAQ } from '@/components/site/FAQ'
 import { JsonLdScript } from '@/components/site/JsonLdScript'
+import { QualificationForm } from '@/components/site/QualificationForm'
 import { CONTACT_FAQ } from '@/lib/faq'
 import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE } from '@/lib/site'
@@ -74,7 +75,7 @@ export default function ContactPage() {
           </p>
           <div className="mt-10">
             <Link href="#book" className="btn-primary">
-              Book the call
+              See if we&rsquo;re a fit
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
@@ -127,56 +128,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right: inline booking CTA card (links to GHL booking widget) */}
-          <div className="card-solid p-8 lg:p-10">
-            <span className="font-mono text-[11px] uppercase tracking-widest text-[color:var(--blue-system)]">
-              Strategy Call
-            </span>
-
-            <h2 className="mt-4 font-display text-2xl leading-tight tracking-tight text-[color:var(--text-primary)] md:text-3xl">
-              20 minutes. No pitch.
-            </h2>
-
-            <p className="mt-3 text-sm leading-relaxed text-[color:var(--text-secondary)]">
-              Tell us where leads, follow-up, or reviews are leaking.
-              Walk away with a system map whether we work together or not.
-            </p>
-
-            <div className="my-6 border-t border-[color:var(--border)]" />
-
-            <ul className="space-y-3">
-              {[
-                'Personalized audit of your current gaps',
-                'AI automation roadmap for your business type',
-                'Clear order of operations — yours to keep',
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 text-sm text-[color:var(--text-secondary)]"
-                >
-                  <span
-                    aria-hidden
-                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--yellow-primary)]"
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href="https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary mt-8 flex w-full items-center justify-center gap-2"
-            >
-              Book the 20-min call
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </a>
-
-            <p className="mt-3 text-center text-xs text-[color:var(--text-muted)]">
-              Opens in a new tab. No account needed.
-            </p>
-          </div>
+          {/* Right: qualification form with scoring + dual outcome (booking or lead magnet) */}
+          <QualificationForm />
         </div>
       </section>
 
