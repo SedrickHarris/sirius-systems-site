@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 import { FAQ } from '@/components/site/FAQ'
-import { BookingEmbed } from '@/components/site/BookingEmbed'
-import { ContactFormEmbed } from '@/components/site/ContactFormEmbed'
 import { JsonLdScript } from '@/components/site/JsonLdScript'
 import { CONTACT_FAQ } from '@/lib/faq'
 import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
@@ -76,7 +74,7 @@ export default function ContactPage() {
           </p>
           <div className="mt-10">
             <Link href="#book" className="btn-primary">
-              Jump to the form
+              Book the call
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
@@ -85,7 +83,7 @@ export default function ContactPage() {
 
       {/* ───────── Contact / strategy session (light, form + alt contact) ───────── */}
       <section id="book" className="section-light section-padding scroll-mt-20">
-        <div className="site-container grid items-start gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+        <div className="site-container grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* Left: alt contact + framing copy */}
           <div>
@@ -129,12 +127,56 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right: Website Contact Form embed (live GHL widget) */}
-          <ContactFormEmbed />
-        </div>
+          {/* Right: inline booking CTA card (links to GHL booking widget) */}
+          <div className="card-solid p-8 lg:p-10">
+            <span className="font-mono text-[11px] uppercase tracking-widest text-[color:var(--blue-system)]">
+              Strategy Call
+            </span>
 
-        <div className="site-container mt-12 lg:mt-16">
-          <BookingEmbed />
+            <h2 className="mt-4 font-display text-2xl leading-tight tracking-tight text-[color:var(--text-primary)] md:text-3xl">
+              20 minutes. No pitch.
+            </h2>
+
+            <p className="mt-3 text-sm leading-relaxed text-[color:var(--text-secondary)]">
+              Tell us where leads, follow-up, or reviews are leaking.
+              Walk away with a system map whether we work together or not.
+            </p>
+
+            <div className="my-6 border-t border-[color:var(--border)]" />
+
+            <ul className="space-y-3">
+              {[
+                'Personalized audit of your current gaps',
+                'AI automation roadmap for your business type',
+                'Clear order of operations — yours to keep',
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm text-[color:var(--text-secondary)]"
+                >
+                  <span
+                    aria-hidden
+                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--yellow-primary)]"
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mt-8 flex w-full items-center justify-center gap-2"
+            >
+              Book the 20-min call
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </a>
+
+            <p className="mt-3 text-center text-xs text-[color:var(--text-muted)]">
+              Opens in a new tab. No account needed.
+            </p>
+          </div>
         </div>
       </section>
 
