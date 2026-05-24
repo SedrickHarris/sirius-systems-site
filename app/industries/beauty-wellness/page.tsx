@@ -8,43 +8,62 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 
 const DATA: IndustryPageData = {
   slug: 'beauty-wellness',
-  metaTitle:
-    'Beauty & Wellness Automation: Booking, Reviews & AI | Sirius Systems',
+
+  metaTitle: 'Salon & Spa Booking Automation | Sirius Systems',
+
   metaDescription:
-    'Appointment booking automation, rebooking flows, review systems, and AI chatbots for salons, med spas, personal trainers, day spas, and other beauty and wellness businesses.',
+    'Automated booking, rebooking, review requests, and client retention for hair salons, med spas, day spas, and fitness studios. Built to run while you work.',
+
   eyebrow: 'Beauty & Wellness',
-  headline: 'A Full Chair Starts with a System That Books While You Work.',
+
+  headline:
+    'Stop Leaving Money in the Chair. Automate Your Booking, Rebooking, and Reviews.',
+
   subheadline:
-    'Beauty and wellness businesses run on repeat clients and word-of-mouth. We build the system that books new clients automatically, brings existing ones back, reduces no-shows, and earns the reviews that make your chair the obvious choice.',
+    'Beauty and wellness runs on repeat clients. The problem isn\'t finding them once — it\'s the system that brings them back, fills the gaps when they don\'t show, and earns the reviews that make new clients choose you over the next salon on Google.',
+
   heroHighlights: [
-    'Online booking + rebooking automation',
-    'No-show reduction with timed text reminders',
-    'Review requests after every appointment',
-    'Repeat-client retention sequences',
+    'Automated online booking that works while you\'re behind the chair',
+    'Rebooking prompts sent at the right interval after every visit',
+    'Review requests triggered automatically after each completed appointment',
+    'Lapsed client reactivation so past clients don\'t become lost clients',
   ],
-  problemHeadline: "What's keeping your calendar from being full",
+
+  problemHeadline: 'Why your calendar isn\'t full — and it\'s not a client problem',
+
   problems: [
-    'No-shows drain revenue because reminders are sent manually, inconsistently, or not at all.',
-    "New clients book once and don't return because there's no rebooking system prompting them at the right interval.",
-    'Happy clients leave without leaving a review because asking in person feels awkward and no one follows up.',
-    'Booking requires a DM, a phone call, or a text: friction that costs you clients who go to whoever is easier to book.',
+    'Your rebooking window closes the moment a client walks out. Checkout is the natural moment to rebook — but when that conversation doesn\'t happen, most clients won\'t book again until they need to. By then, they\'re searching Google and booking whoever comes up first.',
+    'No-shows drain your day and there\'s nothing in place to recover the slot. A missed appointment with no fill system is pure lost revenue. Manual reminder calls happen inconsistently — or not at all when you\'re in back-to-back service hours.',
+    'Happy clients leave without leaving a review because no one followed up. Asking in person feels transactional. Clients intend to leave one and forget. Meanwhile, competitors with newer reviews are capturing the clients you should be getting.',
+    'Booking still requires effort — a DM, a call, or a text. Clients who can\'t book immediately when they think of it often don\'t come back to it. Whoever is easiest to book gets the appointment.',
   ],
-  systemsHeadline: 'The automation stack for beauty and wellness',
+
+  systemsHeadline: 'The systems that keep your chair full',
+
+  systemsCopy:
+    'These are the specific tools we connect for beauty and wellness businesses — each one targeting a revenue gap that manual follow-up can\'t close consistently.',
+
   serviceSlugs: [
     'appointment-booking-automation',
-    'ai-chatbots',
-    'crm-automation',
     'review-automation',
-    'smart-websites',
+    'crm-automation',
+    'reputation-management',
+    'ai-chatbots',
     'all-in-one-business-growth-system',
   ],
+
   subVerticalsHeadline: 'Built for your specific business type',
+
+  subVerticalsCopy:
+    'Every beauty and wellness business has a different rhythm — appointment length, rebooking interval, client relationship style. The system is configured around how your business actually runs.',
+
   featured: [
     { name: 'Hair Salons & Stylists', blurb: 'Online booking, automated rebooking reminders, and review flows for hair salons and independent stylists.' },
     { name: 'Med Spas & Aesthetics', blurb: 'Consultation booking automation, no-show reduction, and reputation management for med spas and aesthetics businesses.' },
     { name: 'Personal Training & Fitness Studios', blurb: 'Session booking automation, membership retention flows, and review systems for personal trainers and fitness studios.' },
     { name: 'Day Spas & Massage', blurb: 'Online booking, rebooking automation, and review flows for day spas and massage therapists.' },
   ],
+
   compact: [
     { name: 'Barbershops', blurb: 'Online booking and review automation for barbershops competing on local search and reputation.' },
     { name: 'Nail Salons', blurb: 'Appointment booking automation and review flows for nail salons.' },
@@ -55,28 +74,36 @@ const DATA: IndustryPageData = {
     { name: 'Nutrition & Wellness Coaching', blurb: 'Discovery call booking and CRM automation for nutrition and wellness coaches.' },
     { name: 'Acupuncture & Holistic Health', blurb: 'Appointment booking automation and review flows for acupuncture and holistic health practitioners.' },
   ],
+
   faqs: [
     {
       q: 'What types of beauty and wellness businesses do you work with?',
-      a: 'We work with salons, barbershops, med spas, spas, fitness studios, personal trainers, and other appointment-based beauty and wellness businesses. If your business depends on repeat clients and local reputation, the system applies.',
+      a: 'We work with hair salons, barbershops, med spas, day spas, nail salons, lash and brow studios, massage therapy clinics, personal training studios, yoga and Pilates studios, and other appointment-based beauty and wellness businesses. If your revenue depends on repeat clients and local reputation, the system is built for your model.',
     },
     {
       q: 'How does the rebooking automation work?',
-      a: 'After an appointment is completed, the system sends a follow-up message at the interval you configure: typically 4 to 6 weeks for most beauty services. The message includes a direct booking link. This runs automatically without any manual step from you or your staff.',
+      a: 'After an appointment is completed, the system sends a follow-up message at the interval you configure — typically 4 to 6 weeks for most hair and beauty services, longer for treatments with different cycles. The message includes a direct link to book the next appointment. This runs automatically without any action from you or your staff.',
     },
     {
-      q: 'How do you reduce no-shows?',
-      a: 'The system sends automated reminders by text at 24 hours and 2 hours before each appointment. Clients can confirm directly from the message. Confirmed appointments show significantly fewer no-shows than manual reminder systems.',
+      q: 'Our no-show rate is hurting us. What does the system actually do about it?',
+      a: 'The system sends automated text reminders at 24 hours and 2 hours before each appointment, with a direct confirmation option built into the message. Most no-shows happen because clients forget — not because they want to cancel. Timed reminders catch that window consistently, without your front desk making calls.',
     },
     {
-      q: 'Will this work for a solo stylist or only larger salons?',
-      a: 'Both. The system scales to your size. A solo stylist benefits from automated rebooking and review requests the same way a multi-chair salon does. You start with the pieces that address your biggest gap.',
+      q: 'We already have an online booking tool. What does this add?',
+      a: 'Booking tools handle the scheduling. This system handles everything that happens before and after — the reminder that prevents the no-show, the follow-up that prompts the rebooking, the review request after checkout, and the reactivation message when a client hasn\'t booked in 60 or 90 days. The booking tool is one piece; this connects the full retention loop.',
     },
     {
-      q: 'How does the review automation work?',
-      a: 'After each appointment, the system sends a review request by text with a direct link to your Google Business Profile. The timing is configurable. No manual follow-up needed from you.',
+      q: 'I\'m a solo stylist, not a big salon. Is this too much for my business?',
+      a: 'No. The system scales to your size. A solo provider benefits from automated rebooking reminders and review requests the same way a multi-chair salon does — and often more, because there\'s no front desk staff to do any of it manually. You start with the pieces that address your biggest gap and add from there.',
     },
   ],
+
+  ctaHeadline: 'Find out what\'s costing you clients — before you lose another one.',
+
+  ctaBody:
+    'We\'ll look at your current booking flow, review presence, and retention gaps and show you exactly where the system will close them. No pitch. No obligation.',
+
+  ctaPrimaryLabel: 'Get a Free Audit',
 }
 
 export const metadata: Metadata = {

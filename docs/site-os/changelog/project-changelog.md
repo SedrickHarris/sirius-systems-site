@@ -15,6 +15,11 @@ Format per entry:
 
 ---
 
+## 2026-05-23 — /industries/beauty-wellness Level 4 copy rewrite
+- type: seo
+- changes: Replaced scaffold DATA object with approved Level 4 copy package. Updated metaTitle (47 chars), metaDescription (154 chars), headline, subheadline, heroHighlights, problemHeadline, problems, systemsHeadline, systemsCopy (newly populated), subVerticalsCopy (newly populated), faqs (5 new pairs focused on rebooking, no-show reduction, booking-tool augmentation, and solo-stylist scale), ctaHeadline, ctaBody, ctaPrimaryLabel ("Get a Free Audit"). serviceSlugs swap: out `smart-websites`; in `reputation-management` (page confirmed live). featured[] and compact[] preserved verbatim. Schema block (webPage, breadcrumbList, faqPage) unchanged. tsc clean. next build clean.
+- files: app/industries/beauty-wellness/page.tsx, docs/site-os/changelog/project-changelog.md
+
 ## 2026-05-23 — /industries/auto-services Level 4 SEO/AEO copy rebuild
 - type: seo
 - changes: Replaced scaffold DATA object with approved Level 4 copy package. Updated metaTitle, metaDescription, headline, subheadline, heroHighlights, problemHeadline, problems, systemsHeadline, systemsCopy, subVerticalsHeadline, subVerticalsCopy, featured, compact, faqs, ctaHeadline, ctaBody, ctaPrimaryLabel. serviceSlugs updated from scaffold set to: reputation-management, review-automation, ai-voicebots, appointment-booking-automation, google-business-profile-optimization, crm-automation. Schema block (webPage, breadcrumbList, faqPage) unchanged. tsc clean. next build clean.
