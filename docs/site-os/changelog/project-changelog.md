@@ -15,6 +15,11 @@ Format per entry:
 
 ---
 
+## 2026-05-23 — /industries/real-estate-property copy update
+- type: seo
+- changes: Set DATA object with Level 5 SEO/AEO copy package. metaTitle, metaDescription, headline, subheadline, heroHighlights, problems, systemsCopy, subVerticalsCopy, 5 featured + 10 compact sub-verticals, faqs, cta fields. Schema: WebPage + BreadcrumbList + FAQPage. No platform integration claims, no named CRM references. tsc clean. next build clean.
+- files: app/industries/real-estate-property/page.tsx
+
 ## 2026-05-23 — /industries/healthcare-medical copy update
 - type: seo
 - changes: Set DATA object with Level 5 SEO/AEO copy package. metaTitle, metaDescription, headline, subheadline, heroHighlights, problems, systemsCopy, subVerticalsCopy, 6 featured + 12 compact sub-verticals, faqs, cta fields. Schema: WebPage + BreadcrumbList + FAQPage. No HIPAA claims, no EHR integrations, no compliance certifications. tsc clean. next build clean.
