@@ -63,7 +63,7 @@ const PAGE = {
     'competitor-review-benchmarking',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services', 'contractors'],
+  industryFit: ['home-services', 'construction-contractors'],
   faqs: [
     {
       q: 'What is local SEO for a service business?',

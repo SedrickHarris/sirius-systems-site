@@ -63,7 +63,7 @@ const PAGE = {
     'google-business-profile-optimization',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services', 'contractors'],
+  industryFit: ['home-services', 'construction-contractors'],
   faqs: [
     {
       q: 'What is reputation management for a local service business?',

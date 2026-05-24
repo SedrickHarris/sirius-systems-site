@@ -9,6 +9,13 @@ import {
   Briefcase,
   Car,
   Sparkles,
+  Stethoscope,
+  Building2,
+  UtensilsCrossed,
+  GraduationCap,
+  Heart,
+  ShoppingBag,
+  Cpu,
 } from 'lucide-react'
 import { FAQ } from '@/components/site/FAQ'
 import { JsonLdScript } from '@/components/site/JsonLdScript'
@@ -18,24 +25,38 @@ import { INDUSTRIES } from '@/lib/industries'
 const META = {
   title: 'Industries We Serve: Local Business Automation | Sirius Systems',
   description:
-    'Sirius Systems builds AI automation, booking systems, and reputation management for home service businesses, contractors, professional services, auto shops, and beauty and wellness businesses.',
+    'Sirius Systems builds AI automation, booking systems, and reputation management for local service businesses across 12 industries: home services, construction, professional services, auto, beauty, healthcare, real estate, hospitality, education, nonprofit, retail, and technology.',
   slug: 'industries',
 }
 
 const SUB_VERTICAL_COUNT: Record<string, string> = {
   'home-services': '20 trades covered',
-  contractors: '15 specialties covered',
+  'construction-contractors': '19 specialties covered',
   'professional-services': '15 practice types covered',
   'auto-services': '12 shop types covered',
   'beauty-wellness': '12 business types covered',
+  'healthcare-medical': '12 practice types covered',
+  'real-estate-property': '10 business types covered',
+  'hospitality-events': '9 business types covered',
+  'education-childcare': '10 program types covered',
+  'community-faith-nonprofit': '8 organization types covered',
+  'retail-local-commerce': '11 store types covered',
+  'technology-b2b': '15 firm types covered',
 }
 
 const INDUSTRY_ICON: Record<string, typeof Home> = {
   'home-services': Home,
-  contractors: HardHat,
+  'construction-contractors': HardHat,
   'professional-services': Briefcase,
   'auto-services': Car,
   'beauty-wellness': Sparkles,
+  'healthcare-medical': Stethoscope,
+  'real-estate-property': Building2,
+  'hospitality-events': UtensilsCrossed,
+  'education-childcare': GraduationCap,
+  'community-faith-nonprofit': Heart,
+  'retail-local-commerce': ShoppingBag,
+  'technology-b2b': Cpu,
 }
 
 const FAQS = [
@@ -116,7 +137,7 @@ export default function IndustriesIndexPage() {
           <div className="content-medium">
             <span className="section-eyebrow">Choose your industry</span>
             <h2 className="mt-5 section-heading">
-              Five industry groups. Hundreds of sub-verticals.
+              Twelve industry groups. Hundreds of sub-verticals.
             </h2>
           </div>
 

@@ -61,7 +61,7 @@ const PAGE = {
     'appointment-booking-automation',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services', 'contractors'],
+  industryFit: ['home-services', 'construction-contractors'],
   faqs: [
     {
       q: 'What is an AI voicebot for a service business?',

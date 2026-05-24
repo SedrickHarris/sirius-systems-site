@@ -73,7 +73,7 @@ const PAGE = {
     'services',
   ],
   industryFitHeadline: 'Built for local service businesses',
-  industryFit: ['home-services', 'contractors'],
+  industryFit: ['home-services', 'construction-contractors'],
   faqs: [
     {
       q: 'What is the Sirius Systems all-in-one business growth system?',

@@ -64,7 +64,7 @@ const PAGE = {
     'local-seo-aeo',
     'all-in-one-business-growth-system',
   ],
-  industryFit: ['home-services', 'contractors'],
+  industryFit: ['home-services', 'construction-contractors'],
   faqs: [
     {
       q: 'What is lead generation automation for a service business?',

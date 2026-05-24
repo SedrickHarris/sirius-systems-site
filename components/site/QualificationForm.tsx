@@ -49,7 +49,7 @@ const EMPTY_FORM: FormData = {
 
 const INDUSTRY_HIGH_FIT = new Set([
   'home-services',
-  'contractors',
+  'construction-contractors',
   'cleaning',
   'junk-removal',
   'real-estate',
@@ -115,7 +115,7 @@ type IconCmp = typeof Wrench
 
 const INDUSTRY_OPTIONS: { value: string; label: string; Icon: IconCmp }[] = [
   { value: 'home-services', label: 'Home Services', Icon: Wrench },
-  { value: 'contractors', label: 'Contractors', Icon: HardHat },
+  { value: 'construction-contractors', label: 'Construction & Contractors', Icon: HardHat },
   { value: 'cleaning', label: 'Cleaning Companies', Icon: Sparkles },
   { value: 'junk-removal', label: 'Junk Removal', Icon: Trash2 },
   { value: 'real-estate', label: 'Real Estate', Icon: Building2 },

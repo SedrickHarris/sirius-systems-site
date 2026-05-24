@@ -15,6 +15,13 @@ import {
   Car,
   Sparkles,
   ShieldCheck,
+  Stethoscope,
+  Building2,
+  UtensilsCrossed,
+  GraduationCap,
+  Heart,
+  ShoppingBag,
+  Cpu,
 } from 'lucide-react'
 import { FAQ } from '@/components/site/FAQ'
 import { GoogleReviewsSection } from '@/components/reviews/GoogleReviewsSection'
@@ -52,11 +59,18 @@ const WORKFLOW = [
 
 // ─── Industry icons (lucide) keyed to INDUSTRIES.slug ───────────────
 const INDUSTRY_ICON: Record<string, typeof Home> = {
-  'home-services':         Home,
-  'contractors':           HardHat,
-  'professional-services': Briefcase,
-  'auto-services':         Car,
-  'beauty-wellness':       Sparkles,
+  'home-services':              Home,
+  'construction-contractors':   HardHat,
+  'professional-services':      Briefcase,
+  'auto-services':              Car,
+  'beauty-wellness':            Sparkles,
+  'healthcare-medical':         Stethoscope,
+  'real-estate-property':       Building2,
+  'hospitality-events':         UtensilsCrossed,
+  'education-childcare':        GraduationCap,
+  'community-faith-nonprofit':  Heart,
+  'retail-local-commerce':      ShoppingBag,
+  'technology-b2b':             Cpu,
 }
 
 export default function HomePage() {
@@ -484,7 +498,7 @@ export default function HomePage() {
               Built for local service businesses.
             </h2>
             <p className="mt-5 section-copy">
-              Five industry hubs. Hundreds of sub-verticals beneath each. If
+              Twelve industry hubs. Hundreds of sub-verticals beneath each. If
               your business depends on calls, bookings, and local reputation,
               the system applies.
             </p>

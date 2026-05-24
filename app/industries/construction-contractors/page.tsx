@@ -1,5 +1,3 @@
-// DEPRECATED SLUG — moved to /industries/construction-contractors
-// TODO: add a Next.js redirect in next.config.js after this task is verified
 import type { Metadata } from 'next'
 import {
   IndustryPageTemplate,
@@ -9,13 +7,12 @@ import { JsonLdScript } from '@/components/site/JsonLdScript'
 import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 
 const DATA: IndustryPageData = {
-  slug: 'contractors',
-  metaTitle:
-    'Contractors: AI Automation, Lead Follow-Up & Reviews | Sirius Systems',
+  slug: 'construction-contractors',
+  metaTitle: 'Construction & Contractors Automation | Sirius Systems',
   metaDescription:
-    'AI-powered lead follow-up, estimate automation, appointment booking, and reputation management for contractors: general contractors, remodelers, solar, flooring, and more.',
-  eyebrow: 'Contractors',
-  headline: 'Your Estimate Was Good. The Follow-Up Is What Lost the Job.',
+    'AI automation, booking systems, and reputation management for general contractors, remodelers, painters, flooring installers, and construction businesses.',
+  eyebrow: 'Construction & Contractors',
+  headline: 'The System That Keeps Construction Businesses Booked and Reviewed',
   subheadline:
     'Most contractors lose jobs not because they priced wrong but because they followed up too late: or not at all. We build the system that follows up automatically, books the call, and earns the review that wins the next job without you lifting a finger.',
   heroHighlights: [
@@ -111,7 +108,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ContractorsIndustryPage() {
+export default function ConstructionContractorsIndustryPage() {
   return (
     <>
       <JsonLdScript
@@ -124,7 +121,7 @@ export default function ContractorsIndustryPage() {
           breadcrumbList([
             { name: 'Home', url: '/' },
             { name: 'Industries', url: '/industries' },
-            { name: 'Contractors', url: `/industries/${DATA.slug}` },
+            { name: 'Construction & Contractors', url: `/industries/${DATA.slug}` },
           ]),
           faqPage(DATA.faqs),
         ]}
