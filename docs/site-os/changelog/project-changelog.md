@@ -15,6 +15,22 @@ Format per entry:
 
 ---
 
+## 2026-05-23 — /privacy + /terms shipped, NAP confirmed, LocalBusiness schema added
+- type: feat
+- author: Sirius Systems / Claude Code
+- changes: NAP details verified against the public Google Business Profile and shipped end-to-end. `app/privacy/page.tsx` and `app/terms/page.tsx` created with template-based legal copy, brand layout, and WebPage + BreadcrumbList JSON-LD. Footer updated with confirmed legal name (SHH Group dba Sirius Systems), address block (304 S Jones Blvd Ste 1915, Las Vegas, NV 89107), phone (727) 222-3424 with E.164 href, and restored /privacy + /terms links in the Company column. `lib/site.ts` SITE.contact.phone.display harmonized to spec format `(727) 222-3424`; new SITE.contact.address and SITE.contact.legal fields added. Homepage JsonLdScript array extended with a LocalBusiness block (name, legalName, url, telephone, PostalAddress, areaServed=Nevada interim). `app/sitemap.ts` restored /privacy + /terms ROUTES entries (URL count 31 → 33; build route count 36 → 38). docs/site-os/inputs/verified-public-sources.md gains a new §1a confirmed-NAP table. docs/site-os/inputs/content-needed-from-client.md marks items 1.1, 1.4, 1.9, 1.10, and 2.3 as RESOLVED 2026-05-23.
+- files:
+  app/privacy/page.tsx (new),
+  app/terms/page.tsx (new),
+  app/page.tsx,
+  app/sitemap.ts,
+  components/site/Footer.tsx,
+  lib/site.ts,
+  docs/site-os/inputs/verified-public-sources.md,
+  docs/site-os/inputs/content-needed-from-client.md,
+  docs/site-os/changelog/project-changelog.md
+- notes: 4 launch blockers from Phase 6 QA resolved (privacy page, terms page, legal name, address+phone confirmation). Remaining Phase 6 blockers: B5b (email canonical — display `info@siriussys.io` vs href `mailto:info@inbox.siriussys.io` mismatch in `lib/site.ts` still flagged for client) and B6 (GHL_WEBHOOK_URL stub). LocalBusiness `areaServed` set to Nevada state-level as interim until content-needed item 1.3 (exact service area) resolves. tsc clean. next build clean — 38 routes.
+
 ## 2026-05-23 — /industries/beauty-wellness Level 4 copy rewrite
 - type: seo
 - changes: Replaced scaffold DATA object with approved Level 4 copy package. Updated metaTitle (47 chars), metaDescription (154 chars), headline, subheadline, heroHighlights, problemHeadline, problems, systemsHeadline, systemsCopy (newly populated), subVerticalsCopy (newly populated), faqs (5 new pairs focused on rebooking, no-show reduction, booking-tool augmentation, and solo-stylist scale), ctaHeadline, ctaBody, ctaPrimaryLabel ("Get a Free Audit"). serviceSlugs swap: out `smart-websites`; in `reputation-management` (page confirmed live). featured[] and compact[] preserved verbatim. Schema block (webPage, breadcrumbList, faqPage) unchanged. tsc clean. next build clean.

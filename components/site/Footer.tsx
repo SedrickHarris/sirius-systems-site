@@ -46,6 +46,24 @@ export function Footer() {
             >
               {SITE.description}
             </p>
+
+            {/* NAP block — confirmed 2026-05-23 (see verified-public-sources.md §1a) */}
+            <address
+              className="mt-6 not-italic text-sm leading-relaxed"
+              style={{ color: 'var(--text-muted)' }}
+            >
+              {SITE.contact.address.street}
+              <br />
+              {SITE.contact.address.cityRegion}
+              <br />
+              <a
+                href={SITE.contact.phone.href}
+                className="transition-colors hover:[color:var(--text)]"
+              >
+                {SITE.contact.phone.display}
+              </a>
+            </address>
+
             <div className="mt-6 flex flex-wrap items-center gap-3 text-xs">
               <a
                 href={SITE.social.facebook}
@@ -161,10 +179,24 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              {/* /privacy and /terms routes don't exist yet (copy blocked
-                  on content-needed-from-client.md items 1.9 + 1.10). Footer
-                  links removed so we don't ship broken hrefs in the meantime.
-                  Restore both list items when the pages land. */}
+              <li>
+                <Link
+                  href="/privacy"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  Terms
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -174,11 +206,7 @@ export function Footer() {
           style={{ borderColor: 'var(--border)', color: 'var(--text-faint)' }}
         >
           <p>
-            &copy; {year} {SITE.name}.{' '}
-            <span style={{ color: 'var(--text-faint)' }}>
-              {/* TODO: replace with confirmed legal business name (content-needed 1.4) */}
-              Legal name pending confirmation.
-            </span>
+            &copy; {year} {SITE.contact.legal.footer}. All rights reserved.
           </p>
           <p style={{ color: 'var(--text-faint)' }}>Built by Sedrick Harris.</p>
         </div>

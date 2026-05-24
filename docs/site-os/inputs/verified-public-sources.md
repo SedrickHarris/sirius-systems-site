@@ -13,8 +13,32 @@ Catalog of public URLs tied to the brand. Each entry records **what the source v
 
 ### 2. Google Business Profile
 - **URL:** https://share.google/TUgLZOpTwsYaHLaLZ
-- **Verifies:** the business is registered on Google, GBP exists and is claimable
-- **Does not verify:** specific NAP details, service area boundaries, or review counts (pull live at render time; do not hardcode)
+- **Verifies:** the business is registered on Google, GBP exists and is claimable. NAP details (see §1a below) are also verified via this listing as of 2026-05-23.
+- **Does not verify:** service area boundaries, review counts (pull live at render time; do not hardcode), or hours of operation.
+
+---
+
+## 1a. Confirmed business identity (NAP)
+
+Verified against the Google Business Profile public listing on 2026-05-23.
+
+| Field | Value |
+|-------|-------|
+| Legal name | SHH Group, doing business as Sirius Systems |
+| DBA | Sirius Systems |
+| Street address | 304 S Jones Blvd Ste 1915 |
+| City, State, ZIP | Las Vegas, NV 89107 |
+| Country | US |
+| Phone (display) | (727) 222-3424 |
+| Phone (E.164) | +17272223424 |
+| Source | Google Business Profile (public listing) |
+| Confirmed | 2026-05-23 |
+
+These values are the canonical source for:
+- `lib/site.ts` `SITE.contact.phone`
+- Footer copyright + address block
+- `/privacy` and `/terms` "Contact Us" sections
+- Homepage `LocalBusiness` JSON-LD `name`, `legalName`, `telephone`, `address`
 
 ### 3. Facebook page
 - **URL:** https://www.facebook.com/SiriusSys.io/

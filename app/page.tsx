@@ -88,6 +88,29 @@ export default function HomePage() {
             description: SITE.description,
           }),
           faqPage(HOME_FAQ),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'Sirius Systems',
+            legalName: 'SHH Group',
+            url: 'https://siriussys.io/',
+            telephone: '+17272223424',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '304 S Jones Blvd Ste 1915',
+              addressLocality: 'Las Vegas',
+              addressRegion: 'NV',
+              postalCode: '89107',
+              addressCountry: 'US',
+            },
+            // areaServed: interim — Nevada state-level. Update to the
+            // confirmed service area (metro list or "nationwide") once
+            // content-needed-from-client.md item 1.3 is resolved.
+            areaServed: {
+              '@type': 'State',
+              name: 'Nevada',
+            },
+          },
         ]}
       />
 

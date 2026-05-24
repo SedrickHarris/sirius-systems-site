@@ -12,16 +12,16 @@ These must be answered before the site can ship.
 
 | # | Item | Why it blocks launch |
 |---|------|----------------------|
-| 1.1 | Publishable phone number | Header, footer, contact page, schema |
+| 1.1 | ~~Publishable phone number~~ — **RESOLVED 2026-05-23**: `(727) 222-3424` (E.164 `+17272223424`). Source: GBP. | Header, footer, contact page, schema |
 | 1.2 | Publishable email address | Footer, contact page, schema |
 | 1.3 | Service area (specific cities / metros / "nationwide remote") | Schema `areaServed`, page copy, GBP consistency |
-| 1.4 | Legal business name (for footer + Terms) | Footer, Terms, Privacy |
+| 1.4 | ~~Legal business name~~ — **RESOLVED 2026-05-23**: `SHH Group, doing business as Sirius Systems`. Source: GBP. | Footer, Terms, Privacy |
 | 1.5 | Final logo files (SVG light + SVG dark + favicon source) | Header, footer, favicon, social cards |
 | 1.6 | Primary brand color (hex) | Tailwind theme, accent treatments |
 | 1.7 | Secondary brand color (hex) | Backgrounds, hover states |
 | 1.8 | Type pairing decision (display + body) | Tailwind theme, all type |
-| 1.9 | Privacy Policy (text or "use generated template") | `/privacy` page |
-| 1.10 | Terms of Service (text or "use generated template") | `/terms` page |
+| 1.9 | ~~Privacy Policy~~ — **RESOLVED 2026-05-23** (template-based, shipped at `/privacy` with confirmed NAP). | `/privacy` page |
+| 1.10 | ~~Terms of Service~~ — **RESOLVED 2026-05-23** (template-based, shipped at `/terms` with confirmed NAP and Nevada governing-law clause). | `/terms` page |
 | 1.11 | Founder bio (2–4 sentences) + headshot | `/about` |
 | 1.12 | ~~Final positioning line~~ — **RESOLVED 2026-05-20**, see `docs/brand/brand-skill.md` | `/` hero, meta description |
 
@@ -33,7 +33,7 @@ These are not blockers, but every page or feature that depends on them ships as 
 |---|------|-------------------------------|
 | 2.1 | Tagline (if any) | Hero, social cards |
 | 2.2 | Hours of operation | Footer, schema, GBP consistency |
-| 2.3 | Physical address (or "virtual / no public address") | Footer, schema |
+| 2.3 | ~~Physical address~~ — **RESOLVED 2026-05-23**: `304 S Jones Blvd Ste 1915, Las Vegas, NV 89107`. Source: GBP. | Footer, schema |
 | 2.4 | CRM choice (e.g. GoHighLevel, HubSpot, custom) | Form integration |
 | 2.5 | Lead form endpoint + auth | All page CTAs |
 | 2.6 | Booking provider + link | `/contact`, service-page CTAs |
@@ -90,12 +90,14 @@ Format: `[STATUS] item — date`
 
 Statuses: `BLOCKED` (waiting on client), `RECEIVED` (in hand), `RESOLVED` (in `client-discovery-notes.md`).
 
-- `BLOCKED` 1.1 Phone number — 2026-05-20
-- `BLOCKED` 1.2 Email — 2026-05-20
-- `BLOCKED` 1.3 Service area — 2026-05-20
-- `BLOCKED` 1.4 Legal business name — 2026-05-20
+- `RESOLVED` 1.1 Phone number — 2026-05-23 (`(727) 222-3424` / E.164 `+17272223424`; verified via GBP, see `verified-public-sources.md` §1a)
+- `BLOCKED` 1.2 Email — 2026-05-20 (display + href mismatch in `lib/site.ts` flagged; needs client decision on canonical address)
+- `BLOCKED` 1.3 Service area — 2026-05-20 (LocalBusiness schema currently uses `areaServed: { State: Nevada }` as interim until client confirms exact metro / nationwide scope)
+- `RESOLVED` 1.4 Legal business name — 2026-05-23 (`SHH Group, doing business as Sirius Systems`; verified via GBP)
 - `BLOCKED` 1.5 Logo files — 2026-05-20
 - `BLOCKED` 1.6–1.8 Brand colors + type — 2026-05-20
-- `BLOCKED` 1.9–1.10 Privacy + Terms — 2026-05-20
+- `RESOLVED` 1.9 Privacy Policy — 2026-05-23 (template-based, shipped at `/privacy` with confirmed NAP)
+- `RESOLVED` 1.10 Terms of Service — 2026-05-23 (template-based, Nevada governing law, shipped at `/terms`)
 - `BLOCKED` 1.11 Founder bio + headshot — 2026-05-20
 - `RESOLVED` 1.12 Final positioning line — 2026-05-20 (delivered via `docs/brand/brand-skill.md`; long-form in `brand.md` + `docs/brand/brand-guide.md` §1; trimmed meta in `lib/site.ts`)
+- `RESOLVED` 2.3 Physical address — 2026-05-23 (`304 S Jones Blvd Ste 1915, Las Vegas, NV 89107`; verified via GBP)

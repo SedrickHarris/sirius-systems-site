@@ -9,14 +9,6 @@ export const dynamic = 'force-static'
 // page's `metadata.alternates.canonical` declares: so a sitemap entry
 // always points at the canonical URL form, not a variant.
 //
-// NOTE: `/privacy` and `/terms` are intentionally OMITTED. Those routes
-// are referenced in the footer and prelaunch checklist but no `app/privacy`
-// or `app/terms` page has been built yet (the copy is blocked on
-// content-needed-from-client.md items 1.9 + 1.10). Adding them to the
-// sitemap now would send search engines to two 404 URLs, which is a
-// negative crawl signal. Add them back here in the same commit that ships
-// the actual pages.
-//
 // NOTE: `/industries/contractors` is a deprecated slug. It's served via
 // a 301 redirect from `public/_redirects` to `/industries/construction-
 // contractors`. Indexing a redirect target is a confusing crawl signal,
@@ -62,9 +54,9 @@ const ROUTES: { path: string; priority: number; changeFrequency: Freq }[] = [
   { path: '/industries/retail-local-commerce', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b', priority: 0.7, changeFrequency: 'monthly' },
 
-  // Utility: /privacy and /terms omitted, see note above.
-  // '/privacy',   // add when page ships
-  // '/terms',     // add when page ships
+  // Utility (2)
+  { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
 
   // TODO: extend with blog routes when blog ships.
   // Blog posts are dynamic MDX slugs — this hardcoded

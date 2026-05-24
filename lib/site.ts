@@ -18,8 +18,18 @@ export const SITE = {
       href: 'mailto:info@inbox.siriussys.io',
     },
     phone: {
-      display: '+1 727-222-3424',
+      display: '(727) 222-3424',
       href: 'tel:+17272223424',
+    },
+    address: {
+      street: '304 S Jones Blvd Ste 1915',
+      cityRegion: 'Las Vegas, NV 89107',
+    },
+    legal: {
+      name: 'SHH Group',
+      dba: 'Sirius Systems',
+      // Convenience render for footer + legal pages
+      footer: 'SHH Group dba Sirius Systems',
     },
   },
   social: {
