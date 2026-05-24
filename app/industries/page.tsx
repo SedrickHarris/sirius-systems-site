@@ -31,7 +31,7 @@ const META = {
 
 const SUB_VERTICAL_COUNT: Record<string, string> = {
   'home-services': '20 trades covered',
-  'construction-contractors': '19 specialties covered',
+  'construction-contractors': '15 specialties covered',
   'professional-services': '15 practice types covered',
   'auto-services': '12 shop types covered',
   'beauty-wellness': '12 business types covered',
