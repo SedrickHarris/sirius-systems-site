@@ -10,7 +10,7 @@ const DATA: IndustryPageData = {
   slug: 'construction-contractors',
 
   metaTitle:
-    'Construction & Contractor Automation | Sirius Systems',
+    'Contractor Automation Systems | Sirius Systems',
 
   metaDescription:
     'Lead follow-up, estimate automation, CRM, and review systems for general contractors, remodelers, painters, flooring companies, and specialty trades.',
@@ -24,19 +24,19 @@ const DATA: IndustryPageData = {
     'Most contractors lose jobs not because they priced wrong — but because they followed up too late, or not at all. We build the system that follows up automatically, books the call, and earns the review that wins the next job.',
 
   heroHighlights: [
-    'Estimate follow-up sequences at 24h, 72h, and hand-off',
+    'Estimate follow-up sequences that run at 24h, 72h, and hand-off — without you touching them',
     'Lead capture across paid, organic, and referral channels',
-    'Review automation that builds reputation with every completed job',
-    'CRM pipeline that updates itself — no manual data entry',
+    'Review automation that builds your reputation after every completed job',
+    'CRM pipeline that updates itself — no manual data entry required',
   ],
 
   problemHeadline: 'Where contractors leak revenue',
 
   problems: [
     'Estimates go out and sit. The job goes to whoever followed up first — not whoever priced better.',
-    'You are on site and cannot respond to a new inquiry fast enough to stay competitive.',
+    'You are on site and cannot respond to a new inquiry fast enough to stay in the running.',
     'Completed jobs do not turn into reviews because no one asked at the right moment.',
-    'The website looks fine but has no system behind it — leads stall before they reach you.',
+    'The website looks fine but has no system behind it — leads stall before they ever reach you.',
   ],
 
   systemsHeadline: 'The system contractors actually need',
@@ -70,27 +70,32 @@ const DATA: IndustryPageData = {
         'High-ticket estimate follow-up, consultation booking automation, and review flows for remodelers.',
     },
     {
+      name: 'Painting Contractors',
+      blurb:
+        'Quote follow-up, job booking, and post-job review automation for residential and commercial painters.',
+    },
+    {
       name: 'Flooring Installation',
       blurb:
         'Estimate automation, booking, and review requests for flooring contractors competing on responsiveness and reputation.',
-    },
-    {
-      name: 'Solar Installation',
-      blurb:
-        'Multi-step lead nurturing, consultation booking, and post-install review automation for solar contractors.',
     },
   ],
 
   compact: [
     {
+      name: 'Deck & Patio Builders',
+      blurb:
+        'Booking automation and review flows for deck and outdoor structure builders.',
+    },
+    {
+      name: 'Concrete & Masonry',
+      blurb:
+        'Lead capture and booking automation for concrete and masonry contractors.',
+    },
+    {
       name: 'Tile & Stone',
       blurb:
         'Estimate follow-up and review automation for tile and stone installation contractors.',
-    },
-    {
-      name: 'Concrete & Flatwork',
-      blurb:
-        'Lead capture and booking automation for concrete and flatwork contractors.',
     },
     {
       name: 'Drywall & Plastering',
@@ -98,29 +103,14 @@ const DATA: IndustryPageData = {
         'Job booking automation and review flows for drywall and plastering contractors.',
     },
     {
-      name: 'Insulation',
-      blurb:
-        'Lead follow-up and appointment automation for insulation contractors.',
-    },
-    {
       name: 'Siding & Exterior',
       blurb:
         'Estimate automation and review systems for siding and exterior contractors.',
     },
     {
-      name: 'Fencing',
+      name: 'Fencing Contractors',
       blurb:
         'Quote follow-up and review automation for fencing contractors.',
-    },
-    {
-      name: 'Decks & Outdoor Structures',
-      blurb:
-        'Booking automation and review flows for deck and outdoor structure builders.',
-    },
-    {
-      name: 'Masonry & Brickwork',
-      blurb:
-        'Estimate follow-up and reputation management for masonry contractors.',
     },
     {
       name: 'Waterproofing & Foundation',
@@ -135,30 +125,40 @@ const DATA: IndustryPageData = {
     {
       name: 'Commercial Build-Out',
       blurb:
-        'Lead qualification, estimate automation, and CRM integration for commercial build-out contractors.',
+        'Lead qualification, estimate automation, and CRM for commercial build-out contractors.',
+    },
+    {
+      name: 'Insulation',
+      blurb:
+        'Lead follow-up and appointment automation for insulation contractors.',
+    },
+    {
+      name: 'Excavation & Demolition',
+      blurb:
+        'Estimate follow-up and CRM pipeline for excavation and demolition contractors.',
     },
   ],
 
   faqs: [
     {
       q: 'What types of contractors do you work with?',
-      a: 'We work with residential and commercial contractors across most trades — general contractors, remodelers, flooring companies, solar installers, painters, fencing businesses, concrete contractors, and more. If your business is project-based and depends on estimates, referrals, and local reputation, the system applies.',
+      a: 'We work with residential and commercial contractors across most trades — general contractors, remodelers, flooring companies, painters, deck builders, concrete contractors, and more. The automation systems are the same across trades; the triggers and follow-up sequences are configured for how your specific job cycle works.',
     },
     {
-      q: 'My estimates are already detailed and professional. What would automation actually change?',
-      a: 'The gap is almost never in estimate quality — it is in follow-up timing and consistency. Most contractors send an estimate and wait. An automated follow-up sends a message within 24 hours, again at 72 hours, and then flags the lead for a direct call if there is still no response. That sequence alone closes more jobs than redesigning the estimate format.',
+      q: 'How does estimate follow-up automation work for contractors?',
+      a: 'When a lead comes in — from your website, your Google Business Profile, or a referral — the system captures their contact information and starts a follow-up sequence automatically. You set the timing and the messages. The system sends them at 24 hours, 72 hours, and a final check-in without you having to remember or manually reach out. If they respond, it routes to you. If they book, it stops.',
     },
     {
-      q: 'How does the review system work for a contractor?',
-      a: 'After a job closes, the system sends a review request by text at a timed interval — long enough for the customer to see the finished result, not so long that the moment has passed. The message links directly to your Google Business Profile. No manual step required from you or your crew.',
+      q: 'Can you help me get more Google reviews for my contracting business?',
+      a: 'Yes. Review automation sends a review request to your customer after the job closes — at the right moment, through text or email, with a direct link to your Google Business Profile. Most contractors who complete strong work have few reviews because no one has a consistent ask process. The system builds that into every completed job.',
     },
     {
-      q: 'Do I need a new website to connect the lead follow-up system?',
-      a: 'No. In most cases the automation connects to your existing site. If your current site needs changes to support the follow-up flow, we scope that during the discovery call. The website rebuild is optional, not required.',
+      q: 'Do I need a CRM to use these systems?',
+      a: 'No. If you do not have one, we can set up a CRM as part of the system. If you already use one, we connect it. The goal is a single pipeline where you can see every active lead, every estimate sent, and every follow-up status without logging into multiple tools or updating a spreadsheet.',
     },
     {
-      q: 'How is this different from just buying more leads from a lead generation service?',
-      a: 'Lead generation services sell you the same leads they sell to other contractors in your market. This system captures leads you already generate — from your own site, your GBP, your referrals, and your ads — and follows up faster and more consistently than your competition. You own the leads. You own the follow-up.',
+      q: 'Does this work if most of my business comes from referrals?',
+      a: 'Yes — and it makes referrals work harder. When a referral contacts you, the system captures them, follows up, books the consultation, and asks for a review after the job. The referral that used to be a one-time customer becomes a repeat review and a source for the next referral. The system amplifies word of mouth — it does not replace it.',
     },
   ],
 

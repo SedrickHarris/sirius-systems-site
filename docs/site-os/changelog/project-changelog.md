@@ -15,6 +15,11 @@ Format per entry:
 
 ---
 
+## 2026-05-23 — /industries/construction-contractors copy update
+- type: seo
+- changes: Replaced DATA object with Level 5 SEO/AEO copy package. Updated metaTitle, metaDescription, headline, subheadline, heroHighlights, problems, systemsCopy, subVerticalsCopy, 4 featured + 11 compact sub-verticals, 5 FAQs, and CTA fields. Schema block unchanged: WebPage + BreadcrumbList + FAQPage. No invented stats, ratings, reviews, or guarantees. tsc clean. next build clean.
+- files: app/industries/construction-contractors/page.tsx
+
 ## 2026-05-23 — /industries/real-estate-property copy update
 - type: seo
 - changes: Set DATA object with Level 5 SEO/AEO copy package. metaTitle, metaDescription, headline, subheadline, heroHighlights, problems, systemsCopy, subVerticalsCopy, 5 featured + 10 compact sub-verticals, faqs, cta fields. Schema: WebPage + BreadcrumbList + FAQPage. No platform integration claims, no named CRM references. tsc clean. next build clean.
