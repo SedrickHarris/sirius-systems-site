@@ -15,6 +15,17 @@ Format per entry:
 
 ---
 
+## 2026-05-23 — Level 4 SEO/AEO rebuild: /industries/professional-services
+
+- type: seo
+- author: Sirius Systems / Claude Code
+- changes: Replaced scaffold placeholder copy in /industries/professional-services with approved Level 4 SEO/AEO copy package. New headline, subheadline, heroHighlights, 4 problem statements, systemsHeadline, systemsCopy, subVerticalsHeadline, subVerticalsCopy, 4 featured sub-vertical cards, 4 compact sub-vertical cards, 5 FAQ pairs, ctaHeadline, ctaBody, ctaPrimaryLabel. metaTitle corrected to ≤ 60 characters. metaDescription updated. Metadata draft doc updated to reflect Level 4 shipped status.
+- files:
+  app/industries/professional-services/page.tsx
+  docs/seo/metadata-draft.md
+  docs/site-os/changelog/project-changelog.md
+- notes: Two TODO comments preserved in code — (1) FAQ Q4 integration list pending client confirmation, (2) IT Consultants & MSPs compact card cross-link to /industries/technology-b2b pending that hub's copy stage. Do not resolve either TODO without client input. No AggregateRating or Review schema. No invented claims.
+
 ## 2026-05-23 — /industries/construction-contractors copy update
 - type: seo
 - changes: Replaced DATA object with Level 5 SEO/AEO copy package. Updated metaTitle, metaDescription, headline, subheadline, heroHighlights, problems, systemsCopy, subVerticalsCopy, 4 featured + 11 compact sub-verticals, 5 FAQs, and CTA fields. Schema block unchanged: WebPage + BreadcrumbList + FAQPage. No invented stats, ratings, reviews, or guarantees. tsc clean. next build clean.

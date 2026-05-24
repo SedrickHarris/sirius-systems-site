@@ -114,9 +114,9 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Notes:** Renamed from `/industries/contractors` on 2026-05-23. 301 redirect from the old slug lives in `public/_redirects`.
 
 ### `/industries/professional-services`
-- **Title:** `Professional Services Automation: AI Chatbots, Booking & Reviews | Sirius Systems`
-- **Description:** `AI chatbots, appointment booking automation, CRM, and reputation management for professional service firms: law, dental, medical, accounting, and more.`
-- **Notes:** Pre-Level 5 copy. Pending SEO rebuild — flag length on title (currently > 60 chars).
+- **Title:** `Professional Services Automation | Sirius Systems`
+- **Description:** `CRM automation, consultation booking, AI chatbots, and reputation management for law firms, accounting practices, financial planners, and consultants.`
+- **Notes:** Level 4 copy shipped 2026-05-23. Title 49 chars; description 150 chars. Refocused away from healthcare-style sub-verticals (those now live on `/industries/healthcare-medical`); featured set is Law/CPA/Financial Planning/Insurance, compact set is Business Consultants/Marketing & Creative Agencies/HR & Recruiting/IT Consultants & MSPs.
 
 ### `/industries/auto-services`
 - **Title:** `Auto Services Automation: Booking, Reviews & CRM | Sirius Systems`
