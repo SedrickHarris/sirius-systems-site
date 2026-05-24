@@ -10,7 +10,7 @@ const DATA: IndustryPageData = {
   slug: 'education-childcare',
   metaTitle: 'Education & Childcare Business Automation | Sirius Systems',
   metaDescription:
-    'AI automation, enrollment follow-up, and reputation management for tutoring centers, childcare providers, music schools, martial arts studios, and training programs.',
+    'AI automation, enrollment follow-up, and reputation management for tutoring, childcare, music schools, martial arts studios, and training programs.',
   eyebrow: 'Education & Childcare',
   headline: 'The System That Turns Inquiries Into Enrolled Students',
   subheadline:

@@ -8,9 +8,9 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 
 const DATA: IndustryPageData = {
   slug: 'community-faith-nonprofit',
-  metaTitle: 'Nonprofit, Church & Community Organization Automation | Sirius Systems',
+  metaTitle: 'Automation for Nonprofits & Faith Orgs | Sirius',
   metaDescription:
-    'Outreach automation, donor follow-up, and communication systems for churches, nonprofits, charities, membership organizations, and mission-driven businesses.',
+    'Outreach automation, donor follow-up, and communication systems for churches, nonprofits, charities, and membership organizations.',
   eyebrow: 'Community, Faith & Nonprofit',
   headline: 'The System That Keeps Your Mission Moving Forward',
   subheadline:

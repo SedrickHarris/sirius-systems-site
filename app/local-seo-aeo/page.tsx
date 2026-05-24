@@ -7,7 +7,7 @@ const PAGE = {
   slug: 'local-seo-aeo',
   metaTitle: 'Local SEO & AEO for Service Businesses | Sirius Systems',
   metaDescription:
-    'Local SEO and AEO that ranks your business in Google search, Google Maps, and AI answer engines: ChatGPT, Perplexity, and AI Overviews. Built for local service businesses.',
+    "Local SEO and AEO that ranks your business in Google's map pack and AI answer engines like ChatGPT, Perplexity, and Google AI Overviews.",
   eyebrow: 'Local SEO & AEO',
   headline: 'Show up in Google. Show up in AI answers. Both matter now.',
   subheadline:

@@ -23,9 +23,9 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 import { INDUSTRIES } from '@/lib/industries'
 
 const META = {
-  title: 'Industries We Serve: Local Business Automation | Sirius Systems',
+  title: 'Industries We Serve | Sirius Systems',
   description:
-    'Sirius Systems builds AI automation, booking systems, and reputation management for local service businesses across 12 industries: home services, construction, professional services, auto, beauty, healthcare, real estate, hospitality, education, nonprofit, retail, and technology.',
+    'AI automation and growth systems for local service businesses across 12 industries — home services, healthcare, construction, auto, retail, and more.',
   slug: 'industries',
 }
 

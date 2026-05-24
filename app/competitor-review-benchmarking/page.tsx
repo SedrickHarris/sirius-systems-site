@@ -6,7 +6,7 @@ import { webPage, breadcrumbList, serviceSchema, faqPage } from '@/lib/schema'
 const PAGE = {
   slug: 'competitor-review-benchmarking',
   metaTitle:
-    'Competitor Review Benchmarking for Service Businesses | Sirius Systems',
+    'Competitor Review Benchmarking | Sirius Systems',
   metaDescription:
     'See how your reviews stack up against your top local competitors: volume, rating, recency, and response rate: and know exactly where to push next.',
   eyebrow: 'Competitor Benchmarking',

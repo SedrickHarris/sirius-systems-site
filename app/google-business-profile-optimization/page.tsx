@@ -7,7 +7,7 @@ const PAGE = {
   slug: 'google-business-profile-optimization',
   metaTitle: 'Google Business Profile Optimization | Sirius Systems',
   metaDescription:
-    'Google Business Profile optimization that improves local search visibility: NAP, categories, services, photos, posts, and Q&A fully configured for local service businesses.',
+    'GBP optimization that drives local search visibility, map pack ranking, and review management for local service businesses. Built by Sirius Systems.',
   eyebrow: 'Google Business Profile',
   headline:
     'The first thing customers see. Most businesses set it up once and forget it.',

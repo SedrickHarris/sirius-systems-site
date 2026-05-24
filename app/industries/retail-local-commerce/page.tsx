@@ -10,7 +10,7 @@ const DATA: IndustryPageData = {
   slug: 'retail-local-commerce',
   metaTitle: 'Retail & Local Commerce Automation | Sirius Systems',
   metaDescription:
-    'Customer follow-up, review generation, and local search visibility for retail shops, boutiques, pet stores, specialty retailers, and local commerce businesses.',
+    'Customer follow-up, review generation, and local search visibility for retail shops, boutiques, pet stores, specialty retailers, and local commerce.',
   eyebrow: 'Retail & Local Commerce',
   headline: 'The System That Keeps Customers Coming Back and Reviewing',
   subheadline:

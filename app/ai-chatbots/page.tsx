@@ -7,7 +7,7 @@ const PAGE = {
   slug: 'ai-chatbots',
   metaTitle: 'AI Chatbots for Service Businesses | Sirius Systems',
   metaDescription:
-    'AI chatbots that answer in your voice, qualify leads, and book appointments 24/7: connected to your CRM and calendar. Designed for local service businesses.',
+    'AI chatbots that answer in your voice, qualify leads, and book appointments 24/7 — connected to your CRM and calendar, for local service businesses.',
   eyebrow: 'AI Chatbots',
   headline: 'A chatbot that books jobs. Not just answers questions.',
   subheadline:

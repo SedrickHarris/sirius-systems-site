@@ -6,9 +6,9 @@ import { webPage, breadcrumbList, serviceSchema, faqPage } from '@/lib/schema'
 const PAGE = {
   slug: 'all-in-one-business-growth-system',
   metaTitle:
-    'All-in-One Business Growth System for Service Businesses | Sirius Systems',
+    'All-in-One Growth System for Local Business | Sirius',
   metaDescription:
-    'One system that connects AI automation, reputation management, and local SEO: so your local service business captures more leads, earns more reviews, and ranks where customers search.',
+    'Unified system for local service businesses — lead capture, follow-up, booking, reviews, and CRM connected as one platform, not point tools.',
   eyebrow: 'The Full System',
   headline: 'Stop running three systems that do not talk to each other. Run one.',
   subheadline:

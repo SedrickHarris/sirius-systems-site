@@ -7,7 +7,7 @@ const PAGE = {
   slug: 'smart-websites',
   metaTitle: 'Smart Websites for Local Service Businesses | Sirius Systems',
   metaDescription:
-    'A smart website does more than look good: it captures leads, qualifies visitors, books appointments, and connects to your CRM. Built for local service businesses by Sirius Systems.',
+    'Conversion-focused websites with lead capture, chat, booking, and mobile-ready performance — built for local service businesses by Sirius Systems.',
   eyebrow: 'Smart Websites',
   headline: 'Your website should book jobs. Not just describe them.',
   subheadline:

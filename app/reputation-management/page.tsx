@@ -5,9 +5,9 @@ import { webPage, breadcrumbList, serviceSchema, faqPage } from '@/lib/schema'
 
 const PAGE = {
   slug: 'reputation-management',
-  metaTitle: 'Reputation Management for Service Businesses | Sirius Systems',
+  metaTitle: 'Reputation Management for Local Businesses | Sirius',
   metaDescription:
-    'Reputation management that earns more reviews, handles the hard ones, and keeps your local search visibility strong. Built for local service businesses by Sirius Systems.',
+    'Reputation management that earns more reviews, handles the hard ones, and keeps your local search visibility strong. Built for local service businesses.',
   eyebrow: 'Reputation Management',
   headline: 'Your reputation is being built right now. The question is whether you are building it or ignoring it.',
   subheadline:

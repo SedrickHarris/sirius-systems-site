@@ -10,7 +10,7 @@ const DATA: IndustryPageData = {
   slug: 'technology-b2b',
   metaTitle: 'Technology & B2B Services Automation | Sirius Systems',
   metaDescription:
-    'Lead nurture automation, CRM integration, and review systems for IT firms, managed service providers, SaaS companies, AI agencies, and B2B service businesses.',
+    'Lead nurture automation, CRM integration, and review systems for IT firms, MSPs, SaaS companies, AI agencies, and B2B service businesses.',
   eyebrow: 'Technology & B2B Services',
   headline: 'The System That Turns B2B Inquiries Into Closed Clients',
   subheadline:

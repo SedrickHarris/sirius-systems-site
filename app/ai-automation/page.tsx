@@ -7,7 +7,7 @@ const PAGE = {
   slug: 'ai-automation',
   metaTitle: 'AI Automation for Local Businesses | Sirius Systems',
   metaDescription:
-    'Sirius Systems builds AI automation for local service businesses: capture leads, follow up faster, book more jobs, and run your operations without adding headcount.',
+    'AI automation for local service businesses: capture leads, follow up faster, book more jobs, and run operations without adding headcount.',
   eyebrow: 'AI Automation',
   headline: 'Your business on autopilot. Without the headcount.',
   subheadline:

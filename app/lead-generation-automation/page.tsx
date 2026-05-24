@@ -6,7 +6,7 @@ import { webPage, breadcrumbList, serviceSchema, faqPage } from '@/lib/schema'
 const PAGE = {
   slug: 'lead-generation-automation',
   metaTitle:
-    'Lead Generation Automation for Service Businesses | Sirius Systems',
+    'Lead Generation Automation for Local Business | Sirius',
   metaDescription:
     'Lead generation automation that connects paid, organic, and referral funnels directly to your CRM and booking flow: built for local service businesses.',
   eyebrow: 'Lead Generation',

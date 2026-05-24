@@ -7,7 +7,7 @@ const PAGE = {
   slug: 'review-automation',
   metaTitle: 'Review Automation for Service Businesses | Sirius Systems',
   metaDescription:
-    'Review automation that asks the right customer at the right time on the right channel: without spamming or sounding scripted. Built for local service businesses.',
+    'Review automation that asks the right customer at the right time and channel — without spam or sounding scripted. Built for local service businesses.',
   eyebrow: 'Review Automation',
   headline: 'You are completing jobs that never turn into reviews. That is a system problem.',
   subheadline:

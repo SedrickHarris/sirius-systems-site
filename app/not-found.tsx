@@ -28,8 +28,8 @@ export default function NotFound() {
           industries
         </Link>
         , or{' '}
-        <Link href="/blog" className="underline underline-offset-4 hover:text-foreground">
-          the blog
+        <Link href="/contact" className="underline underline-offset-4 hover:text-foreground"> {/* TODO: restore href="/blog" when blog ships */}
+          contact us
         </Link>
         .
       </p>

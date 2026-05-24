@@ -6,7 +6,7 @@ import { webPage, breadcrumbList, serviceSchema, faqPage } from '@/lib/schema'
 const PAGE = {
   slug: 'appointment-booking-automation',
   metaTitle:
-    'Appointment Booking Automation for Service Businesses | Sirius Systems',
+    'Appointment Booking Automation | Sirius Systems',
   metaDescription:
     'Automated booking flows that go from inquiry to confirmed appointment without you in the loop: connected to your calendar, CRM, and reminder sequences.',
   eyebrow: 'Appointment Booking',

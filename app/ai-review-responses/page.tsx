@@ -7,7 +7,7 @@ const PAGE = {
   slug: 'ai-review-responses',
   metaTitle: 'AI Review Responses for Service Businesses | Sirius Systems',
   metaDescription:
-    'On-brand AI-assisted replies to every review: positive or hard: at scale. Never leave a review unanswered again. Built for local service businesses by Sirius Systems.',
+    'AI-generated review responses in your brand voice — handle every Google review, positive or negative, without writing each one. Built by Sirius.',
   eyebrow: 'AI Review Responses',
   headline: 'Every review deserves a response. Most businesses do not have time to write them.',
   subheadline:
