@@ -98,29 +98,68 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ## Industry pages
 
+> **Source of truth note.** As of 2026-05-23, each industry hub page sets its own `metaTitle` / `metaDescription` inside `app/industries/<slug>/page.tsx` (via the `DATA` object passed to `IndustryPageTemplate`). The values below mirror what those pages currently export. **If a value here disagrees with the page file, the page file wins** — update this doc to match, not the other way around.
+
 ### `/industries`
-- **Title:** `Industries We Serve | Sirius Systems`
-- **Description:** `Sirius Systems builds AI automation, booking systems, and reputation management for home services, contractors, professional services, auto services, and beauty and wellness businesses.`
+- **Title:** `Industries We Serve: Local Business Automation | Sirius Systems`
+- **Description:** `Sirius Systems builds AI automation, booking systems, and reputation management for local service businesses across 12 industries: home services, construction, professional services, auto, beauty, healthcare, real estate, hospitality, education, nonprofit, retail, and technology.`
 
 ### `/industries/home-services`
-- **Title:** `Home Services Marketing & Automation | Sirius Systems`
-- **Description:** `AI automation, smart websites, and reputation systems built for home service trades — plumbing, HVAC, electrical, cleaning, junk removal, roofing, and more.`
+- **Title:** `AI Automation for Home Service Businesses | Sirius Systems`
+- **Description:** `Missed-call recovery, appointment booking, and automated review requests for home service businesses: plumbers, HVAC, roofers, and 16 more trades.`
 
-### `/industries/contractors`
-- **Title:** `Contractor Marketing & Automation | Sirius Systems`
-- **Description:** `Contractors use Sirius Systems for AI lead capture, automated quoting follow-up, and review systems that build trust faster than any ad.`
+### `/industries/construction-contractors`
+- **Title:** `Contractor Automation Systems | Sirius Systems`
+- **Description:** `Lead follow-up, estimate automation, CRM, and review systems for general contractors, remodelers, painters, flooring companies, and specialty trades.`
+- **Notes:** Renamed from `/industries/contractors` on 2026-05-23. 301 redirect from the old slug lives in `public/_redirects`.
 
 ### `/industries/professional-services`
-- **Title:** `Professional Services Automation | Sirius Systems`
-- **Description:** `AI automation, smart sites, and reputation systems for real estate, legal, accounting, coaching, consulting, and medical practices — capture and qualify leads automatically.`
+- **Title:** `Professional Services Automation: AI Chatbots, Booking & Reviews | Sirius Systems`
+- **Description:** `AI chatbots, appointment booking automation, CRM, and reputation management for professional service firms: law, dental, medical, accounting, and more.`
+- **Notes:** Pre-Level 5 copy. Pending SEO rebuild — flag length on title (currently > 60 chars).
 
 ### `/industries/auto-services`
-- **Title:** `Auto Services Marketing & Automation | Sirius Systems`
-- **Description:** `AI voicebots, appointment booking, and reputation systems for auto repair shops, body shops, detailing, and tire shops — capture more calls, book more service.`
+- **Title:** `Auto Services Automation: Booking, Reviews & CRM | Sirius Systems`
+- **Description:** `Appointment booking automation, AI chatbots, review systems, and CRM for auto repair shops, detailers, tire shops, body shops, and other auto service businesses.`
+- **Notes:** Pre-Level 5 copy. Pending SEO rebuild.
 
 ### `/industries/beauty-wellness`
-- **Title:** `Beauty & Wellness Automation & Booking | Sirius Systems`
-- **Description:** `Appointment booking, rebooking flows, review systems, and AI chatbots for salons, spas, fitness studios, and other beauty and wellness businesses.`
+- **Title:** `Beauty & Wellness Automation: Booking, Reviews & AI | Sirius Systems`
+- **Description:** `Appointment booking automation, rebooking flows, review systems, and AI chatbots for salons, med spas, personal trainers, day spas, and other beauty and wellness businesses.`
+- **Notes:** Pre-Level 5 copy. Pending SEO rebuild.
+
+### `/industries/healthcare-medical`
+- **Title:** `AI Automation for Medical Practices | Sirius Systems`
+- **Description:** `Appointment automation, AI scheduling, and review systems for dental, chiropractic, physical therapy, and medical practices.`
+
+### `/industries/real-estate-property`
+- **Title:** `AI Lead Follow-Up for Real Estate Agents | Sirius Systems`
+- **Description:** `Lead response automation, CRM follow-up, and review systems for real estate agents, property managers, mortgage companies, and investors.`
+
+### `/industries/hospitality-events`
+- **Title:** `Hospitality & Events Business Automation | Sirius Systems`
+- **Description:** `AI automation, booking systems, and reputation management for restaurants, event venues, wedding planners, hotels, caterers, and hospitality businesses.`
+- **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
+
+### `/industries/education-childcare`
+- **Title:** `Education & Childcare Business Automation | Sirius Systems`
+- **Description:** `AI automation, enrollment follow-up, and reputation management for tutoring centers, childcare providers, music schools, martial arts studios, and training programs.`
+- **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
+
+### `/industries/community-faith-nonprofit`
+- **Title:** `Nonprofit, Church & Community Organization Automation | Sirius Systems`
+- **Description:** `Outreach automation, donor follow-up, and communication systems for churches, nonprofits, charities, membership organizations, and mission-driven businesses.`
+- **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
+
+### `/industries/retail-local-commerce`
+- **Title:** `Retail & Local Commerce Automation | Sirius Systems`
+- **Description:** `Customer follow-up, review generation, and local search visibility for retail shops, boutiques, pet stores, specialty retailers, and local commerce businesses.`
+- **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
+
+### `/industries/technology-b2b`
+- **Title:** `Technology & B2B Services Automation | Sirius Systems`
+- **Description:** `Lead nurture automation, CRM integration, and review systems for IT firms, managed service providers, SaaS companies, AI agencies, and B2B service businesses.`
+- **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
 
 ---
 
@@ -166,3 +205,4 @@ OG image generation strategy lives in `docs/brand/image-prompt-bank.md`.
 |------|--------|
 | 2026-05-20 | Initial drafts for all Phase 1 pages. Refine in QA pass after final positioning line is confirmed. |
 | 2026-05-20 | Industry metadata rewritten for the 5 confirmed hubs. Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` removed. New title/description drafts added for `professional-services`, `auto-services`, `beauty-wellness`. |
+| 2026-05-23 | Industry section restructured for the 12-hub taxonomy. `contractors` renamed to `construction-contractors`. 7 new industry sections added: `healthcare-medical`, `real-estate-property`, `hospitality-events`, `education-childcare`, `community-faith-nonprofit`, `retail-local-commerce`, `technology-b2b`. Source-of-truth note added: industry page files in `app/industries/<slug>/page.tsx` win when they disagree with this doc. Values mirrored from current production for `/industries`, `home-services`, `construction-contractors`, `healthcare-medical`, `real-estate-property` (Level 5 copy shipped); remaining seven hubs flagged as pre-Level-5 / pending SEO rebuild. |

@@ -56,24 +56,37 @@ The authoritative URL map for the site. Every slug listed here is the **only** v
 | `/competitor-review-benchmarking` | C |
 | `/all-in-one-business-growth-system` | Capstone (A+B+C) |
 
-### Industries (1 + 5)
+### Industries (1 + 12)
 
 | Slug | Notes |
 |------|-------|
-| `/industries` | Index — all 5 industry hub pages |
-| `/industries/home-services` | Absorbs former `/industries/cleaning-companies` and `/industries/junk-removal`. Covers plumbing, HVAC, electrical, cleaning, junk removal, roofing, landscaping, and similar trades. |
-| `/industries/contractors` | General contractors, remodelers, builders, specialty contractors. |
-| `/industries/professional-services` | Absorbs former `/industries/real-estate` and `/industries/coaches-consultants`. Covers real estate, legal, accounting, coaching, consulting, and medical practices. |
+| `/industries` | Index — all 12 industry hub pages |
+| `/industries/home-services` | Covers plumbing, HVAC, electrical, cleaning, junk removal, roofing, landscaping, and similar trades. Also absorbs former `/industries/cleaning-companies` and `/industries/junk-removal` (never published). |
+| `/industries/construction-contractors` | General contractors, remodelers, painters, flooring companies, deck builders, concrete contractors, and specialty trades. Renamed from `/industries/contractors` on 2026-05-23 (commit `8fa3b4a`); 301 redirect lives in `public/_redirects`. |
+| `/industries/professional-services` | Legal, accounting, financial advisors, insurance agencies, consultants. (Real estate and medical practices broke out into their own hubs — see below.) |
 | `/industries/auto-services` | Auto repair, body shops, detailing, tire shops, and similar. |
 | `/industries/beauty-wellness` | Salons, barbershops, med spas, day spas, fitness studios, personal training, and similar. |
+| `/industries/healthcare-medical` | Patient-facing practices — dental, chiropractic, physical therapy, mental health, primary care, urgent care, and specialty clinics. |
+| `/industries/real-estate-property` | Real estate agents, brokerages, property managers, mortgage companies, home inspectors, investors. |
+| `/industries/hospitality-events` | Restaurants, event venues, wedding planners, hotels, caterers, photographers, and event service providers. |
+| `/industries/education-childcare` | Tutoring centers, childcare/daycare, music/dance/martial arts schools, private schools, trade schools. |
+| `/industries/community-faith-nonprofit` | Churches, nonprofits, charities, membership organizations, mission-driven groups. |
+| `/industries/retail-local-commerce` | Specialty retail, boutiques, pet stores, home goods, local e-commerce. |
+| `/industries/technology-b2b` | IT consulting, MSPs, SaaS, software development, AI agencies, B2B service providers. |
 
-**Deprecated industry slugs** (not published, do not link to, no 301 needed — these never went live):
+**Active 301 redirect** (lives in `public/_redirects` — see §2):
+
+| Deprecated slug | Replaced by | Reason |
+|-----------------|-------------|--------|
+| `/industries/contractors` | `/industries/construction-contractors` | Slug renamed 2026-05-23 for taxonomy clarity. Redirect must be preserved indefinitely — page was indexable while live. |
+
+**Deprecated industry slugs** (never published, do not link to, no 301 required):
 
 | Deprecated slug | Replaced by |
 |-----------------|-------------|
 | `/industries/cleaning-companies` | `/industries/home-services` |
 | `/industries/junk-removal` | `/industries/home-services` |
-| `/industries/real-estate` | `/industries/professional-services` |
+| `/industries/real-estate` | `/industries/real-estate-property` (originally folded into `/industries/professional-services` pre-2026-05-23) |
 | `/industries/coaches-consultants` | `/industries/professional-services` |
 
 ### Blog (system)
@@ -103,7 +116,7 @@ The authoritative URL map for the site. Every slug listed here is the **only** v
 ## 4. Slug naming patterns
 
 - **Service pages:** keyword-exact. `/ai-chatbots`, not `/conversational-ai-for-businesses`.
-- **Industry pages:** plural noun under `/industries/`. `/industries/contractors`, not `/industries/contractor`.
+- **Industry pages:** plural / compound noun under `/industries/`. `/industries/construction-contractors`, not `/industries/contractor`.
 - **Blog posts:** descriptive, no clickbait, no dates, ideally ≤ 60 chars. Example: `/blog/google-business-profile-checklist-2026`.
 
 ## 5. Sitemap inclusion rules
@@ -124,3 +137,5 @@ When any doc references a URL — page copy plan, metadata draft, schema plan, i
 |------|--------|
 | 2026-05-20 | Initial map — 4 core + 14 service + 7 industry + blog + 2 utility. Canonical host TBD pending client (default: bare `siriussys.io`). |
 | 2026-05-20 | Industry taxonomy confirmed: collapsed from 7 industry slugs to 5 hubs (`home-services`, `contractors`, `professional-services`, `auto-services`, `beauty-wellness`). Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` — none published, so no 301 redirects required. |
+| 2026-05-23 | Industry taxonomy expanded from 5 hubs to 12 (added `healthcare-medical`, `real-estate-property`, `hospitality-events`, `education-childcare`, `community-faith-nonprofit`, `retail-local-commerce`, `technology-b2b`). `contractors` renamed to `construction-contractors`; **active 301 redirect** required and shipped in `public/_redirects`. Blog system deferred to a separate project, so the blog section of this map describes the eventual structure but is not in Phase 1 launch scope. |
+| 2026-05-23 | Redirect convention recorded: project uses `output: 'export'`, so all redirects must be defined in `public/_redirects`. Next.js `redirects()` in `next.config.mjs` is silently ignored under static export — do not use it. |

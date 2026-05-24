@@ -65,18 +65,23 @@ Every page in `site-build-plan.md` Phase 1 ships:
 - [ ] `/competitor-review-benchmarking`
 - [ ] `/all-in-one-business-growth-system`
 
-### Industries (6)
+### Industries (13)
 - [ ] `/industries`
 - [ ] `/industries/home-services`
-- [ ] `/industries/contractors`
+- [ ] `/industries/construction-contractors`
 - [ ] `/industries/professional-services`
 - [ ] `/industries/auto-services`
 - [ ] `/industries/beauty-wellness`
+- [ ] `/industries/healthcare-medical`
+- [ ] `/industries/real-estate-property`
+- [ ] `/industries/hospitality-events`
+- [ ] `/industries/education-childcare`
+- [ ] `/industries/community-faith-nonprofit`
+- [ ] `/industries/retail-local-commerce`
+- [ ] `/industries/technology-b2b`
 
 ### Blog
-- [ ] `/blog`
-- [ ] At least 3 published posts at `/blog/<slug>`
-- [ ] Each post has a featured image at `public/images/blog/`
+- [ ] Blog system deferred to separate Claude Project — confirm launch strategy before Phase 7
 
 ### Utility
 - [ ] `/privacy`
@@ -128,7 +133,7 @@ Per `docs/seo/internal-linking-plan.md`:
 - [ ] Every industry page links to its mapped service set
 - [ ] Every blog post links to at least 2 relevant service or industry pages
 - [ ] `/services` links to all 14 service pages
-- [ ] `/industries` links to all 5 industry hub pages
+- [ ] `/industries` links to all 12 industry hub pages
 - [ ] No broken internal links (run a crawl)
 
 ## 8. Performance
@@ -156,6 +161,13 @@ Per `docs/seo/internal-linking-plan.md`:
 - [ ] Honeypot or other spam mitigation in place
 - [ ] No PII logged client-side
 
+### QualificationForm (`components/site/QualificationForm.tsx`)
+
+- [ ] QualificationForm — `GHL_WEBHOOK_URL` replaced with live endpoint
+- [ ] QualificationForm — nurture magnet delivery wired in GHL (`source: qualification-form-magnet`)
+- [ ] QualificationForm — GHL automations updated to route on new industry slugs (12 slugs + `other`)
+- [ ] QualificationForm — `qualificationResult` field (`'qualified' | 'nurture'`) routing confirmed in GHL
+
 ## 11. Analytics & tracking
 
 - [ ] Analytics provider configured per client choice (or explicitly omitted)
@@ -168,6 +180,13 @@ Per `docs/seo/internal-linking-plan.md`:
 - [ ] `/terms` published with current text
 - [ ] Footer links to both
 - [ ] Footer carries legal business name + year
+
+## 12b. Redirects (Cloudflare Pages)
+
+This project uses `output: 'export'`, so all redirects live in `public/_redirects`. Next.js `redirects()` in `next.config.mjs` is silently ignored under static export — do not use it.
+
+- [ ] `public/_redirects` verified on live Cloudflare Pages deployment — confirm `/industries/contractors → /industries/construction-contractors` 301 fires at the edge
+- [ ] Any future redirect rule added to `public/_redirects` (not `next.config.mjs`) and verified post-deploy
 
 ## 13. Mobile
 

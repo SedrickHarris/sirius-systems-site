@@ -13,7 +13,7 @@ The master plan that drives the build. Everything else in `/docs` either feeds i
 
 ## 2. Target audience
 
-Primary: **owner-operators of local service businesses** in the five confirmed industry hubs (home services, contractors, professional services, auto services, beauty and wellness). Typically:
+Primary: **owner-operators of local service businesses** in the twelve confirmed industry hubs (home services, construction & contractors, professional services, auto services, beauty & wellness, healthcare & medical practices, real estate & property services, hospitality & events, education & childcare, community/faith/nonprofit, retail & local commerce, technology & B2B services). Typically:
 
 - $250k–$5M annual revenue
 - 1–25 employees
@@ -72,66 +72,92 @@ Secondary: **agency partners** who might whitelabel or refer (not the primary au
 - `/competitor-review-benchmarking`
 - `/all-in-one-business-growth-system`
 
-### Industry (6)
+### Industry (13)
 - `/industries`
 - `/industries/home-services`
-- `/industries/contractors`
+- `/industries/construction-contractors`
 - `/industries/professional-services`
 - `/industries/auto-services`
 - `/industries/beauty-wellness`
+- `/industries/healthcare-medical`
+- `/industries/real-estate-property`
+- `/industries/hospitality-events`
+- `/industries/education-childcare`
+- `/industries/community-faith-nonprofit`
+- `/industries/retail-local-commerce`
+- `/industries/technology-b2b`
 
 ### Blog (system)
-- `/blog`
-- `/blog/[slug]`
+- Deferred to a separate Claude Project — see §5 Phase 5 below. Not in Phase 1 launch scope.
 
 ### Utility (required for trust + legal)
 - `/privacy`
 - `/terms`
 
-**Total Phase 1 pages:** 4 + 14 + 6 + (blog index + N posts) + 2 = **~26 static routes + blog posts**
+**Total Phase 1 pages:** 4 core + 14 service + 13 industry (index + 12 hubs) + 2 utility = **33 static routes minimum (excluding blog).** Latest `next build` reports 36 static routes (delta accounts for `/_not-found`, `/robots.txt`, `/sitemap.xml`).
+
+### Redirect convention
+
+This project uses `output: 'export'` in `next.config.mjs` for Cloudflare Pages. **All redirects must be defined in `public/_redirects`** using Cloudflare Pages redirect syntax. Do **not** use `next.config.mjs` `redirects()` — they are silently ignored under static export. Current rules ship in `public/_redirects`:
+
+- `/industries/contractors  /industries/construction-contractors  301`
+
+### Post-launch: Industry × Service intersection pages
+
+Planned post-launch content layer building ~70–80 intersection pages across 4 batches. **Batch 1** targets `home-services`, `construction-contractors`, `beauty-wellness`, and `healthcare-medical` paired with `reputation-management`, `appointment-booking-automation`, and `ai-chatbots`. Build prompts to be written after all hub-page Level 5 SEO rebuilds are complete.
 
 ## 5. Phase plan
 
-### Phase 0 — Site OS foundation (THIS PHASE)
-- Populate every doc in `/docs/`
-- Capture confirmed facts + flag unknowns
-- Lock the URL strategy, schema plan, topical authority map
-- Output: this set of docs, reviewable before code is written
+### Phase 0 — Site OS foundation — **COMPLETE**
+- Populated every doc in `/docs/`
+- Captured confirmed facts, flagged unknowns
+- Locked URL strategy, schema plan, topical authority map
 
-### Phase 1 — Next.js scaffold + global shell
-- `next@latest` with App Router, TypeScript, Tailwind, MDX
-- Layout, header, footer, theme, type pairing
-- 404, robots.txt, sitemap.xml stubs
-- Tailwind theme tokens wired to brand colors (placeholders until client confirms)
+### Phase 1 — Next.js scaffold + global shell — **COMPLETE**
+- Next.js App Router + TypeScript + Tailwind + MDX scaffolded
+- Layout, header, footer, theme, type pairing in place
+- 404, robots.txt, sitemap.xml stubs shipping
+- Tailwind theme tokens wired to brand colors
 
-### Phase 2 — Core pages
-- `/`, `/about`, `/services`, `/contact`
-- Lead capture form (stub → wired once endpoint provided)
+### Phase 2 — Core pages — **COMPLETE**
+- `/`, `/about`, `/services`, `/contact` shipping
+- Lead capture form built (see Phase 5b for the qualification-form rebuild)
 
-### Phase 3 — Service pages
-- 14 service pages, one MDX/TSX file each
-- Consistent template: hero → problem framing → how it works → outcomes → cross-links → CTA
-- Schema.org `Service` JSON-LD on each
+### Phase 3 — Service pages — **COMPLETE (14 service pages)**
+- All 14 service pages shipping with the shared `ServicePageTemplate`
+- Each page emits `WebPage + BreadcrumbList + Service + FAQPage` JSON-LD
+- Internal linking via `RelatedServicesGrid` and `IndustryFitStrip`
 
-### Phase 4 — Industry pages
-- 1 index + 5 industry hub pages
-- Each maps which services apply, with internal links
+### Phase 4 — Industry pages — **COMPLETE (12 industry hubs)**
+- Taxonomy expanded from 5 to 12 hubs (commit `8fa3b4a`)
+- `/industries/contractors` renamed to `/industries/construction-contractors` (commit `8fa3b4a`); legacy page deleted (commit `75c5b80`)
+- 301 redirect `/industries/contractors → /industries/construction-contractors` in `public/_redirects` (commit `985c918`)
+- Level 5 SEO/AEO copy package rolled out for home-services, construction-contractors, healthcare-medical, real-estate-property — remaining hubs queued
+- Each hub emits `WebPage + BreadcrumbList + FAQPage` JSON-LD (no Service / LocalBusiness / Organization / Review schema)
 
-### Phase 5 — Blog system
-- `/blog` index + `/blog/[slug]` dynamic
-- MDX in `content/blog/`, util in `lib/blog.ts`
-- Categories, tags, author, dates, reading time, featured image
-- `Article` schema per post
-- 3–5 launch posts published
+### Phase 5 — Blog system — **SKIPPED**
+- Deferred to a separate Claude Project. Not in Phase 7 launch scope. Confirm launch strategy before deploy.
 
-### Phase 6 — Prelaunch QA
-- Run `docs/site-os/qa/prelaunch-checklist.md` end to end
+### Phase 5b — Qualification form rebuild — **COMPLETE**
+- `QualificationForm` rebuilt (commit `dd71396`) with:
+  - 12-industry selector pulled dynamically from `lib/industries.ts`
+  - Conditional sub-category step (skipped when industry = `other`)
+  - `book-anyway` ghost link removed from nurture path
+  - Nurture confirmation state ("You're on our list.") swap replaces the lead-magnet card after the magnet button click
+  - Webhook payload extended with `industry`, `subCategory`, `qualificationResult`, `score`
+  - Second webhook fired on magnet button click (`source: qualification-form-magnet`)
+  - Both webhook calls remain guarded by the `GHL_WEBHOOK_URL` stub literal until launch wiring
+
+### Phase 6 — Prelaunch QA — **IN PROGRESS**
+- Running `docs/site-os/qa/prelaunch-checklist.md` end to end
 - Lighthouse, schema validator, broken-link sweep, mobile passes
 - Final do-not-invent audit
 
-### Phase 7 — Cloudflare Pages deploy
-- DNS cutover plan (depends on whether current siriussys.io is being replaced or this is a staging clone)
+### Phase 7 — Cloudflare Pages deploy — **PENDING**
+- DNS cutover plan (canonical host TBD per `url-strategy.md`)
+- Replace `GHL_WEBHOOK_URL` stub with live endpoint before deploy
 - Post-launch monitoring window
+- Verify `public/_redirects` fires the contractors 301 at the edge on the live deployment
 
 ## 6. Out of scope for Phase 1
 
@@ -181,3 +207,7 @@ content/blog-publishing-checklist.md ─► every post before publish
 |------|--------|
 | 2026-05-20 | Initial plan: phase 0–7, page list locked, URL slugs aligned with brief, scope boundaries set. |
 | 2026-05-20 | Industry taxonomy confirmed: 5 hubs (`home-services`, `contractors`, `professional-services`, `auto-services`, `beauty-wellness`). Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` — folded into `home-services` and `professional-services`. Total Phase 1 page count drops by 1. |
+| 2026-05-23 | **Phase 4 expansion.** Industry taxonomy grew from 5 to 12 hubs (added `healthcare-medical`, `real-estate-property`, `hospitality-events`, `education-childcare`, `community-faith-nonprofit`, `retail-local-commerce`, `technology-b2b`). `contractors` renamed to `construction-contractors`; 301 redirect lives in `public/_redirects` (Cloudflare Pages convention — not `next.config.mjs.redirects()` because the project uses `output: 'export'`). Total Phase 1 page count restated as 33 minimum (excluding blog). |
+| 2026-05-23 | **Phase 5 deferred** to a separate Claude Project. **Phase 5b** added and marked complete: `QualificationForm` rebuilt with 12-industry selector + conditional sub-category step, nurture path hardened (book-anyway removed, confirmation swap state added), webhook payload extended (`industry`, `subCategory`, `qualificationResult`, `score`), second webhook on magnet button click. **Phase 6** in progress. **Phase 7** pending. |
+| 2026-05-23 | **Redirect convention recorded.** Static export means `next.config.mjs.redirects()` is a no-op; `public/_redirects` is the canonical place for 301/302 rules. |
+| 2026-05-23 | **Post-launch intersection pages noted.** Batch 1 = home-services / construction-contractors / beauty-wellness / healthcare-medical paired with reputation-management / appointment-booking-automation / ai-chatbots. Build prompts to follow after hub Level 5 rebuilds. |
