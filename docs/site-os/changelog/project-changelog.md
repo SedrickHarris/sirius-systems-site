@@ -15,6 +15,11 @@ Format per entry:
 
 ---
 
+## 2026-05-23 — /industries/auto-services Level 4 SEO/AEO copy rebuild
+- type: seo
+- changes: Replaced scaffold DATA object with approved Level 4 copy package. Updated metaTitle, metaDescription, headline, subheadline, heroHighlights, problemHeadline, problems, systemsHeadline, systemsCopy, subVerticalsHeadline, subVerticalsCopy, featured, compact, faqs, ctaHeadline, ctaBody, ctaPrimaryLabel. serviceSlugs updated from scaffold set to: reputation-management, review-automation, ai-voicebots, appointment-booking-automation, google-business-profile-optimization, crm-automation. Schema block (webPage, breadcrumbList, faqPage) unchanged. tsc clean. next build clean.
+- files: app/industries/auto-services/page.tsx, docs/site-os/changelog/project-changelog.md
+
 ## 2026-05-23 — Level 4 SEO/AEO rebuild: /industries/professional-services
 
 - type: seo
