@@ -1,30 +1,25 @@
 'use client'
 
 import { useState } from 'react'
-import {
-  ArrowRight,
-  BookOpen,
-  Briefcase,
-  Building2,
-  Check,
-  HardHat,
-  HelpCircle,
-  Loader2,
-  MapPin,
-  Sparkles,
-  Trash2,
-  Wrench,
-} from 'lucide-react'
+import { ArrowRight, BookOpen, Check, Loader2 } from 'lucide-react'
+import { INDUSTRIES } from '@/lib/industries'
 
 // Replace before launch with the live GHL inbound webhook URL.
 const GHL_WEBHOOK_URL = 'TODO_GHL_WEBHOOK_URL'
 const BOOKING_URL =
   'https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4'
+const THRESHOLD = 20
 
-type Step = 1 | 2 | 3 | 'result-qualified' | 'result-nurture'
+type Step =
+  | 'industry'
+  | 'sub-category'
+  | 'lead-volume'
+  | 'operation'
+  | 'contact'
+  | 'result-qualified'
+  | 'result-nurture'
 
 interface FormData {
-  industry: string
   leadVolume: string
   bottleneck: string[]
   currentTools: string
@@ -36,7 +31,6 @@ interface FormData {
 }
 
 const EMPTY_FORM: FormData = {
-  industry: '',
   leadVolume: '',
   bottleneck: [],
   currentTools: '',
@@ -47,14 +41,256 @@ const EMPTY_FORM: FormData = {
   firstName: '',
 }
 
-const INDUSTRY_HIGH_FIT = new Set([
-  'home-services',
-  'construction-contractors',
-  'cleaning',
-  'junk-removal',
-  'real-estate',
-  'coaches-consultants',
-])
+// Industry → list of sub-categories. The sub-category step is shown for
+// any industry slug present in this map. When the user picks 'other', the
+// sub-category step is skipped. Sub-category values are the literal label
+// strings (not slugs), since they're routing/CRM data only and never
+// contribute to the qualification score.
+const SUB_CATEGORIES: Record<string, string[]> = {
+  'home-services': [
+    'Plumbing',
+    'HVAC',
+    'Electrical Services',
+    'Roofing',
+    'House Cleaning & Maid Services',
+    'Lawn Care & Landscaping',
+    'Pest Control',
+    'Handyman Services',
+    'Carpet & Upholstery Cleaning',
+    'Window Cleaning & Pressure Washing',
+    'Appliance Repair',
+    'Garage Door Repair & Installation',
+    'Pool Maintenance & Repair',
+    'Water, Fire & Mold Restoration',
+    'Junk Removal & Hauling',
+    'Moving Services',
+    'Tree Services & Arborists',
+    'Locksmithing',
+    'Home Security Installation',
+    'Solar Panel Installation & Maintenance',
+    'Gutter Repair & Cleaning',
+    'Chimney & Fireplace Services',
+    'Insulation Installation',
+    'Irrigation & Sprinkler Repair',
+    'Fence Repair',
+    'Pet Waste Removal',
+    'Holiday Lighting Installation',
+    'Home Inspection',
+    'Smart Home Installation',
+  ],
+  'construction-contractors': [
+    'General Contractors',
+    'Residential Remodeling (Kitchen & Bathroom)',
+    'Painting Contractors',
+    'Flooring Installation',
+    'Deck & Patio Builders',
+    'Concrete & Masonry',
+    'Custom Home Builders',
+    'Commercial Construction & Build-Outs',
+    'Drywall Installation',
+    'Carpentry & Framing',
+    'Tile & Stone Contractors',
+    'Siding & Exterior Contractors',
+    'Window & Door Installation',
+    'Fencing Contractors',
+    'Paving & Asphalt Contractors',
+    'Waterproofing & Foundation Repair',
+    'Excavation & Demolition',
+    'Epoxy Flooring Contractors',
+    'Cabinet Installers & Custom Woodworking',
+    'Countertop Installation',
+    'Outdoor Kitchen Builders',
+    'Home Additions',
+    'Tenant Improvement Contractors',
+  ],
+  'professional-services': [
+    'Law Firms & Attorneys',
+    'Accounting, CPA & Bookkeeping',
+    'Financial Planners & Wealth Management',
+    'Insurance Agencies',
+    'Business Consultants & Coaches',
+    'Marketing & Creative Agencies',
+    'Mortgage Brokers & Loan Officers',
+    'Architecture & Engineering Firms',
+    'HR Consultants & Staffing Agencies',
+    'Recruiting Agencies',
+    'Web Design Agencies',
+    'Tax Preparation Services',
+    'Private Investigation Services',
+    'Notary Public & Signing Agents',
+    'Translation & Interpretation Services',
+  ],
+  'auto-services': [
+    'Auto Repair Shops & General Mechanics',
+    'Auto Detailing & Ceramic Coating',
+    'Tire & Wheel Shops',
+    'Auto Body & Collision Repair',
+    'Oil Change & Quick-Lube Centers',
+    'Windshield & Auto Glass Repair',
+    'Transmission Repair',
+    'Brake Repair Specialists',
+    'Car Wash Facilities',
+    'Mobile Mechanics',
+    'Motorcycle & ATV Repair',
+    'RV Repair',
+    'Towing & Roadside Assistance',
+    'Fleet Maintenance',
+    'Diesel Repair',
+    'Smog Check Stations',
+    'Auto AC Repair',
+    'Window Tinting & Car Audio',
+    'Auto Upholstery',
+    'Wheel & Rim Repair',
+    'Auto Locksmiths',
+  ],
+  'beauty-wellness': [
+    'Hair Salons & Barbershops',
+    'Nail Salons',
+    'Day Spas & Medical Spas',
+    'Personal Training Studios & Gyms',
+    'Massage Therapy Clinics',
+    'Estheticians & Skincare',
+    'Boutique Fitness Studios (Yoga, Pilates)',
+    'Tattoo & Piercing Studios',
+    'Lash & Brow Bars',
+    'Waxing Studios',
+    'Tanning Salons',
+    'Aesthetic & Cosmetic Clinics',
+    'Nutrition & Wellness Coaches',
+    'Weight Loss Clinics',
+    'IV Therapy & Cryotherapy Studios',
+    'Stretch Therapy Studios',
+    'Makeup Artists & Bridal Beauty',
+    'Permanent Makeup Artists',
+  ],
+  'healthcare-medical': [
+    'Medical Clinics & Primary Care',
+    'Dental Practices & Orthodontists',
+    'Physical Therapy Clinics',
+    'Chiropractic Offices',
+    'Mental Health & Counseling Practices',
+    'Urgent Care Clinics',
+    'Dermatology Practices',
+    'Optometry Practices',
+    'Pediatric Clinics',
+    "OB-GYN & Women's Health",
+    'Home Health Agencies & Senior Care',
+    'Occupational & Speech Therapy',
+    'Podiatry Practices',
+    'Pain Management Clinics',
+    'Sports Medicine Clinics',
+    'Telehealth Providers',
+    'Medical Billing Companies',
+    'Medical Equipment Providers',
+  ],
+  'real-estate-property': [
+    'Real Estate Agents & Brokerages',
+    'Property Management Companies',
+    'Mortgage Companies & Loan Officers',
+    'Home Inspectors & Appraisers',
+    'Real Estate Investors & Developers',
+    'Commercial Leasing Firms',
+    'Title & Escrow Companies',
+    'Short-Term & Vacation Rental Managers',
+    'Apartment Communities',
+    'HOA Management Companies',
+    'Real Estate Photography & Staging',
+    'Leasing Agents',
+    'Property Maintenance Companies',
+    'Corporate Housing Providers',
+    'Land Development Companies',
+  ],
+  'hospitality-events': [
+    'Restaurants & Catering',
+    'Event & Wedding Venues',
+    'Wedding & Event Planners',
+    'Hotels & Boutique Hotels',
+    'Photographers & Videographers',
+    'DJs & Live Entertainment',
+    'Florists & Event Decorators',
+    'Party Rental Companies',
+    'Food Trucks & Bakeries',
+    'Bartending Services',
+    'Photo Booth Companies',
+    'Tourism & Tour Operators',
+    'Conference Centers & Banquet Halls',
+    'Corporate Event Services',
+  ],
+  'education-childcare': [
+    'Tutoring & Test Prep Centers',
+    'Childcare & Daycare Centers',
+    'Music, Dance & Martial Arts Schools',
+    'Private Schools & Preschools',
+    'Training & Trade Schools',
+    'Driving Schools',
+    'Swim Schools',
+    'Sports Training Programs',
+    'Language Schools',
+    'After-School Programs',
+    'Online Education Providers',
+    'Youth Programs & Coaching',
+    'Career & Certification Programs',
+    'Homeschool Support Programs',
+    'Continuing Education Providers',
+  ],
+  'community-faith-nonprofit': [
+    'Churches & Ministries',
+    'Nonprofit Organizations & Charities',
+    'Community & Membership Organizations',
+    'Youth Organizations & Programs',
+    'Fundraising & Advocacy Organizations',
+    'Faith-Based Schools & Outreach',
+    'Volunteer Organizations',
+    'Civic & Local Associations',
+    'Food Banks & Rescue Missions',
+    'Mentorship & Support Groups',
+    'Donor-Based Organizations',
+    'Coaching Communities',
+    'Mission-Based Organizations',
+  ],
+  'retail-local-commerce': [
+    'Specialty Retail & Boutiques',
+    'Pet Stores',
+    'Health Food & Supplement Stores',
+    'Home Goods & Furniture Stores',
+    'E-Commerce Stores',
+    'Apparel & Shoe Shops',
+    'Gift & Toy Stores',
+    'Beauty Supply Stores',
+    'Hardware Stores',
+    'Jewelry Stores',
+    'Sporting Goods Stores',
+    'Electronics & Appliance Stores',
+    'Mattress & Flooring Showrooms',
+    'Garden Centers & Outdoor Living',
+    'Thrift & Consignment Shops',
+    'Grocery & Convenience Stores',
+  ],
+  'technology-b2b': [
+    'IT Consulting & Managed Service Providers',
+    'Cybersecurity Companies',
+    'SaaS & Software Development Firms',
+    'AI Automation Agencies',
+    'CRM & Business Automation Consultants',
+    'Cloud Service Providers',
+    'App Development Firms',
+    'Data Analytics Firms',
+    'Digital Transformation Consultants',
+    'Web Hosting Companies',
+    'Call Center & Virtual Assistant Services',
+    'B2B Lead Generation Companies',
+    'Business Process Outsourcing',
+    'Telecom Services',
+    'Systems Integration Companies',
+    'Compliance Technology Firms',
+    'Help Desk & Technical Support',
+    'Network Support Companies',
+    'Database Management Companies',
+    'Workflow Automation Consultants',
+  ],
+}
+
+const SUB_CATEGORY_OTHER = 'Other / My business type is not listed'
 
 const LEAD_VOLUME_POINTS: Record<string, number> = {
   '50-plus': 5,
@@ -92,37 +328,21 @@ const TIMELINE_POINTS: Record<string, number> = {
   'just-researching': 0,
 }
 
+// Industry and sub-category are routing/CRM-only and do not contribute
+// to the qualification score. Threshold (THRESHOLD = 20) is unchanged.
 function calculateScore(form: FormData): number {
   let score = 0
-
-  if (INDUSTRY_HIGH_FIT.has(form.industry)) score += 4
-  else if (form.industry === 'other-local-service') score += 2
-
   score += LEAD_VOLUME_POINTS[form.leadVolume] ?? 0
   score += Math.min(form.bottleneck.length * 2, 6)
   score += TOOLS_POINTS[form.currentTools] ?? 0
   score += FOLLOW_UP_POINTS[form.followUpSpeed] ?? 0
   score += DECISION_POINTS[form.decisionMaker] ?? 0
   score += TIMELINE_POINTS[form.timeline] ?? 0
-
   return score
 }
 
 const isValidEmail = (email: string) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
-
-type IconCmp = typeof Wrench
-
-const INDUSTRY_OPTIONS: { value: string; label: string; Icon: IconCmp }[] = [
-  { value: 'home-services', label: 'Home Services', Icon: Wrench },
-  { value: 'construction-contractors', label: 'Construction & Contractors', Icon: HardHat },
-  { value: 'cleaning', label: 'Cleaning Companies', Icon: Sparkles },
-  { value: 'junk-removal', label: 'Junk Removal', Icon: Trash2 },
-  { value: 'real-estate', label: 'Real Estate', Icon: Building2 },
-  { value: 'coaches-consultants', label: 'Coaches & Consultants', Icon: Briefcase },
-  { value: 'other-local-service', label: 'Other Local Service', Icon: MapPin },
-  { value: 'not-sure', label: 'Not Sure Yet', Icon: HelpCircle },
-]
 
 const LEAD_VOLUME_OPTIONS = [
   { value: 'under-10', label: 'Under 10' },
@@ -226,12 +446,16 @@ function OptionCard({
 }
 
 export function QualificationForm() {
-  const [step, setStep] = useState<Step>(1)
+  const [step, setStep] = useState<Step>('industry')
+  const [selectedIndustry, setSelectedIndustry] = useState<string>('')
+  const [selectedSubCategory, setSelectedSubCategory] = useState<string>('')
   const [form, setForm] = useState<FormData>(EMPTY_FORM)
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [touched, setTouched] = useState({ email: false, firstName: false })
   const [magnetSent, setMagnetSent] = useState(false)
+  const [magnetSubmitting, setMagnetSubmitting] = useState(false)
+  const [magnetError, setMagnetError] = useState<string | null>(null)
 
   const update = <K extends keyof FormData>(key: K, value: FormData[K]) =>
     setForm((prev) => ({ ...prev, [key]: value }))
@@ -244,40 +468,79 @@ export function QualificationForm() {
         : [...prev.bottleneck, value],
     }))
 
-  const canProceedStep1 = form.industry !== '' && form.leadVolume !== ''
-  const canProceedStep2 =
+  // Changing industry resets the sub-category selection so a stale value
+  // can't leak into the payload after a back-and-change navigation.
+  const setIndustry = (value: string) => {
+    setSelectedIndustry(value)
+    setSelectedSubCategory('')
+  }
+
+  // Step sequence depends on the industry choice. 'other' skips the
+  // sub-category step entirely; any real slug includes it.
+  const steps: Step[] =
+    selectedIndustry === 'other'
+      ? ['industry', 'lead-volume', 'operation', 'contact']
+      : ['industry', 'sub-category', 'lead-volume', 'operation', 'contact']
+
+  const isResultStep =
+    step === 'result-qualified' || step === 'result-nurture'
+  const currentStepIndex = steps.indexOf(step)
+  const totalSteps = steps.length
+
+  const canProceedIndustry = selectedIndustry !== ''
+  const canProceedSubCategory = selectedSubCategory !== ''
+  const canProceedLeadVolume = form.leadVolume !== ''
+  const canProceedOperation =
     form.bottleneck.length > 0 &&
     form.currentTools !== '' &&
     form.followUpSpeed !== ''
-  const canProceedStep3 =
+  const canProceedContact =
     form.decisionMaker !== '' &&
     form.timeline !== '' &&
     form.firstName.trim() !== '' &&
     isValidEmail(form.email)
 
   const handleNext = () => {
-    if (step === 1 && canProceedStep1) setStep(2)
-    else if (step === 2 && canProceedStep2) setStep(3)
+    if (step === 'industry') {
+      if (!canProceedIndustry) return
+      setStep(selectedIndustry === 'other' ? 'lead-volume' : 'sub-category')
+    } else if (step === 'sub-category') {
+      if (!canProceedSubCategory) return
+      setStep('lead-volume')
+    } else if (step === 'lead-volume') {
+      if (!canProceedLeadVolume) return
+      setStep('operation')
+    } else if (step === 'operation') {
+      if (!canProceedOperation) return
+      setStep('contact')
+    }
   }
 
   const handleBack = () => {
-    if (step === 2) setStep(1)
-    else if (step === 3) setStep(2)
+    if (step === 'sub-category') setStep('industry')
+    else if (step === 'lead-volume') {
+      setStep(selectedIndustry === 'other' ? 'industry' : 'sub-category')
+    } else if (step === 'operation') setStep('lead-volume')
+    else if (step === 'contact') setStep('operation')
   }
 
   const handleSubmit = async () => {
-    if (!canProceedStep3 || submitting) return
+    if (!canProceedContact || submitting) return
     setSubmitting(true)
     setSubmitError(null)
 
     const score = calculateScore(form)
-    const tag = score >= 20 ? 'qualified-lead' : 'nurture-lead'
-    const nextStep: Step = score >= 20 ? 'result-qualified' : 'result-nurture'
+    const qualificationResult: 'qualified' | 'nurture' =
+      score >= THRESHOLD ? 'qualified' : 'nurture'
+    const tag = qualificationResult === 'qualified' ? 'qualified-lead' : 'nurture-lead'
+    const nextStep: Step =
+      qualificationResult === 'qualified' ? 'result-qualified' : 'result-nurture'
 
     const payload = {
       firstName: form.firstName.trim(),
       email: form.email.trim(),
-      industry: form.industry,
+      industry: selectedIndustry,
+      subCategory: selectedSubCategory,
       leadVolume: form.leadVolume,
       bottlenecks: form.bottleneck.join(', '),
       currentTools: form.currentTools,
@@ -286,6 +549,8 @@ export function QualificationForm() {
       timeline: form.timeline,
       qualificationScore: score,
       qualificationTag: tag,
+      qualificationResult,
+      score,
       source: 'contact-page-qualification-form',
     }
 
@@ -314,8 +579,54 @@ export function QualificationForm() {
     }
   }
 
-  const currentStepNum = step === 1 ? 1 : step === 2 ? 2 : 3
-  const isResultStep = step === 'result-qualified' || step === 'result-nurture'
+  // Second webhook call fired when the nurture lead-magnet button is clicked.
+  // Separate payload shape from the main submission; same stub guard.
+  const handleMagnetClick = async () => {
+    if (magnetSubmitting || magnetSent) return
+    setMagnetSubmitting(true)
+    setMagnetError(null)
+
+    const score = calculateScore(form)
+    const payload = {
+      firstName: form.firstName.trim(),
+      email: form.email.trim(),
+      industry: selectedIndustry,
+      subCategory: selectedSubCategory,
+      qualificationResult: 'nurture' as const,
+      score,
+      magnetRequested: true,
+      source: 'qualification-form-magnet',
+    }
+
+    if (GHL_WEBHOOK_URL === 'TODO_GHL_WEBHOOK_URL') {
+      setMagnetSubmitting(false)
+      setMagnetSent(true)
+      return
+    }
+
+    try {
+      const res = await fetch(GHL_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      if (!res.ok) throw new Error(`status ${res.status}`)
+      setMagnetSubmitting(false)
+      setMagnetSent(true)
+    } catch {
+      setMagnetSubmitting(false)
+      setMagnetError(
+        'Something went wrong sending the guide. Please try again.'
+      )
+    }
+  }
+
+  // Industry options pull dynamically from INDUSTRIES (12 hubs) plus a final
+  // 'other' sentinel. Never hardcode the industry list.
+  const industryOptions = [
+    ...INDUSTRIES.map((i) => ({ value: i.slug, label: i.name })),
+    { value: 'other', label: 'Other / Not Listed' },
+  ]
 
   return (
     <div className="card-elevated p-8 lg:p-10">
@@ -326,21 +637,21 @@ export function QualificationForm() {
               Fit Check
             </span>
             <span className="font-mono text-[11px] uppercase tracking-widest text-[color:var(--text-muted)]">
-              Step {currentStepNum} of 3
+              Step {currentStepIndex + 1} of {totalSteps}
             </span>
           </div>
           <div
             className="mt-3 flex items-center gap-2"
             role="progressbar"
             aria-valuemin={1}
-            aria-valuemax={3}
-            aria-valuenow={currentStepNum}
+            aria-valuemax={totalSteps}
+            aria-valuenow={currentStepIndex + 1}
           >
-            {[1, 2, 3].map((n) => (
+            {steps.map((s, i) => (
               <div
-                key={n}
+                key={s}
                 className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${
-                  currentStepNum >= n
+                  currentStepIndex >= i
                     ? 'bg-[color:var(--blue)]'
                     : 'bg-[color:var(--border)]'
                 }`}
@@ -350,54 +661,34 @@ export function QualificationForm() {
         </>
       )}
 
-      {step === 1 && (
+      {step === 'industry' && (
         <div className="mt-6">
-          <h2 className="sr-only">Step 1: About your business</h2>
-          <div>
-            <p className="font-display text-lg leading-snug text-[color:var(--text)]">
-              What best describes your business?
-            </p>
-            <div
-              role="radiogroup"
-              aria-label="Business type"
-              className="mt-4 grid gap-2 sm:grid-cols-2"
-            >
-              {INDUSTRY_OPTIONS.map(({ value, label, Icon }) => (
-                <OptionCard
-                  key={value}
-                  selected={form.industry === value}
-                  onSelect={() => update('industry', value)}
-                  label={label}
-                  icon={<Icon className="h-4 w-4 text-[color:var(--blue-system)]" aria-hidden />}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8">
-            <p className="font-display text-lg leading-snug text-[color:var(--text)]">
-              How many new leads does your business receive per month?
-            </p>
-            <div
-              role="radiogroup"
-              aria-label="Lead volume"
-              className="mt-4 grid gap-2 sm:grid-cols-2"
-            >
-              {LEAD_VOLUME_OPTIONS.map(({ value, label }) => (
-                <OptionCard
-                  key={value}
-                  selected={form.leadVolume === value}
-                  onSelect={() => update('leadVolume', value)}
-                  label={label}
-                />
-              ))}
-            </div>
+          <h2 className="sr-only">Industry</h2>
+          <p className="font-display text-lg leading-snug text-[color:var(--text)]">
+            What industry are you in?
+          </p>
+          <p className="mt-1 text-xs text-[color:var(--text-muted)]">
+            Select your industry
+          </p>
+          <div
+            role="radiogroup"
+            aria-label="Industry"
+            className="mt-4 grid gap-2 sm:grid-cols-2"
+          >
+            {industryOptions.map(({ value, label }) => (
+              <OptionCard
+                key={value}
+                selected={selectedIndustry === value}
+                onSelect={() => setIndustry(value)}
+                label={label}
+              />
+            ))}
           </div>
 
           <button
             type="button"
             onClick={handleNext}
-            disabled={!canProceedStep1}
+            disabled={!canProceedIndustry}
             className="btn-primary mt-8 flex w-full items-center justify-center gap-2 disabled:cursor-not-allowed disabled:opacity-50"
           >
             Next
@@ -406,9 +697,99 @@ export function QualificationForm() {
         </div>
       )}
 
-      {step === 2 && (
+      {step === 'sub-category' && (
         <div className="mt-6">
-          <h2 className="sr-only">Step 2: Your current operation</h2>
+          <h2 className="sr-only">Business type</h2>
+          <p className="font-display text-lg leading-snug text-[color:var(--text)]">
+            What best describes your business?
+          </p>
+          <p className="mt-1 text-xs text-[color:var(--text-muted)]">
+            Select your business type
+          </p>
+          <div
+            role="radiogroup"
+            aria-label="Business type"
+            className="mt-4 grid gap-2 sm:grid-cols-2"
+          >
+            {[
+              ...(SUB_CATEGORIES[selectedIndustry] ?? []),
+              SUB_CATEGORY_OTHER,
+            ].map((label) => (
+              <OptionCard
+                key={label}
+                selected={selectedSubCategory === label}
+                onSelect={() => setSelectedSubCategory(label)}
+                label={label}
+              />
+            ))}
+          </div>
+
+          <div className="mt-8 flex gap-3">
+            <button
+              type="button"
+              onClick={handleBack}
+              className="btn-ghost flex-1"
+            >
+              Back
+            </button>
+            <button
+              type="button"
+              onClick={handleNext}
+              disabled={!canProceedSubCategory}
+              className="btn-primary flex-[2] items-center justify-center gap-2 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Next
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {step === 'lead-volume' && (
+        <div className="mt-6">
+          <h2 className="sr-only">Lead volume</h2>
+          <p className="font-display text-lg leading-snug text-[color:var(--text)]">
+            How many new leads does your business receive per month?
+          </p>
+          <div
+            role="radiogroup"
+            aria-label="Lead volume"
+            className="mt-4 grid gap-2 sm:grid-cols-2"
+          >
+            {LEAD_VOLUME_OPTIONS.map(({ value, label }) => (
+              <OptionCard
+                key={value}
+                selected={form.leadVolume === value}
+                onSelect={() => update('leadVolume', value)}
+                label={label}
+              />
+            ))}
+          </div>
+
+          <div className="mt-8 flex gap-3">
+            <button
+              type="button"
+              onClick={handleBack}
+              className="btn-ghost flex-1"
+            >
+              Back
+            </button>
+            <button
+              type="button"
+              onClick={handleNext}
+              disabled={!canProceedLeadVolume}
+              className="btn-primary flex-[2] items-center justify-center gap-2 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Next
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {step === 'operation' && (
+        <div className="mt-6">
+          <h2 className="sr-only">Your current operation</h2>
           <div>
             <p className="font-display text-lg leading-snug text-[color:var(--text)]">
               Where are your biggest growth bottlenecks?
@@ -480,7 +861,7 @@ export function QualificationForm() {
             <button
               type="button"
               onClick={handleNext}
-              disabled={!canProceedStep2}
+              disabled={!canProceedOperation}
               className="btn-primary flex-[2] items-center justify-center gap-2 disabled:cursor-not-allowed disabled:opacity-50"
             >
               Next
@@ -490,9 +871,9 @@ export function QualificationForm() {
         </div>
       )}
 
-      {step === 3 && (
+      {step === 'contact' && (
         <div className="mt-6">
-          <h2 className="sr-only">Step 3: Timing and contact</h2>
+          <h2 className="sr-only">Timing and contact</h2>
           <div>
             <p className="font-display text-lg leading-snug text-[color:var(--text)]">
               Are you the decision-maker for investing in growth systems?
@@ -603,7 +984,7 @@ export function QualificationForm() {
             <button
               type="button"
               onClick={handleSubmit}
-              disabled={submitting || !canProceedStep3}
+              disabled={submitting || !canProceedContact}
               aria-busy={submitting}
               className="btn-primary flex-[2] items-center justify-center gap-2 disabled:cursor-not-allowed disabled:opacity-50"
             >
@@ -703,56 +1084,67 @@ export function QualificationForm() {
 
           <div className="my-6 border-t border-[color:var(--border)]" />
 
-          <div className="card-elevated p-5 mt-4">
-            <span className="code-badge">Free Resource</span>
-            <p className="mt-3 font-semibold text-base text-[color:var(--text)]">
-              The Local Business Automation Audit
-            </p>
-            <p className="text-xs text-[color:var(--text-muted)] mt-1 leading-relaxed">
-              10 questions that reveal exactly where your business is leaking
-              leads, revenue, and time — before you spend a dollar on any tool.
-            </p>
-          </div>
-
-          <p className="text-xs text-[color:var(--text-muted)] mt-3 text-center">
-            We&rsquo;ll email this to {form.firstName} at {form.email}
-          </p>
-
           {magnetSent ? (
-            <p
-              role="status"
-              className="text-sm text-[color:var(--success)] text-center mt-6"
-            >
-              Guide sent — check your inbox.
-            </p>
+            <div className="card-elevated p-5 mt-4">
+              <p className="font-semibold text-base text-[color:var(--text)]">
+                You&rsquo;re on our list.
+              </p>
+              <p className="text-xs text-[color:var(--text-muted)] mt-2 leading-relaxed">
+                We&rsquo;ll review your info and reach out with resources
+                tailored to where you are right now. Most businesses we work
+                with aren&rsquo;t ready to move the day they find us — and
+                that&rsquo;s fine. When the timing is right, we&rsquo;ll be
+                ready.
+              </p>
+            </div>
           ) : (
-            <button
-              type="button"
-              // TODO: wire to email delivery — send lead magnet PDF to
-              // form.email via GHL workflow or direct email API. For now,
-              // this only flips local state to show a confirmation message.
-              onClick={() => setMagnetSent(true)}
-              className="btn-primary w-full flex items-center justify-center gap-2 mt-6"
-            >
-              Send me the guide
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </button>
+            <>
+              <div className="card-elevated p-5 mt-4">
+                <span className="code-badge">Free Resource</span>
+                <p className="mt-3 font-semibold text-base text-[color:var(--text)]">
+                  The Local Business Automation Audit
+                </p>
+                <p className="text-xs text-[color:var(--text-muted)] mt-1 leading-relaxed">
+                  10 questions that reveal exactly where your business is
+                  leaking leads, revenue, and time — before you spend a dollar
+                  on any tool.
+                </p>
+              </div>
+
+              <p className="text-xs text-[color:var(--text-muted)] mt-3 text-center">
+                We&rsquo;ll email this to {form.firstName} at {form.email}
+              </p>
+
+              {magnetError ? (
+                <p
+                  role="alert"
+                  className="mt-4 text-xs text-[color:var(--error)]"
+                >
+                  {magnetError}
+                </p>
+              ) : null}
+
+              <button
+                type="button"
+                onClick={handleMagnetClick}
+                disabled={magnetSubmitting}
+                aria-busy={magnetSubmitting}
+                className="btn-primary w-full flex items-center justify-center gap-2 mt-6 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {magnetSubmitting ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send me the guide
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </>
+                )}
+              </button>
+            </>
           )}
-
-          <div className="my-6 border-t border-[color:var(--border)]" />
-
-          <p className="text-sm text-[color:var(--text-muted)] text-center">
-            Already know what you need?
-          </p>
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-ghost w-full flex items-center justify-center gap-2 mt-3"
-          >
-            Book the call anyway
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </a>
         </div>
       )}
     </div>
