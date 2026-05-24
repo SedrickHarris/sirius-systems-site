@@ -15,6 +15,11 @@ Format per entry:
 
 ---
 
+## 2026-05-23 — /industries/home-services copy update
+- type: seo
+- changes: Replaced DATA object with Level 5 SEO/AEO copy package. Updated metaTitle, metaDescription, headline, subheadline, heroHighlights, problems, systemsCopy, subVerticalsCopy, faqs, and cta fields. Schema block unchanged. tsc clean. next build clean.
+- files: app/industries/home-services/page.tsx
+
 ## 2026-05-20 — Body copy targeted fixes
 
 - type: copy
