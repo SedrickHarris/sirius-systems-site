@@ -15,6 +15,16 @@ Format per entry:
 
 ---
 
+## 2026-05-25 — Add Google Tag Manager (GTM-TJRT2ZHL)
+- type: feat
+- changes: Google Tag Manager added to app/layout.tsx. `Script` component with `strategy="afterInteractive"` placed inside `<body>` (Next.js App Router handles head injection per strategy); `<noscript>` iframe fallback placed as first child of `<body>` immediately after the opening tag. Container ID: `GTM-TJRT2ZHL`. `Script` imported from `next/script` at top of layout. GTM-TJRT2ZHL string confirmed in built HTML (3 occurrences in `out/index.html`: script body, noscript iframe src, hydration duplicate). content-needed-from-client.md item 2.9 marked RESOLVED. No cookie banner added — flagged as post-launch if GDPR/CCPA compliance required. tsc clean. next build clean.
+- files: app/layout.tsx, docs/site-os/inputs/content-needed-from-client.md, docs/site-os/changelog/project-changelog.md
+
+## 2026-05-25 — Wire Google Place ID
+- type: feat
+- changes: Google Place ID confirmed by client. `placeId` and `placeUrl` populated in `data/google-reviews.json`. placeId: `ChIJ5_nmHI_RHi4RrYRgpNp5pWs`. placeUrl: `https://share.google/TUgLZOpTwsYaHLaLZ`. `verified` flag remains `false`, `reviews` array remains `[]`, `summary` block remains null — neutral trust fallback still renders on homepage (`hasVerifiedReviews()` early-returns false on `verified: false`). No review data added. No AggregateRating or Review schema emitted (0 files match across `out/*.html`). content-needed-from-client.md item 2.8 marked RESOLVED. tsc clean. next build clean.
+- files: data/google-reviews.json, docs/site-os/inputs/content-needed-from-client.md, docs/site-os/changelog/project-changelog.md
+
 ## 2026-05-25 — Resolve client blockers: email, service area, schema
 - type: feat
 - changes: Confirmed client inputs applied end-to-end. Email canonical confirmed (`display: info@siriussys.io` / `href: mailto:info@inbox.siriussys.io`) — `lib/site.ts` already correct on disk, no code change. Service area confirmed as worldwide (HQ Las Vegas NV) — LocalBusiness `areaServed` updated from `{ '@type': 'State', name: 'Nevada' }` to `'Worldwide'`; `email: 'info@siriussys.io'` added to LocalBusiness block; interim TODO comment removed. `serviceSchema()` in `lib/schema.ts` gains `areaServed: 'Worldwide'` — applied automatically across all 14 service schemas via helper. TODO comment in `serviceSchema()` removed. `content-needed-from-client.md` items 1.2, 1.3, 1.5, 1.6, 1.7, 1.8, 1.11 marked RESOLVED 2026-05-25 in both the table and the status tracker (5 newly RESOLVED grouped items: 1.2, 1.3, 1.5, 1.6-1.8, 1.11). Build verification: 39 static routes, `"areaServed":"Worldwide"` present on 15 files (homepage + 14 service pages), `"email":"info@siriussys.io"` present on homepage, no forbidden schema types (AggregateRating/Review/Product/Offer) emitted anywhere. tsc clean. next build clean.
