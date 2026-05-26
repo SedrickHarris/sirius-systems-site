@@ -61,7 +61,7 @@ export default function BookingPage() {
                 display: "block",
                 width: "100%",
                 height: "900px",
-                marginTop: "-52px",
+                marginTop: "-72px",
                 marginBottom: "-52px",
                 border: "none",
                 background: "#050505",
