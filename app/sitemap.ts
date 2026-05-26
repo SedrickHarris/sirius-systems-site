@@ -17,11 +17,12 @@ export const dynamic = 'force-static'
 type Freq = MetadataRoute.Sitemap[number]['changeFrequency']
 
 const ROUTES: { path: string; priority: number; changeFrequency: Freq }[] = [
-  // Core (4)
+  // Core (5)
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
   { path: '/services', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/booking', priority: 0.8, changeFrequency: 'monthly' },
 
   // Service (14): capstone elevated to 0.9; everything else at 0.8.
   { path: '/ai-automation', priority: 0.8, changeFrequency: 'monthly' },

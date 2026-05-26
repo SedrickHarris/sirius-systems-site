@@ -693,6 +693,9 @@ export default function HomePage() {
                 Book the audit
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
+              <Link href="/booking" className="btn-ghost">
+                Pick a time
+              </Link>
               <Link href="/services" className="btn-ghost">
                 See services
               </Link>

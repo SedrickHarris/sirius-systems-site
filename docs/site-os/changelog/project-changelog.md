@@ -15,6 +15,12 @@ Format per entry:
 
 ---
 
+## 2026-05-25 — /booking page added (GHL widget embed)
+- type: feat
+- changes: New `/booking` route at `app/booking/page.tsx` embedding the GoHighLevel booking widget (`link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4`) with the GHL `form_embed.js` loaded via `next/script` (strategy: afterInteractive). metadata export added (title, description, canonical /booking, openGraph). JsonLdScript block emits WebPage + BreadcrumbList. Inline hex colors replaced with brand tokens: `#0B0F14`→`var(--bg-alt)`, `#111827`→`var(--surface)`, `#F9FAFB`→`var(--text-on-dark)`, `#B6C2CF`→`var(--text-on-dark-soft)`. Note: client spec requested `--text-primary`/`--text-secondary` but those tokens do not exist in app/globals.css; nearest existing tokens substituted. `/booking` added to `app/sitemap.ts` ROUTES (priority 0.8, monthly, in Core block alongside /contact — Core count 4→5). Homepage final CTA section gains a third button "Pick a time" → /booking (btn-ghost) inserted between /contact (primary) and /services (ghost). Build route count 38→39. tsc clean. next build clean.
+- files: app/booking/page.tsx (new), app/sitemap.ts, app/page.tsx, docs/site-os/changelog/project-changelog.md
+- notes: Booking page styling is still raw inline styles with hardcoded sizes (fontSize 42, padding 64/20, borderRadius 28). Tokens cover colors but not typography or spacing scale — page is functionally aligned to brand palette but visually still a one-off relative to other pages built on Tailwind component classes. Consider a follow-up pass to convert to the section-* / hero-* / card-glass class system if visual consistency matters.
+
 ## 2026-05-25 — /services FAQ section + FAQPage schema
 - type: seo
 - changes: Added SERVICES_FAQ (5 questions) to lib/faq.ts. Added FAQ section to app/services/page.tsx consuming SERVICES_FAQ. Added faqPage(SERVICES_FAQ) to JsonLdScript data array. Schema on /services now emits WebPage + BreadcrumbList + FAQPage. Questions cover: modular-vs-full-stack entry, AI-automation-vs-CRM distinction, highest-impact starting points, three-pillar compounding explanation, GBP-and-automation connection. Visible FAQ text and FAQPage JSON-LD consume the same array — byte-identical. No layout changes beyond the new FAQ section. tsc clean. next build clean.
