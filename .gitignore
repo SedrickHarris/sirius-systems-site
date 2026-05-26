@@ -30,3 +30,8 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# GBP review pipeline — secrets and raw fetch output never go to git
+credentials.json
+scripts/tokens.json
+data/google-reviews.staged.json
