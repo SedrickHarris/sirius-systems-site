@@ -61,3 +61,26 @@ export const CONTACT_FAQ: QA[] = [
     a: "No. No automated nurture, no list-sharing, no surprise emails. If you don't move forward, we don't keep contacting you.",
   },
 ]
+
+export const SERVICES_FAQ: QA[] = [
+  {
+    q: 'Do I have to buy all the services or can I start with one?',
+    a: 'You can start with one. Most clients begin with the piece that addresses their most urgent gap — usually lead follow-up automation or review acquisition — and add from there. The services are designed to compound when they run together, but the full stack is the destination, not the entry requirement.',
+  },
+  {
+    q: 'What is the difference between AI automation and CRM automation?',
+    a: 'AI automation covers the actions that happen in response to lead activity: follow-up messages, missed-call responses, appointment reminders, review requests. CRM automation is the pipeline layer: moving leads through stages, updating records, and triggering sequences based on deal status. They work together — AI automation feeds the CRM; CRM automation determines what the AI automation does next.',
+  },
+  {
+    q: 'Which services have the most immediate impact?',
+    a: 'Missed-call text-back and new lead follow-up automation address the two moments where most local service businesses lose jobs without realizing it. Review acquisition automation compounds over weeks as jobs close and requests go out consistently. These three are the most common starting points because the impact is visible quickly and the setup does not require replacing existing tools.',
+  },
+  {
+    q: 'How do the three pillars connect to each other?',
+    a: 'The AI automation pillar captures and converts leads. The smart website and local SEO pillar makes the business findable in Google and AI answer engines, feeding traffic into the automation layer. The reputation pillar earns reviews after completed jobs and feeds those signals back into local search visibility. Each pillar strengthens the others when they run as a connected system rather than in isolation.',
+  },
+  {
+    q: 'What does Google Business Profile optimization have to do with AI automation?',
+    a: 'GBP optimization determines how prominently your business appears when customers search locally — it is the top of the lead funnel. Automation handles what happens after a lead arrives. An optimized GBP without an automation layer means more leads leaking at the follow-up stage. Automation without an optimized GBP means the pipeline is starved for traffic. They are separate services that produce the most value when they run together.',
+  },
+]

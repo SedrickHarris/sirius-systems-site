@@ -15,6 +15,11 @@ Format per entry:
 
 ---
 
+## 2026-05-25 — /services FAQ section + FAQPage schema
+- type: seo
+- changes: Added SERVICES_FAQ (5 questions) to lib/faq.ts. Added FAQ section to app/services/page.tsx consuming SERVICES_FAQ. Added faqPage(SERVICES_FAQ) to JsonLdScript data array. Schema on /services now emits WebPage + BreadcrumbList + FAQPage. Questions cover: modular-vs-full-stack entry, AI-automation-vs-CRM distinction, highest-impact starting points, three-pillar compounding explanation, GBP-and-automation connection. Visible FAQ text and FAQPage JSON-LD consume the same array — byte-identical. No layout changes beyond the new FAQ section. tsc clean. next build clean.
+- files: lib/faq.ts, app/services/page.tsx, docs/site-os/changelog/project-changelog.md
+
 ## 2026-05-25 — Homepage Level 5 SEO/AEO upgrade
 - type: seo
 - changes: Three-file homepage depth pass. (1) app/page.tsx metadata export: added explicit title field, rewrote description to problem-led buyer framing, added openGraph block. (2) lib/faq.ts HOME_FAQ: expanded from 5 to 9 questions — existing 5 rewritten for AEO extractability; 4 new questions added covering AI-automation definition, CRM-vs-automation distinction, reputation management explanation, and all-in-one system compounding loop. All 9 items visible in rendered HTML and match FAQPage JSON-LD exactly. (3) app/page.tsx LocalBusiness schema block: added @id anchor (/#organization forward-reference resolution), description field, and sameAs array (Facebook, GBP share link, GitHub repo) for entity grounding with AI answer engines. areaServed remains Nevada interim pending content-needed 1.3. No layout changes, no new sections, no component edits. tsc clean. next build clean.

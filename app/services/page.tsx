@@ -9,6 +9,7 @@ import {
   LayoutDashboard,
   Layers,
 } from 'lucide-react'
+import { FAQ } from '@/components/site/FAQ'
 import { ServiceCard } from '@/components/site/ServiceCard'
 import { JsonLdScript } from '@/components/site/JsonLdScript'
 import {
@@ -17,7 +18,8 @@ import {
   servicesByGroup,
 } from '@/lib/services'
 import { INDUSTRIES } from '@/lib/industries'
-import { breadcrumbList, webPage } from '@/lib/schema'
+import { SERVICES_FAQ } from '@/lib/faq'
+import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE } from '@/lib/site'
 
 const PAGE = {
@@ -74,6 +76,7 @@ export default function ServicesPage() {
             { name: 'Home', url: '/' },
             { name: 'Services', url: '/services' },
           ]),
+          faqPage(SERVICES_FAQ),
         ]}
       />
 
@@ -290,6 +293,17 @@ export default function ServicesPage() {
               <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ───────── FAQ ───────── */}
+      <section className="section-soft section-padding">
+        <div className="site-container grid gap-12 md:grid-cols-[1fr_2fr]">
+          <div>
+            <span className="section-eyebrow">FAQ</span>
+            <h2 className="mt-5 section-heading">Common questions</h2>
+          </div>
+          <FAQ items={SERVICES_FAQ} />
         </div>
       </section>
 
