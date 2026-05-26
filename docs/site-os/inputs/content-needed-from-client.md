@@ -39,7 +39,7 @@ These are not blockers, but every page or feature that depends on them ships as 
 | 2.6 | Booking provider + link | `/contact`, service-page CTAs |
 | 2.7 | Email provider (e.g. Resend, Postmark) | Contact form delivery |
 | 2.8 | ~~Google Place ID~~ — **RESOLVED 2026-05-25** (`ChIJ5_nmHI_RHi4RrYRgpNp5pWs`; placeUrl `https://share.google/TUgLZOpTwsYaHLaLZ`). | Live review pull on `/`, `/reputation-management`, `/review-automation` |
-| 2.9 | ~~Analytics provider preference (GA4, Plausible, none)~~ — **RESOLVED 2026-05-25** (Google Tag Manager, container ID `GTM-TJRT2ZHL`). | Tracking setup |
+| 2.9 | ~~Analytics provider preference (GA4, Plausible, none)~~ — **RESOLVED 2026-05-25** (Google Tag Manager, container ID `GTM-TJRT2ZHL`). **Blog analytics follow-up:** Blog is now live at /blog and /blog/*. Once analytics provider is confirmed and installed, verify pageview events fire on blog routes, create a /blog/* filtered report in GA4, and set up a conversion event for CTA clicks originating from blog posts. GSC will pick up blog URLs automatically from the sitemap — no action needed there. | Tracking setup |
 | 2.10 | Pricing visibility (show packages? show "request quote"?) | Service pages, `/services` |
 | 2.11 | Lead magnet(s) — file or "none" | Hero, blog CTAs |
 
