@@ -4,12 +4,12 @@ import { JsonLdScript } from '@/components/site/JsonLdScript'
 import { webPage, breadcrumbList } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Book an Appointment | Sirius Systems',
+  title: 'Book a Strategy Call | Sirius Systems',
   description:
     'Schedule a discovery call with Sirius Systems. Twenty minutes to map where leads, reviews, and follow-up are leaking in your business.',
   alternates: { canonical: '/booking' },
   openGraph: {
-    title: 'Book an Appointment | Sirius Systems',
+    title: 'Book a Strategy Call | Sirius Systems',
     description:
       'Schedule a discovery call with Sirius Systems. Twenty minutes to map where leads, reviews, and follow-up are leaking in your business.',
     url: '/booking',
@@ -23,21 +23,23 @@ export default function BookingPage() {
         data={[
           webPage({
             url: '/booking',
-            name: 'Book an Appointment | Sirius Systems',
+            name: 'Book a Strategy Call | Sirius Systems',
             description:
               'Schedule a discovery call with Sirius Systems. Twenty minutes to map where leads, reviews, and follow-up are leaking in your business.',
           }),
           breadcrumbList([
             { name: 'Home', url: '/' },
-            { name: 'Book an Appointment', url: '/booking' },
+            { name: 'Book a Strategy Call', url: '/booking' },
           ]),
         ]}
       />
-      <main style={{ background: "var(--bg-alt)", minHeight: "100vh", padding: "64px 20px" }}>
+      <main style={{ background: "var(--bg-alt)", minHeight: "100vh", padding: "72px 20px" }}>
         <section style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ maxWidth: 640, marginBottom: 24 }}>
-            <h1 style={{ color: "var(--text-on-dark)", fontSize: 42, margin: 0 }}>Book Your Appointment</h1>
-            <p style={{ color: "var(--text-on-dark-soft)", fontSize: 18 }}>
+          <div style={{ maxWidth: 640, marginBottom: 28 }}>
+            <h1 style={{ color: "var(--text-on-dark)", fontSize: 42, lineHeight: 1.1, margin: 0 }}>
+              Book Your Strategy Call
+            </h1>
+            <p style={{ color: "var(--text-on-dark-soft)", fontSize: 18, marginTop: 12 }}>
               Choose a time below and complete your booking.
             </p>
           </div>
@@ -47,7 +49,7 @@ export default function BookingPage() {
               background: "var(--surface)",
               border: "1px solid rgba(255,255,255,0.08)",
               borderRadius: 28,
-              padding: 24,
+              padding: 22,
               boxShadow: "0 18px 50px rgba(0,0,0,0.35)",
               overflow: "hidden",
             }}
