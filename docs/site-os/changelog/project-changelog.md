@@ -15,6 +15,11 @@ Format per entry:
 
 ---
 
+## 2026-05-25 — Footer: add Resources column with /blog link
+- type: feat
+- changes: New "Resources" column added to the sitewide footer in `components/site/Footer.tsx`, containing a single link to `/blog`. Column inserted between Industries and Company. Grid widths rebalanced from 4/3/3/2 to 4/2/2/2/2 across the 5 columns to keep the 12-column md grid clean. Column header uses the same font-mono / text-[11px] / uppercase / tracking-eyebrow / var(--text-faint) style as the other section headers. Link uses the standard transition-colors / var(--text-muted) → var(--text) hover treatment. No other footer content changed.
+- files: components/site/Footer.tsx, docs/site-os/changelog/project-changelog.md
+
 ## 2026-05-25 — Expand blog content plan to 400-topic prioritized backlog
 - type: docs
 - changes: Major expansion of `docs/content/blog-content-plan.md`. Integrated 400 topics from the 20-pillar topical authority map. Restructured backlog from a flat ~20-post cluster table into Tier 1 (write first, mapped to existing service pages, no flags) / Tier 2 (write after launch traction) / Tier 3 (held for editorial review behind explicit flags) / Industry Verticals (write reactively). Added editorial flag system documented in §2: 🔧 TOOL-NAME, 💰 PRICING, ⚖️ LEGAL, 🔁 OVERLAP, 📋 COMPARISON — each with a required action authors must take before drafting. Tier 1 contains 65 posts (25 AI Automation, 15 Reputation, 20 Local SEO/AEO/GBP/Smart Websites, 5 Capstone). Tier 2 contains 54 posts. Tier 3 contains 30 flagged posts held pending resolution. Industry verticals add 39 posts across Home Services, Contractors, Healthcare/Wellness/Beauty, Professional Services. Slug convention aligned with `url-strategy.md` (≤ 60 chars, kebab-case, no dates). Retired 6 topics from the original backlog (4 superseded by better versions in the new tier structure; 2 dropped outright as conflicting with positioning or too niche). Launch cohort (L1–L5) preserved with slugs added and word counts kept. 6-month editorial cadence section preserved with Tier-based language. §9 ideation guardrails preserved unchanged. No code files touched.

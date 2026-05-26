@@ -98,7 +98,7 @@ export function Footer() {
           </div>
 
           {/* Services column */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <p
               className="font-mono text-[11px] uppercase tracking-eyebrow"
               style={{ color: 'var(--text-faint)' }}
@@ -130,7 +130,7 @@ export function Footer() {
           </div>
 
           {/* Industries column */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <p
               className="font-mono text-[11px] uppercase tracking-eyebrow"
               style={{ color: 'var(--text-faint)' }}
@@ -149,6 +149,27 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Resources column */}
+          <div className="md:col-span-2">
+            <p
+              className="font-mono text-[11px] uppercase tracking-eyebrow"
+              style={{ color: 'var(--text-faint)' }}
+            >
+              Resources
+            </p>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              <li>
+                <Link
+                  href="/blog"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
