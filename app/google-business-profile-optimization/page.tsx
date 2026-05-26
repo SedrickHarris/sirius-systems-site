@@ -7,7 +7,7 @@ const PAGE = {
   slug: 'google-business-profile-optimization',
   metaTitle: 'Google Business Profile Optimization | Sirius Systems',
   metaDescription:
-    'GBP optimization that drives local search visibility, map pack ranking, and review management for local service businesses. Built by Sirius Systems.',
+    'GBP optimization that closes the gaps suppressing your local search rankings — categories, services, photos, posts, Q&A, and NAP consistency.',
   eyebrow: 'Google Business Profile',
   headline:
     'The first thing customers see. Most businesses set it up once and forget it.',
@@ -15,29 +15,29 @@ const PAGE = {
     'An optimized GBP puts your business in front of people searching for exactly what you do, in the area you serve, at the moment they are ready to book.',
   glyphVariant: 'beacon' as const,
   definition:
-    'Google Business Profile optimization means fully configuring and actively maintaining your GBP listing: categories, services, attributes, photos, posts, Q&A, and review responses: so that Google surfaces your business prominently in local search and Maps results.',
+    'Google Business Profile optimization means fully configuring and actively maintaining your GBP listing so Google surfaces your business prominently in local search and Maps results. It covers the elements most businesses set up once and leave incomplete: primary and secondary categories, service listings with descriptions, attributes, photos, posts, Q&A, and NAP consistency across your entire web presence. An incomplete or stale profile is a direct ranking liability against competitors who maintain theirs.',
   problems: [
-    "Your GBP was set up years ago and hasn't been touched since: it's missing services, photos, and current information.",
-    "You're in the wrong primary category or missing secondary categories that match how customers search.",
-    "Competitors with comparable ratings rank above you because their profiles are more complete and active.",
-    'Your profile has unanswered Q&A, missing service descriptions, or outdated hours that erode trust.',
+    'Your GBP was set up years ago and has not been updated since. Services are missing, photos are outdated, and the business description does not reflect what you actually do.',
+    'You are in a primary category that is too broad or mismatched, and you are missing the secondary categories that match how customers actually search for your services.',
+    'Competitors with similar or weaker review profiles rank above you in the local pack because their profiles are more complete and signal active management.',
+    'Your profile has unanswered Q&A entries, missing attributes, and NAP details that do not match your website — each one a signal Google reads as unreliable.',
   ],
   steps: [
     {
-      label: 'Full profile audit',
-      body: "We review every element of your current GBP against Google's best practices and your competitors' profiles: categories, service areas, attributes, photos, posts, Q&A, and review activity. You get a prioritized gap list before we touch anything.",
+      label: 'Full profile audit against competitors',
+      body: 'We review every element of your current GBP against both Google best practices and the top-ranking profiles in your local market. Categories, service area configuration, attributes, photo count and recency, post frequency, Q&A status, and review response rate are all measured. You receive a prioritized gap list before we change anything.',
     },
     {
-      label: 'Core optimizations',
-      body: 'We update the profile elements that have the most impact on visibility: primary and secondary categories, service listings with descriptions, business attributes, NAP consistency, and the business description optimized for local search intent.',
+      label: 'Core profile optimization',
+      body: 'We update the elements with the highest impact on visibility: primary and secondary category selection, service listings with keyword-relevant descriptions, business attributes, and the business description written for local search intent. NAP details are checked against your website and major directories and corrected where they conflict.',
     },
     {
       label: 'Visual and content layer',
-      body: 'We configure the photo set, add service-specific images, and set up a GBP post cadence: updates, offers, or service highlights: so the profile signals active management to Google, not a stale listing.',
+      body: 'We configure the photo set with the categories Google uses to classify images, add service-specific visuals, and establish a GBP post cadence — service highlights, updates, or offers — so the profile signals ongoing activity rather than a listing that was claimed and abandoned.',
     },
     {
-      label: 'Q&A and ongoing maintenance',
-      body: 'We populate the Q&A section with the questions your customers actually ask, configure review response workflows, and establish a maintenance schedule so the profile stays current as your services, hours, or service area changes.',
+      label: 'Q&A, review integration, and maintenance',
+      body: 'We populate the Q&A section with the questions your customers actually ask so they are answered before a visitor has to ask them. Review response workflows are connected so incoming reviews do not go unanswered. A maintenance schedule is set so the profile stays current when services, hours, or service area changes.',
     },
   ],
   features: [
@@ -51,11 +51,11 @@ const PAGE = {
     'Review response integration: connects to your review response workflow',
   ],
   outcomes: [
-    'Your profile appears more completely in local search and Maps results.',
-    'Customers land on a profile that answers their questions before they have to call.',
-    'Google sees an actively maintained profile: which is a positive ranking signal.',
-    'NAP consistency across your web presence removes a common local SEO liability.',
-    'Your services are discoverable by customers searching for specific jobs, not just your business name.',
+    'Your profile appears more completely in local search and Maps results because the gaps that were suppressing visibility are closed.',
+    'Customers land on a profile that answers their questions before they have to call — service descriptions, hours, location, and Q&A all present and current.',
+    'Google sees an actively maintained profile with consistent post activity and review responses, which reinforces your local ranking position over stale competitor listings.',
+    'NAP consistency across your website, GBP, and directories removes a common trust signal problem that suppresses local rankings without any obvious cause.',
+    'Your services are findable by customers searching for specific job types, not just by customers who already know your business name.',
   ],
   relatedSlugs: [
     'local-seo-aeo',
@@ -68,23 +68,39 @@ const PAGE = {
   faqs: [
     {
       q: 'What is Google Business Profile optimization?',
-      a: 'It means fully configuring and actively maintaining your GBP listing: categories, services, attributes, photos, posts, and Q&A: so Google surfaces your business prominently in local search and Maps results. Most businesses set it up once and leave it incomplete.',
+      a: 'Google Business Profile optimization means fully configuring and actively maintaining your GBP listing so Google surfaces your business prominently in local search and Maps results. It covers the elements most profiles leave incomplete: primary and secondary categories, service listings, attributes, photos, posts, Q&A, and consistent NAP details across your web presence.',
     },
     {
-      q: 'How much does GBP affect local search rankings?',
-      a: 'Significantly. GBP signals: profile completeness, category accuracy, review volume and recency, post activity, and photo count: are among the primary factors Google uses to rank local results. An incomplete or stale profile is a direct competitive disadvantage.',
+      q: 'What is the Google local pack and how does GBP affect it?',
+      a: 'The local pack is the block of three business listings that appears at the top of Google search results for local service queries, above the organic results. GBP is the primary input Google uses to decide which businesses appear there. Profile completeness, category accuracy, review volume and recency, post activity, and NAP consistency are all factors. An optimized GBP is the foundation of local pack visibility.',
     },
     {
       q: 'My GBP is already set up. Do I still need this?',
-      a: "Probably. Most GBP profiles that were set up without a structured optimization process are missing secondary categories, have incomplete service listings, lack attributes, and have no post or Q&A activity. A full audit identifies what's missing and what it's costing you in visibility.",
+      a: 'Most GBP profiles that were configured without a structured optimization process are missing secondary categories, have incomplete or absent service listings, lack relevant attributes, and have no post or Q&A activity. A full audit identifies exactly what is missing and how each gap compares to the profiles ranking above you. In most cases there are five to ten correctable issues that are directly affecting visibility.',
     },
     {
-      q: 'What is NAP consistency and why does it matter?',
-      a: 'NAP stands for Name, Address, Phone. Inconsistencies in how your business information appears across your website, GBP, directories, and social profiles create a trust signal problem for Google: it reduces confidence that the listings refer to the same business, which can suppress rankings.',
+      q: 'What is NAP consistency and why does it affect rankings?',
+      a: 'NAP stands for Name, Address, and Phone. When these details appear differently across your website, GBP, directories, and social profiles — different phone formats, abbreviated address variations, slightly different business names — Google loses confidence that all of those listings refer to the same business. That reduced confidence can suppress local rankings even when every other signal is strong.',
     },
     {
-      q: 'How does GBP optimization connect to the rest of the system?',
-      a: 'GBP is the anchor of your local search presence. We connect it to your review acquisition system so incoming reviews land on the profile consistently, to your review response workflow so nothing goes unanswered, and to your website so the signals align across both.',
+      q: 'How much does GBP affect local search rankings?',
+      a: 'GBP signals are among the primary factors Google uses to rank local results. Profile completeness, category accuracy, review volume and recency, post frequency, and photo activity all contribute. A stale or incomplete profile is a direct competitive disadvantage against businesses in your market that actively maintain theirs.',
+    },
+    {
+      q: 'What is GBP Q&A and why does it matter?',
+      a: 'The Q&A section on a Google Business Profile lets anyone post questions that the business or the public can answer. Most businesses leave this section empty or unmonitored, which means customers post questions that go unanswered, or members of the public answer them inaccurately. Populating Q&A with the questions your customers actually ask, answered correctly, removes a trust barrier before a visitor ever contacts you.',
+    },
+    {
+      q: 'What are GBP posts and do they actually help?',
+      a: 'GBP posts are short updates that appear on your profile and in some local search results. They signal to Google that the profile is actively managed rather than claimed and abandoned. Consistent post activity is a mild but real ranking factor. More practically, posts give you a surface to highlight current services, seasonal offers, or recent work without requiring a change to your website.',
+    },
+    {
+      q: 'How does GBP optimization connect to the rest of my system?',
+      a: 'GBP is the anchor of your local search presence. It connects to your review acquisition system so incoming reviews build consistently on the profile, to your review response workflow so no review goes unanswered, and to your website so the signals across both align rather than contradict each other. An optimized GBP without a review system to feed it stalls. A review system without an optimized profile to display those reviews is a missed opportunity.',
+    },
+    {
+      q: 'How long does it take to see results from GBP optimization?',
+      a: 'Core profile updates — category corrections, service listings, attribute additions — can produce visible ranking movement within a few weeks as Google recrawls and reindexes the profile. Photo and post activity compounds over time. NAP corrections across directories take longer to propagate. The full effect of a structured optimization is typically visible over two to three months, though some improvements show up sooner depending on how significant the gaps were.',
     },
   ],
 }

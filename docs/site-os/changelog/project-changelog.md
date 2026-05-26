@@ -15,6 +15,41 @@ Format per entry:
 
 ---
 
+## 2026-05-25 — /all-in-one-business-growth-system Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced PAGE object with Level 5 copy package. Updated metaTitle (restored full `| Sirius Systems` suffix: `All-in-One Growth System for Local Business | Sirius` → `All-in-One Business Growth System | Sirius Systems`), metaDescription, definition (compounding-loop framing explicit: SEO → automation → review → SEO), problems (manual-handoff specificity, overhead-growth framing, incomplete-information problem). steps rewritten with deeper mechanism detail: pillar 1 expanded with full channel list, pillar 2 competitor benchmarking detail, pillar 3 AEO/AI-answer-engine layer added with ChatGPT/Perplexity examples, pillar 4 decision-information framing. outcomes rewritten with contrast framing throughout (5 items). faqs expanded from 5 to 9 (added all-in-one-vs-separate-tools mechanism detail, SEO-automation-reputation compounding-loop explanation, AEO definition and rationale, existing-tools audit approach, system-vs-agency distinction). All 9 FAQ items visible in rendered HTML and match FAQPage JSON-LD exactly. Schema stack unchanged: WebPage + BreadcrumbList + Service + FAQPage. Sync metadata-draft.md Description (Title was already current). No invented claims, no pricing figures, no guarantees. tsc clean. next build clean.
+- files: app/all-in-one-business-growth-system/page.tsx, docs/seo/metadata-draft.md, docs/site-os/changelog/project-changelog.md
+
+## 2026-05-25 — /reputation-management Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced PAGE object with Level 5 copy package. Updated metaTitle (dropped "Local" for character count: `Reputation Management for Local Businesses | Sirius` → `Reputation Management for Service Businesses | Sirius`), metaDescription, definition (two-sentence AEO pattern with proactive-vs-crisis framing explicit), problems (consistency-vs-occasionally framing, unanswered negative review specificity, competitor-has-a-system contrast, multi-platform blind-spot detail), steps (competitive audit added as first step with benchmarking detail, acquisition timing mechanism, response workflow detail, monitoring cadence with reporting). outcomes rewritten with contrast framing throughout (5 items). faqs expanded from 5 to 9 (added why-reviews-matter-for-rankings, reputation-vs-review-automation distinction, handling-unfair-reviews, results-timeline, system-connectivity questions). All 9 FAQ items visible in rendered HTML and match FAQPage JSON-LD exactly. Schema stack unchanged: WebPage + BreadcrumbList + Service + FAQPage. Sync metadata-draft.md Title (also dropped "Systems" from brand suffix in metadata-draft.md to match shipped page) and Description. No AggregateRating, Review, or invented claims. tsc clean. next build clean.
+- files: app/reputation-management/page.tsx, docs/seo/metadata-draft.md, docs/site-os/changelog/project-changelog.md
+
+## 2026-05-25 — /google-business-profile-optimization Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced PAGE object with Level 5 copy package. Updated metaDescription, definition (two-sentence AEO pattern with competitive liability framing explicit), problems (specificity: stale-profile, category mismatch, competitor-completeness gap, NAP conflict), steps (competitor-benchmarked audit step, NAP cross-check in core optimization, photo category detail, Q&A + maintenance integration), outcomes rewritten with contrast framing throughout (5 items). faqs expanded from 5 to 9 (added local-pack definition, Q&A explanation, GBP-posts value question, NAP trust-signal detail, results-timeline question). All 9 FAQ items visible in rendered HTML and match FAQPage JSON-LD exactly. Schema stack unchanged: WebPage + BreadcrumbList + Service + FAQPage. Sync metadata-draft.md Description to match shipped page (Title was already current). No invented claims, no AggregateRating, no Review schema. tsc clean. next build clean.
+- files: app/google-business-profile-optimization/page.tsx, docs/seo/metadata-draft.md, docs/site-os/changelog/project-changelog.md
+
+## 2026-05-25 — /smart-websites Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced PAGE object with Level 5 copy package. Updated metaTitle (`Smart Websites for Local Service Businesses` → `Smart Websites for Service Businesses`), metaDescription, subheadline, definition (three-sentence AEO pattern with explicit local SEO foundation framing), problems (no-conversion specificity, form-inbox lag, built-wrong-first-time framing), steps (conversion-architecture step added with mechanism detail, local-SEO mechanism explicit, CRM integration timing). outcomes rewritten with contrast framing throughout (still 5 items). faqs expanded from 5 to 9 (added smart-vs-regular-website contrast, conversion-first-architecture definition, why-local-SEO-built-in explanation, build-timeline question). All 9 FAQ items visible in rendered HTML and match FAQPage JSON-LD exactly. Schema stack unchanged: WebPage + BreadcrumbList + Service + FAQPage. Sync metadata-draft.md Title and Description to match shipped page. No invented claims. tsc clean. next build clean.
+- files: app/smart-websites/page.tsx, docs/seo/metadata-draft.md, docs/site-os/changelog/project-changelog.md
+
+## 2026-05-25 — /ai-voicebots Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced PAGE object with Level 5 copy package. Updated metaDescription, definition (two-sentence AEO pattern, no-phone-tree contrast explicit), problems (specificity + after-hours framing + inconsistent follow-up pattern), steps (call-type mapping detail, voice config mechanism, CRM handoff specifics, logging and refinement cadence), outcomes expanded from 4 to 5 (call volume scaling added), faqs expanded from 5 to 9 (added voicebot-vs-IVR contrast, voicebot-vs-missed-call-text-back distinction, setup timeline, system-connectivity question). All 9 FAQ items visible in rendered HTML and match FAQPage JSON-LD exactly. Also sync metadata-draft.md Title (`AI Voicebots: Never Miss a Lead Call` → `AI Voicebots for Service Businesses`) and Description to match shipped page. Schema stack unchanged: WebPage + BreadcrumbList + Service + FAQPage. relatedSlugs gained `crm-automation`. No invented claims. tsc clean. next build clean.
+- files: app/ai-voicebots/page.tsx, docs/seo/metadata-draft.md, docs/site-os/changelog/project-changelog.md
+
+## 2026-05-25 — /ai-chatbots Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced PAGE object with Level 5 copy package. Updated metaDescription, subheadline, definition (two-sentence AEO pattern), problems (specificity + time-of-day framing), steps (real-conversation audit step, qualification logic detail, monitoring cadence), outcomes (conversion rate framing added as fifth outcome), faqs expanded from 5 to 9 (added AI-chatbot-vs-live-chat, what-can-it-handle scope definition, chatbot-vs-contact-form contrast, system-connectivity question). All 9 FAQ items visible in rendered HTML and match FAQPage JSON-LD exactly. Schema stack unchanged: WebPage + BreadcrumbList + Service + FAQPage. No invented claims. tsc clean. next build clean.
+- files: app/ai-chatbots/page.tsx, docs/seo/metadata-draft.md, docs/site-os/changelog/project-changelog.md
+
+## 2026-05-25 — /ai-automation Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced PAGE object with Level 5 copy package. Updated metaTitle, metaDescription, subheadline, definition (AEO-sharpened), problems (buyer-voice specificity), steps (mechanism depth), outcomes (competitive contrast framing), faqs expanded from 5 to 9 (added AI-vs-traditional-automation, first-tasks-to-automate, missed-call-text-back definition, automation-vs-hiring contrast, system-connectivity question). All new FAQ items are visible in rendered HTML and match FAQPage JSON-LD exactly. Schema stack unchanged: WebPage + BreadcrumbList + Service + FAQPage. No invented claims. tsc clean. next build clean.
+- files: app/ai-automation/page.tsx, docs/seo/metadata-draft.md, docs/site-os/changelog/project-changelog.md
+
 ## 2026-05-23 — /privacy + /terms shipped, NAP confirmed, LocalBusiness schema added
 - type: feat
 - author: Sirius Systems / Claude Code

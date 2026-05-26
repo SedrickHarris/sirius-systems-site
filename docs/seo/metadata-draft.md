@@ -39,16 +39,16 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 ## Service pages
 
 ### `/ai-automation`
-- **Title:** `AI Automation for Local Service Businesses | Sirius Systems`
-- **Description:** `AI automation that captures leads, books jobs, and follows up — built for local service businesses, not enterprise. See how Sirius Systems sets it up.`
+- **Title:** `AI Automation for Service Businesses | Sirius Systems`
+- **Description:** `Replace manual follow-up, missed-call recovery, and CRM updates with trigger-based systems that run automatically. Built for local service businesses.`
 
 ### `/ai-chatbots`
 - **Title:** `AI Chatbots for Service Businesses | Sirius Systems`
-- **Description:** `AI chatbots that answer in your voice, qualify leads, and book appointments 24/7 — connected to your CRM and calendar. Designed for service businesses.`
+- **Description:** `AI chatbots that qualify leads, answer service questions, and book appointments 24/7 — in your voice, connected to your CRM and calendar.`
 
 ### `/ai-voicebots`
-- **Title:** `AI Voicebots: Never Miss a Lead Call | Sirius Systems`
-- **Description:** `AI voicebots that pick up missed calls, qualify the lead, and book the job — so your business runs even when you're on a roof or under a sink.`
+- **Title:** `AI Voicebots for Service Businesses | Sirius Systems`
+- **Description:** `AI voicebots that answer missed calls, qualify leads by voice, and book appointments automatically — so no inbound call goes unanswered.`
 
 ### `/crm-automation`
 - **Title:** `CRM Automation for Service Businesses | Sirius Systems`
@@ -59,16 +59,16 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Description:** `Automated booking flows that go from inquiry to confirmed appointment without you in the loop — connected to your calendar, CRM, and reminders.`
 
 ### `/smart-websites`
-- **Title:** `Smart Websites for Local Service Businesses | Sirius Systems`
-- **Description:** `A smart website is more than a brochure — it captures, qualifies, books, and follows up. See how Sirius Systems builds them.`
+- **Title:** `Smart Websites for Service Businesses | Sirius Systems`
+- **Description:** `A website built to capture leads, qualify visitors, and book jobs automatically — connected to your CRM, chatbot, and follow-up system from day one.`
 
 ### `/lead-generation-automation`
 - **Title:** `Lead Generation Automation | Sirius Systems`
 - **Description:** `Lead generation automation built for local service businesses — paid, organic, and referral funnels wired to your CRM and booking flow.`
 
 ### `/reputation-management`
-- **Title:** `Reputation Management for Service Businesses | Sirius Systems`
-- **Description:** `Reputation management that earns more reviews, handles the hard ones, and keeps your local search visibility strong. Built by Sirius Systems.`
+- **Title:** `Reputation Management for Service Businesses | Sirius`
+- **Description:** `Build your review volume, respond to every review, and strengthen local search visibility — with a reputation system that runs automatically after every job.`
 
 ### `/review-automation`
 - **Title:** `Review Automation: Earn More Reviews on Autopilot | Sirius Systems`
@@ -80,7 +80,7 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/google-business-profile-optimization`
 - **Title:** `Google Business Profile Optimization | Sirius Systems`
-- **Description:** `Google Business Profile optimization for local service businesses — NAP, categories, services, photos, posts, Q&A, and the right schema on your site.`
+- **Description:** `GBP optimization that closes the gaps suppressing your local search rankings — categories, services, photos, posts, Q&A, and NAP consistency.`
 
 ### `/local-seo-aeo`
 - **Title:** `Local SEO & AEO for Service Businesses | Sirius Systems`
@@ -92,7 +92,7 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/all-in-one-business-growth-system`
 - **Title:** `All-in-One Business Growth System | Sirius Systems`
-- **Description:** `Sirius Systems' all-in-one business growth system — AI automation, smart website, reputation systems, and local SEO/AEO running as one engine.`
+- **Description:** `AI automation, reputation management, and local SEO built to run as one connected system — not three separate tools with manual handoffs between them.`
 
 ---
 
