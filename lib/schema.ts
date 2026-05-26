@@ -79,7 +79,7 @@ export function serviceSchema({
     name,
     description,
     provider: { '@id': `${SITE.url}/#organization` },
-    // TODO: add areaServed when content-needed 1.3 resolves
+    areaServed: 'Worldwide',
     url: `${SITE.url}/${slug}`,
   }
 }

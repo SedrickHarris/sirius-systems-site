@@ -106,6 +106,7 @@ export default function HomePage() {
               'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses — capturing leads, booking jobs, and growing reviews automatically.',
             url: 'https://siriussys.io/',
             telephone: '+17272223424',
+            email: 'info@siriussys.io',
             address: {
               '@type': 'PostalAddress',
               streetAddress: '304 S Jones Blvd Ste 1915',
@@ -114,12 +115,7 @@ export default function HomePage() {
               postalCode: '89107',
               addressCountry: 'US',
             },
-            // areaServed: Nevada interim — update to confirmed service area
-            // when content-needed-from-client.md item 1.3 resolves.
-            areaServed: {
-              '@type': 'State',
-              name: 'Nevada',
-            },
+            areaServed: 'Worldwide',
             sameAs: [
               'https://www.facebook.com/SiriusSys.io/',
               'https://share.google/TUgLZOpTwsYaHLaLZ',
