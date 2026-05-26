@@ -82,12 +82,12 @@
 
   html {
     color-scheme: dark;
-    background-color: var(--bg);
+    background-color: var(--bg-alt);
     color: var(--text);
     scroll-behavior: smooth;
   }
   body {
-    background-color: var(--bg);
+    background-color: var(--bg-alt);
     color: var(--text);
     @apply antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1, 'ss01' 1;

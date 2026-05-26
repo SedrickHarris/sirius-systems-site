@@ -33,8 +33,8 @@ export default function BookingPage() {
           ]),
         ]}
       />
-      <main style={{ background: "var(--bg-alt)", minHeight: "100vh", padding: "72px 20px" }}>
-        <section style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <main style={{ background: "var(--bg-alt)", minHeight: "100vh" }}>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "72px 20px" }}>
           <div style={{ maxWidth: 640, marginBottom: 28 }}>
             <h1 style={{ color: "var(--text-on-dark)", fontSize: 42, lineHeight: 1.1, margin: 0 }}>
               Book Your Strategy Call
@@ -56,7 +56,7 @@ export default function BookingPage() {
           >
             <iframe
               src="https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4"
-              style={{ width: "100%", border: "none", overflow: "hidden" }}
+              style={{ width: "100%", border: "none", overflow: "hidden", display: "block" }}
               scrolling="no"
               id="Qn4ugo4iZ8ZJ8eaxX1c4_1779763469847"
               title="Booking widget"
