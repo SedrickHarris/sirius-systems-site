@@ -15,6 +15,22 @@ Format per entry:
 
 ---
 
+## 2026-05-26 — GHL calendar iframe white strip fixed
+
+- type: fix
+- author: Sirius Systems / Claude Code
+- changes: Resolved persistent white background strips
+  above and below the GHL calendar widget iframe on
+  /booking. Fix uses negative marginTop (-72px) and
+  marginBottom (-52px) on the iframe element combined
+  with overflow: hidden on the wrapper div to clip
+  GHL's document whitespace outside the visible area.
+  Confirmed clean on siriussys.io/booking.
+  Dimensions locked in docs/site-os/inputs/embed-specs.md
+  for all future builds.
+- files: app/booking/page.tsx,
+  docs/site-os/inputs/embed-specs.md (new)
+
 ## 2026-05-25 — GBP review fetch + curation pipeline
 - type: feat
 - changes: Built a two-script GBP review pipeline. `scripts/fetch-reviews.ts` handles OAuth 2.0 (local browser flow on first run with callback on `localhost:3333`, refresh-token reuse thereafter), calls `mybusinessaccountmanagement` v1 for the account ID, `mybusinessbusinessinformation` v1 for the location matching Place ID `ChIJ5_nmHI_RHi4RrYRgpNp5pWs`, and a raw `fetch` to the legacy `mybusiness.googleapis.com/v4/` reviews endpoint (Google never migrated reviews to the split APIs; `googleapis` package no longer ships a v4 client). Writes raw output to `data/google-reviews.staged.json` (gitignored). `scripts/curate-reviews.ts` is an interactive CLI using Node's built-in `readline`: walks each NEW review (skipping IDs already in `data/google-reviews.json`), accepts `[y] approve / [n] skip / [e] edit name`, and writes the merged final file with `verified: true` + `permissionToPublish: true` on approved items only. If zero reviews are approved, top-level `verified` stays `false` so the homepage renders the neutral trust fallback. `scripts/README.md` documents the full flow (first run, subsequent runs, file map, troubleshooting). `.gitignore` gains `credentials.json`, `scripts/tokens.json`, `data/google-reviews.staged.json`. `package.json` gains the two npm scripts plus deps (`googleapis`, `google-auth-library`, `ts-node`) and a `ts-node` config block (overrides the project's `esnext`/`bundler` tsconfig with `commonjs`/`node` + `transpileOnly` so `ts-node` can execute scripts without touching the main tsconfig). `data/google-reviews.json` untouched — `verified: false` until the first curation run. tsc clean. next build clean (41 static routes; spec said 39 because it was authored before the blog infra commits earlier this session).
