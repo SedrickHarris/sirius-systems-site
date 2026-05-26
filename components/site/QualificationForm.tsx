@@ -1,13 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { ArrowRight, BookOpen, Check, Loader2 } from 'lucide-react'
 import { INDUSTRIES } from '@/lib/industries'
 
 // Replace before launch with the live GHL inbound webhook URL.
 const GHL_WEBHOOK_URL = 'TODO_GHL_WEBHOOK_URL'
-const BOOKING_URL =
-  'https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4'
 const THRESHOLD = 20
 
 type Step =
@@ -1046,19 +1045,13 @@ export function QualificationForm() {
             ))}
           </ul>
 
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/booking"
             className="btn-primary mt-8 flex w-full items-center justify-center gap-2"
           >
             Book the 20-min audit call
             <ArrowRight className="h-4 w-4" aria-hidden />
-          </a>
-
-          <p className="mt-3 text-center text-xs text-[color:var(--text-muted)]">
-            Opens in a new tab. No account needed.
-          </p>
+          </Link>
         </div>
       )}
 
