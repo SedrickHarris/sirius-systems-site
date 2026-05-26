@@ -51,16 +51,19 @@ export default function BookingPage() {
               border: "1px solid #2A2F3A",
               borderRadius: "1.5rem",
               overflow: "hidden",
+              position: "relative",
               boxShadow: "0 18px 50px rgba(0,0,0,0.5)",
             }}
           >
             <iframe
               src="https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4"
               style={{
-                width: "100%",
-                height: "780px",
-                border: "none",
                 display: "block",
+                width: "100%",
+                height: "900px",
+                marginTop: "-52px",
+                marginBottom: "-52px",
+                border: "none",
                 background: "#050505",
               }}
               allowTransparency={true}
