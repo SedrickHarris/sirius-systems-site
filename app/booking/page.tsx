@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     'Schedule a discovery call with Sirius Systems. Twenty minutes to map where leads, reviews, and follow-up are leaking in your business.',
   alternates: { canonical: '/booking' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Book a Strategy Call | Sirius Systems',
     description:
@@ -46,17 +47,23 @@ export default function BookingPage() {
 
           <div
             style={{
-              background: "var(--surface)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: 28,
-              padding: 22,
-              boxShadow: "0 18px 50px rgba(0,0,0,0.35)",
+              background: "#050505",
+              border: "1px solid #2A2F3A",
+              borderRadius: "1.5rem",
               overflow: "hidden",
+              boxShadow: "0 18px 50px rgba(0,0,0,0.5)",
             }}
           >
             <iframe
               src="https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4"
-              style={{ width: "100%", border: "none", overflow: "hidden", display: "block" }}
+              style={{
+                width: "100%",
+                height: "780px",
+                border: "none",
+                display: "block",
+                background: "#050505",
+              }}
+              allowTransparency={true}
               scrolling="no"
               id="Qn4ugo4iZ8ZJ8eaxX1c4_1779763469847"
               title="Booking widget"
