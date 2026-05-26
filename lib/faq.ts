@@ -6,24 +6,40 @@ export type QA = { q: string; a: string }
 
 export const HOME_FAQ: QA[] = [
   {
-    q: "What does Sirius Systems actually do?",
-    a: "We build the system that captures, qualifies, books, and follows up on leads for a local service business: AI automation, smart websites, and reputation systems running together. You can adopt one piece or the whole engine.",
+    q: 'What does Sirius Systems do?',
+    a: 'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses. The system captures leads, follows up automatically, books appointments, requests reviews after completed jobs, and keeps your local search visibility strong — running as one connected engine rather than separate tools.',
   },
   {
-    q: "Is this for small businesses or larger ones?",
-    a: "Local service businesses that have outgrown a website-only setup and want automation in place of more headcount. We don't build for enterprise.",
+    q: 'What is AI automation for a local service business?',
+    a: 'AI automation for a local service business means replacing the manual steps between a new lead and a booked job with trigger-based systems. When a lead submits a form, a call goes unanswered, or a job completes, the right action fires automatically: a follow-up SMS, an appointment reminder, a review request, a CRM update. The business sets the rules once; the system runs them every time.',
   },
   {
-    q: "Do I have to replace my current CRM, booking tool, or website?",
-    a: "Not necessarily. We audit what you've already got, fix what's worth keeping, and replace only what's actively losing you leads. We'll be honest about the tradeoffs.",
+    q: 'Which types of businesses does Sirius Systems work with?',
+    a: 'Local service businesses that have outgrown a website-only setup and want automation running in place of more headcount. Home services, contractors, professional services, auto services, healthcare, real estate, and similar owner-operated businesses. We do not build for enterprise.',
   },
   {
-    q: "How long does it take to get something live?",
-    a: "Depends on the scope. A standalone piece: a chatbot, review automation, or a smart-site rebuild: can land in two to four weeks. The full integrated system is a multi-month engagement.",
+    q: 'Do I have to replace my current CRM, booking tool, or website?',
+    a: 'Not necessarily. We audit what you already have, keep what is working and can be connected, and replace only what is actively losing you leads. When a tool is genuinely limiting the system, we say so directly. The goal is the most capable connected setup with the least disruption.',
   },
   {
-    q: "What does the discovery call look like?",
-    a: "Twenty minutes. We ask where leads, reviews, and follow-up are leaking, and you leave with a map of the gaps and the order of operations: whether or not we end up working together.",
+    q: 'What is the difference between AI automation and a CRM?',
+    a: 'A CRM is a database that stores contact and deal information. AI automation is the system that acts on that information: sending follow-up messages, moving leads through stages, triggering reminders, and requesting reviews based on what has happened. Most businesses have a CRM but no automation layer, which means the data sits there and someone has to do everything manually. Automation is what makes the CRM work without constant manual input.',
+  },
+  {
+    q: 'How long does it take to get something live?',
+    a: 'A focused piece — lead follow-up automation, review acquisition, or a chatbot — can be live in two to four weeks. The full connected system covering automation, reputation, and local SEO is a multi-week phased engagement. We prioritize the highest-impact pieces first so the system is producing results before everything is deployed.',
+  },
+  {
+    q: 'What does the discovery call look like?',
+    a: 'Twenty minutes. We ask where leads, reviews, and follow-up are leaking and map the gaps in your current setup. You leave with a clear picture of the order of operations whether or not we end up working together. There is no charge for the call.',
+  },
+  {
+    q: 'How does Sirius Systems handle reputation management?',
+    a: 'Reputation management at Sirius Systems means building a system that earns reviews consistently after every completed job, responds to every review in your business voice, and monitors what is being said across platforms. Reviews earned by the acquisition system feed back into your Google Business Profile and strengthen your local search signals. The reputation system and the local search system are connected, not separate.',
+  },
+  {
+    q: 'What is the all-in-one business growth system?',
+    a: 'It is the full connected stack: AI automation handling lead capture and follow-up, a smart website built for local search and conversion, and a reputation system earning and responding to reviews — all running together so each pillar compounds the others. SEO brings in the lead, automation converts it to a booked job, the completed job produces a review, the review strengthens the local search position that brings in the next lead.',
   },
 ]
 

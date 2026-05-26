@@ -33,8 +33,16 @@ import { INDUSTRIES } from '@/lib/industries'
 import { HOME_FAQ } from '@/lib/faq'
 
 export const metadata = {
-  description: SITE.description,
+  title: 'AI Automation & Growth Systems for Local Service Businesses | Sirius Systems',
+  description:
+    'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses — so leads get captured, jobs get booked, and reviews keep coming automatically.',
   alternates: { canonical: '/' },
+  openGraph: {
+    title: 'AI Automation & Growth Systems for Local Service Businesses | Sirius Systems',
+    description:
+      'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses — so leads get captured, jobs get booked, and reviews keep coming automatically.',
+    url: '/',
+  },
 }
 
 // ─── Hero dashboard panel data ──────────────────────────────────────
@@ -91,8 +99,11 @@ export default function HomePage() {
           {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
+            '@id': 'https://siriussys.io/#organization',
             name: 'Sirius Systems',
             legalName: 'SHH Group',
+            description:
+              'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses — capturing leads, booking jobs, and growing reviews automatically.',
             url: 'https://siriussys.io/',
             telephone: '+17272223424',
             address: {
@@ -103,13 +114,17 @@ export default function HomePage() {
               postalCode: '89107',
               addressCountry: 'US',
             },
-            // areaServed: interim — Nevada state-level. Update to the
-            // confirmed service area (metro list or "nationwide") once
-            // content-needed-from-client.md item 1.3 is resolved.
+            // areaServed: Nevada interim — update to confirmed service area
+            // when content-needed-from-client.md item 1.3 resolves.
             areaServed: {
               '@type': 'State',
               name: 'Nevada',
             },
+            sameAs: [
+              'https://www.facebook.com/SiriusSys.io/',
+              'https://share.google/TUgLZOpTwsYaHLaLZ',
+              'https://github.com/SedrickHarris/sirius-systems-site',
+            ],
           },
         ]}
       />
