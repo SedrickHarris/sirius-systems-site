@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { ArrowRight, BookOpen, Check, Loader2 } from 'lucide-react'
 import { INDUSTRIES } from '@/lib/industries'
 
-// Replace before launch with the live GHL inbound webhook URL.
 const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/qsRpwFouj6uMgzSHHDn3/webhook-trigger/lLqIumMk4qgVaHUlVeio'
 const THRESHOLD = 20
 
