@@ -15,6 +15,29 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — /industries/education-childcare Level 4 copy rewrite
+- type: seo
+- author: Sirius Systems / Claude Code
+- changes: Replaced DATA object with approved Level 4 SEO/AEO copy package.
+  Updated metaTitle, metaDescription, headline, subheadline, heroHighlights,
+  problemHeadline, problems, systemsHeadline, systemsCopy,
+  subVerticalsHeadline, subVerticalsCopy, 4 featured + 10 compact sub-verticals,
+  5 FAQs, ctaHeadline, ctaBody, ctaPrimaryLabel. Removed TODO comment on
+  integration FAQ — replaced with a scoped honest answer about scaling across
+  studio sizes. Schema block (webPage, breadcrumbList, faqPage) unchanged.
+  tsc clean. next build clean.
+- files: app/industries/education-childcare/page.tsx,
+  docs/site-os/changelog/project-changelog.md
+- notes: No AggregateRating / Review / LocalBusiness / Organization schema.
+  No invented stats, ratings, testimonials, or guarantees. Do-not-invent
+  rules honored throughout. Approved metaTitle (64 chars) and
+  metaDescription (164 chars) both exceeded gate limits; user-approved
+  trims applied: title → 'Enrollment Automation for Schools & Studios |
+  Sirius Systems' (60); description trimmed to 145 chars by dropping
+  'and training programs' phrase.
+
+---
+
 ## 2026-05-27 — Industry hub metaTitle cleanup (4 pages)
 - type: seo
 - author: Sirius Systems / Claude Code
