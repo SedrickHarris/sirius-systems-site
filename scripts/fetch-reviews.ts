@@ -28,6 +28,12 @@ const TOKENS_PATH = path.join(PROJECT_ROOT, 'scripts', 'tokens.json')
 const STAGED_PATH = path.join(PROJECT_ROOT, 'data', 'google-reviews.staged.json')
 const PLACE_ID = 'ChIJ5_nmHI_RHi4RrYRgpNp5pWs'
 const PLACE_URL = 'https://share.google/TUgLZOpTwsYaHLaLZ'
+// Sirius Systems GBP location ID. The location is accessible to
+// sedrickharris17@gmail.com via direct GET but does NOT enumerate under
+// accounts/{personal_account}/locations.list (likely lives in a Business
+// Group / Organization container outside the default accounts.list view).
+// So we look it up directly by name instead of searching by Place ID.
+const LOCATION_ID = '8459044461157530093'
 const CALLBACK_PORT = 3333
 const CALLBACK_PATH = '/oauth2callback'
 
@@ -221,23 +227,20 @@ async function main(): Promise<void> {
   const accountId = accountName.split('/')[1]
   console.log(`Account: ${account.accountName ?? account.name}`)
 
-  // 2. Find location by Place ID
+  // 2. Get the Sirius Systems location directly by ID, then sanity-check
+  // that its Place ID still matches what we have on record.
   const businessInfoApi = google.mybusinessbusinessinformation({ version: 'v1', auth: oauth2Client })
-  const locationsResp = await businessInfoApi.accounts.locations.list({
-    parent: accountName,
+  const locationResp = await businessInfoApi.locations.get({
+    name: `locations/${LOCATION_ID}`,
     readMask: 'name,title,metadata',
   })
-  const locations = locationsResp.data.locations ?? []
-  const location = locations.find((l) => {
-    const meta = l.metadata as { placeId?: string } | undefined
-    return meta?.placeId === PLACE_ID
-  })
-  if (!location) {
-    throw new Error(`No location found with Place ID ${PLACE_ID}.`)
+  const location = locationResp.data
+  const meta = location.metadata as { placeId?: string } | undefined
+  if (meta?.placeId && meta.placeId !== PLACE_ID) {
+    console.warn(`Place ID mismatch: hardcoded ${PLACE_ID}, GBP says ${meta.placeId}`)
   }
-  const locationName = location.name!
-  const locationId = locationName.split('/')[1]
-  console.log(`Location: ${location.title ?? locationName}`)
+  const locationId = LOCATION_ID
+  console.log(`Location: ${location.title ?? location.name}`)
 
   // 3. Fetch reviews via raw v4 API
   const accessToken = (oauth2Client.credentials.access_token ?? '') as string
