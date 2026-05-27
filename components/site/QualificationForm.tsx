@@ -6,7 +6,7 @@ import { ArrowRight, BookOpen, Check, Loader2 } from 'lucide-react'
 import { INDUSTRIES } from '@/lib/industries'
 
 // Replace before launch with the live GHL inbound webhook URL.
-const GHL_WEBHOOK_URL = 'TODO_GHL_WEBHOOK_URL'
+const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/qsRpwFouj6uMgzSHHDn3/webhook-trigger/lLqIumMk4qgVaHUlVeio'
 const THRESHOLD = 20
 
 type Step =
@@ -553,14 +553,6 @@ export function QualificationForm() {
       source: 'contact-page-qualification-form',
     }
 
-    // Skip the network call while the webhook URL is still the placeholder
-    // so the form is functional during development and visual QA.
-    if (GHL_WEBHOOK_URL === 'TODO_GHL_WEBHOOK_URL') {
-      setSubmitting(false)
-      setStep(nextStep)
-      return
-    }
-
     try {
       const res = await fetch(GHL_WEBHOOK_URL, {
         method: 'POST',
@@ -579,7 +571,7 @@ export function QualificationForm() {
   }
 
   // Second webhook call fired when the nurture lead-magnet button is clicked.
-  // Separate payload shape from the main submission; same stub guard.
+  // Separate payload shape from the main submission.
   const handleMagnetClick = async () => {
     if (magnetSubmitting || magnetSent) return
     setMagnetSubmitting(true)
@@ -595,12 +587,6 @@ export function QualificationForm() {
       score,
       magnetRequested: true,
       source: 'qualification-form-magnet',
-    }
-
-    if (GHL_WEBHOOK_URL === 'TODO_GHL_WEBHOOK_URL') {
-      setMagnetSubmitting(false)
-      setMagnetSent(true)
-      return
     }
 
     try {
