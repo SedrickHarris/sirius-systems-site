@@ -634,7 +634,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────────────── 10. TRUST / REVIEW POLICY ───────────────── */}
-      <section className="section-light section-padding overflow-hidden">
+      <section className="section-light section-padding-sm overflow-hidden">
 
         {/* Centered copy block */}
         <div className="site-container">
