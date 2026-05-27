@@ -49,9 +49,15 @@ export function GoogleReviewCard({ review }: { review: Review }) {
         ))}
       </div>
 
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90 line-clamp-8">
-        {review.text}
-      </p>
+      <div className="relative mt-4">
+        <p className="text-sm leading-relaxed text-foreground/90 max-h-[280px] overflow-hidden">
+          {review.text}
+        </p>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-surface to-transparent"
+        />
+      </div>
 
       {review.sourceUrl && (
         <a

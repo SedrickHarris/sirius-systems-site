@@ -67,11 +67,11 @@ export function GoogleReviewsMarquee({
       <div
         role="region"
         aria-label={label}
-        className="flex gap-4 overflow-x-auto pb-3"
+        className="flex gap-7 overflow-x-auto pb-3"
         style={{ scrollbarWidth: 'none' }}
       >
         {reviews.map((r) => (
-          <div key={r.id} className="w-[320px] shrink-0">
+          <div key={r.id} className="w-[380px] shrink-0">
             <GoogleReviewCard review={r} />
           </div>
         ))}
@@ -87,7 +87,7 @@ export function GoogleReviewsMarquee({
     >
       <div
         ref={trackRef}
-        className="marquee-track flex gap-5"
+        className="marquee-track flex gap-7"
         onMouseEnter={() => {
           if (trackRef.current) trackRef.current.style.animationPlayState = 'paused'
         }}
@@ -96,17 +96,17 @@ export function GoogleReviewsMarquee({
         }}
       >
         {/* First half — measured to drive --marquee-width */}
-        <div ref={firstHalfRef} className="flex gap-5">
+        <div ref={firstHalfRef} className="flex gap-7">
           {reviews.map((r) => (
-            <div key={`${r.id}-orig`} className="w-[320px] shrink-0">
+            <div key={`${r.id}-orig`} className="w-[380px] shrink-0">
               <GoogleReviewCard review={r} />
             </div>
           ))}
         </div>
         {/* Duplicate — aria-hidden so SRs see each review once */}
-        <div aria-hidden className="flex gap-5">
+        <div aria-hidden className="flex gap-7">
           {reviews.map((r) => (
-            <div key={`${r.id}-dupe`} className="w-[320px] shrink-0">
+            <div key={`${r.id}-dupe`} className="w-[380px] shrink-0">
               <GoogleReviewCard review={r} />
             </div>
           ))}
