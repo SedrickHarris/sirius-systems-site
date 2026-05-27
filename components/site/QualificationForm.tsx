@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ArrowRight, BookOpen, Check, Loader2 } from 'lucide-react'
 import { INDUSTRIES } from '@/lib/industries'
 
-const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/qsRpwFouj6uMgzSHHDn3/webhook-trigger/lLqIumMk4qgVaHUlVeio'
+const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/qsRpwFouj6uMgzSHHDn3/webhook-trigger/FapSiXkQAV0LrTmhF7la'
 const THRESHOLD = 20
 
 type Step =
