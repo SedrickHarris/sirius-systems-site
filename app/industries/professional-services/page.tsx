@@ -97,8 +97,6 @@ const DATA: IndustryPageData = {
     },
     {
       name: 'IT Consultants & MSPs',
-      // TODO: add cross-link to /industries/technology-b2b
-      // once that hub page is confirmed at its final copy stage
       blurb:
         'Lead follow-up and review systems for managed service providers and IT consultants.',
     },

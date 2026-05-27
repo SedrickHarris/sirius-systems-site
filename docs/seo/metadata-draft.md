@@ -158,9 +158,9 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
 
 ### `/industries/technology-b2b`
-- **Title:** `Technology & B2B Services Automation | Sirius Systems`
-- **Description:** `Lead nurture automation, CRM integration, and review systems for IT firms, managed service providers, SaaS companies, AI agencies, and B2B service businesses.`
-- **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
+- **Title:** `B2B Tech Services Automation: CRM & Leads | Sirius Systems`
+- **Description:** `Lead response automation, CRM pipeline management, and review systems for IT firms, MSPs, SaaS companies, AI agencies, and B2B service businesses.`
+- **Notes:** Level 4 copy shipped 2026-05-27. Title 58 chars; description 146 chars. Primary spec title (67 chars) was over the limit; spec-provided fallback was used. TODO on CRM-integration FAQ removed; replacement FAQ stays neutral on platform names. professional-services compact card cross-link TODO also removed in the same commit (component supports `href` but `IndustryPageTemplate` forces `comingSoon` and does not currently plumb href through — cross-link is a wider refactor, out of scope).
 
 ---
 

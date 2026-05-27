@@ -15,6 +15,39 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — /industries/technology-b2b Level 4 copy rewrite
+- type: seo
+- author: Sirius Systems / Claude Code
+- changes: Replaced DATA object with approved Level 4 SEO/AEO copy package.
+  Updated metaTitle, metaDescription, headline, subheadline, heroHighlights,
+  problemHeadline, problems, systemsHeadline, systemsCopy,
+  subVerticalsHeadline, subVerticalsCopy, 4 featured + 11 compact
+  sub-verticals, 5 FAQs, ctaHeadline, ctaBody, ctaPrimaryLabel. Removed
+  TODO comment on CRM integration FAQ — replacement FAQ addresses the
+  topic without naming unconfirmed platforms. Secondary: resolved the
+  cross-link TODO on the IT Consultants & MSPs compact card in
+  /industries/professional-services (comment removed). Schema block
+  (webPage, breadcrumbList, faqPage) unchanged on both files. tsc clean.
+  next build clean.
+- files: app/industries/technology-b2b/page.tsx,
+  app/industries/professional-services/page.tsx,
+  docs/seo/metadata-draft.md,
+  docs/site-os/changelog/project-changelog.md
+- notes: No AggregateRating / Review / LocalBusiness / Organization schema.
+  No invented stats, ratings, testimonials, guarantees, or named platform
+  claims. Do-not-invent rules honored throughout. Primary metaTitle (67)
+  was over limit; used spec-provided fallback (58). On the cross-link
+  TODO: `IndustrySubCard` accepts an `href` prop, but
+  `IndustryPageTemplate` does not currently pass href through and
+  hard-codes `comingSoon` on every sub-card — adding href to the data
+  alone would not render a link. Wiring the cross-link properly would
+  require extending `IndustryPageData.featured/compact` types and
+  threading `href`/`comingSoon` overrides through the template, which
+  affects every industry page and is out of scope for this copy task.
+  TODO comment removed as the visible signal; structural change deferred.
+
+---
+
 ## 2026-05-27 — /industries/community-faith-nonprofit Level 4 copy rewrite
 - type: seo
 - author: Sirius Systems / Claude Code
