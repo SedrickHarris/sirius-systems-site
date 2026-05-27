@@ -1,13 +1,494 @@
 {
-  "verified": false,
-  "lastVerifiedAt": null,
+  "verified": true,
+  "lastVerifiedAt": "2026-05-27T21:28:59.053Z",
   "source": "google-business-profile",
   "placeId": "ChIJ5_nmHI_RHi4RrYRgpNp5pWs",
   "placeUrl": "https://share.google/TUgLZOpTwsYaHLaLZ",
   "summary": {
-    "averageRating": null,
-    "totalReviewCount": null,
-    "lastFetchedAt": null
+    "averageRating": 5,
+    "totalReviewCount": 48,
+    "lastFetchedAt": "2026-05-27T21:19:28.302Z"
   },
-  "reviews": []
+  "reviews": [
+    {
+      "id": "AbFvOqm82Nxc28s5IeeW9MPRvnPHT3aW6eUIf1g2dD4_N8IKgiSPmKvSVPV68CgPonC7VvxMnd8fLg",
+      "authorName": "Scott Maland",
+      "rating": 5,
+      "text": "Sirius-ly recommend Sedrick to anybody looking to grow their business. On top of the wealth of knowledge he has, his calm cool personality put my mind at ease from start to finish.",
+      "reviewedAt": "2026-04-14T20:11:37.846669Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXVmrlfduCp6Y7wXRqaKqGRdIHU_fyYzm8BiF3jT5-66k-hYmw=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlRzUpz2lwCcD2vUUkBbRpNg6oqjxjL9oyklUeme0Z69SVsAmgGNe3ddMn7axKqRpzo-kYfJQ",
+      "authorName": "Roger James",
+      "rating": 5,
+      "text": "I had an absolutely fantastic experience working with Sedrick at Sirius Systems. From start to finish, he was professional, knowledgeable, and incredibly helpful. He took the time to listen to exactly what I needed and went above and beyond to ensure everything was handled smoothly and efficiently. It’s rare to find someone so dedicated to customer satisfaction these days.I highly recommend Sirius Systems.",
+      "reviewedAt": "2026-03-25T19:59:29.671980Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXhlc_VFWJ_pUee5hDaBi2CpnZ0Ide0FUuV4WfVzuwHPMT-vrwR=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlEhiBM5-bBD_UgGIWctMVqzK-wgE06Ee7gJXpNCGiXPzwH_OJVqpCwLduXZ-eExltIGHmw9g",
+      "authorName": "Shane McGrath",
+      "rating": 5,
+      "text": "Absolutely the best help, you need to hire these guys immediately!",
+      "reviewedAt": "2026-03-10T16:48:22.611364Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIbL4lux57OCmfHAHlXA8IlkByK_g0Cf62HwIaSU-A4SZytSA=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkKzkn6jpO7-gwNTnEyWoHuJZVdOyvuXm5aHFEosoHY59PDO5wC1UnJ24JyqVgtcJ2otI71CQ",
+      "authorName": "Unfair Advantage Performance",
+      "rating": 5,
+      "text": "Sedrick is literally mind blowing!!  We got on a call and he surpassed every expectation!  His knowledge about all things CRM, SEO, and the inner-workings of the internet and how all these work together is beyond impressive and down right LETHAL!!  You want him on your team, more than that, you want him working on your business!  HIGHLY RECOMMEND!!  Don't waste your time anywhere else....if you found Sedrick with Sirius Systems...YOUR SEARCH IS OVER!  Thanks for everything Sedrick!",
+      "reviewedAt": "2026-02-25T03:53:58.948381Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWd3DEHGIyrxL5UhS5iQ7CiAO8knGoVDCgU7zZAqSC9VWrqgE44=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlGrGEekI7WnKmws1VZeWFqHM9HzWbWGBOFCothf9q20_GI1BsE4ZPYEk5hPSHMriFGlsU8tQ",
+      "authorName": "Josiah Mendez",
+      "rating": 5,
+      "text": "Took the time out of his day to not only help me learn how to make a website for my agency but taught me how to nurture leads, get better seo, and how to set up a good business profile",
+      "reviewedAt": "2026-02-02T22:28:15.794774Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVAp9P6e7l0hYvYy5y3Accf-S718oewylBAqT9Ch3yMulNEFJAg=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlsttJ-SZ2-rZ34pVji2ypFIKNHx3T5k_zfswlVTJ50UZyJsi0aGkAoTMRVII3RXhDxAjucMQ",
+      "authorName": "Randy",
+      "rating": 5,
+      "text": "I had an excellent experience with Sedrick from start to finish. Our call was outstanding—he was patient, attentive, and never rushed through the conversation. Every question I had was answered clearly, and the information provided was thorough and easy to understand. I Highly recommend Sirius Systems if you're looking  looking to improve your skills, systems, or need confidence in delivering projects",
+      "reviewedAt": "2026-01-25T21:03:29.546489Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJclt1z7eW-o_Yqvlx7BFaw7g27MdMl8SJBUIfb62m3mGtpuA=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOql17h7xDMam2y1Ldy6Qq2XOWqZcopDrQLJY8NSrX05ViCeHvnwp-mhNrdIOqAsGcas-0Q1i",
+      "authorName": "Maurice Odenyo",
+      "rating": 5,
+      "text": "Working with Sedrick was a game-changer for my furnished studio business. He completely upgraded and optimised my Google Business Profile, created 15 highly targeted services with clear descriptions, and even produced 15 professional GBP posts that instantly improved our visibility. The level of detail, strategy, and expertise he brought to the project was beyond anything I expected. If you want someone who understands SEO, search intent, and how to make your business stand out on Google, Sedrick is the one to call. Highly recommended.",
+      "reviewedAt": "2026-01-22T05:04:07.061006Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJVhb0rKrBDbDVEo_2WXbtft3YagY538CeGGEkmVEO2JLcTiQ=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmnZNoNP4yu8WLcz1YEsol4yFKZCAt3o26PiphY-3Chl0s-EVHyuZKdu1bVQSyatgCrkQaWug",
+      "authorName": "Caleb Kirubakaran",
+      "rating": 5,
+      "text": "I had a 1-hour session today with Sedrick Harris, who runs multiple AI SaaS businesses and is also one of the coaches in the community I’m part of.\n\nFrom the start, Sedrick was incredibly polite, professional, and deeply knowledgeable. He took the time to really listen to my questions and reviewed a client website build I’m currently working on. His feedback was practical and actionable—covering layout improvements, SEO best practices, text sizing, content structure, and overall page flow.\n\nOne thing I especially appreciated was his guidance on using custom values to speed up and streamline the website build process. These are the kinds of insights that come only from real hands-on experience. His depth of knowledge across web builds, SEO, and systems is truly outstanding.\n\nBeyond the technical advice, what stood out most was the confidence he helped instill. He reminded me that it’s okay to start with what you know, take on projects, and continue developing your skills as you go. That mindset shift alone was incredibly valuable.\n\nI genuinely recommend Sedrick to anyone looking to improve their skills, systems, or confidence in delivering projects. Attending his session was absolutely worth it, and I’m grateful for the clarity and encouragement he shared.",
+      "reviewedAt": "2026-01-14T00:30:47.733395Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJUWEUR-R_DdAVA424tsCvRxe897BId33gSrCWaZXklausyKDtN=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkULvhF5GEEzopSXR3VPh2q1dGjUvVO_3QXdweJuQqtnduf32tBb_mcQnDlnMLcpR37tdHkZg",
+      "authorName": "Juliet Morrison",
+      "rating": 5,
+      "text": "Sedrick is the G.O.A.T. of GHL! I was feeling lost and overwhelmed and reached out to him, and he was very receptive to working with me to show me the ropes. We embarked on our sessions, and let me just say, his expertise came through. He simplified difficult concepts and made them straightforward to grasp. Sedrick made me feel at ease, which facilitated the learning process. I'm so happy I found him. I would highly recommend Sedrick.",
+      "reviewedAt": "2026-01-13T19:05:51.964190Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocI16Z5IuWSZzffBPxMGk8SZbpOWWF5z6GWlSwD9Cf1FQ5ASAg=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmpnpvxEKPJXigkldrsj8wTkMIzABeSlN-mvcaiHsRiWHbujGoQP3O4in9oZdeXn9rCrDjN5Q",
+      "authorName": "cheryl thomas",
+      "rating": 5,
+      "text": "I told you Sedrick was AMMAZZING last year!  Well the bombs he dropped on me the last 2 days is off the charts!!!!!  The list of blog and post topics with a calendar is insane!  Thanks again Sed!",
+      "reviewedAt": "2024-04-05T16:03:23.483297Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLUU49ZAqtLkX8wtjN1H70JzKuzcFp2YDnAgBqowAomMs3kNYc=s120-c-rp-mo-ba2-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlIorpPi8oHszIRTouKHb83cCFcXl4Yh-P17RAdeKa_UtJFSSeRXPM5d5mqqSoeRpsAfoeaeA",
+      "authorName": "AI Receptionist Website",
+      "rating": 5,
+      "text": "We made a few simple SEO edits and GEO additions suggested by Sedrick, and immediately started getting traction! So thankful google is finally starting to work for us, and excited to implement more of his SEO/AEO suggestions this week.",
+      "reviewedAt": "2025-10-27T16:31:04.770023Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUsqMJqp-QCrZc6DDGQosy4dElUEKR0L7J9A2Ivyl69AJIisXE=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqnnEQ5tgThM17DZNKprjuUOOamayLS8f-v1lrhnkOEM8YM8DIZuhY2iH8iG-X72E8dCWQsPiQ",
+      "authorName": "Ali Hal",
+      "rating": 5,
+      "text": "Amazing help, provided so much value. Thank you !",
+      "reviewedAt": "2025-10-24T13:25:54.986484Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJbxhy7sD_85c6ukqP4qHt9YH7fIe6MmTR_Q-7e0eteby-rPg=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkCEdOubd49_GRKvUkagHjhJ3iKVCrdEBmBGDaISYLnG5UGCVES7PtXuU5pffMkprvY61vIFg",
+      "authorName": "John Foster",
+      "rating": 5,
+      "text": "I had the pleasure of being mentored by Sedrick to get my AI Agency off the ground. All I can say is WOW. Sedrick provided more value to me in 1 hour than most of the coaching programs that I have paid for.\n\nHis years of experience helps him to frame things in such a way that it just makes sense. The best part is I didn't just walk away with theory, Sedrick is a man of action and will make sure that you walk away from your time with him with not just an action plan but an action plan that he has already started implementing for you and your business.\n\nMost of the things he teaches I have not learned anywhere else and these are the types of things that really move the needle for a business. The most important thing that my time with him gave me was CONFIDENCE. Confidence that not only did I find the right mentor but also the confidence that I WILL have success in my business especially with someone like him with the knowledge and experience that has that is willing to take his time out with someone without much experience.\n\nI cannot say enough good things about my experience so far and I am ONLY AN HOUR IN!\n\nBottom line is Sedrick is the Man ...",
+      "reviewedAt": "2025-10-14T22:51:48.802330Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWd9J2baOgMAnqBRU7nTnLTfyhlR8KP-ptd9tZZsYQPAwr15nvKpA=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkTXRVdMvz9XLGbcw0vuW9TIhtFFaD56MmiG8Bqd6z5O7ts0_wZJvt8iOpcOfnJmkogwpLyww",
+      "authorName": "Sy Brown",
+      "rating": 5,
+      "text": "Sedrick is ALL IN! I have never worked with someone so hands on and so knowlegable. He made the seemingly confusing stuff very simple for me to understand and the results of what he does work IMMEDIATELY!  Highly Recommend!",
+      "reviewedAt": "2025-10-12T20:20:27.752631Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXdJIs5k1zyEdqpvKXQcIqctz3cyQRw6wknaZKxahlhWPy7kSr-=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmizLK0syUXmXd1k0nPoGxMajJFhD_SVmDDOeEN2k2x54a2r7ZqIb6HHtMm6P5naRx4Lwg4JQ",
+      "authorName": "Anna Del Carmen",
+      "rating": 5,
+      "text": "With Sedrick's genuine show of support, wanting to help everyone around him succeed, going above and beyond what is required, and all backed up by his years of skill and expertise - any business would be so lucky to have Sirius Systems as an ally! Thank you for being mine and my business' North Star, Sedrick! You're the best!!!!",
+      "reviewedAt": "2025-10-05T23:03:11.552360Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKWE4KdMd_qkk-G8B8YPQEuOvkmktku62tZizHrheyx5ACngQ=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqn79XDHEZb2RX5PtFnHmbFqM5dHAIr5WCqy1yLJS_KlYuBf5bzgs7RMnXyM9H8OMHccgLHiKg",
+      "authorName": "Tracy Cannon",
+      "rating": 5,
+      "text": "Very knowledgeable and ready to help! Thank you Sirius!",
+      "reviewedAt": "2025-09-29T01:16:11.661055Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVcRFiy34Wq7yAItDcxY0u2shNqCMSLR3fdJaVZCvlvO6hP9fg7=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqm_3XUx_OxMbWwOzgQTNizUpMsG1i2f7WN1Zurs3Xu9zeaL_pRYTHU6GLjtL-KVkQGCwtVI",
+      "authorName": "Where to Now Travel",
+      "rating": 5,
+      "text": "Sedrick is a tech wizard!  He helped my business with a multitude of things in a short amount of time.  He is very knowledgeable and works to ensure that your business has the best chance to be seen on that busy internet highway.  Highly recommend!",
+      "reviewedAt": "2025-08-22T01:37:21.047103Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWqtzyXfl9DIRiMLxEwuG94jUPNZcMeUy3D3baG8BNRE2Ud5vo=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmS6HM0c9i5K7w3Qox1MS3wt3DxmOUpH7BeA_vquD7RoCwMsRU_-POOohJ-aE7OXqWIo-yc5g",
+      "authorName": "Vincent Sauceda Gonzalez",
+      "rating": 5,
+      "text": "Sirius Systems has been a total game-changer for my business. They set me up with an AI-powered system that makes staying on top of leads, customer messages, and follow-ups super easy. Everything feels automated but still personal, and it saves me so much time every day.\nSedrick was awesome to work with—friendly, responsive, and really cared about helping my business grow. If you’re looking to get organized and scale up, I highly recommend them!",
+      "reviewedAt": "2025-09-01T21:16:28.907228Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVykg7uq2KfuVKg-CruxN04hIVKClyCHLrzymE3RQg959AYzjQ=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmkystJ-Jr7MpuvDpNVwuH7u0k3XLxcKHzNErgRfbeaMiWOtszKS90kF_me4Xpq4y3iNmi-Og",
+      "authorName": "Billye Thompson",
+      "rating": 5,
+      "text": "Sedrick is very knowledgeable and helpful when it comes to optimizing websites, Google My Business, Reviews and AI integration and overall marketing strategy.  I highly recommend using his services.",
+      "reviewedAt": "2025-08-15T01:15:34.720137Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXknxjEocX6CBWIuwOMycSvFG-4d8ZFfjiBuIdy3tp4Zi0CXqY=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOql-vH_BpPqY85m6QKPO7qUY7UAg3BqDvh1Ax8e2JjPBaloNrn6OWsu8udZAssp0I1is8fOUig",
+      "authorName": "Lionel JEAN-BAPTISTE",
+      "rating": 5,
+      "text": "Working with Sirius Site Studio completely changed how I view SEO. They explained the importance of it in a way that made sense and showed me exactly why my business needs it. Their professionalism and expertise are clear in everything they do, and I feel confident knowing my online growth is in the right hands. Highly recommended!",
+      "reviewedAt": "2025-08-22T19:11:00.500844Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJXZwPuNr9HWhhDF0ovWUTDK6YYqcDTs74VHjBpsC-UQG10hQ=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlwMDWxWJOGyc0REVGYkEpThPRs6ytZ8iQbWSjJD9cNSUeYrebqDLA96mhQh1TzRkxYBxuV4A",
+      "authorName": "Sebastian Tellez",
+      "rating": 5,
+      "text": "Sirius Systems is awesome.  He makes everything really easy and it will pay off in less than a week.  I am still shocked by how quickly we was able to get results.",
+      "reviewedAt": "2025-08-22T01:08:58.688445Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUcvfyYC1tpQP802AToQNadx0aCVSh9NoZCaq4Q9BuVIjiNQ_wH=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqnS35MEGlu6lz529QyhcLOFRP0-LCQXKvfBRZKjXbb8H4-vNJ5h57yWDKs3gRhU3ABA5kOX",
+      "authorName": "Julia Thomas",
+      "rating": 5,
+      "text": "Sedrick helped me with AEO for my website. I tried to do it myself but then decided that I need help. Good that I found Sedrick! Now my website ranks in AI searches.",
+      "reviewedAt": "2025-08-22T01:00:23.266562Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWwFtrEDDmrTJFom01KIN7oiglcCNuQBUs2VuFinoyyC0aqZnw=s120-c-rp-mo-ba2-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmdPhVgFzNz2W-7UNaUYTYGXoJvPsm6s4Yq9CMtPxQ-_ggyC1X83UNOf0S_sBREl8AfkPsz7Q",
+      "authorName": "Stevie Noah",
+      "rating": 5,
+      "text": "Above and beyond helpful!",
+      "reviewedAt": "2025-08-22T00:55:16.722360Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX2nFAmUuZezBF0igvTvvyNM19x4_Ocpf-6Hua8lKvWMN9w1APn=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqnfaCslPIKZR0xxWt_a5bLlvyJGhw-Qzq6kCmQxaOKVmoo2bsrvxQQjDQN0mfF4Z5-aVnin",
+      "authorName": "Josh Lowe",
+      "rating": 5,
+      "text": "Great knowledge on getting my business website ranked higher. Highly recommend.",
+      "reviewedAt": "2025-08-22T00:52:21.250087Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJpMgLky7CCHOglr_jGQNydoY446ztRW4ChQNaA50zMcfEW6A=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlnCCT6afIJGxmb5dPM_qOEVUETLpl66r5IJP8vthaop6FEhe_PLeoQuggKpWtDBpBZHo-2VA",
+      "authorName": "Bart Ratliff",
+      "rating": 5,
+      "text": "Sedrick is a pure pro!  What amazing help he gave me on SEO, Local SEO, AEO, and Reputation Management, he's so well versed and was extremely knowledgable and helpful in explaining how to leverage for myself as well as my clients...  Thank you Sedrick!!!",
+      "reviewedAt": "2025-08-22T00:10:21.928099Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjU6mXspJsnZJaq5j_EVhjzinWL3yb8tKqCK4SHl8b7qgr-p_ijB=s120-c-rp-mo-ba3-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqk7bWcVElpZpm6Jlu1oblAvkpYpTxK93UiU4MeUGYLm74c4ML6RS9muUQKVWv11y9NSniKacA",
+      "authorName": "Andrea Huston",
+      "rating": 5,
+      "text": "Sedrick is a kind, knowledgeable, and helpful professional. I’m grateful for the time he dedicated to helping our business improve, and I truly appreciate his support.",
+      "reviewedAt": "2025-08-21T19:45:21.850665Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUZPrnjTcp1e0suSigxEX1VWr7UKUVwMI0z_eVshSP9O7minXGr=s120-c-rp-mo-ba2-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmJfgdZmab7180cVsL6BreKs8KocJg2uEewcg6LvhJX6_zDzHoZ5cbZQNGHlx4zMGBGyirq2g",
+      "authorName": "Shannon Torres",
+      "rating": 5,
+      "text": "What an awesome fella! Assisted me setting up some vital business components with ease and was calm and collected in giving direction. Highly recommend using his services.",
+      "reviewedAt": "2025-08-21T17:53:28.318514Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocLzR16ArKBKD9MutlJrZ2GCYidTS7BUDKHUwg5kQUZMGF5GmA=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqnod40KfOSkoG_OsZeRUSncN7gRTTzedDBAB6cU8YTI6Szq6uK2N4V7qlpKYjJsnkiWfRsAnA",
+      "authorName": "T.J. Huston",
+      "rating": 5,
+      "text": "Sedrick knows his stuff! We were just starting our business and he definitely put us on the map! I didn’t realize how important it was to have an online presence until he shows us with results! We are now ranking higher than ever and get calls everyday!",
+      "reviewedAt": "2025-08-21T00:40:58.296589Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWYcMFcL0-55f2Ao8a5DoqCHakDD-hdByhcSQ7Adu3IkZcJsYO4RA=s120-c-rp-mo-ba4-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkwX2kyep2cBy-4C7alJYIO-Nxm-E9naNkr_klHcG4BAGVLKCprqxx-LqBBCmS3dh4HXpEn6g",
+      "authorName": "Dave -",
+      "rating": 5,
+      "text": "Sedrick is an incredible resource when it comes to SEO and AI automation systems. In just one hour, he saved me days—if not weeks—of trial and error. If you’re looking to optimize your website or implement AI automations for your business, I highly recommend reaching out to Sedrick and his team. A++",
+      "reviewedAt": "2025-08-21T00:16:02.967755Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocKdbpoGWkQptw4TI6wdV8VHYit-VksdZkxN0ZXmngCEj54ZFQ=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlyQ_LyM_XUGlQgl8dVT5zixLeIe9dN2pret6TY0MWUfXkh4zaI4fG6ntr_hALu9Hz3d7yOEw",
+      "authorName": "Juan Pablo Barcenas",
+      "rating": 5,
+      "text": "Incredible value",
+      "reviewedAt": "2025-08-15T01:20:53.992948Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX24uZtoeelgFAIOspTqzSB76hGdlR5NEmBR-oSMv9xP-PZrlvb=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlV1Uq5YrkvlyxTTqnglyhMol4d7DLT117cz-q60op-wCmjKgnjq5Ovs89TWy7Uqo-gjXwCXw",
+      "authorName": "early bird",
+      "rating": 5,
+      "text": "Amazing learned a lot !!",
+      "reviewedAt": "2025-08-15T01:14:33.956706Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ8MBhXxwSWZnLHgd2jUSLFdWjmuLlacxGsNLsT1r_twRE9bQ=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqnOubaU9pGJNbXlQYqqwYITZX9WzYTOV1kD-Ln75cBOCUQGrbu-8aN_7EMdmeWTB3VFJnPVWA",
+      "authorName": "AI Receptionist",
+      "rating": 5,
+      "text": "So many great tips! Can't thank you enough for helping us with SEO, u rock!",
+      "reviewedAt": "2025-08-15T01:14:26.812356Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXRjlYAq_JouBNGntK2VX4pAtB1Bfv-f3CP79XWEqcj9A_q8Uw=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqksnY2g9kfQMYExr2eq3QuS2iaUPWh6qGwCQcsWCFhaKjJXpgM6rIa3003ttmVeG5n7Oj3K4A",
+      "authorName": "Andres Manco",
+      "rating": 5,
+      "text": "Sedrick is an SEO master! Thank you for everything",
+      "reviewedAt": "2025-08-15T01:13:29.480825Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjW32UqCJJ2qLKwo6cNUxwbNKIX3De1zPb1zjr6UTAAaZB6J_sc4=s120-c-rp-mo-ba3-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqno-yI-rQyB-SlWYmkRnfDoWyJV4IbgmkolR92bGb_b31BCw6NB2DYm07KWfKCSwXdhw6aX",
+      "authorName": "O'Brien Alaribe",
+      "rating": 5,
+      "text": "I originally came in just for an audit/onboarding call with Sedrick, but left with a fully built website and a ton of unexpected value for my . Sedrick is very patient and helped me fully digitise my business, cut my overhead costs, and set up AI automations systems that have made customer inbound less stressful. He even pointed out areas I didn’t know I needed to improve. Definitely worth the time and money. Highly recommended!",
+      "reviewedAt": "2025-07-29T19:42:14.115408Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWBiuto6m4vcbLs-4mNKwmkW7EGEb4d7q-62VRUq4ZqJCD9Ab9W=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqlRC_SuS1pLkJTAJr0BkQkBph8sqaVb-XBQ7GGbNGWeL8nFCVkwQUeK0oj7C7Dx3vNMzSuD7g",
+      "authorName": "Michelle Jackson",
+      "rating": 5,
+      "text": "Sedrick is the absolute best. He is always there to help you and he genuinely cares about his clients and is so knowledgeable. I highly recommend Sirius Systems.",
+      "reviewedAt": "2024-07-30T15:04:49.823232Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVcQcumzdydc-V895jx39Nw0-DMkM06U-t2c_YsrFZA_o6Y0o0=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqk_wxPVwa4jYu6DNXTYGM41pxYjjJwnFVf9JIrTlRAvQ2Bna_kB51uHbEAzWUhsIXJ4yXwemw",
+      "authorName": "Jeremy P",
+      "rating": 5,
+      "text": "Cedric is terrific! His vast knowledge in the industry is next to none. I learn something new from him every time I see him.  If you want a professional to help guide your business in this technological age, I couldn't recommend him enough.",
+      "reviewedAt": "2024-07-30T15:03:32.944650Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUGqiBYi6tGhxOqleJ0HZOG7mmLlo3qL-Jj2rIVuurik--c36XR=s120-c-rp-mo-ba2-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmZ47EPcm72vkHzcwEgpnD8XXuw-uZ-3IOLlphQ2lbfBW7vB8P7OiUnxWGfgguZxzz-ggnk",
+      "authorName": "Mike Lofton",
+      "rating": 5,
+      "text": "Have worked with Sedrick on a few projects. Very easy to work with and great results.",
+      "reviewedAt": "2024-07-30T14:56:47.253557Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJq_WamyWh5lTOV6c1chh-bXvB_wpirIEjY8hGfZtXeEwa5OA=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqnRkFhdGjOquAvi76pj5sGkeKMXUehMk2RLmjNJFTfI7fr65K33qGCBI3vucIXRVrFWnLN2_g",
+      "authorName": "Sheryll Caboteja",
+      "rating": 5,
+      "text": "I've been using Sirius Systems, and it has transformed my business management. The user-friendly interface and powerful automation features save me time and streamline my processes. The customer support is excellent, and constant updates keep the platform improving. Thank you, Sedrick! Highly recommend!",
+      "reviewedAt": "2024-07-04T08:47:22.617538Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUbd3BPUu7lRAEklcZmugxmRn8qJilCNDIgGRDXgb961PENA67b=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkX1yyMCJNG9k-Yq-g3le1nxFbO_XMvt2oKitGnxtKE497rrPnwuBTl4S9Zkb2a_dVLDEORcQ",
+      "authorName": "Dominic Lacerenza",
+      "rating": 5,
+      "text": "Sedrick at Sirius Systems has been instrumental in assisting us with getting our business profiles up to snuff along with helping to decipher what information was required for various verification processes. It is with zero reluctance that we would recommend him to anyone looking to streamline their socials and business profiles to be seen loud and clear in the current digital landscape. Thanks again!!!",
+      "reviewedAt": "2024-06-25T01:04:36.455470Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjU2qqxXcqAGSyJCWT0l5zBkl0d5xq8b-a91PjtwigH-29fSE-vl=s120-c-rp-mo-ba2-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOql36QIAbnYJkzIjHHO6ITqZQxZEBYUgFjsx8tgvwwpNCDHzZI_lHHtuRofJD7BNlNaREISQDg",
+      "authorName": "Lucas Marin",
+      "rating": 5,
+      "text": "We signed up with Sirius systems for our HVAC start up and we immediately saw the results.\nWith so many things to worry about when you’re launching a new business, keeping up with our compan’s online presence was a time-consuming task.  Sedrick and his team are pros and guided us to implement an effective and effortless strategy.\nTheir services are a smart investment for your company.\nWe highly recommend you give them a shot!",
+      "reviewedAt": "2024-06-05T01:44:14.654310Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIsPkc51lQIrcgkhWZ1ehifOggfRKjYK-r6vNPZ_ZN7HIAqMdY=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmXYE5zgsMKOTotPrUiFPYQb4x-RlCFDYaHmR21CMJ3qeS1iDBj2jeU589DMOiUr6IyzxIH",
+      "authorName": "Daniel Singleton",
+      "rating": 5,
+      "text": "Sirius Systems is an absolute game-changer! Their expertise in text/email marketing and social media management has revolutionized my business. With their seamless integration of automation and personalized strategies, we've seen a remarkable increase in sales and customer satisfaction. Sirius Systems isn't just a service provider; they're an indispensable partner in our success. I highly recommend them to any business looking to thrive in the digital age!",
+      "reviewedAt": "2024-04-05T21:56:18.094857Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocK9whlP-nltFyISug0b9Ji18ptMhgsOsFLDASLLdOt8vTc4zg=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkd3YVKLMs3-JGhLI-d2NbB1uE3_wOl7kj0IAyImxBc_ttzqIXAq9HQJYErnaj1x6QM56bMsg",
+      "authorName": "Paisly Morales",
+      "rating": 5,
+      "text": "So informative! Worth sitting down to learn how you can improve your business & how Sedrick can help.",
+      "reviewedAt": "2024-04-02T15:16:52.347936Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVc5t_P5wZXJchOqbp7Y-ZvTwmsOLzAcg04lwGwQSc218eBvct1kg=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkw_Bq1iwNAGqrutRcEcSwMQZVra0DnXUh52vDVpSy0wrXEabpY1OhwG_MTuAn_dTciML7AvA",
+      "authorName": "Uli Auliani",
+      "rating": 5,
+      "text": "❤️❤️❤️",
+      "reviewedAt": "2024-04-02T15:14:22.362427Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXlilT497eo-XTvantOl0oB0aYMY_OEces7sEiGSfCDdi3Xzf2o=s120-c-rp-mo-ba2-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqmLDhp47GgLCNP-QJc_UClJrU3Vk4LUmgwqNGl-B8MUw-_qm8GYVXqQbctdOQtjfpCLp5-_",
+      "authorName": "Brian Clarkson",
+      "rating": 5,
+      "text": "Very nervous on setting up my business and Sedrick has answered all my questions very thorough he took the time to listen to my concerns and explain to me how this is all going to work. I will recommend you guys to my friends and family. Very happy with the work that has been done so far and the price if you guys had 10 stars I would give you guys a 10 looking forward to working with you folks in the future, God bless and have a great day",
+      "reviewedAt": "2024-01-16T23:23:29.063207Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocJuEUHqt1FzZbJFQjFzyE69VEp4_F6Z9uGvTAEYX-fpmQCwEA=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkmYrIhWBpOI7-F_p9KNczdcJbW9i487aowStg43qkeBTrywjAwMpsim3kkBpZjuP5XC9oH",
+      "authorName": "Angel Rosario",
+      "rating": 5,
+      "text": "Sedrick was amazing with designing, customizing and executing our new websites along with revamping our Google Business Pages. We have seen an influx of traffic with his SEO expertise that his company applied all of Route Runners LLC’s platforms.",
+      "reviewedAt": "2024-01-12T23:32:37.024629Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX2JFJSftp62elTJgbswn8al1GxBTgp7hTSWNuZ6OOAGgbeT50=s120-c-rp-mo-ba2-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOql4iQpcYsspeSV8EGXTslgrP1AG0fq9dPB8pVYDqyMfi0TewyqXlbbIrAZ9sjl7lKvB-1f7",
+      "authorName": "Dedric Wilson",
+      "rating": 5,
+      "text": "I had the pleasure of working with Sirius Systems, a top-notch SAAS agency, and I must say that their expertise in automations, lead generation, and reputation management has significantly impacted my company, InMotion Digital Media. From the initial consultation to ongoing support, their team has consistently demonstrated professionalism and dedication, allowing us to streamline our operations and enhance our online presence.\n\nSirius Systems' automation solutions have revolutionized our workflow. Their robust systems have enabled us to automate repetitive tasks, freeing up valuable time and resources that can now be focused on more strategic initiatives. By implementing their advanced automation tools, our efficiency has improved, errors have reduced, and project timelines have accelerated. Their seamless integration of different platforms and tools has truly been a game-changer for our organization.\n\nMoreover, their lead generation strategies have proven highly effective in expanding our customer base. Sirius Systems possesses a deep understanding of our industry and target audience, which is reflected in the quality of leads they have generated for us. Through their meticulous research, strategic planning, and implementation of tailored campaigns, we have witnessed a significant increase in qualified leads, resulting in a higher conversion rate and substantial revenue growth. Their data-driven approach and continuous optimization have undoubtedly made a positive impact on our sales pipeline.\n\nIn addition, Sirius Systems' reputation management services have played a pivotal role in bolstering our online presence. Their team has been proactive in monitoring and managing our online reputation across various platforms. Through their expertise in search engine optimization (SEO) and online review management, they have helped us maintain a positive brand image and respond effectively to customer feedback. As a result, we have experienced a noticeable improvement in customer satisfaction and loyalty, leading to enhanced organic visibility and increased website traffic.\n\nBeyond their technical expertise, the team at Sirius Systems has been an absolute pleasure to work with. They consistently demonstrate professionalism, responsiveness, and a genuine commitment to our success. They take the time to understand our unique business needs and tailor their solutions accordingly. Their clear communication and ability to simplify complex concepts have made the entire process smooth and enjoyable.\n\nOverall, I highly recommend Sirius Systems to any company seeking to optimize their operations, generate quality leads, and manage their online reputation. Their comprehensive SAAS solutions, combined with their exceptional service, have proven to be invaluable for InMotion Digital Media. Thank you, Sirius Systems, for your unwavering support and the positive impact you have made on our business!\n\nThank You\nDedric",
+      "reviewedAt": "2023-07-07T17:16:49.226649Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWT2MTWA_DEbFR9WgME57Xli9nzcglhrFu_UXwPoHFjMgkOQkKd=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqkuYyLzshyZ35iByvcedMmyaowXYWWoYa5_1_iBZaBSP5Sa83AscsP1EM6EcOceypLT6Wt5Dg",
+      "authorName": "Jose Lucero",
+      "rating": 5,
+      "text": "I gotta give a shoutout to Sirius Systems, this amazing SAAS agency that totally rocked my SEO game. Seriously, these guys know their stuff, and I'm stoked to share my awesome experience with you all.\n\nRight from the get-go, I was blown away by the way Sirius Systems handled my SEO needs. They dug deep into keyword research and analysis, uncovering all the juicy keywords that could make my business shine. Armed with this knowledge, they crafted killer SEO strategies that brought in some mind-blowing results.\n\nLet me tell you, my website's visibility in search engine results has gone through the roof! Sirius Systems nailed it with their on-page and off-page optimization techniques. They did all the behind-the-scenes magic to make sure my website ranked higher for the keywords that mattered most. And you know what? It worked like a charm! My organic traffic shot up, and conversions? Oh boy, they've gone through the roof too!\n\nBut that's not all. These guys are like SEO wizards. They gave me some priceless advice on how to structure my website and craft content that grabs attention. They seamlessly integrated those important keywords into my meta tags, headings, and content. And let me tell you, my website is rocking it! Not only is it ranking higher, but the content is so engaging and captivating that people just can't get enough. They're spending more time browsing and getting hooked on what I have to offer.\n\nOne thing I absolutely love about Sirius Systems is how they stay on top of the game. They're like the SEO superheroes, always keeping an eye on the latest trends and search engine algorithms. They're quick to adapt their strategies and keep my website ahead of the pack. It's like having my own personal SEO squad by my side!\n\nAnd let me just say, the folks at Sirius Systems are just awesome to work with. They're super responsive, friendly, and always ready to address any questions or concerns I had. They didn't just throw technical jargon at me; they explained everything in a way that even I could understand. It was a true collaboration, and I felt supported throughout the entire process.\n\nSo, if you're looking to supercharge your business with some kickass SEO solutions, I can't recommend Sirius Systems enough. These guys are the real deal, and they'll take your website from zero to hero in no time. Trust me, I'm a satisfied customer who's seen some serious (pun intended) results!\n\nA big shoutout and thanks to the awesome team at Sirius Systems for turbocharging my SEO and helping my business kick some serious digital butt.",
+      "reviewedAt": "2023-06-12T23:28:26.770445Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVVGeiF3THm3kuKDHLXAbGEF9CR5hQDR4H18OgOkMQ85yQLzr3tbw=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    },
+    {
+      "id": "AbFvOqldEezWETRkJI62sWoX_GxvMv5Pv0NTuug-ppNGYT0jRFoemWUfmZM3SCeVlrZlyVwCs5-l",
+      "authorName": "Dolls Getaway",
+      "rating": 5,
+      "text": "",
+      "reviewedAt": "2023-03-15T14:22:39.163626Z",
+      "sourceUrl": "https://lh3.googleusercontent.com/a/ACg8ocIhC-hnA9VswgPh1KbndvxnMREWMccdZDkM2QTAPGdubaSsjA=s120-c-rp-mo-br100",
+      "verified": true,
+      "permissionToPublish": true
+    }
+  ]
 }
