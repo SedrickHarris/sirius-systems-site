@@ -31,6 +31,7 @@ import { SITE } from '@/lib/site'
 import { servicesByGroup } from '@/lib/services'
 import { INDUSTRIES } from '@/lib/industries'
 import { HOME_FAQ } from '@/lib/faq'
+import { getSummary } from '@/lib/google-reviews'
 
 export const metadata = {
   title: 'AI Automation for Local Service Businesses | Sirius Systems',
@@ -86,6 +87,11 @@ export default function HomePage() {
   const webSeoServices     = servicesByGroup('web-seo')
   const reputationServices = servicesByGroup('reputation')
 
+  // AggregateRating: values pulled directly from data/google-reviews.json
+  // via the verified-gate accessor. Stays in lockstep with the visible
+  // GoogleReviewSummary on this page (schema-plan.md §8 condition 3).
+  const reviewSummary = getSummary()
+
   return (
     <>
       <JsonLdScript
@@ -116,6 +122,15 @@ export default function HomePage() {
               addressCountry: 'US',
             },
             areaServed: 'Worldwide',
+            ...(reviewSummary && {
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: reviewSummary.averageRating,
+                reviewCount: reviewSummary.totalReviewCount,
+                bestRating: 5,
+                worstRating: 1,
+              },
+            }),
             sameAs: [
               'https://www.facebook.com/SiriusSys.io/',
               'https://share.google/TUgLZOpTwsYaHLaLZ',
