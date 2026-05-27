@@ -49,7 +49,7 @@ export function GoogleReviewCard({ review }: { review: Review }) {
         ))}
       </div>
 
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90 line-clamp-8">
         {review.text}
       </p>
 
