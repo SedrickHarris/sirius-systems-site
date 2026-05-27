@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — Phase 6 prelaunch QA sweep
+- type: qa
+- author: Sirius Systems / Claude Code
+- changes: Ran full prelaunch QA sweep per docs/site-os/qa/prelaunch-checklist.md.
+  Automated checks: build integrity (tsc clean, next build clean, 41 routes),
+  route coverage (33/33 required Phase 1 routes present in out/), metaTitle
+  lengths (38 titles scanned; 1 hard FAIL on app/page.tsx at 76 chars and
+  1 KNOWN-accepted overage on /industries/hospitality-events at 68 chars),
+  forbidden schema scan (0 hits across app/), do-not-invent pattern scan
+  (30 hits all confirmed false positives — copy denying guarantees, common-
+  English use of "results"), broken internal link scan (5 hits all template
+  literals resolved against valid slug arrays), NAP consistency (7/7 fields
+  match GBP-verified values in lib/site.ts), sitemap coverage (36 URLs,
+  zero required missing), robots.txt (all 4 directives present),
+  _redirects (contractors → construction-contractors 301 present in
+  source; manual edge test pending), FAQ schema byte-identity spot
+  check (5/5 sampled pages PASS — both industry DATA.faqs and service
+  PAGE.faqs patterns are structurally byte-identical between visible
+  FAQ block and FAQPage JSON-LD). QA report written to
+  docs/site-os/qa/qa-report-phase6.md.
+- files: docs/site-os/qa/qa-report-phase6.md (new),
+  docs/site-os/changelog/project-changelog.md,
+  scripts/qa-phase6-checks.mjs (new, untracked — left out of the QA
+  commit per spec; ready to commit if desired)
+- notes: Verdict NOT READY for Phase 7 — one hard FAIL (homepage metaTitle
+  at 76 chars) needs user decision on trim. Three options proposed in the
+  report (47-, 59-, and 52-char variants). Eight MANUAL PENDING items
+  documented: Lighthouse, schema validator, mobile visual review,
+  QualificationForm webhook submission test (now wired live as of
+  b1b718e), footer/header link audits, 404 page test, Cloudflare
+  _redirects edge test post-deploy. No AggregateRating / Review /
+  LocalBusiness / Product / Offer schema present anywhere. Do-not-invent
+  rules honored throughout.
+
+---
+
 ## 2026-05-27 — /industries/technology-b2b Level 4 copy rewrite
 - type: seo
 - author: Sirius Systems / Claude Code
