@@ -42,7 +42,23 @@ export function GoogleReviewsMarquee({
   label?: string
 }) {
   const trackRef = useRef<HTMLDivElement>(null)
+  const firstHalfRef = useRef<HTMLDivElement>(null)
   const reduced = useReducedMotion()
+
+  // Expose the true loop period to CSS as --marquee-width. The keyframe
+  // animates by exactly this distance, so the duplicate half lands where
+  // the original started — no visible jump.
+  //
+  // Period = firstHalf.offsetWidth + outerTrackGap. The outer gap matters
+  // because flex `gap` is internal to the parent: it lives between the two
+  // half-divs but is not included in either child's offsetWidth.
+  useEffect(() => {
+    if (!trackRef.current || !firstHalfRef.current) return
+    const w = firstHalfRef.current.offsetWidth
+    const cs = getComputedStyle(trackRef.current)
+    const gap = parseFloat(cs.columnGap || cs.gap || '0') || 0
+    trackRef.current.style.setProperty('--marquee-width', `${w + gap}px`)
+  }, [])
 
   if (reviews.length === 0) return null
 
@@ -63,8 +79,6 @@ export function GoogleReviewsMarquee({
     )
   }
 
-  const doubled = [...reviews, ...reviews]
-
   return (
     <div
       role="region"
@@ -81,15 +95,22 @@ export function GoogleReviewsMarquee({
           if (trackRef.current) trackRef.current.style.animationPlayState = 'running'
         }}
       >
-        {doubled.map((r, i) => (
-          <div
-            key={`${r.id}-${i}`}
-            aria-hidden={i >= reviews.length}
-            className="w-[320px] shrink-0"
-          >
-            <GoogleReviewCard review={r} />
-          </div>
-        ))}
+        {/* First half — measured to drive --marquee-width */}
+        <div ref={firstHalfRef} className="flex gap-5">
+          {reviews.map((r) => (
+            <div key={`${r.id}-orig`} className="w-[320px] shrink-0">
+              <GoogleReviewCard review={r} />
+            </div>
+          ))}
+        </div>
+        {/* Duplicate — aria-hidden so SRs see each review once */}
+        <div aria-hidden className="flex gap-5">
+          {reviews.map((r) => (
+            <div key={`${r.id}-dupe`} className="w-[320px] shrink-0">
+              <GoogleReviewCard review={r} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

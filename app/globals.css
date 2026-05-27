@@ -682,9 +682,12 @@
   .motion-soft-scale:hover { transform: scale(1.02); }
 
   /* ─── Marquee (review strip auto-scroll) ─── */
+  /* --marquee-width is set in JS to the true loop period (first-half width
+     + outer gap) so the duplicate lands exactly where the original started.
+     The 50% fallback is the first-paint approximation before JS runs. */
   @keyframes marquee-scroll {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to   { transform: translateX(calc(-1 * var(--marquee-width, 50%))); }
   }
 
   .marquee-track {
