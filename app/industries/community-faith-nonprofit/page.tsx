@@ -8,28 +8,42 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 
 const DATA: IndustryPageData = {
   slug: 'community-faith-nonprofit',
-  metaTitle: 'Automation for Nonprofits & Faith Orgs | Sirius',
+
+  metaTitle: 'Automation for Nonprofits & Community Orgs | Sirius Systems',
+
   metaDescription:
-    'Outreach automation, donor follow-up, and communication systems for churches, nonprofits, charities, and membership organizations.',
+    'Outreach automation, donor follow-up, and communication systems for churches, nonprofits, charities, membership organizations, and mission-driven groups.',
+
   eyebrow: 'Community, Faith & Nonprofit',
-  headline: 'The System That Keeps Your Mission Moving Forward',
+
+  headline:
+    'The Organizations That Stay Consistent Between Campaigns Are the Ones That Retain Donors and Members',
+
   subheadline:
-    'Community organizations and faith-based businesses run on relationships and communication. The ones that grow are the ones with consistent outreach, fast inquiry responses, and systems that keep donors, members, and volunteers engaged.',
+    'Community and faith-based organizations run on relationships. The ones that grow are not necessarily the ones with the biggest mission — they are the ones that respond to inquiries quickly, follow up with donors and members consistently, and show up in local search when someone is looking for them. We build the operational system that makes consistency possible without requiring more staff hours.',
+
   heroHighlights: [
-    'Outreach and follow-up automation for donors, members, and volunteers',
-    'Inquiry response automation so no contact goes unanswered',
-    'Communication sequences for events, campaigns, and re-engagement',
-    'Reputation management and review systems for community visibility',
+    'Donor and member follow-up automation — no contact falls through between campaigns',
+    'Inquiry response automation so every inbound message gets acknowledged',
+    'Event and re-engagement communication sequences that run on schedule',
+    'Google visibility and review systems for organizations people search for locally',
   ],
+
   problemHeadline: 'Where community organizations lose engagement and momentum',
+
   problems: [
-    'Donor and membership inquiries go unanswered because staff and volunteers are stretched thin and cannot respond quickly.',
-    'Outreach and follow-up happen inconsistently because there is no automated system keeping contacts engaged between campaigns.',
-    'Event attendance and volunteer participation drop because reminders and re-engagement communications are sent manually or not at all.',
-    'Your organization has a strong community reputation but almost no Google presence because no one has a system to generate reviews or manage visibility.',
+    'Donor and membership inquiries go unanswered because staff and volunteers are stretched across programs and cannot respond quickly enough.',
+    'Follow-up between campaigns is inconsistent or nonexistent. Donors and members who engaged once drift because no system brought them back.',
+    'Event attendance and volunteer participation drop when reminders and re-engagement messages depend on someone remembering to send them manually.',
+    'The organization has a strong community reputation but almost no Google presence because no system generates reviews or manages visibility online.',
   ],
+
   systemsHeadline:
-    'The automation stack built for community and mission-driven organizations',
+    'Outreach and communication automation for mission-driven organizations',
+
+  systemsCopy:
+    'The operational gaps — inquiry response, donor follow-up, event reminders, member re-engagement — are the same whether you run a church, a nonprofit, or a community program. These are the six systems that close them without adding headcount.',
+
   serviceSlugs: [
     'crm-automation',
     'lead-generation-automation',
@@ -38,48 +52,108 @@ const DATA: IndustryPageData = {
     'review-automation',
     'appointment-booking-automation',
   ],
-  subVerticalsHeadline: 'Organization types we work with',
+
+  subVerticalsHeadline:
+    'Built for the way mission-driven organizations actually operate',
+
+  subVerticalsCopy:
+    'The automation work — capturing inquiries, following up with donors and members, sending event reminders, requesting reviews — is operational. It runs around your mission, not instead of it. You do not need to understand the system. You need it to work consistently while your team focuses on the people in front of them.',
+
   featured: [
-    { name: 'Churches & Ministries', blurb: 'Visitor follow-up, event communication, and online reputation management for churches and ministries.' },
-    { name: 'Nonprofit Organizations & Charities', blurb: 'Donor follow-up, outreach automation, and CRM systems for nonprofits and charities.' },
-    { name: 'Community & Membership Organizations', blurb: 'Member communication automation and engagement systems for community and membership groups.' },
-    { name: 'Youth Organizations & Programs', blurb: 'Inquiry follow-up and communication automation for youth-focused organizations.' },
-    { name: 'Fundraising & Advocacy Organizations', blurb: 'Donor outreach and campaign follow-up automation for fundraising and advocacy groups.' },
+    {
+      name: 'Churches & Ministries',
+      blurb:
+        'Visitor follow-up, event communication automation, and Google visibility management for churches and ministries.',
+    },
+    {
+      name: 'Nonprofit Organizations & Charities',
+      blurb:
+        'Donor follow-up sequences, outreach automation, and CRM systems for nonprofits and charitable organizations.',
+    },
+    {
+      name: 'Community & Membership Organizations',
+      blurb:
+        'Member communication automation and re-engagement systems for community groups and membership organizations.',
+    },
+    {
+      name: 'Youth Organizations & Programs',
+      blurb:
+        'Inquiry response and parent communication automation for youth-focused organizations and programs.',
+    },
   ],
+
   compact: [
-    { name: 'Faith-Based Schools & Outreach', blurb: 'Inquiry response and enrollment follow-up for faith-based schools and outreach programs.' },
-    { name: 'Volunteer Organizations', blurb: 'Volunteer inquiry response and communication automation for volunteer-driven organizations.' },
-    { name: 'Civic & Local Associations', blurb: 'Member communication and event automation for civic and local associations.' },
-    { name: 'Food Banks & Rescue Missions', blurb: 'Donor follow-up and volunteer inquiry automation for food banks and rescue missions.' },
-    { name: 'Mentorship & Support Groups', blurb: 'Inquiry response and communication automation for mentorship and support programs.' },
-    { name: 'Donor-Based Organizations', blurb: 'Donor follow-up sequences and CRM automation for donation-funded organizations.' },
-    { name: 'Coaching Communities', blurb: 'Member inquiry response and enrollment automation for coaching and community programs.' },
-    { name: 'Mission-Based Organizations', blurb: 'Outreach automation and CRM systems for mission-driven businesses and organizations.' },
+    {
+      name: 'Fundraising & Advocacy Organizations',
+      blurb:
+        'Donor outreach and campaign follow-up automation for fundraising and advocacy groups.',
+    },
+    {
+      name: 'Faith-Based Schools & Outreach Programs',
+      blurb:
+        'Inquiry response and enrollment follow-up for faith-based schools and community outreach programs.',
+    },
+    {
+      name: 'Volunteer Organizations',
+      blurb:
+        'Volunteer inquiry response and communication automation for volunteer-driven organizations.',
+    },
+    {
+      name: 'Civic & Local Associations',
+      blurb:
+        'Member communication and event reminder automation for civic and local associations.',
+    },
+    {
+      name: 'Food Banks & Rescue Missions',
+      blurb:
+        'Donor follow-up and volunteer inquiry automation for food banks and rescue missions.',
+    },
+    {
+      name: 'Mentorship & Support Programs',
+      blurb:
+        'Inquiry response and communication automation for mentorship and support group programs.',
+    },
+    {
+      name: 'Donor-Funded Organizations',
+      blurb:
+        'Donor follow-up sequences and CRM automation for organizations that depend on recurring donations.',
+    },
+    {
+      name: 'Mission-Based Service Organizations',
+      blurb:
+        'Outreach automation and CRM systems for mission-driven organizations providing direct community services.',
+    },
   ],
+
   faqs: [
     {
       q: 'Do you work with nonprofits and faith-based organizations?',
-      a: 'Yes. The core systems — inquiry response, follow-up automation, CRM, and reputation management — apply to nonprofits, churches, and community organizations just as they do to for-profit businesses.',
+      a: 'Yes. The core systems — inquiry response, follow-up automation, CRM, and reputation management — apply to nonprofits, churches, and community organizations the same way they apply to service businesses. The operational gaps are the same: contacts go unanswered, follow-up is inconsistent, and reviews do not reflect the actual community presence.',
     },
     {
-      q: 'Can you help with donor outreach and follow-up automation?',
-      a: 'Yes. Automated follow-up sequences can be configured to stay in contact with donors, lapsed members, or volunteers on a defined cadence. The system keeps your organization visible and engaged without requiring manual outreach every time.',
+      q: 'Can you help with donor and member follow-up automation?',
+      a: 'Yes. Automated follow-up sequences can be configured to stay in contact with donors, lapsed members, or volunteers on a defined cadence. The system keeps your organization visible and engaged between campaigns without requiring manual outreach every time.',
     },
     {
-      q: 'How does reputation management work for a nonprofit or church?',
-      a: 'Google visibility matters for community organizations too — people search for local churches, charities, and nonprofits before they engage. We build review generation and response systems that reflect your organization honestly and professionally.',
+      q: 'How does Google visibility work for a nonprofit or church?',
+      a: 'People search for local churches, nonprofits, and community organizations before they engage. We build review generation systems that ask real community members for honest Google reviews, and review response workflows so incoming reviews do not go unanswered. The result is a profile that reflects your actual community presence.',
     },
-    // TODO: confirm with client which platforms they use for events and volunteer management
     {
-      q: 'Can you automate event registration or volunteer sign-ups?',
-      a: 'Automated booking and registration sequences are part of the system. Specific integration capability depends on the tools your organization currently uses. We confirm compatibility during onboarding.',
+      q: 'Can you automate event reminders and re-engagement communications?',
+      a: 'Yes. Reminder sequences for events, volunteer shifts, and recurring programs are a standard part of the system. Re-engagement flows for lapsed donors or members can also be configured to run on a set schedule so contacts do not drift silently.',
     },
-    // TODO: confirm with client on pricing and package structure for nonprofit/community orgs
     {
-      q: 'Do you work with small organizations on limited budgets?',
-      a: 'We scope systems around what your organization actually needs. Get in touch and we will walk through what makes sense for your size and goals. We confirm compatibility during onboarding.',
+      q: 'Do you work with small organizations that have limited staff capacity?',
+      a: 'The system is built for organizations where staff are stretched across programs and cannot manage follow-up manually. A small nonprofit and a large church have the same core problem — too many contacts to stay in touch with consistently, and not enough hours to do it by hand. We scope the system to what actually applies to your size and workflow.',
     },
   ],
+
+  ctaHeadline: 'Book a 20-minute audit for your organization.',
+
+  ctaBody:
+    "We'll map where donor follow-up, member communication, or online visibility are falling short and show you the order of operations. Walk away with the plan, whether or not we work together.",
+
+  ctaPrimaryLabel: 'Get a Free Audit',
 }
 
 export const metadata: Metadata = {

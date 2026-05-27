@@ -15,6 +15,32 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — /industries/community-faith-nonprofit Level 4 copy rewrite
+- type: seo
+- author: Sirius Systems / Claude Code
+- changes: Replaced DATA object with approved Level 4 SEO/AEO copy package.
+  Updated metaTitle (corrected from truncated "| Sirius" to full
+  "| Sirius Systems" and brought under 60-char limit via the spec's
+  fallback phrasing), metaDescription, headline, subheadline,
+  heroHighlights, problemHeadline, problems, systemsHeadline, systemsCopy,
+  subVerticalsHeadline, subVerticalsCopy, 4 featured + 8 compact
+  sub-verticals, 5 FAQs, ctaHeadline, ctaBody, ctaPrimaryLabel. Removed
+  both TODO comments (event platform integration, nonprofit pricing) —
+  replacement FAQs address these topics honestly without referencing
+  unconfirmed platforms or pricing. Schema block (webPage,
+  breadcrumbList, faqPage) unchanged. tsc clean. next build clean.
+- files: app/industries/community-faith-nonprofit/page.tsx,
+  docs/seo/metadata-draft.md,
+  docs/site-os/changelog/project-changelog.md
+- notes: No AggregateRating / Review / LocalBusiness / Organization schema.
+  No invented stats, ratings, testimonials, guarantees, or platform claims.
+  Do-not-invent rules honored throughout. metaTitle 59 chars; description
+  153 chars. Primary metaTitle 'Automation for Nonprofits, Churches &
+  Community Orgs | Sirius Systems' was 69 chars; used spec-provided
+  fallback as authorized.
+
+---
+
 ## 2026-05-27 — /industries/education-childcare Level 4 copy rewrite
 - type: seo
 - author: Sirius Systems / Claude Code

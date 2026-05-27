@@ -148,9 +148,9 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
 
 ### `/industries/community-faith-nonprofit`
-- **Title:** `Nonprofit, Church & Community Organization Automation | Sirius Systems`
-- **Description:** `Outreach automation, donor follow-up, and communication systems for churches, nonprofits, charities, membership organizations, and mission-driven businesses.`
-- **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
+- **Title:** `Automation for Nonprofits & Community Orgs | Sirius Systems`
+- **Description:** `Outreach automation, donor follow-up, and communication systems for churches, nonprofits, charities, membership organizations, and mission-driven groups.`
+- **Notes:** Level 4 copy shipped 2026-05-27. Title 59 chars; description 153 chars. Production previously had a truncated `| Sirius` suffix and an over-limit primary title — both corrected. Both TODOs (event/volunteer platform, nonprofit pricing) removed from the page; replacement FAQs cover the same ground without naming platforms.
 
 ### `/industries/retail-local-commerce`
 - **Title:** `Retail & Local Commerce Automation | Sirius Systems`
