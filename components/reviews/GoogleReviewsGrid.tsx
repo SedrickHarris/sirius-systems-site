@@ -15,7 +15,7 @@ export function GoogleReviewsGrid({
     <div
       role="region"
       aria-label={label}
-      className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 items-start"
     >
       {reviews.map((review) => (
         <GoogleReviewCard key={review.id} review={review} />

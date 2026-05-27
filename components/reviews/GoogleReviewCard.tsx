@@ -9,7 +9,7 @@ export function GoogleReviewCard({ review }: { review: Review }) {
   const date = formatDate(review.reviewedAt)
 
   return (
-    <article className="card flex h-full flex-col p-6 md:p-7">
+    <article className="card flex flex-col p-6 md:p-7">
       <header className="flex items-start gap-3">
         <div
           aria-hidden
