@@ -36,11 +36,22 @@ export const metadata: Metadata = {
     url: SITE.url,
     title: SITE.name,
     description: SITE.description,
+    // TODO: add OG default image at public/og/default.png (1200×630) before launch
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE.name,
     description: SITE.description,
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/logos/favicons/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/images/logos/favicons/favicon-192x192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/images/logos/favicons/favicon-512x512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: '/images/logos/favicons/favicon-180x180.png',
+    shortcut: '/favicon.ico',
   },
   robots: { index: true, follow: true },
 }

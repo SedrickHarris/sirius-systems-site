@@ -15,6 +15,66 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — Wire canonical logo
+- type: feat
+- author: Sirius Systems / Claude Code
+- changes: Logo and favicon files wired site-wide. Canonical file
+  assignments (from inventory of public/images/logos/):
+    A) LOGO_DARK   = sirius-systems-star-business-name-cropped-transparent-logo.webp
+                     (1080×635, transparent BG, star+wordmark lockup)
+    B) LOGO_LIGHT  = NOT AVAILABLE (no light/inverse/white variant
+                     present in the asset bank — flagged as outstanding
+                     in content-needed-from-client.md 1.5)
+    C) FAVICON_ICO = public/images/logos/favicons/favicon.ico
+                     (also copied to public/favicon.ico for default
+                     browser request)
+    D) FAVICON_PNG = favicon-16/32/48/180/192/512 .png suite at
+                     public/images/logos/favicons/
+                     apple-touch = favicon-180x180.png
+    E) OG_IMAGE    = NOT AVAILABLE (no /og/ dir, no wide social card)
+  Header.tsx: SiriusMark placeholder did NOT exist (Header was already
+  using a small 24×24 Image of /images/brand/sirius-systems-logo.webp
+  plus an adjacent text wordmark span). Replaced both with a single
+  Next.js Image rendering the full LOGO_DARK lockup at
+  className="h-8 w-auto" (32px tall, ≥24px brand-guide minimum).
+  Removed the duplicate text wordmark span since the lockup already
+  contains "Sirius Systems". Added aria-label={SITE.name} to the
+  wrapping Link. Footer.tsx: replaced the text wordmark
+  <p>{SITE.name}</p> in the brand column with the same lockup at
+  className="h-10 w-auto" (40px tall, slightly larger for the brand
+  block weight), wrapped in <Link href="/"> with aria-label. Added
+  `import Image from 'next/image'` to Footer.tsx (Header already had
+  it). app/layout.tsx: added icons block to the metadata export
+  wiring /favicon.ico (root copy) + favicons/favicon-32x32.png,
+  192x192.png, 512x512.png as PNG icons + favicons/favicon-180x180.png
+  as apple-touch. Added "TODO: add OG default image at public/og/
+  default.png (1200×630) before launch" comment in openGraph block.
+  content-needed-from-client.md item 1.5 marked RESOLVED 2026-05-27
+  with actual filenames and outstanding gaps documented. SiriusMark
+  component: did not exist; nothing deleted. The legacy file
+  /images/brand/sirius-systems-logo.webp is no longer referenced and
+  can be deleted in a future cleanup if desired (left in place to
+  avoid expanding scope). tsc clean. next build clean (41 routes,
+  /_not-found still prerendered).
+- files: public/favicon.ico (new — copy of favicons/favicon.ico),
+         public/images/logos/ (new — 9 PNG/WEBP lockup variants +
+         favicons/ subdirectory with 6 PNG sizes + 1 ICO),
+         components/site/Header.tsx,
+         components/site/Footer.tsx,
+         app/layout.tsx,
+         docs/site-os/inputs/content-needed-from-client.md,
+         docs/site-os/changelog/project-changelog.md
+- notes: VS Code audit "Recommended pre-deploy actions" item #4
+  (public/images/logos/ decision) is now resolved. Outstanding asset
+  TODOs remaining for launch: (a) light/inverse logo variant for
+  light-canvas contexts, (b) 1200×630 OG default social card. Neither
+  blocks Phase 7 — both are noted in the file and in content-needed.
+  No invented alt text; alt="Sirius Systems" matches the brand name
+  exactly. Brand-guide §5 minimum-size rule honored (header 32px ≥
+  24px minimum).
+
+---
+
 ## 2026-05-27 — Fix: 404 blog link + QA scripts committed
 - type: fix
 - author: Sirius Systems / Claude Code

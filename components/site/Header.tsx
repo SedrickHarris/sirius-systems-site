@@ -45,19 +45,18 @@ export function Header() {
       <div className="site-container flex h-16 items-center justify-between gap-4 md:gap-6">
         <Link
           href="/"
-          className="group inline-flex items-center gap-2.5"
+          className="group inline-flex items-center"
+          aria-label={SITE.name}
           style={{ color: 'var(--text)' }}
         >
           <Image
-            src="/images/brand/sirius-systems-logo.webp"
-            alt="Sirius Systems logo"
-            width={24}
-            height={24}
+            src="/images/logos/sirius-systems-star-business-name-cropped-transparent-logo.webp"
+            alt="Sirius Systems"
+            width={1080}
+            height={635}
             priority
+            className="h-8 w-auto"
           />
-          <span className="font-display text-base font-semibold tracking-tight">
-            {SITE.name}
-          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 text-sm md:flex">

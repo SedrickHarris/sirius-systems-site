@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { SITE } from '@/lib/site'
 import { SERVICES } from '@/lib/services'
@@ -34,12 +35,15 @@ export function Footer() {
 
           {/* Brand column */}
           <div className="md:col-span-4">
-            <p
-              className="font-display text-xl font-semibold tracking-tight"
-              style={{ color: 'var(--text)' }}
-            >
-              {SITE.name}
-            </p>
+            <Link href="/" aria-label={SITE.name} className="inline-flex">
+              <Image
+                src="/images/logos/sirius-systems-star-business-name-cropped-transparent-logo.webp"
+                alt="Sirius Systems"
+                width={1080}
+                height={635}
+                className="h-10 w-auto"
+              />
+            </Link>
             <p
               className="mt-3 max-w-xs text-sm leading-relaxed"
               style={{ color: 'var(--text-muted)' }}
