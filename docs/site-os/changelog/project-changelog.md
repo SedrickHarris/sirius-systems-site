@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — VS Code project audit (pre-Phase 7)
+- type: audit
+- author: Sirius Systems / Claude Code
+- changes: Full pre-deploy project audit across 11 sections — TypeScript
+  integrity, build integrity, dependency vulnerabilities, orphaned files,
+  environment variables, console artifacts and TODOs, image assets,
+  next.config.mjs, Tailwind config, open TODO tracker, git status.
+  tsc clean (0 errors). next build clean (41 routes prerendered).
+  npm audit --audit-level=high exits 0 (6 moderate findings via
+  postcss/uuid transitive chains — informational, below gate threshold).
+  Auto-fixes applied: committed scripts/qa-phase6-checks.mjs as 9d7cdc9
+  per the explicit "ready to commit if desired" note in the 2026-05-27
+  Phase 6 QA sweep entry below. No console.* artifacts removed (the
+  single console.warn in lib/blog.ts is gated on NODE_ENV === 'development'
+  and is intentional dev diagnostics). No TODOs auto-removed — the one
+  stale candidate (app/not-found.tsx:31, "restore href when blog ships")
+  requires a copy decision, not just a comment removal. Six orphaned
+  components in components/site/ flagged for human decision
+  (CategoryCard, Container, CTACard, CTASection, HowItWorksSteps;
+  ContactFormEmbed retained intentionally per embed-specs.md). Nine
+  untracked logo variants in public/images/logos/ flagged — none
+  referenced in source. The app/industries/hospitality-events/page.tsx
+  unstaged Level 4 SEO rewrite was detected and flagged out of scope —
+  decide commit-or-revert before Phase 7.
+- files: docs/site-os/qa/vs-code-audit-report.md (new),
+         docs/site-os/changelog/project-changelog.md,
+         scripts/qa-phase6-checks.mjs (auto-committed 9d7cdc9)
+- notes: Phase 7 deploy gate — review the "Recommended pre-deploy
+  actions" section of docs/site-os/qa/vs-code-audit-report.md before
+  proceeding. Inherited Phase 6 hard FAIL (homepage metaTitle at 76
+  chars) is still unresolved and remains the primary blocker for the
+  automated gate. Webhook submission test (M4 from Phase 6) was
+  completed earlier this session against the live URL — HTTP 200 OK.
+
+---
+
 ## 2026-05-27 — Phase 6 prelaunch QA sweep
 - type: qa
 - author: Sirius Systems / Claude Code
