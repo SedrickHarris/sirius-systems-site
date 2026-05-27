@@ -33,12 +33,12 @@ import { INDUSTRIES } from '@/lib/industries'
 import { HOME_FAQ } from '@/lib/faq'
 
 export const metadata = {
-  title: 'AI Automation & Growth Systems for Local Service Businesses | Sirius Systems',
+  title: 'AI Automation for Local Service Businesses | Sirius Systems',
   description:
     'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses — so leads get captured, jobs get booked, and reviews keep coming automatically.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'AI Automation & Growth Systems for Local Service Businesses | Sirius Systems',
+    title: 'AI Automation for Local Service Businesses | Sirius Systems',
     description:
       'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses — so leads get captured, jobs get booked, and reviews keep coming automatically.',
     url: '/',
