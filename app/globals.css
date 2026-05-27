@@ -681,6 +681,25 @@
   }
   .motion-soft-scale:hover { transform: scale(1.02); }
 
+  /* ─── Marquee (review strip auto-scroll) ─── */
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .marquee-track {
+    animation: marquee-scroll 50s linear infinite;
+    will-change: transform;
+  }
+
+  /* Reduced-motion handled in JS (useReducedMotion hook) — CSS fallback: */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .motion-fade-up,
     .motion-stagger > * {

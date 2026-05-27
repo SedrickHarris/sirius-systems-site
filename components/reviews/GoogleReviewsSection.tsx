@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { GoogleReviewsGrid } from './GoogleReviewsGrid'
 import { GoogleReviewsCarousel } from './GoogleReviewsCarousel'
+import { GoogleReviewsMarquee } from './GoogleReviewsMarquee'
 import { GoogleReviewSummary } from './GoogleReviewSummary'
 import {
   getVerifiedReviews,
@@ -30,7 +31,7 @@ export function GoogleReviewsSection({
   label = 'Customer reviews',
   count,
 }: {
-  variant?: 'grid' | 'carousel'
+  variant?: 'grid' | 'carousel' | 'marquee'
   label?: string
   count?: number
 }) {
@@ -46,11 +47,13 @@ export function GoogleReviewsSection({
   return (
     <div>
       {summary && (
-        <div className="mb-8">
+        <div className="mb-8 site-container">
           <GoogleReviewSummary summary={summary} placeUrl={placeUrl} />
         </div>
       )}
-      {variant === 'carousel' ? (
+      {variant === 'marquee' ? (
+        <GoogleReviewsMarquee reviews={reviews} label={label} />
+      ) : variant === 'carousel' ? (
         <GoogleReviewsCarousel reviews={reviews} label={label} />
       ) : (
         <GoogleReviewsGrid reviews={reviews} label={label} />

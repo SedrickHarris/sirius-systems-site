@@ -14,7 +14,6 @@ import {
   Briefcase,
   Car,
   Sparkles,
-  ShieldCheck,
   Stethoscope,
   Building2,
   UtensilsCrossed,
@@ -635,9 +634,11 @@ export default function HomePage() {
       </section>
 
       {/* ───────────────── 10. TRUST / REVIEW POLICY ───────────────── */}
-      <section className="section-light section-padding">
-        <div className="site-container grid items-start gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
-          <div>
+      <section className="section-light section-padding overflow-hidden">
+
+        {/* Centered copy block */}
+        <div className="site-container">
+          <div className="mx-auto max-w-2xl text-center">
             <span className="section-eyebrow">Trust policy</span>
             <h2 className="mt-5 section-heading">
               No fake testimonials. No inflated claims.
@@ -648,29 +649,27 @@ export default function HomePage() {
               don&rsquo;t. Real proof gets added when verified. Until then,
               this section tells you what we won&rsquo;t do.
             </p>
-            <ul className="mt-7 space-y-3">
+            <ul className="mt-8 grid grid-cols-2 gap-3 text-left">
               {[
                 'No invented results or rented testimonials',
-                'No numbers we can’t back with a source',
-                '“As featured in” strips we didn’t earn',
-                'No guarantees we can’t actually enforce',
-              ].map((line) => (
-                <li key={line} className="flex items-start gap-2 text-sm leading-relaxed text-[color:var(--text-body)]">
-                  <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--blue-system)]" aria-hidden />
-                  <span>{line}</span>
+                "No numbers we can't back with a source",
+                '"As featured in" strips we didn\'t earn',
+                "No guarantees we can't actually enforce",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-muted">
+                  <span aria-hidden className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  {item}
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Live Google reviews surface: currently renders the neutral
-              trust fallback per docs/site-os/inputs/do-not-invent-rules.md.
-              When verified GBP data lands, this surface automatically swaps
-              to real review cards. */}
-          <div>
-            <GoogleReviewsSection variant="carousel" />
-          </div>
         </div>
+
+        {/* Full-bleed marquee — no site-container wrapper here so it spans edge-to-edge */}
+        <div className="mt-12">
+          <GoogleReviewsSection variant="marquee" />
+        </div>
+
       </section>
 
       {/* ───────────────── 11. FAQ ───────────────── */}
