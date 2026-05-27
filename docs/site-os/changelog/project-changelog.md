@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — /industries/hospitality-events Level 4 copy rewrite
+- type: seo
+- author: Sirius Systems / Claude Code
+- changes: Replaced scaffold DATA object with approved Level 4 SEO/AEO copy
+  package. Updated metaTitle (58 chars — trimmed from the 68-char overage
+  flagged in Phase 6 QA; user supplied the corrected trim mid-task after
+  the originally supplied "approved" title still measured 68 chars),
+  metaDescription (151 chars), headline, subheadline, heroHighlights,
+  problemHeadline, problems, systemsHeadline, systemsCopy,
+  subVerticalsHeadline, subVerticalsCopy, 4 featured + 9 compact
+  sub-verticals, 5 FAQs, ctaHeadline, ctaBody, ctaPrimaryLabel. Removed
+  TODO comment on booking platforms FAQ — replaced with honest scoped
+  answer in FAQ 5 ("Do you work with solo event planners and small
+  venues, or only larger operations?"). Schema block (webPage,
+  breadcrumbList, faqPage) unchanged. FAQPage Question.name strings
+  remain byte-identical with the visible faqs[].q strings via the
+  shared DATA.faqs reference. tsc clean. next build clean (41 routes).
+- files: app/industries/hospitality-events/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: This commit resolves the Phase 6 QA metaTitle overage for this
+  page (previously 68 chars, now 58). Final metaTitle:
+  "Hospitality Automation: Booking & Reviews | Sirius Systems". No
+  AggregateRating / Review / LocalBusiness / Organization / Product /
+  Offer schema. No invented stats, ratings, testimonials, guarantees,
+  or named platform claims. Do-not-invent rules honored throughout.
+
+---
+
 ## 2026-05-27 — VS Code project audit (pre-Phase 7)
 - type: audit
 - author: Sirius Systems / Claude Code
