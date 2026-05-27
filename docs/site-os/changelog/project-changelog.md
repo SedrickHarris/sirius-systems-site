@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — Fix: 404 blog link + QA scripts committed
+- type: fix
+- author: Sirius Systems / Claude Code
+- changes: Resolved stale TODO in app/not-found.tsx — blog shipped
+  2026-05-27 so the TODO comment and the /contact href placeholder are
+  replaced with four navigation options: home, services, industries,
+  blog, contact us. No other changes to the 404 page (H1, eyebrow,
+  metadata export, and Section wrapper untouched). Also committed the
+  previously untracked QA utility script scripts/qa-metadata-audit.mjs
+  (metadata length audit helper from the VS Code audit session). Note:
+  scripts/qa-phase6-checks.mjs was already committed as 9d7cdc9 during
+  the VS Code project audit run earlier today; this commit only adds
+  qa-metadata-audit.mjs to fully resolve the audit report's
+  scripts/-untracked items. tsc clean. next build clean (41 routes,
+  /blog and /blog/welcome both still prerendering as static).
+- files: app/not-found.tsx,
+         scripts/qa-metadata-audit.mjs,
+         docs/site-os/changelog/project-changelog.md
+- notes: VS Code audit items resolved (not-found TODO + both scripts/
+  helpers tracked). Remaining pre-Phase 7 decisions: logo variants
+  (public/images/logos/ — 9 untracked files), GHL_WEBHOOK_URL env-var
+  migration (post-launch candidate). The 5 orphaned components in
+  components/site/ (CategoryCard, Container, CTACard, CTASection,
+  HowItWorksSteps) and the 4 industry-page TODOs gated on client CRM
+  confirmation remain informational, not Phase 7 blockers.
+
+---
+
 ## 2026-05-27 — /industries/hospitality-events Level 4 copy rewrite
 - type: seo
 - author: Sirius Systems / Claude Code
