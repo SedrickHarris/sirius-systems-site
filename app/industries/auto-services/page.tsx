@@ -10,7 +10,7 @@ const DATA: IndustryPageData = {
   slug: 'auto-services',
 
   metaTitle:
-    'Auto Shop Automation: Reviews & CRM | Sirius Systems',
+    'Auto Shop Automation: Booking, Reviews, CRM | Sirius Systems',
 
   metaDescription:
     'Missed-call recovery, review automation, appointment booking, and interval follow-up for auto repair shops, detailers, tire shops, and mobile mechanics.',

@@ -10,7 +10,7 @@ const DATA: IndustryPageData = {
   slug: 'healthcare-medical',
 
   metaTitle:
-    'AI Automation for Medical Practices | Sirius Systems',
+    'Medical Practice Scheduling & Reviews | Sirius Systems',
 
   metaDescription:
     'Appointment automation, AI scheduling, and review systems for dental, chiropractic, physical therapy, and medical practices.',

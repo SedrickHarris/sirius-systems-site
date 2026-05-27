@@ -10,7 +10,7 @@ const DATA: IndustryPageData = {
   slug: 'construction-contractors',
 
   metaTitle:
-    'Contractor Automation Systems | Sirius Systems',
+    'Contractor Automation: Estimates & Reviews | Sirius Systems',
 
   metaDescription:
     'Lead follow-up, estimate automation, CRM, and review systems for general contractors, remodelers, painters, flooring companies, and specialty trades.',

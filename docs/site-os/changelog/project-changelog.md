@@ -15,6 +15,32 @@ Format per entry:
 
 ---
 
+## 2026-05-27 — Industry hub metaTitle cleanup (4 pages)
+- type: seo
+- author: Sirius Systems / Claude Code
+- changes: Refreshed metaTitle on 4 industry hub pages to specific,
+  outcome-led versions all ≤ 60 chars.
+  - construction-contractors: `Contractor Automation Systems | Sirius Systems`
+    (46, generic) → `Contractor Automation: Estimates & Reviews | Sirius Systems` (59).
+  - auto-services: `Auto Shop Automation: Reviews & CRM | Sirius Systems`
+    (52) → `Auto Shop Automation: Booking, Reviews, CRM | Sirius Systems` (60).
+  - beauty-wellness: `Salon & Spa Booking Automation | Sirius Systems`
+    (48) → `Beauty & Wellness Booking & Reviews | Sirius Systems` (52).
+  - healthcare-medical: `AI Automation for Medical Practices | Sirius Systems`
+    (53, generic pattern) → `Medical Practice Scheduling & Reviews | Sirius Systems` (54).
+  metaDescription, page copy, and schema untouched on all 4 pages.
+  docs/seo/metadata-draft.md updated to match. tsc clean. next build clean.
+- files: app/industries/construction-contractors/page.tsx,
+  app/industries/auto-services/page.tsx,
+  app/industries/beauty-wellness/page.tsx,
+  app/industries/healthcare-medical/page.tsx,
+  docs/seo/metadata-draft.md,
+  docs/site-os/changelog/project-changelog.md
+- notes: Task spec's "OLD" titles were stale — actual current titles in
+  the files were already ≤ 60. Updated approved NEW phrasings each
+  exceeded 60 chars on first pass (68/61/64/66) and were trimmed per
+  Step 4 authority while preserving the approved outcome verbs.
+
 ## 2026-05-26 — GHL calendar iframe white strip fixed
 
 - type: fix

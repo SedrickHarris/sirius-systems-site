@@ -109,9 +109,9 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Description:** `Missed-call recovery, appointment booking, and automated review requests for home service businesses: plumbers, HVAC, roofers, and 16 more trades.`
 
 ### `/industries/construction-contractors`
-- **Title:** `Contractor Automation Systems | Sirius Systems`
+- **Title:** `Contractor Automation: Estimates & Reviews | Sirius Systems`
 - **Description:** `Lead follow-up, estimate automation, CRM, and review systems for general contractors, remodelers, painters, flooring companies, and specialty trades.`
-- **Notes:** Renamed from `/industries/contractors` on 2026-05-23. 301 redirect from the old slug lives in `public/_redirects`.
+- **Notes:** Renamed from `/industries/contractors` on 2026-05-23. 301 redirect from the old slug lives in `public/_redirects`. Title refreshed 2026-05-27 (outcome-led; previous title was generic).
 
 ### `/industries/professional-services`
 - **Title:** `Professional Services Automation | Sirius Systems`
@@ -119,18 +119,19 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Notes:** Level 4 copy shipped 2026-05-23. Title 49 chars; description 150 chars. Refocused away from healthcare-style sub-verticals (those now live on `/industries/healthcare-medical`); featured set is Law/CPA/Financial Planning/Insurance, compact set is Business Consultants/Marketing & Creative Agencies/HR & Recruiting/IT Consultants & MSPs.
 
 ### `/industries/auto-services`
-- **Title:** `Auto Services Automation: Booking, Reviews & CRM | Sirius Systems`
+- **Title:** `Auto Shop Automation: Booking, Reviews, CRM | Sirius Systems`
 - **Description:** `Appointment booking automation, AI chatbots, review systems, and CRM for auto repair shops, detailers, tire shops, body shops, and other auto service businesses.`
-- **Notes:** Pre-Level 5 copy. Pending SEO rebuild.
+- **Notes:** Pre-Level 5 copy. Pending SEO rebuild. Title refreshed 2026-05-27 (trimmed under 60 chars).
 
 ### `/industries/beauty-wellness`
-- **Title:** `Beauty & Wellness Automation: Booking, Reviews & AI | Sirius Systems`
+- **Title:** `Beauty & Wellness Booking & Reviews | Sirius Systems`
 - **Description:** `Appointment booking automation, rebooking flows, review systems, and AI chatbots for salons, med spas, personal trainers, day spas, and other beauty and wellness businesses.`
-- **Notes:** Pre-Level 5 copy. Pending SEO rebuild.
+- **Notes:** Pre-Level 5 copy. Pending SEO rebuild. Title refreshed 2026-05-27 (trimmed under 60 chars).
 
 ### `/industries/healthcare-medical`
-- **Title:** `AI Automation for Medical Practices | Sirius Systems`
+- **Title:** `Medical Practice Scheduling & Reviews | Sirius Systems`
 - **Description:** `Appointment automation, AI scheduling, and review systems for dental, chiropractic, physical therapy, and medical practices.`
+- **Notes:** Title refreshed 2026-05-27 (moved off the generic "AI Automation for X" pattern).
 
 ### `/industries/real-estate-property`
 - **Title:** `AI Lead Follow-Up for Real Estate Agents | Sirius Systems`
@@ -206,3 +207,4 @@ OG image generation strategy lives in `docs/brand/image-prompt-bank.md`.
 | 2026-05-20 | Initial drafts for all Phase 1 pages. Refine in QA pass after final positioning line is confirmed. |
 | 2026-05-20 | Industry metadata rewritten for the 5 confirmed hubs. Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` removed. New title/description drafts added for `professional-services`, `auto-services`, `beauty-wellness`. |
 | 2026-05-23 | Industry section restructured for the 12-hub taxonomy. `contractors` renamed to `construction-contractors`. 7 new industry sections added: `healthcare-medical`, `real-estate-property`, `hospitality-events`, `education-childcare`, `community-faith-nonprofit`, `retail-local-commerce`, `technology-b2b`. Source-of-truth note added: industry page files in `app/industries/<slug>/page.tsx` win when they disagree with this doc. Values mirrored from current production for `/industries`, `home-services`, `construction-contractors`, `healthcare-medical`, `real-estate-property` (Level 5 copy shipped); remaining seven hubs flagged as pre-Level-5 / pending SEO rebuild. |
+| 2026-05-27 | Industry hub metaTitle cleanup. Refreshed `construction-contractors`, `auto-services`, `beauty-wellness`, `healthcare-medical` to specific, outcome-led titles all ≤ 60 chars. Descriptions, page copy, and schema untouched. |

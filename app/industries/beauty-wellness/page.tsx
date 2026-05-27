@@ -9,7 +9,7 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 const DATA: IndustryPageData = {
   slug: 'beauty-wellness',
 
-  metaTitle: 'Salon & Spa Booking Automation | Sirius Systems',
+  metaTitle: 'Beauty & Wellness Booking & Reviews | Sirius Systems',
 
   metaDescription:
     'Automated booking, rebooking, review requests, and client retention for hair salons, med spas, day spas, and fitness studios. Built to run while you work.',
