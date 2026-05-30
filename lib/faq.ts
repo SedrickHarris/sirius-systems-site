@@ -34,8 +34,8 @@ export const HOME_FAQ: QA[] = [
     a: 'Twenty minutes. We ask where leads, reviews, and follow-up are leaking and map the gaps in your current setup. You leave with a clear picture of the order of operations whether or not we end up working together. There is no charge for the call.',
   },
   {
-    q: 'How does Sirius Systems handle reputation management?',
-    a: 'Reputation management at Sirius Systems means building a system that earns reviews consistently after every completed job, responds to every review in your business voice, and monitors what is being said across platforms. Reviews earned by the acquisition system feed back into your Google Business Profile and strengthen your local search signals. The reputation system and the local search system are connected, not separate.',
+    q: 'How do I know if my business needs this?',
+    a: "If you are losing leads because calls go unanswered, follow-up is inconsistent, reviews are not coming in automatically, or your website does not book appointments — the system addresses all of those gaps. The audit call maps exactly which ones apply to your business specifically.",
   },
   {
     q: 'What is the all-in-one business growth system?',

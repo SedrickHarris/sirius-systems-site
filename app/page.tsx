@@ -35,12 +35,12 @@ import { getSummary } from '@/lib/google-reviews'
 export const metadata = {
   title: 'AI Automation for Local Service Businesses | Sirius Systems',
   description:
-    'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses — so leads get captured, jobs get booked, and reviews keep coming automatically.',
+    'Sirius Systems helps local service businesses capture leads, automate follow-up, book more appointments, and grow reviews — without adding headcount.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'AI Automation for Local Service Businesses | Sirius Systems',
     description:
-      'Sirius Systems builds AI automation, smart websites, and reputation systems for local service businesses — so leads get captured, jobs get booked, and reviews keep coming automatically.',
+      'Sirius Systems helps local service businesses capture leads, automate follow-up, book more appointments, and grow reviews — without adding headcount.',
     url: '/',
   },
 }
