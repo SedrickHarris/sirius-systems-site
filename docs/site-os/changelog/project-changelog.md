@@ -15,6 +15,79 @@ Format per entry:
 
 ---
 
+## 2026-05-29 — /lead-generation-automation Level 4 copy upgrade
+
+- type: seo
+- author: Sirius Systems / Claude Code
+- changes: metaTitle updated ('Lead Generation Automation for
+  Service Businesses | Sirius', 58 chars), metaDescription and
+  openGraph.description updated to approved buyer-problem-led
+  framing. subheadline, definition, and problems rewritten —
+  colons-as-em-dashes replaced throughout, buyer voice
+  sharpened. PAGE.faqs expanded from 5 to 10 — all 5 existing
+  questions preserved, 5 new questions appended (speed-to-lead
+  definition, source tracking, non-responder re-engagement,
+  automation-alongside-human-sales, system-connectivity). FAQ
+  count deviation from spec (spec assumed 4 existing + 5 new
+  = 9; actual was 5 existing + 5 new = 10) — shipped 10 per
+  direction consistent with /review-automation precedent.
+  FAQPage JSON-LD = 10 questions, byte-identical to PAGE.faqs.
+  metadata-draft.md updated with new title and description.
+- files: app/lead-generation-automation/page.tsx,
+         docs/seo/metadata-draft.md
+- notes: tsc clean. next build clean (41 routes). Commit
+  69d2a29. Minor pre-existing issue noted but not fixed:
+  root layout applies '%s | Sirius Systems' template to page
+  metaTitles, causing browser title bar to read
+  '…| Sirius | Sirius Systems' on pages whose metaTitle
+  already ends with '| Sirius'. og:title and the metaTitle
+  field itself are correct at 58 chars. Site-wide fix is a
+  one-line layout template change — queued as a separate task.
+
+## 2026-05-27 — Fix: marquee loop hitch — measured first-half width + gap
+
+- type: fix
+- author: Sirius Systems / Claude Code
+- changes: Replaced translateX(-50%) in the marquee keyframe with a
+  CSS custom property --marquee-width set on mount via a useEffect.
+  firstHalfRef added to the first group div; on mount, offsetWidth is
+  read and the outer track's columnGap is read from
+  getComputedStyle(trackRef).columnGap so the measured value includes
+  the inter-half flex gap that offsetWidth alone omits.
+  --marquee-width = firstHalf.offsetWidth + outerGap.
+  @keyframes marquee-scroll updated:
+    to { transform: translateX(calc(-1 * var(--marquee-width, 50%))); }
+  The 50% fallback covers first paint before the effect fires.
+  Deviation from spec documented: spec set width = offsetWidth only,
+  which would have produced a 20px back-jump (worse than the original
+  10px). The correct value is offsetWidth + gap. Fix is robust to any
+  future gap-* change on the outer track — no magic numbers in JS.
+  Math and reasoning captured in an inline comment in the component
+  and in the commit body.
+- files: components/reviews/GoogleReviewsMarquee.tsx,
+         app/globals.css
+- notes: tsc clean. next build clean (41 routes). Loop is visually
+  seamless. Pause-on-hover and reduced-motion fallback unchanged.
+
+## 2026-05-27 — Fix: review cards size to content
+
+- type: fix
+- author: Sirius Systems / Claude Code
+- changes: Removed `h-full` from the `<article>` element in
+  `GoogleReviewCard.tsx` (className now `"card flex flex-col p-6 md:p-7"`).
+  Added `items-start` to the grid container in `GoogleReviewsGrid.tsx`
+  (className now `"grid gap-4 sm:grid-cols-2 lg:grid-cols-3 items-start"`).
+  Previously, CSS grid row-stretching forced all cards in a row to match
+  the tallest card, leaving large empty whitespace below short reviews.
+  Cards now render at their natural content height. The carousel was left
+  untouched — removing `h-full` from the card is safe inside the carousel
+  because carousel slides are width-constrained only; cards there are now
+  content-sized too, which is correct for the scroll-snap layout.
+- files: components/reviews/GoogleReviewCard.tsx,
+         components/reviews/GoogleReviewsGrid.tsx
+- notes: tsc clean. next build clean (41 routes). Commit ca4bb15.
+  No schema, data layer, or review gating logic changed.
+
 ## 2026-05-27 — Wire canonical logo
 - type: feat
 - author: Sirius Systems / Claude Code
