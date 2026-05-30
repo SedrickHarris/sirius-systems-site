@@ -72,7 +72,8 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/review-automation`
 - **Title:** `Review Automation: Earn More Reviews on Autopilot | Sirius Systems`
-- **Description:** `Review automation that asks the right customer at the right time on the right channel — without spamming or sounding scripted. Built by Sirius Systems.`
+- **Description:** `Automated review requests sent at the right moment after every job — so your Google review count grows consistently without anyone on your team having to remember to ask.`
+- **Notes:** Level 4 copy shipped 2026-05-29. metaDescription updated to the value above (mirrored to openGraph.description and the webPage/serviceSchema descriptions, all of which read PAGE.metaDescription). subheadline, definition, and problems rewritten to Level 4; FAQ array expanded from 5 to 10 (5 originals preserved exactly, 5 new appended). Note: the task spec assumed 4 existing FAQs and a target of 9; the page actually had 5 existing, so the faithful result preserving all originals + appending the approved 5 is 10 (confirmed with client). metaTitle, steps, features, outcomes, relatedSlugs, industryFit, schema block unchanged.
 
 ### `/ai-review-responses`
 - **Title:** `AI Review Responses: On-Brand Replies at Scale | Sirius Systems`

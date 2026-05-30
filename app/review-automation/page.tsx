@@ -7,19 +7,19 @@ const PAGE = {
   slug: 'review-automation',
   metaTitle: 'Review Automation for Service Businesses | Sirius Systems',
   metaDescription:
-    'Review automation that asks the right customer at the right time and channel — without spam or sounding scripted. Built for local service businesses.',
+    'Automated review requests sent at the right moment after every job — so your Google review count grows consistently without anyone on your team having to remember to ask.',
   eyebrow: 'Review Automation',
   headline: 'You are completing jobs that never turn into reviews. That is a system problem.',
   subheadline:
-    'Review automation sends the ask at the right moment, on the right channel, every time a job closes. Review volume grows with your job volume.',
+    'Every completed job is a review opportunity. Most businesses convert one in ten, not because their customers are unhappy, but because no one asked at the right moment. Review automation fixes the ask — timing, channel, and message — so every job has a chance to become a public signal that brings the next customer in.',
   glyphVariant: 'arc' as const,
   definition:
-    'Review automation for service businesses means triggering review requests automatically after a completed job: via SMS or email: so that asking for reviews happens consistently every time, not only when someone remembers.',
+    'Review automation for local service businesses is a system that sends a review request to the customer automatically after a job is completed — triggered by the job completion event in your CRM or scheduling tool, timed to when the experience is freshest, and configured to route to Google by default. It removes the manual ask from your team\'s workflow and replaces inconsistent, occasional outreach with a sequence that fires after every job without exception.',
   problems: [
-    'You finish a job, the customer is happy, and no one asks for a review before the moment passes.',
-    "Manual review requests are inconsistent: some customers get asked, most don't.",
-    'Your review count grows slowly while competitors with the same quality of work have far more.',
-    "Generic review request templates get ignored because they don't sound like your business.",
+    'You finish a job, the customer is happy, and they never leave a review — not because they wouldn\'t, but because no one asked them within 24 hours while the experience was still fresh.',
+    'Your team has tried asking customers in person. It works sometimes. It doesn\'t scale, it depends on who\'s on the job, and it stops entirely when things get busy.',
+    'Your competitor has more reviews than you. They almost certainly have a system. You don\'t — which means the gap widens every week, not just because they\'re getting more reviews, but because you\'re falling further behind on a local ranking factor.',
+    'You have no way to know which jobs turned into reviews and which didn\'t. There\'s no trigger, no tracking, and no way to close the loop without someone manually checking.',
   ],
   steps: [
     {
@@ -84,6 +84,26 @@ const PAGE = {
     {
       q: 'How does this connect to my CRM or job management tool?',
       a: 'The review request trigger connects to the job completion event in your CRM or scheduling tool. When a job is marked done, the sequence starts. We configure the integration during setup: no manual step required from your team.',
+    },
+    {
+      q: 'Does review volume actually affect my Google ranking?',
+      a: 'Yes. Review count, recency, rating, and response rate are confirmed local ranking factors for Google Maps and the local pack. A business with more recent reviews from real customers consistently outranks a business with fewer or older reviews at the same quality level. Review automation addresses the volume and recency dimensions directly — by making sure every completed job produces a request, not just the ones where someone remembered to ask.',
+    },
+    {
+      q: 'What is the best time to send a review request?',
+      a: 'Within 24 hours of job completion, while the experience is fresh and the customer still has your business top of mind. The exact timing is configured based on your job type — a same-day service might trigger a request that evening, while a multi-day project might trigger it the morning after the final walkthrough. The system is set up around your workflow, not a generic schedule.',
+    },
+    {
+      q: 'Can I customize the message the customer receives?',
+      a: 'Yes. The review request message is written in your voice — we configure the template during setup. The message references the specific job or service when that data is available from your CRM. It does not feel like a generic bulk email because it is tied to a real transaction.',
+    },
+    {
+      q: 'How does review automation connect to the rest of the reputation system?',
+      a: 'Review automation handles the acquisition side — getting reviews from completed jobs. AI review responses handle the engagement side — responding to every review in your voice. Competitor review benchmarking shows how your growing profile compares to the businesses ranking above you. The three pieces run together as one reputation system, each one strengthening the signal the others send to Google and to prospective customers.',
+    },
+    {
+      q: 'What happens if a customer ignores the first request?',
+      a: 'A single follow-up message fires after a configured interval — typically 48 to 72 hours. The sequence stops after the follow-up whether or not the customer responds, so it stays persistent enough to work without feeling like repeated spam. If the customer had a bad experience and signals dissatisfaction, the review request is withheld entirely and a service recovery sequence starts instead.',
     },
   ],
 }
