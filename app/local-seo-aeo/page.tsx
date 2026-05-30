@@ -7,19 +7,19 @@ const PAGE = {
   slug: 'local-seo-aeo',
   metaTitle: 'Local SEO & AEO for Service Businesses | Sirius Systems',
   metaDescription:
-    "Local SEO and AEO that ranks your business in Google's map pack and AI answer engines like ChatGPT, Perplexity, and Google AI Overviews.",
+    'Local SEO and AEO for service businesses — rank in Google Maps and the local pack, and get cited by ChatGPT, Perplexity, and Google AI Overviews when customers ask.',
   eyebrow: 'Local SEO & AEO',
   headline: 'Show up in Google. Show up in AI answers. Both matter now.',
   subheadline:
-    'Customers are searching on Google and asking AI. If you are not optimized for both, you are invisible to half your market.',
+    'Customers search Google Maps for your service. They also ask ChatGPT, Perplexity, and Google AI Overviews. Those are two different optimization problems. We solve both — the local pack signals that drive Maps rankings and the content structure that makes AI engines cite you instead of your competitor.',
   glyphVariant: 'wave' as const,
   definition:
-    'Local SEO and AEO for service businesses means optimizing your web presence to rank in Google local search and Maps results, and structuring your content so AI answer engines: ChatGPT, Perplexity, Google AI Overviews: cite your business when customers ask relevant questions.',
+    'Local SEO for service businesses means optimizing your Google Business Profile, website, citations, and content so your business appears in the local pack and Maps when customers search for what you offer in your area. AEO — answer engine optimization — means structuring that same content with clear definitions, direct-answer FAQ sections, and schema markup so AI systems like ChatGPT, Perplexity, and Google AI Overviews can extract and cite your business when customers ask relevant questions. The two disciplines overlap significantly: a well-optimized local SEO foundation makes AEO easier, and AEO content signals reinforce local SEO authority.',
   problems: [
-    "Your business doesn't appear in the local pack for the service terms your customers actually search.",
-    'Competitors with comparable or worse reviews outrank you because their technical SEO foundation is stronger.',
-    "Your content isn't structured for AI answer engines: so when customers ask ChatGPT or Perplexity for recommendations, you're not in the answer.",
-    'You have no visibility into which search terms are driving calls and bookings versus just impressions.',
+    'Your business does not appear in the local pack for the service terms your customers search. A competitor with fewer reviews and a worse website outranks you because their technical SEO foundation is stronger.',
+    'You have invested in a website but it is not producing local search traffic. The site describes your services but it is not structured to tell Google or AI engines where you operate, what you do, and why you are the right answer.',
+    'When a customer asks ChatGPT or Perplexity \'who does HVAC repair near me\' or \'best plumber in Las Vegas,\' your business is not in the answer. That is a new kind of invisibility that most local businesses have not started solving yet.',
+    'You have no visibility into which search terms are actually driving calls and bookings versus which are just generating impressions. Without that data, every SEO decision is a guess.',
   ],
   steps: [
     {
@@ -84,6 +84,22 @@ const PAGE = {
     {
       q: 'How does local SEO connect to the rest of the system?',
       a: 'Local SEO is the top of the funnel: it gets customers to your website or GBP. From there, your smart website, chatbot, and booking automation convert that traffic into booked jobs. SEO without a conversion layer leaks leads; automation without SEO starves the pipeline.',
+    },
+    {
+      q: 'What is GEO — generative engine optimization — and is it different from AEO?',
+      a: 'GEO and AEO overlap significantly. AEO focuses on structuring your existing content — definitions, FAQ sections, schema — so AI engines can extract and cite it. GEO adds a broader layer: building consistent entity signals across your website, Google Business Profile, citations, and off-site mentions so AI systems recognize your business as a credible, well-established entity in your category. For local service businesses, the practical difference is small — a strong AEO foundation covers most of the GEO requirements automatically.',
+    },
+    {
+      q: 'How do I know if my business is showing up in ChatGPT or Perplexity?',
+      a: 'Manual checks are the most reliable method right now — searching for the queries your customers would use and seeing whether your business appears in the response. We set up a monitoring process during onboarding that tracks your visibility across the main AI answer engines and flags changes over time. There is no equivalent of Google Search Console for AI citations yet, so manual and semi-automated tracking is the current standard.',
+    },
+    {
+      q: 'Does local SEO work differently for businesses without a physical storefront?',
+      a: 'Yes. Service area businesses — where you travel to the customer rather than operating from a fixed location — are optimized differently than storefront businesses. GBP is configured as a service area business, which affects how Maps displays your listing. On-site content and schema are structured around the areas you serve rather than a single address. The core signals — reviews, citations, content authority — are the same.',
+    },
+    {
+      q: 'What is the difference between local SEO and national SEO?',
+      a: 'Local SEO is optimized for geographic queries — searches with location intent or searches where Google infers local intent based on your IP. The ranking factors include proximity, GBP completeness, review signals, and local citations. National SEO competes on domain authority and content depth across topics regardless of geography. For service businesses that operate in a defined area, local SEO produces higher-intent traffic because the person searching is physically in a position to hire you.',
     },
   ],
 }

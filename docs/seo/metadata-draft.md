@@ -86,7 +86,8 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/local-seo-aeo`
 - **Title:** `Local SEO & AEO for Service Businesses | Sirius Systems`
-- **Description:** `Local SEO and AEO (Answer Engine Optimization) for service businesses — ranking in Google AND in AI answers like ChatGPT, Perplexity, and AI Overviews.`
+- **Description:** `Local SEO and AEO for service businesses — rank in Google Maps and the local pack, and get cited by ChatGPT, Perplexity, and Google AI Overviews when customers ask.`
+- **Notes:** Level 4 copy shipped 2026-05-29. metaDescription updated to the value above (mirrored to openGraph.description and the webPage/serviceSchema descriptions, all of which read PAGE.metaDescription). subheadline, definition, and problems rewritten to Level 4; FAQ array expanded from 5 to 9 (5 originals preserved exactly, 4 appended). metaTitle, eyebrow, headline, steps, features, outcomes, relatedSlugs, industryFit, schema block unchanged.
 
 ### `/competitor-review-benchmarking`
 - **Title:** `Competitor Review Benchmarking | Sirius Systems`
