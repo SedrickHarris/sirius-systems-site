@@ -8,19 +8,19 @@ const PAGE = {
   metaTitle:
     'Appointment Booking Automation | Sirius Systems',
   metaDescription:
-    'Automated booking flows that go from inquiry to confirmed appointment without you in the loop: connected to your calendar, CRM, and reminder sequences.',
+    'Automated booking flows that go from inquiry to confirmed appointment — connected to your calendar, CRM, and reminder sequences — without manual coordination.',
   eyebrow: 'Appointment Booking',
   headline: 'From inquiry to confirmed appointment. Without you in the loop.',
   subheadline:
     'Every unconfirmed inquiry is a job that might not happen. Booking automation closes that gap without you in the loop.',
   glyphVariant: 'arc' as const,
   definition:
-    'Appointment booking automation for service businesses means connecting your lead capture, calendar, and confirmation system so that bookings happen without a human coordinating each one: from the first inquiry to the confirmed slot.',
+    'Appointment booking automation for service businesses means connecting your lead capture, calendar, and confirmation system so that a qualified lead can select an available slot, receive a confirmation, and land in your CRM pipeline — all without a team member coordinating the exchange. The system pulls live availability from your calendar, so customers only see real open slots, and every confirmed booking triggers the right follow-up sequence automatically.',
   problems: [
-    'Every booking requires back-and-forth messages or calls to find a time that works.',
-    "Leads who can't reach you immediately book a competitor who makes it easier.",
-    'No-shows happen because reminders are manual and inconsistent.',
-    "Your calendar lives in one place and your CRM in another: confirmations don't sync.",
+    'Every booking requires a back-and-forth exchange — you send times, they respond, you confirm — and by the time you reply, the lead has already called someone else who made it easier.',
+    'Leads who arrive after hours submit a form and wait. Your competitor who has self-booking captures that job overnight. You find out the next morning when you check your inbox.',
+    'No-shows happen because reminders are inconsistent — sent when someone remembered to send them, skipped when things got busy. A customer who forgets costs you a slot that could have been filled.',
+    'Your calendar and your CRM are two separate places. A booking confirmed in one does not update the other unless someone manually bridges them. Eventually something falls through the gap.',
   ],
   steps: [
     {
@@ -85,6 +85,22 @@ const PAGE = {
     {
       q: 'Can it handle deposits or pre-job payments?',
       a: 'Yes: where your payment processor supports it, we can add a deposit step to the booking flow. The customer pays at booking, your team is notified, and the job is confirmed in one sequence.',
+    },
+    {
+      q: 'What happens to a lead who starts booking but doesn\'t finish?',
+      a: 'We configure an abandoned booking recovery sequence — if a lead starts the booking flow but does not complete it, a follow-up message fires after a set interval with a direct link back to the scheduling page. Most businesses recover a meaningful portion of these leads without any manual outreach.',
+    },
+    {
+      q: 'Can different job types have different booking flows?',
+      a: 'Yes. A free estimate, a paid service call, and a recurring maintenance appointment can each have their own booking form, their own availability rules, and their own confirmation sequence. We configure each flow based on your job types so the customer experience matches what they are actually scheduling.',
+    },
+    {
+      q: 'How does booking automation connect to my chatbot or voicebot?',
+      a: 'The chatbot on your website and the voicebot on your phone line both route qualified leads directly to the booking flow. A visitor who chats through their service need gets handed off to the scheduling page at the right moment in the conversation. A caller who reaches the voicebot after hours gets texted a booking link immediately. Both capture jobs that would otherwise wait until the next business day.',
+    },
+    {
+      q: 'How does appointment booking automation connect to the rest of the growth system?',
+      a: 'Booking automation is the conversion layer. Lead generation and AI chatbots fill the top of the funnel. CRM automation manages what happens after the booking is confirmed — reminders, job updates, pipeline stages. Review automation fires after the job is complete. When booking is automated, the handoff from lead to scheduled job to completed job to review request runs as one connected sequence without manual coordination at any step.',
     },
   ],
 }

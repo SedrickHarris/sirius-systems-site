@@ -57,7 +57,8 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/appointment-booking-automation`
 - **Title:** `Appointment Booking Automation | Sirius Systems`
-- **Description:** `Automated booking flows that go from inquiry to confirmed appointment without you in the loop — connected to your calendar, CRM, and reminders.`
+- **Description:** `Automated booking flows that go from inquiry to confirmed appointment — connected to your calendar, CRM, and reminder sequences — without manual coordination.`
+- **Notes:** Level 4 copy shipped 2026-05-29. metaDescription updated to the value above (mirrored to openGraph.description and the webPage/serviceSchema descriptions, all of which read PAGE.metaDescription). definition and problems rewritten to Level 4; FAQ array expanded from 5 to 9 (5 originals preserved exactly, 4 appended). metaTitle, eyebrow, headline, subheadline, steps, features, outcomes, relatedSlugs, industryFit, schema block unchanged.
 
 ### `/smart-websites`
 - **Title:** `Smart Websites for Service Businesses | Sirius Systems`
