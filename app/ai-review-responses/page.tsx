@@ -7,19 +7,19 @@ const PAGE = {
   slug: 'ai-review-responses',
   metaTitle: 'AI Review Responses for Service Businesses | Sirius Systems',
   metaDescription:
-    'AI-generated review responses in your brand voice — handle every Google review, positive or negative, without writing each one. Built by Sirius.',
+    'AI-generated review responses in your brand voice — so every Google review gets a reply that sounds like your business, not a bot, without your team writing each one.',
   eyebrow: 'AI Review Responses',
   headline: 'Every review deserves a response. Most businesses do not have time to write them.',
   subheadline:
     'AI review responses mean no review sits unanswered. Positive ones get acknowledged, hard ones get handled in your voice, without you writing each one.',
   glyphVariant: 'pulse' as const,
   definition:
-    'AI review responses for service businesses means using an AI system trained on your brand voice to draft replies to every incoming review: positive, neutral, or negative: so that no review goes unanswered and every response sounds like it came from your business.',
+    'AI review responses for service businesses means using an AI system configured to your brand voice to draft a reply to every incoming review — positive, neutral, or negative — so that no review goes unanswered and every response reads like it came from your business, not a template. The system generates the draft; your team approves and publishes, or you configure auto-publish for positive reviews when volume makes manual approval impractical.',
   problems: [
-    "Positive reviews go unacknowledged because responding feels optional when you're busy.",
-    'Negative reviews sit unanswered for days: or forever: because no one knows what to say.',
-    'When you do respond, the tone is inconsistent depending on who wrote it and when.',
-    "Responding to every review manually doesn't scale as volume grows.",
+    'Positive reviews sit without a response because replying feels optional when there are jobs to run. Prospective customers reading your reviews notice which businesses respond and which ones don\'t.',
+    'A one-star review is sitting on your profile right now with no reply. Every day it goes unanswered, it signals to the next person who reads it that you either didn\'t see it or didn\'t care.',
+    'When you do respond, the tone is inconsistent — whoever had five minutes wrote it, in whatever mood they were in. It does not read like the same business every time.',
+    'As review volume grows, manual responses stop being realistic. Automation without a voice profile produces generic copy that makes the situation worse, not better.',
   ],
   steps: [
     {
@@ -83,6 +83,22 @@ const PAGE = {
     {
       q: 'Which platforms does this cover?',
       a: 'Google is the primary platform for most local service businesses. We also cover Facebook and can integrate additional platforms where your reviews are most active. The setup is configured around where your review volume actually lives.',
+    },
+    {
+      q: 'Does responding to reviews actually affect my Google ranking?',
+      a: 'Yes. Google has confirmed that responding to reviews is a signal it considers for local search rankings. Response rate and response recency both factor into how Google evaluates your business\'s engagement. Beyond rankings, responding to reviews influences the decision of the next prospective customer who reads your profile — a business that engages with feedback reads as more trustworthy than one that ignores it.',
+    },
+    {
+      q: 'What makes an AI review response different from a copy-paste template?',
+      a: 'A template is static — every positive review gets the same reply. An AI response system is trained on your voice and configured by review category, so a glowing five-star response differs from a lukewarm four-star, which differs from a complaint. The variation makes responses feel considered rather than automated, even when they are generated at scale.',
+    },
+    {
+      q: 'Can the AI reference the specific service or job in the response?',
+      a: 'Yes, when that data is available from your review platform or CRM. When a customer mentions the service they received, the response can acknowledge it specifically. When no detail is available, the response is warm and personal in tone without fabricating specifics it cannot know.',
+    },
+    {
+      q: 'How does this connect to the rest of the reputation system?',
+      a: 'AI review responses handle the engagement layer — making sure every review gets a reply in your voice. Review automation handles the acquisition layer — making sure every completed job produces a review request. Competitor review benchmarking shows how your response rate and volume compare to the businesses ranking above you. The three services run as one reputation system, each one reinforcing the signals the others build.',
     },
   ],
 }

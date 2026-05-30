@@ -77,7 +77,8 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/ai-review-responses`
 - **Title:** `AI Review Responses: On-Brand Replies at Scale | Sirius Systems`
-- **Description:** `AI review responses that sound like your business, not a bot — handling positive, neutral, and tough reviews with consistent tone and policy.`
+- **Description:** `AI-generated review responses in your brand voice — so every Google review gets a reply that sounds like your business, not a bot, without your team writing each one.`
+- **Notes:** Level 4 copy shipped 2026-05-29. metaDescription updated to the value above (mirrored to openGraph.description and the webPage/serviceSchema descriptions, all of which read PAGE.metaDescription). definition and problems rewritten to Level 4; FAQ array expanded from 5 to 9 (5 originals preserved exactly, 4 appended). metaTitle, subheadline, steps, features, outcomes, relatedSlugs, industryFit, schema block unchanged.
 
 ### `/google-business-profile-optimization`
 - **Title:** `Google Business Profile Optimization | Sirius Systems`
