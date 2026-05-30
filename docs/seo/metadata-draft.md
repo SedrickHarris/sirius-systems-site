@@ -65,8 +65,9 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Description:** `A website built to capture leads, qualify visitors, and book jobs automatically — connected to your CRM, chatbot, and follow-up system from day one.`
 
 ### `/lead-generation-automation`
-- **Title:** `Lead Generation Automation | Sirius Systems`
-- **Description:** `Lead generation automation built for local service businesses — paid, organic, and referral funnels wired to your CRM and booking flow.`
+- **Title:** `Lead Generation Automation for Service Businesses | Sirius`
+- **Description:** `Lead generation automation that connects every inbound channel — paid, organic, referral — directly to your CRM and booking flow so no lead waits or gets lost.`
+- **Notes:** Level 4 copy shipped 2026-05-29. metaTitle updated to `Lead Generation Automation for Service Businesses | Sirius` (58 chars, verified) — propagates to openGraph.title and the webPage schema name, both of which read PAGE.metaTitle. metaDescription updated to the value above (mirrored to openGraph.description and the webPage/serviceSchema descriptions, all of which read PAGE.metaDescription). subheadline, definition, and problems rewritten to Level 4. FAQ array expanded from 5 to 10: the spec assumed 4 existing FAQs and a target of 9, but the page actually had 5 existing, so preserving all originals + appending the approved 5 yields 10 (confirmed with client — same call as /review-automation; minor thematic overlap on speed-to-lead and source-tracking accepted). slug, eyebrow, headline, glyphVariant, steps, features, outcomes, relatedSlugs, industryFit, schema block unchanged.
 
 ### `/reputation-management`
 - **Title:** `Reputation Management for Service Businesses | Sirius`
