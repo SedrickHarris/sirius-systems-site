@@ -25,7 +25,7 @@ import {
 import { FAQ } from '@/components/site/FAQ'
 import { GoogleReviewsSection } from '@/components/reviews/GoogleReviewsSection'
 import { JsonLdScript } from '@/components/site/JsonLdScript'
-import { faqPage, webPage } from '@/lib/schema'
+import { faqPage, personSchema, webPage } from '@/lib/schema'
 import { SITE } from '@/lib/site'
 import { servicesByGroup } from '@/lib/services'
 import { INDUSTRIES } from '@/lib/industries'
@@ -136,6 +136,7 @@ export default function HomePage() {
               'https://github.com/SedrickHarris/sirius-systems-site',
             ],
           },
+          personSchema(),
         ]}
       />
 

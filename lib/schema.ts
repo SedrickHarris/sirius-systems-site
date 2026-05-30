@@ -136,3 +136,24 @@ export function articleSchema(fm: PostFrontmatter): JsonLd {
     ...(fm.tags.length > 0 ? { keywords: fm.tags.join(', ') } : {}),
   }
 }
+
+// ── Person ────────────────────────────────────────────────────────────────────
+// Founder entity, linked to the homepage Organization via worksFor @id.
+// No image field: founder headshot is not yet confirmed
+// (content-needed-from-client.md item 1.11). Omit image until provided.
+
+export function personSchema(): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type':    'Person',
+    '@id':      `${SITE.url}/#founder`,
+    name:       'Sedrick Harris',
+    url:        `${SITE.url}/about`,
+    jobTitle:   'Founder',
+    worksFor:   { '@id': `${SITE.url}/#organization` },
+    sameAs: [
+      'https://www.instagram.com/sedrick.h.harris/',
+      'https://github.com/SedrickHarris',
+    ],
+  }
+}

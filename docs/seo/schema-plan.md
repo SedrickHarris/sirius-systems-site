@@ -114,7 +114,6 @@ Template (do not publish until placeholders resolved):
   "@id": "https://siriussys.io/#founder",
   "name": "Sedrick Harris",
   "url": "https://siriussys.io/about",
-  "image": "https://siriussys.io/images/sedrick-harris.jpg",
   "jobTitle": "Founder",
   "worksFor": { "@id": "https://siriussys.io/#organization" },
   "sameAs": [
@@ -124,7 +123,14 @@ Template (do not publish until placeholders resolved):
 }
 ```
 
-> `image` ships only when the headshot is provided. Until then, omit `image`.
+> `image` is omitted until the founder headshot is confirmed
+> (content-needed-from-client.md item 1.11). Add `image` to `personSchema()`
+> in `lib/schema.ts` when the headshot is provided.
+>
+> **Shipped:** `personSchema()` is now emitted as the final item in the
+> homepage `JsonLdScript` array (as of 2026-05-29), linked to the
+> `#organization` LocalBusiness entity via `worksFor`. No `image` field
+> is present, by design.
 
 ## 5. `Service` (on each of the 14 service pages)
 
