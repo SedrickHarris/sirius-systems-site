@@ -174,7 +174,7 @@ export const metadata: Metadata = {
     title: DATA.metaTitle,
     description: DATA.metaDescription,
     url: `/industries/${DATA.slug}`,
-    images: ['/og/default.webp'],
+    images: [{ url: '/images/og/industries-education-childcare.webp', alt: DATA.metaTitle }],
   },
 }
 

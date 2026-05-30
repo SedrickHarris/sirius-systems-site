@@ -113,7 +113,7 @@ export const metadata: Metadata = {
     title: PAGE.metaTitle,
     description: PAGE.metaDescription,
     url: `/${PAGE.slug}`,
-    images: ['/og/default.webp'],
+    images: [{ url: '/images/og/appointment-booking-automation.webp', alt: PAGE.metaTitle }],
   },
 }
 

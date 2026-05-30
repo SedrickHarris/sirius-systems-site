@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     title: PAGE.metaTitle,
     description: PAGE.metaDescription,
     url: `/${PAGE.slug}`,
-    images: ['/og/default.webp'],
+    images: [{ url: '/images/og/all-in-one-business-growth-system.webp', alt: PAGE.metaTitle }],
   },
 }
 

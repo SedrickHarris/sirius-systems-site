@@ -112,7 +112,7 @@ export const metadata: Metadata = {
     title: PAGE.metaTitle,
     description: PAGE.metaDescription,
     url: `/${PAGE.slug}`,
-    images: ['/og/default.webp'],
+    images: [{ url: '/images/og/crm-automation.webp', alt: PAGE.metaTitle }],
   },
 }
 

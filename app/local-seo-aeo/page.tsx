@@ -112,7 +112,7 @@ export const metadata: Metadata = {
     title: PAGE.metaTitle,
     description: PAGE.metaDescription,
     url: `/${PAGE.slug}`,
-    images: ['/og/default.webp'],
+    images: [{ url: '/images/og/local-seo-aeo.webp', alt: PAGE.metaTitle }],
   },
 }
 
