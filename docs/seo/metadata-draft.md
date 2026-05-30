@@ -52,7 +52,8 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/crm-automation`
 - **Title:** `CRM Automation for Service Businesses | Sirius Systems`
-- **Description:** `CRM automation that turns leads into booked jobs without manual follow-up — built and configured by Sirius Systems for your stack.`
+- **Description:** `CRM automation that moves leads through your pipeline automatically — follow-up fires, stages update, and nothing sits waiting for someone to remember to act.`
+- **Notes:** Level 4 copy shipped 2026-05-29. metaDescription updated to the value above (mirrored to openGraph.description and the webPage/serviceSchema descriptions, all of which read PAGE.metaDescription). definition and problems rewritten to Level 4; FAQ array expanded from 5 to 9 (5 originals preserved exactly, 4 appended). The spec supplied 5 candidate FAQs to append "until total = 9"; with 5 existing, the first 4 were used and the 5th ("How does CRM automation connect to the rest of the growth system?") was intentionally omitted to land at 9. metaTitle, eyebrow, headline, subheadline, steps, features, outcomes, relatedSlugs, industryFit, schema block unchanged.
 
 ### `/appointment-booking-automation`
 - **Title:** `Appointment Booking Automation | Sirius Systems`

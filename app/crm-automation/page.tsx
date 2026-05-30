@@ -7,19 +7,19 @@ const PAGE = {
   slug: 'crm-automation',
   metaTitle: 'CRM Automation for Service Businesses | Sirius Systems',
   metaDescription:
-    'CRM automation that moves leads through your pipeline without manual follow-up: built and configured for local service businesses by Sirius Systems.',
+    'CRM automation that moves leads through your pipeline automatically — follow-up fires, stages update, and nothing sits waiting for someone to remember to act.',
   eyebrow: 'CRM Automation',
   headline: 'Leads are slipping because no one followed up. Fix that.',
   subheadline:
     'CRM automation means your pipeline moves on its own. Stages update, follow-ups fire, and nothing sits waiting for someone to remember to act.',
   glyphVariant: 'grid' as const,
   definition:
-    'CRM automation for service businesses means configuring your customer relationship management system to move leads through stages, trigger follow-up sequences, and update records automatically: based on actions taken, not manual entry.',
+    'CRM automation for service businesses means configuring your customer relationship management system to move leads through pipeline stages, trigger follow-up sequences, and update records based on actions taken — not manual entry by your team. When a lead submits a form, books an appointment, or goes quiet for a set number of days, the system acts without anyone having to decide that it should.',
   problems: [
-    'Leads sit in your CRM untouched because no one has time to follow up manually.',
-    'Pipeline stages are wrong because updating them requires someone to remember.',
-    'You have no idea which leads went cold versus which ones just need one more touchpoint.',
-    "Your team enters the same data in multiple places because the systems don't talk to each other.",
+    'You have leads in your CRM that nobody has touched in weeks. They are not lost — they just never got a follow-up because the system waited for someone to send it manually.',
+    'Your pipeline stages are wrong because updating them requires whoever ran the job to remember to log it. By the time you look at the board, the data is three days out of date.',
+    'You have no reliable way to know which leads went cold because they are not interested versus which ones just need one more message sent at the right time.',
+    'Your lead data lives in three places — a form inbox, a spreadsheet, and your CRM — and none of them are in sync because syncing them requires manual work nobody has time for.',
   ],
   steps: [
     {
@@ -84,6 +84,22 @@ const PAGE = {
     {
       q: 'What happens to leads that go quiet?',
       a: "We build re-engagement sequences into the CRM: leads that haven't responded after a set period get a follow-up automatically before they're marked inactive. Most businesses recover a meaningful portion of leads this way.",
+    },
+    {
+      q: 'What does CRM automation actually automate?',
+      a: 'The most common automations for service businesses are: new lead follow-up sequences that start within seconds of a form submission; pipeline stage updates that trigger when a key action happens (quote sent, job booked, job completed); appointment reminders sent to the customer before their scheduled time; re-engagement sequences for leads that have gone quiet; and post-job review requests. Each automation replaces a manual step that would otherwise depend on someone remembering to do it.',
+    },
+    {
+      q: 'How does CRM automation connect to my website and booking system?',
+      a: 'We connect the automation layer to your lead sources — website contact forms, chatbot conversations, phone calls — so every new inquiry creates a CRM record and starts a sequence automatically. On the other end, we connect to your booking or job management tool so completed jobs trigger review requests and pipeline closures without manual input. The CRM becomes the hub everything flows through, not an isolated record-keeping tool.',
+    },
+    {
+      q: 'What if my leads come from multiple channels — calls, forms, referrals?',
+      a: 'Each channel is configured with its own entry point into the CRM. A phone lead enters differently than a form submission, which enters differently than a referral. We map every source during setup so each lead type gets the right follow-up sequence and the right stage assignment from the start.',
+    },
+    {
+      q: 'Can I see which leads are in which stage at any given time?',
+      a: 'Yes — that is one of the core outputs of a properly configured CRM. When automation keeps stages current, the pipeline view becomes accurate in real time instead of reflecting whatever was last manually updated. You can see which leads are active, which are stalled, and which are ready to close without asking your team for a status update.',
     },
   ],
 }
