@@ -12,23 +12,25 @@ const DATA: IndustryPageData = {
   metaDescription:
     'Customer follow-up, review generation, and local search visibility for retail shops, boutiques, pet stores, specialty retailers, and local commerce.',
   eyebrow: 'Retail & Local Commerce',
-  headline: 'The System That Keeps Customers Coming Back and Reviewing',
+  headline: 'Automation for retail shops that depend on reviews and repeat customers.',
   subheadline:
-    'Local retail lives and dies on reputation and repeat business. The shops that grow are the ones with consistent reviews, strong local search visibility, and follow-up systems that bring customers back.',
+    'A customer walks out happy and never reviews you. A past customer forgets you exist. Your Google Business Profile sits half-complete while the shop down the street ranks above you. None of that is a marketing problem — it is a systems problem. We fix the system.',
   heroHighlights: [
     'Review generation after every purchase to build your Google reputation',
     'Customer follow-up automation for repeat business and reactivation',
     'Local search and Google Business Profile optimization for foot traffic',
     'AI-generated review responses to keep your profile active and engaged',
   ],
-  problemHeadline: 'Where local retail and commerce businesses lose customers',
+  problemHeadline: 'Where local retail shops lose the customers they already earned.',
   problems: [
-    'You have happy customers who never leave reviews because no one asks them at the right moment after a purchase or visit.',
-    'Your Google Business Profile is incomplete or inactive, which suppresses your visibility in local search and Maps results.',
-    'There is no follow-up system to bring past customers back, so your retention depends entirely on them choosing to return on their own.',
-    'You have no visibility into your online reputation relative to nearby competitors, so you do not know where you stand or what to prioritize.',
+    'Customers leave satisfied and never leave a review — not because they don\'t want to, but because no one asked them at the right moment. Your competitor with 200 reviews asked. You didn\'t.',
+    'Your Google Business Profile is missing photos, categories, or hours. Every gap is a reason Google ranks you lower than a less-established shop nearby.',
+    'You have no automated way to bring past customers back. Seasonal promotions, new arrivals, and reactivation campaigns require manual effort you don\'t have time for.',
+    'You have no visibility into how your reviews and local search ranking compare to the three or four shops competing for the same customers — so you\'re optimizing blind.',
   ],
-  systemsHeadline: 'The automation stack built for retail and local commerce',
+  systemsHeadline: 'The system retail shops use to earn reviews and bring customers back.',
+  systemsCopy:
+    'Most retail shops lose the compounding value of every satisfied customer — the review they didn\'t leave, the return visit that didn\'t happen, the GBP search that sent them to a competitor. We wire the follow-up, the review ask, and the local search signals into one system so that each customer interaction has a longer tail.',
   serviceSlugs: [
     'reputation-management',
     'review-automation',
@@ -37,7 +39,7 @@ const DATA: IndustryPageData = {
     'local-seo-aeo',
     'crm-automation',
   ],
-  subVerticalsHeadline: 'Retail and local commerce businesses we work with',
+  subVerticalsHeadline: 'Retail and local commerce businesses we work with.',
   featured: [
     { name: 'Specialty Retail & Boutiques', blurb: 'Review generation and customer follow-up automation for specialty retail and boutique shops.' },
     { name: 'Pet Stores', blurb: 'Review systems and local search optimization for pet retail businesses.' },
@@ -61,25 +63,29 @@ const DATA: IndustryPageData = {
   faqs: [
     {
       q: 'What types of retail businesses do you work with?',
-      a: 'We work with local retail shops and storefronts of all types — specialty boutiques, pet stores, health food stores, home goods, and more. If your business depends on local foot traffic, repeat customers, and online reviews, the system applies.',
+      a: 'We work with local retail shops and storefronts — specialty boutiques, pet stores, health food and supplement stores, home goods, gift shops, hardware stores, and more. If your business depends on local foot traffic, repeat customers, and Google reviews, the system applies. We also work with local e-commerce businesses that serve a defined geographic area.',
     },
     {
       q: 'How does review generation work for a retail store?',
-      a: 'After a purchase or visit, an automated follow-up message asks the customer to leave a Google review. Timing and channel are configured around your customer flow. The system requests reviews from real customers — it does not fabricate them.',
+      a: 'After a purchase or visit, an automated follow-up message asks the customer to leave a Google review. The timing and channel — SMS, email, or both — are configured around your customer flow and purchase type. The system only requests reviews from real customers who completed a transaction. It does not fabricate reviews or solicit them from people who haven\'t visited.',
     },
     {
-      q: 'Can you help improve our Google Business Profile ranking?',
-      a: 'Yes. Google Business Profile optimization is part of our local SEO and reputation management work. We audit your current profile, identify gaps, and make updates that improve your visibility in local search and Maps results.',
+      q: 'Can you help improve our Google Business Profile ranking in Maps?',
+      a: 'Yes. GBP optimization is part of the local SEO and reputation work we do for retail businesses. We audit your current profile — categories, services, photos, Q&A, hours, attributes — identify the gaps that are suppressing your Maps ranking, and make the updates that improve your visibility. Review velocity and response rate are also ranking factors, which is why the review automation and GBP work run together.',
     },
     {
-      q: 'How do you help bring past customers back?',
-      a: 'Customer reactivation sequences send follow-up messages to past customers on a defined cadence — promoting new products, seasonal offers, or simply checking in. The specific messaging and timing are configured to fit your business and your customers.',
+      q: 'How do you bring past customers back?',
+      a: 'Customer reactivation sequences send follow-up messages to past customers on a defined cadence — promoting new arrivals, seasonal offers, or a simple check-in. The timing and messaging are configured to your business and customer type. This is how retail shops maintain a relationship with their customer base between visits without requiring manual outreach every time.',
     },
     {
       q: 'Do you work with e-commerce stores or only physical retail?',
-      a: 'Both. The review generation, reputation management, and customer follow-up systems apply to local e-commerce businesses as well as physical storefronts.',
+      a: 'Both. Review generation, reputation management, customer follow-up, and local search optimization all apply to local e-commerce businesses as well as physical storefronts. The difference is that physical retail also benefits from GBP and Maps optimization — which drives foot traffic directly.',
     },
   ],
+  ctaHeadline: 'Book a 20-minute revenue leak audit.',
+  ctaBody:
+    'We\'ll map where reviews, repeat customers, and local search visibility are leaking in your retail business — and show you the order of operations. Walk away with the plan whether or not we work together.',
+  ctaPrimaryLabel: 'Book the audit',
 }
 
 export const metadata: Metadata = {

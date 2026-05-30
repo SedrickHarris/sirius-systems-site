@@ -155,7 +155,7 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 ### `/industries/retail-local-commerce`
 - **Title:** `Retail & Local Commerce Automation | Sirius Systems`
 - **Description:** `Customer follow-up, review generation, and local search visibility for retail shops, boutiques, pet stores, specialty retailers, and local commerce businesses.`
-- **Notes:** Initial 12-hub expansion copy. Pending Level 5 SEO rebuild.
+- **Notes:** Level 4 copy shipped 2026-05-29. Title 50 chars; metaTitle/metaDescription unchanged from scaffold. Body copy rewritten to Level 4 (headline, subheadline, problemHeadline, problems, systemsHeadline, systemsCopy, subVerticalsHeadline, faqs, ctaHeadline, ctaBody, ctaPrimaryLabel). heroHighlights, serviceSlugs, featured[], compact[] preserved as scaffolded.
 
 ### `/industries/technology-b2b`
 - **Title:** `B2B Tech Services Automation: CRM & Leads | Sirius Systems`
