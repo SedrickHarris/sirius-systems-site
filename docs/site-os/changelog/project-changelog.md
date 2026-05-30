@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-05-29 — feat: add default OG social card + wire it site-wide
+
+- type: feat
+- author: Sirius Systems / Claude Code
+- changes: Committed the default OpenGraph social card at
+  public/og/default.webp (1730×909, ~1.9:1 OG ratio). NOTE: shipped
+  as WebP, not the PNG/1200×630 originally specified — committed
+  as-is per client direction. Wired into app/layout.tsx openGraph
+  (full object: url '/og/default.webp', width 1730, height 909,
+  alt '${SITE.name}: ${SITE.shortTagline}') and twitter.images,
+  replacing the pre-launch TODO. Because Next.js REPLACES (not
+  merges) openGraph when a page defines its own, the layout default
+  does not reach pages with their own openGraph; added
+  images: ['/og/default.webp'] to all 35 page-level openGraph blocks
+  so og:image emits site-wide. app/blog/[slug] retains its own
+  per-post image.
+- files: public/og/default.webp (new),
+         app/layout.tsx,
+         + 35 page.tsx files (og:image propagation)
+- notes: tsc clean. next build clean (41 routes). Commit 0b71198.
+  Verified og:image + twitter:image on all sampled routes; blog
+  post retains per-post image. Outstanding: WebP og:image is broadly
+  supported but some validators prefer PNG/JPG — a 1200×630 PNG swap
+  is a low-effort follow-up. No page-specific OG images for service/
+  industry pages yet (post-launch candidates per image-prompt-bank.md
+  §3/§4). Light/inverse logo variant still outstanding (content-needed
+  1.5). Pre-launch TODO in app/layout.tsx resolved.
+
 ## 2026-05-29 — /lead-generation-automation Level 4 copy upgrade
 
 - type: seo
