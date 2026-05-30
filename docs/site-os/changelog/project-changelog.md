@@ -15,6 +15,37 @@ Format per entry:
 
 ---
 
+## 2026-05-30 — feat: page-specific OG images for service + industry pages
+
+- type: feat
+- author: Sirius Systems / Claude Code
+- changes: Added a per-page OpenGraph card to the metadata export of
+  every service and industry page — 14 service pages, 12 industry
+  hubs, and the industries index (27 page.tsx files), backed by 27
+  new images under public/images/og/. Each openGraph block's images
+  entry now points to its own card with alt = page title
+  (PAGE.metaTitle for services, DATA.metaTitle for industry hubs,
+  META.title for the industries index). Out-of-scope pages
+  (home/about/services/contact/booking/blog/privacy/terms) keep the
+  shared default card from 2026-05-29.
+- files: public/images/og/*.webp (27 new),
+         14 service page.tsx + 12 industry page.tsx + app/industries/page.tsx
+- notes: tsc clean. next build clean (41 routes). Commit f15fd9f.
+  Verified og:image resolves to the page-specific webp on all 27
+  (e.g. /images/og/ai-automation.webp, /images/og/industries-home-services.webp);
+  out-of-scope pages still serve /og/default.webp; no forbidden schema.
+  Two deviations from the build spec, both deliberate: (1) the spec's
+  "BEFORE" openGraph block had no images line, but each block already
+  carried images: ['/og/default.webp'] from 0b71198 — so this REPLACES
+  that line rather than adding a second images key (a duplicate property
+  would be a TS1117 compile error); the default remains the fallback for
+  out-of-scope pages. (2) width/height omitted (client direction) — the
+  source images are ~1731×909 (correct ~1.9:1 OG ratio), not the 1200×630
+  the spec pattern hardcoded, so no inaccurate dimension hints are emitted;
+  platforms fetch and measure. Twitter cards untouched — they inherit
+  og:image via summary_large_image, though per-page Twitter images remain
+  a possible follow-up since these pages override openGraph but not twitter.
+
 ## 2026-05-29 — feat: add default OG social card + wire it site-wide
 
 - type: feat
