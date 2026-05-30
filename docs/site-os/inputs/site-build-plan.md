@@ -153,11 +153,23 @@ Planned post-launch content layer building ~70–80 intersection pages across 4 
 - Lighthouse, schema validator, broken-link sweep, mobile passes
 - Final do-not-invent audit
 
-### Phase 7 — Cloudflare Pages deploy — **PENDING**
+### Phase 7 — Cloudflare Pages deploy — **COMPLETE — LIVE 2026-05-29**
 - DNS cutover plan (canonical host TBD per `url-strategy.md`)
 - Replace `GHL_WEBHOOK_URL` stub with live endpoint before deploy
 - Post-launch monitoring window
 - Verify `public/_redirects` fires the contractors 301 at the edge on the live deployment
+
+**Live verification (2026-05-29, curl against production):** `https://siriussys.io`
+serves over Cloudflare (HTTPS valid, `Server: cloudflare`); homepage `<title>` is the
+59-char value; `/ai-automation` and `/industries/construction-contractors` return 200;
+`/sitemap.xml` (36 `<loc>` entries) and `/robots.txt` return 200; unknown route returns
+the branded 404; `/industries/contractors` 301-redirects to
+`/industries/construction-contractors`. GHL webhook ships live by design (hardcoded;
+env-var migration deferred). Full check log in `docs/site-os/qa/deploy-log-phase7.md`.
+**Outstanding (not a launch blocker):** `www.siriussys.io` currently returns 200 instead
+of a 301 to the bare apex — `url-strategy.md §2` / deploy-log §5B require
+`www → https://siriussys.io` (301). Fix via a Cloudflare redirect rule. Post-launch
+submissions (GSC/Bing sitemap, GBP NAP cross-check) also still pending per the deploy log.
 
 ## 6. Out of scope for Phase 1
 
@@ -211,3 +223,4 @@ content/blog-publishing-checklist.md ─► every post before publish
 | 2026-05-23 | **Phase 5 deferred** to a separate Claude Project. **Phase 5b** added and marked complete: `QualificationForm` rebuilt with 12-industry selector + conditional sub-category step, nurture path hardened (book-anyway removed, confirmation swap state added), webhook payload extended (`industry`, `subCategory`, `qualificationResult`, `score`), second webhook on magnet button click. **Phase 6** in progress. **Phase 7** pending. |
 | 2026-05-23 | **Redirect convention recorded.** Static export means `next.config.mjs.redirects()` is a no-op; `public/_redirects` is the canonical place for 301/302 rules. |
 | 2026-05-23 | **Post-launch intersection pages noted.** Batch 1 = home-services / construction-contractors / beauty-wellness / healthcare-medical paired with reputation-management / appointment-booking-automation / ai-chatbots. Build prompts to follow after hub Level 5 rebuilds. |
+| 2026-05-29 | **Phase 7 COMPLETE — site live at https://siriussys.io** on Cloudflare Pages (verified via production curl: homepage/service/industry 200, contractors 301 at edge, branded 404, sitemap 36 entries, HTTPS valid). Outstanding non-blockers: `www → apex` 301 not yet configured (www returns 200); GSC/Bing sitemap submission and GBP NAP cross-check pending. Phase 6 prelaunch QA not separately re-verified this session — deploy-log pre-deploy gate (tsc/build/artifact checks + Phase 6 metaTitle hard-FAIL resolution) is PASS. |
