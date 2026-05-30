@@ -12,7 +12,7 @@ import { breadcrumbList, webPage } from '@/lib/schema'
 import { SITE } from '@/lib/site'
 
 const PAGE = {
-  title: 'About',
+  title: 'About | Sirius Systems',
   description: `${SITE.name} builds AI automation, smart websites, and reputation systems for local service businesses. One operator, one system, no rented agency layer.`,
 }
 

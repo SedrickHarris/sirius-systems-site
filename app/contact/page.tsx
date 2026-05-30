@@ -9,7 +9,7 @@ import { breadcrumbList, faqPage, webPage } from '@/lib/schema'
 import { SITE } from '@/lib/site'
 
 const PAGE = {
-  title: 'Contact',
+  title: 'Contact | Sirius Systems',
   description: `Talk to ${SITE.name} about an AI automation, smart website, or reputation system for your local service business. Book a discovery call.`,
 }
 

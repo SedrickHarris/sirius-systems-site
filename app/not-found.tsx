@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Section } from '@/components/site/Section'
 
 export const metadata = {
-  title: 'Page not found',
+  title: 'Page not found | Sirius Systems',
   description: 'The page you are looking for does not exist.',
 }
 
