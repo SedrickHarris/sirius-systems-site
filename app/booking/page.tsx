@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description:
       'Schedule a discovery call with Sirius Systems. Twenty minutes to map where leads, reviews, and follow-up are leaking in your business.',
     url: '/booking',
+    images: ['/og/default.webp'],
   },
 }
 

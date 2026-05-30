@@ -36,12 +36,20 @@ export const metadata: Metadata = {
     url: SITE.url,
     title: SITE.name,
     description: SITE.description,
-    // TODO: add OG default image at public/og/default.png (1200×630) before launch
+    images: [
+      {
+        url: '/og/default.webp',
+        width: 1730,
+        height: 909,
+        alt: `${SITE.name}: ${SITE.shortTagline}`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE.name,
     description: SITE.description,
+    images: ['/og/default.webp'],
   },
   icons: {
     icon: [

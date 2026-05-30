@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     title: PAGE.title,
     description: PAGE.description,
     url: '/services',
+    images: ['/og/default.webp'],
   },
 }
 

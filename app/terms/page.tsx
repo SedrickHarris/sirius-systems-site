@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     title: PAGE.title,
     description: PAGE.description,
     url: '/terms',
+    images: ['/og/default.webp'],
   },
 }
 

@@ -82,6 +82,7 @@ export const metadata: Metadata = {
     title: META.title,
     description: META.description,
     url: `/${META.slug}`,
+    images: ['/og/default.webp'],
   },
 }
 

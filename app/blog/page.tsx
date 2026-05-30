@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     description: 'Guides, playbooks, and practical takes on AI automation, reputation management, and local SEO for owner-operated service businesses.',
     url:         `${SITE.url}/blog`,
     type:        'website',
+    images: ['/og/default.webp'],
   },
 }
 

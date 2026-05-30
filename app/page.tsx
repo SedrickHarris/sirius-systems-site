@@ -42,6 +42,7 @@ export const metadata = {
     description:
       'Sirius Systems helps local service businesses capture leads, automate follow-up, book more appointments, and grow reviews — without adding headcount.',
     url: '/',
+    images: ['/og/default.webp'],
   },
 }
 
