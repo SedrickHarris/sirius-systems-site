@@ -15,6 +15,11 @@ Format per entry:
 
 ---
 
+## 2026-05-31 — Add content visibility strategy and blog writing workflow
+- type: docs
+- changes: Added two new strategy documents. (1) docs/seo/content-visibility-strategy.md — master strategy covering all content visibility channels: SEO, GEO, AEO, LLM search (Perplexity, ChatGPT, Claude, Bing AI), local intent, rich results, featured snippets, PAA, Knowledge Panel, GBP, Apple Search, GSC, topical authority, customer engagement, and conversion. Defines on-page requirements, schema strategy per post type, topical authority execution order, sitemap linking as a per-post requirement, GBP content strategy, AI engine citation rules, Bing/Apple setup, GSC measurement, intent-matched CTA framework, and a full per-post visibility checklist. (2) docs/content/blog-writing-workflow.md — end-to-end 6-stage writing workflow. Adds Stage 2 (keyword research and classification) as a required step before briefing, with keyword type reference (primary, secondary, LSI, long-tail, PAA, local intent). Stage 2D defines all four internal link types: service pages, industry pages, service × industry intersection pages, and blog posts. Stage 6 cross-linking covers reciprocal blog links, intersection page gap tracking, and content plan updates. Sitemap linking quick reference rebuilt for all four link types with link count targets by post age.
+- files: docs/seo/content-visibility-strategy.md, docs/content/blog-writing-workflow.md, docs/site-os/changelog/project-changelog.md
+
 ## 2026-05-30 — feat: GA4 phone-click tracking tag (GTM v2)
 
 - type: feat
