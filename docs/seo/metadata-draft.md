@@ -125,9 +125,9 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Notes:** Level 5 copy shipped 2026-05-31 (upgraded from Level 4 of 2026-05-23). Title 49 chars (outcome-led); description 157 chars (practice-type specific). Featured set is Law/CPA/Financial Planning/Insurance; compact set expanded from 4 to 11 (Business Consultants, Marketing & Creative Agencies, HR & Recruiting, IT Consultants & MSPs, Mortgage Brokers & Loan Officers, Real Estate Attorneys, Tax Resolution & Financial Consultants, Executive & Career Coaches, Compliance & Regulatory Consultants, PR & Communications Agencies, Notary & Legal Document Services).
 
 ### `/industries/auto-services`
-- **Title:** `Auto Shop Automation: Booking, Reviews, CRM | Sirius Systems`
-- **Description:** `Appointment booking automation, AI chatbots, review systems, and CRM for auto repair shops, detailers, tire shops, body shops, and other auto service businesses.`
-- **Notes:** Pre-Level 5 copy. Pending SEO rebuild. Title refreshed 2026-05-27 (trimmed under 60 chars).
+- **Title:** `Auto Shop Automation: Calls & Reviews | Sirius Systems`
+- **Description:** `Missed-call recovery, review automation, booking, and service-interval follow-up for auto repair shops, detailers, tire shops, body shops, and mobile mechanics.`
+- **Notes:** Level 5 copy shipped 2026-05-31. Title 54 chars; description 160 chars. metaDescription trimmed from the 171-char approved draft to 160 (gate is 140–160): "appointment booking" → "booking" to fit. Featured set is Auto Repair/Detailing/Tire & Wheel/Body & Collision; compact set expanded from 2 to 10 (Oil Change & Quick-Lube, Mobile Mechanics, Windshield & Auto Glass, Transmission, Brake, Car Wash, Motorcycle & ATV, Towing & Roadside, Smog Check, Window Tinting & Car Audio).
 
 ### `/industries/beauty-wellness`
 - **Title:** `Beauty & Wellness Booking & Reviews | Sirius Systems`
