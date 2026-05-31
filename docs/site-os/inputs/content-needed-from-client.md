@@ -35,8 +35,8 @@ These are not blockers, but every page or feature that depends on them ships as 
 | 2.2 | Hours of operation | Footer, schema, GBP consistency |
 | 2.3 | ~~Physical address~~ — **RESOLVED 2026-05-23**: `304 S Jones Blvd Ste 1915, Las Vegas, NV 89107`. Source: GBP. | Footer, schema |
 | 2.4 | CRM choice (e.g. GoHighLevel, HubSpot, custom) | Form integration |
-| 2.5 | Lead form endpoint + auth | All page CTAs |
-| 2.6 | Booking provider + link | `/contact`, service-page CTAs |
+| 2.5 | ~~Lead form endpoint + auth~~ — **RESOLVED 2026-05-30**: GHL lead-form webhook confirmed, committed, and pushed (hardcoded as `GHL_WEBHOOK_URL` in `components/site/QualificationForm.tsx` per the `ghl-webhook-hardcoded-decision`; env-var migration deferred post-launch). QualificationForm live end-to-end. | All page CTAs |
+| 2.6 | ~~Booking provider + link~~ — **RESOLVED 2026-05-30**: GoHighLevel (LeadConnector) booking widget — `https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4`, embedded as the iframe `src` in `components/site/BookingEmbed.tsx`. | `/contact`, service-page CTAs |
 | 2.7 | Email provider (e.g. Resend, Postmark) | Contact form delivery |
 | 2.8 | ~~Google Place ID~~ — **RESOLVED 2026-05-25** (`ChIJ5_nmHI_RHi4RrYRgpNp5pWs`; placeUrl `https://share.google/TUgLZOpTwsYaHLaLZ`). | Live review pull on `/`, `/reputation-management`, `/review-automation` |
 | 2.9 | ~~Analytics provider preference (GA4, Plausible, none)~~ — **RESOLVED 2026-05-25** (Google Tag Manager, container ID `GTM-TJRT2ZHL`). **Blog analytics follow-up:** Blog is now live at /blog and /blog/*. Once analytics provider is confirmed and installed, verify pageview events fire on blog routes, create a /blog/* filtered report in GA4, and set up a conversion event for CTA clicks originating from blog posts. GSC will pick up blog URLs automatically from the sitemap — no action needed there. | Tracking setup |
@@ -101,3 +101,5 @@ Statuses: `BLOCKED` (waiting on client), `RECEIVED` (in hand), `RESOLVED` (in `c
 - `RESOLVED` 1.11 Founder bio + headshot — 2026-05-25 (shipped in `/about`)
 - `RESOLVED` 1.12 Final positioning line — 2026-05-20 (delivered via `docs/brand/brand-skill.md`; long-form in `brand.md` + `docs/brand/brand-guide.md` §1; trimmed meta in `lib/site.ts`)
 - `RESOLVED` 2.3 Physical address — 2026-05-23 (`304 S Jones Blvd Ste 1915, Las Vegas, NV 89107`; verified via GBP)
+- `RESOLVED` 2.5 Lead form endpoint + auth — 2026-05-30 (GHL webhook confirmed, committed, pushed; hardcoded as `GHL_WEBHOOK_URL` in `components/site/QualificationForm.tsx` per `ghl-webhook-hardcoded-decision`)
+- `RESOLVED` 2.6 Booking provider + link — 2026-05-30 (GoHighLevel/LeadConnector widget `https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4`; embedded as iframe `src` in `components/site/BookingEmbed.tsx`)

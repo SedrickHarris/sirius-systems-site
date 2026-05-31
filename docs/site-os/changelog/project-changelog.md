@@ -15,6 +15,59 @@ Format per entry:
 
 ---
 
+## 2026-05-30 — feat: GA4 phone-click tracking tag (GTM v2)
+
+- type: feat
+- author: Sirius Systems / Claude Code
+- changes: Added phone-click conversion tracking to GTM container
+  GTM-TJRT2ZHL. Created a **Phone Click** trigger (Just Links →
+  Click URL contains `tel:`) and a **GA4 - Phone Click** event tag
+  (event_name `phone_click`, parameter `phone_number` → `{{Click URL}}`).
+  Published as container **v2 — Add phone click tag**. Container now
+  carries 6 total tags: GA4 Sirius Systems (base), GA4 Sirius Systems -
+  Events (generate_lead), GA4 - Qualification Complete, GA4 - Booking
+  Intent (booking_page_view), GA4 - Outbound Click, GA4 - Phone Click.
+- files: none (external — GTM container GTM-TJRT2ZHL only)
+- notes: No repo files changed. Tag fires on any `tel:` link click;
+  phone number passed via `{{Click URL}}`. `phone_click` to be starred
+  as a key event in GA4 once it fires from real traffic.
+
+## 2026-05-30 — feat: GA4 + GSC + sitemap configuration complete
+
+- type: feat
+- author: Sirius Systems / Claude Code
+- changes: GA4 property **G-X98W63YHM4** confirmed receiving live event
+  data — first_visit, page_view, session_start, scroll, and
+  user_engagement all firing from the "Sirius Systems GA4 2024" stream.
+  GA4 linked to Google Search Console. Sitemap submitted to GSC at
+  https://siriussys.io/sitemap.xml. Full GTM + GA4 + GSC stack is now
+  operational.
+- files: none (external — GA4 / GSC / GTM consoles only)
+- notes: No repo files changed. Key events still to be starred in GA4
+  once they fire from real traffic: generate_lead, phone_click,
+  qualification_complete, booking_page_view.
+
+## 2026-05-30 — feat: phone number + form/booking endpoints wired live
+
+- type: feat
+- author: Sirius Systems / Claude Code
+- changes: Official phone number live on the site — `(727) 222-3424`
+  (`tel:+17272223424`) in `lib/site.ts`. GHL lead-form webhook endpoint
+  confirmed, committed, and pushed (hardcoded as `GHL_WEBHOOK_URL` in
+  `components/site/QualificationForm.tsx` per the
+  ghl-webhook-hardcoded-decision; env-var migration remains a deferred
+  post-launch task). Booking provider URL confirmed, committed, and
+  pushed — `https://link.siriussys.io/widget/booking/Qn4ugo4iZ8ZJ8eaxX1c4`,
+  embedded as the iframe `src` in `components/site/BookingEmbed.tsx`.
+  QualificationForm is now live end-to-end with a working endpoint.
+- files: lib/site.ts (phone display/href),
+  components/site/QualificationForm.tsx (GHL_WEBHOOK_URL),
+  components/site/BookingEmbed.tsx (booking widget iframe)
+- notes: Resolves content-needed items 2.5 (lead form endpoint + auth)
+  and 2.6 (booking provider + link). Phone number was already confirmed
+  (item 1.1, RESOLVED 2026-05-23); this entry records it going live on
+  the site. Webhook remains hardcoded by design.
+
 ## 2026-05-30 — feat: page-specific OG images for service + industry pages
 
 - type: feat
