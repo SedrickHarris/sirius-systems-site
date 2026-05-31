@@ -120,9 +120,9 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 - **Notes:** Renamed from `/industries/contractors` on 2026-05-23. 301 redirect from the old slug lives in `public/_redirects`. Title refreshed 2026-05-27 (outcome-led; previous title was generic).
 
 ### `/industries/professional-services`
-- **Title:** `Professional Services Automation | Sirius Systems`
-- **Description:** `CRM automation, consultation booking, AI chatbots, and reputation management for law firms, accounting practices, financial planners, and consultants.`
-- **Notes:** Level 4 copy shipped 2026-05-23. Title 49 chars; description 150 chars. Refocused away from healthcare-style sub-verticals (those now live on `/industries/healthcare-medical`); featured set is Law/CPA/Financial Planning/Insurance, compact set is Business Consultants/Marketing & Creative Agencies/HR & Recruiting/IT Consultants & MSPs.
+- **Title:** `Consultation Pipeline Automation | Sirius Systems`
+- **Description:** `Intake automation, CRM follow-up, consultation booking, and review systems for law firms, CPA firms, financial planners, insurance agencies, and consultants.`
+- **Notes:** Level 5 copy shipped 2026-05-31 (upgraded from Level 4 of 2026-05-23). Title 49 chars (outcome-led); description 157 chars (practice-type specific). Featured set is Law/CPA/Financial Planning/Insurance; compact set expanded from 4 to 11 (Business Consultants, Marketing & Creative Agencies, HR & Recruiting, IT Consultants & MSPs, Mortgage Brokers & Loan Officers, Real Estate Attorneys, Tax Resolution & Financial Consultants, Executive & Career Coaches, Compliance & Regulatory Consultants, PR & Communications Agencies, Notary & Legal Document Services).
 
 ### `/industries/auto-services`
 - **Title:** `Auto Shop Automation: Booking, Reviews, CRM | Sirius Systems`

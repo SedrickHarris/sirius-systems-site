@@ -9,23 +9,23 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 const DATA: IndustryPageData = {
   slug: 'professional-services',
 
-  metaTitle: 'Professional Services Automation | Sirius Systems',
+  metaTitle: 'Consultation Pipeline Automation | Sirius Systems',
 
   metaDescription:
-    'CRM automation, consultation booking, AI chatbots, and reputation management for law firms, accounting practices, financial planners, and consultants.',
+    'Intake automation, CRM follow-up, consultation booking, and review systems for law firms, CPA firms, financial planners, insurance agencies, and consultants.',
 
   eyebrow: 'Professional Services',
 
   headline: 'A consultation pipeline that runs without you chasing it',
 
   subheadline:
-    'When you are the practitioner and the business developer, you cannot afford to spend billable hours following up on cold leads. We build the system that responds to inquiries immediately, keeps prospects warm over weeks not days, and fills your consultation calendar — so the only thing on your desk is the work you were trained to do.',
+    'When you are the practitioner and the business developer, billable hours spent chasing cold leads are hours you cannot get back. We build the system that responds to inquiries immediately, keeps prospects warm across a 60- or 90-day sales cycle, and fills your consultation calendar — so the only thing on your desk is the work you were trained to do.',
 
   heroHighlights: [
-    'Inquiry capture and response, 24 hours a day',
-    'Automated follow-up built for longer sales cycles',
-    'Consultation booking without phone tag',
-    'Review requests that do not require you to ask',
+    'Intake automation and after-hours inquiry capture for every practice type',
+    'Multi-touch follow-up built for longer professional sales cycles',
+    'Consultation booking without phone tag or manual scheduling',
+    'Review requests delivered at the right moment without you having to ask',
   ],
 
   problemHeadline: 'Where professional service firms quietly lose revenue',
@@ -40,7 +40,7 @@ const DATA: IndustryPageData = {
   systemsHeadline: 'The client acquisition stack for professional practices',
 
   systemsCopy:
-    'Professional service businesses compete on trust and responsiveness. These are the systems that give you both — without adding work to your day.',
+    'Professional service businesses compete on trust and responsiveness. Prospects research before they call, compare firms before they book, and choose based on who responded and who has the stronger review record. These are the systems that win both — without adding work to your day.',
 
   serviceSlugs: [
     'ai-chatbots',
@@ -54,28 +54,28 @@ const DATA: IndustryPageData = {
   subVerticalsHeadline: 'Built for your specific practice type',
 
   subVerticalsCopy:
-    'The intake process, sales cycle, and review dynamics are different for a law firm than they are for a financial planner. We build systems that fit how your type of practice actually works.',
+    'The intake process, sales cycle, and review dynamics are different for a law firm than they are for a financial planner or a solo consultant. We build systems that fit how your type of practice actually acquires and retains clients.',
 
   featured: [
     {
       name: 'Law Firms & Attorneys',
       blurb:
-        'Intake automation and consultation booking for law firms that need to respond to inquiries before a competing firm does. Review systems that build credibility without putting you in an awkward position.',
+        'Intake automation and consultation booking for law firms that need to respond to inquiries before a competing firm does. The chatbot captures the matter type and contact details — it does not provide legal guidance. Review systems that build credibility without putting you in an awkward position with current clients.',
     },
     {
       name: 'Accounting & CPA Firms',
       blurb:
-        'Consultation booking and automated follow-up for CPA firms and accounting practices — built to run year-round, not just during tax season when you have no time to manage it manually.',
+        'Consultation booking and automated follow-up for CPA firms and accounting practices built to run year-round, not only during tax season when you have no time to manage it manually. Review systems that surface your expertise to prospects who found your competitors first.',
     },
     {
       name: 'Financial Planners & Wealth Management',
       blurb:
-        'Long-cycle lead nurture and consultation booking for financial planners and advisors where a prospect may need months of follow-up before they are ready to commit. The system keeps your firm visible throughout.',
+        'Long-cycle lead nurture and consultation booking for financial planners and advisors where a prospect may need months of follow-up before they are ready to commit. The system keeps your firm visible and your name top of mind throughout the entire decision window.',
     },
     {
       name: 'Insurance Agencies',
       blurb:
-        'Automated follow-up sequences and review systems for independent insurance agencies competing on local search and referrals. Capture quote requests outside business hours and keep prospects moving toward a decision.',
+        'Automated follow-up sequences and review systems for independent insurance agencies competing on local search and referrals. Capture quote requests outside business hours and keep prospects moving toward a decision without anyone on your team manually following up.',
     },
   ],
 
@@ -98,36 +98,69 @@ const DATA: IndustryPageData = {
     {
       name: 'IT Consultants & MSPs',
       blurb:
-        'Lead follow-up and review systems for managed service providers and IT consultants.',
+        'Lead follow-up and review systems for managed service providers and IT consultants. See also: Technology & B2B Services.',
+    },
+    {
+      name: 'Mortgage Brokers & Loan Officers',
+      blurb:
+        'Lead response automation and multi-touch follow-up for mortgage professionals with longer loan-cycle timelines.',
+    },
+    {
+      name: 'Real Estate Attorneys',
+      blurb:
+        'Intake automation and review systems for real estate attorneys handling transaction-based client relationships.',
+    },
+    {
+      name: 'Tax Resolution & Financial Consultants',
+      blurb:
+        'Lead nurture and consultation booking for tax resolution specialists and financial consultants with high-consideration buyers.',
+    },
+    {
+      name: 'Executive & Career Coaches',
+      blurb:
+        'Consultation booking automation and review systems for executive, career, and business coaches with referral-driven pipelines.',
+    },
+    {
+      name: 'Compliance & Regulatory Consultants',
+      blurb:
+        'Inquiry response and CRM automation for compliance consultants serving small business and professional clients.',
+    },
+    {
+      name: 'PR & Communications Agencies',
+      blurb:
+        'Lead follow-up, CRM pipeline, and review systems for PR and communications firms with proposal-led sales cycles.',
+    },
+    {
+      name: 'Notary & Legal Document Services',
+      blurb:
+        'Booking automation and review generation for mobile notaries and legal document preparation services.',
     },
   ],
 
   faqs: [
     {
       q: 'Can an AI chatbot handle intake for a law firm without giving legal advice?',
-      a: 'Yes. The chatbot is configured to capture contact details, qualify the type of matter, and route the inquiry to the right person — it does not answer legal questions or provide guidance. Its only job is to make sure no inquiry goes unanswered after hours and that qualified prospects reach your calendar, not a voicemail box.',
+      a: 'Yes. The chatbot is configured to capture contact details, qualify the type of matter, and route the inquiry to the right person — it does not answer legal questions or provide legal guidance. Its job is to make sure no inquiry goes unanswered after hours and that qualified prospects reach your calendar, not a voicemail box.',
     },
     {
-      q: 'My sales cycle is 60 to 90 days. Can the system keep prospects warm that long?',
-      a: 'That is exactly what it is designed for. Automated CRM sequences can run for weeks or months, sending relevant follow-up at timed intervals so a prospect who was not ready in month one is still hearing from you in month three. You set the cadence once; the system handles the execution.',
+      q: 'My sales cycle is 60 to 90 days. Can automation actually stay in front of a prospect that long without annoying them?',
+      a: 'Yes, and that is exactly where automation outperforms manual follow-up. A multi-touch sequence sends the right message at the right interval — not too often, not so infrequently that they forget you. The cadence and messaging are configured to match your sales cycle during setup. Your team is only notified when a prospect re-engages and is ready to move forward.',
     },
     {
-      q: 'How do you ask clients for reviews when the relationship is professional and formal?',
-      a: 'The system sends a review request automatically after a completed engagement or closed matter — timed so it lands when the experience is fresh but not while active work is still in progress. The message is professionally worded and requires no action from you. Clients who want to leave a review can do so in one click; those who do not can ignore it.',
+      q: 'How do you handle review requests for professional services where the relationship is sensitive?',
+      a: 'The review request is timed and worded to fit the professional context — it goes out after a matter closes, a project completes, or a milestone is reached, not mid-engagement. Messaging is configured for your practice type and tone. The system requests a review from real clients — it does not fabricate them or incentivize them in ways that violate platform policies.',
     },
     {
-      q: 'We already use existing software for case management. Does your system integrate with it?',
-      // TODO: confirm with client — replace this answer with confirmed
-      // integration list before publishing. Do not invent integrations.
-      a: 'Integration capability depends on the platforms involved. We assess your current stack during discovery and build the system around what you already have where possible. If a direct integration is not available, we work around it.',
+      q: 'What happens to leads that come in through my website after hours?',
+      a: 'An automated response goes out within minutes — acknowledging the inquiry, collecting the information needed to qualify the prospect, and routing them toward your booking calendar or a follow-up sequence. No inquiry sits in an inbox until the next business day.',
     },
     {
-      q: 'We get most of our business from referrals. Why do we need a lead system?',
-      a: 'Referrals are valuable and unpredictable. A lead system does not replace them — it handles the periods when referrals slow down, captures the people who find you through search or social before they find a competitor, and ensures every referral who contacts you actually books rather than falling through the cracks when you are busy serving existing clients.',
+      q: 'Do you work with solo practitioners or only larger firms?',
+      a: 'Both. The intake, follow-up, and review systems scale to solo practitioners and multi-person firms. The scope of the build depends on how complex your intake workflow is and how many concurrent prospects you are managing. We scope it during the discovery call.',
     },
   ],
 
-  ctaHeadline: 'Your consultation calendar should fill itself',
+  ctaHeadline: 'Your consultation calendar should fill itself.',
 
   ctaBody:
     'If you are manually following up on leads, chasing review requests, or losing prospects to slower response times, the system is the fix. Tell us where the gaps are and we will show you what a connected practice looks like.',
