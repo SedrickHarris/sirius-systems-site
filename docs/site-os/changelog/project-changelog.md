@@ -15,6 +15,131 @@ Format per entry:
 
 ---
 
+## 2026-05-31 — /competitor-review-benchmarking Level 4 SEO/AEO copy upgrade
+- type: seo
+- changes: Upgraded from scaffold to Level 4 (committed in 51a02fd). Updated
+  metaDescription, headline (trailing period removed), subheadline (buyer
+  framing, no colon separators), definition (AEO pattern, colon-as-separator
+  removed), problems (4 items rewritten — contractions removed, colon
+  separators replaced with plain language). PAGE.faqs expanded from 5 to 9 —
+  the file's actual existing Q1-Q5 preserved byte-for-byte, 4 new
+  AEO-optimized questions appended. metaTitle, eyebrow, glyphVariant, steps,
+  features, outcomes, relatedSlugs, industryFit, schema block unchanged.
+  docs/seo/metadata-draft.md updated. tsc clean. next build clean (41 routes).
+- files: app/competitor-review-benchmarking/page.tsx,
+         docs/seo/metadata-draft.md,
+         docs/site-os/changelog/project-changelog.md
+- notes: Two flagged deviations from the build spec, both confirmed with the
+  user. (1) metaDescription: approved value was 164 chars (over the 140–160
+  gate); trimmed to 156 by dropping "exactly". (2) The spec's "existing Q1-Q5"
+  did not match the file's actual current 5 (spec written against a stale
+  copy); per the literal "preserve byte-for-byte" instruction, kept the file's
+  REAL existing 5 and appended 4 → 9. Consequence: preserved Q1-Q5 retain
+  their original colon-separators/contractions; updated/new fields are clean.
+  No AggregateRating / Review / LocalBusiness / Organization / Product / Offer
+  schema; @type:"Review" count across app/ remains 0 (verified). canonical
+  unchanged.
+
+## 2026-05-31 — /industries/beauty-wellness Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Upgraded from Level 4 to Level 5 SEO/AEO copy (committed in
+  ce3980e). H1 rewritten to sentence case, problem-first, no trailing
+  punctuation, no imperative verb lead. problemHeadline em-dash replaced with
+  a plain hyphen. Contractions removed throughout string fields. subheadline
+  rewritten outcome-first. systemsCopy updated to client-lifecycle framing.
+  Featured blurbs sharpened. Compact sub-verticals expanded from 8 to 12.
+  FAQ Q2 specific interval weeks removed and replaced with setup-configured
+  framing. metaTitle retained (52 chars); metaDescription updated (153 chars).
+  docs/seo/metadata-draft.md updated. Schema unchanged. FAQPage JSON-LD driven
+  by DATA.faqs (single source) — Question.name byte-identical to visible FAQ q.
+  tsc clean. next build clean (41 routes).
+- files: app/industries/beauty-wellness/page.tsx,
+         docs/seo/metadata-draft.md,
+         docs/site-os/changelog/project-changelog.md
+- notes: No forbidden schema added. No invented stats, ratings, testimonials,
+  client names, timelines, retention rates, or guarantees. FAQ Q2 states no
+  specific week/day interval as a universal default. Spec deviation flagged:
+  approved problemHeadline contained an em-dash, but the spec's string rules
+  and gate require a plain hyphen there — used the plain hyphen per the rule.
+  canonical unchanged.
+
+## 2026-05-31 — /industries/auto-services Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Upgraded from Level 4 to Level 5 SEO/AEO copy (committed in
+  fe98f21). H1 rewritten to problem-first framing, trailing punctuation
+  removed. subheadline rewritten outcome-first; straight quotes only.
+  systemsCopy updated to competition framing. Featured blurbs sharpened with
+  mechanism language. Compact sub-verticals expanded from 2 to 10. 5 FAQs
+  tightened — Q3 mileage specifics ("3 months or 3,000 miles") replaced with
+  a mechanism-led answer. metaTitle updated to "Auto Shop Automation: Calls &
+  Reviews | Sirius Systems" (54 chars). metaDescription set to 160 chars.
+  docs/seo/metadata-draft.md updated. Schema unchanged. FAQPage JSON-LD driven
+  by DATA.faqs — Question.name byte-identical to visible FAQ q.
+  tsc clean. next build clean (41 routes).
+- files: app/industries/auto-services/page.tsx,
+         docs/seo/metadata-draft.md,
+         docs/site-os/changelog/project-changelog.md
+- notes: No forbidden schema added. No invented stats, ratings, testimonials,
+  client names, timelines, or guarantees. metaDescription trimmed from the
+  171-char approved draft to 160 to satisfy the 140–160 gate ("appointment
+  booking" → "booking"; client approved). Prior Level 4 "200 more Google
+  reviews" stat and the Q3 "3,000 miles" universal-default figure both
+  removed. canonical unchanged.
+
+## 2026-05-31 — /industries/professional-services Level 5 SEO/AEO copy upgrade
+- type: seo
+- changes: Upgraded from Level 4 to Level 5 SEO/AEO copy (committed in
+  2dc8906). Updated metaTitle ("Consultation Pipeline Automation | Sirius
+  Systems", 49 chars), metaDescription (157 chars), subheadline,
+  heroHighlights, systemsCopy, subVerticalsCopy, featured blurbs (mechanism
+  language), compact sub-verticals expanded from 4 to 11, 5 FAQs replaced with
+  AEO-optimized versions. ctaHeadline (period added) and ctaBody preserved.
+  Schema unchanged. docs/seo/metadata-draft.md updated. FAQPage JSON-LD driven
+  by DATA.faqs — Question.name byte-identical to visible FAQ q.
+  tsc clean. next build clean (41 routes).
+- files: app/industries/professional-services/page.tsx,
+         docs/seo/metadata-draft.md,
+         docs/site-os/changelog/project-changelog.md
+- notes: No forbidden schema added. No invented stats, ratings, testimonials,
+  client names, timelines, or guarantees. Law-firm FAQ explicitly states the
+  chatbot does not answer legal questions or provide legal guidance. Prior
+  Level 4 had a TODO-flagged CRM-integration FAQ; the Level 5 FAQ set replaces
+  it (no integration/platform names invented). canonical unchanged.
+
+## 2026-05-31 — /industries/technology-b2b Level 4 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced DATA object with approved Level 4 SEO/AEO copy (committed
+  in e12c505). Sharpened subheadline to buyer-outcome framing, tightened
+  systemsCopy and subVerticalsCopy, updated 5 FAQs to AEO direct-answer
+  format, and revised the compact sub-vertical set (still 11 cards). Updated
+  four featured/compact blurbs and the CTA body. metaTitle unchanged ("B2B
+  Tech Services Automation: CRM & Leads | Sirius Systems", 58 chars);
+  metaDescription unchanged (146 chars). Schema unchanged. FAQPage JSON-LD
+  driven by DATA.faqs — Question.name byte-identical to visible FAQ q.
+  tsc clean. next build clean (41 routes).
+- files: app/industries/technology-b2b/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: No forbidden schema added. No invented stats, ratings, testimonials,
+  client names, timelines, or guarantees. FAQ Q3 references CRM integration in
+  general terms only; no specific CRM/platform names anywhere on the page
+  (verified). canonical unchanged.
+
+## 2026-05-31 — /industries/hospitality-events Level 4 SEO/AEO copy upgrade
+- type: seo
+- changes: Replaced DATA object with approved Level 4 SEO/AEO copy (committed
+  in 6947a2a). Updated headline, subheadline, heroHighlights, problemHeadline,
+  problems, systemsHeadline, systemsCopy, subVerticalsHeadline,
+  subVerticalsCopy, featured blurbs, compact blurbs, 5 AEO-optimized FAQs,
+  ctaHeadline, ctaBody, ctaPrimaryLabel. metaTitle changed to "Hospitality &
+  Events Automation | Sirius Systems" (48 chars). metaDescription unchanged
+  (151 chars). Schema unchanged. FAQPage JSON-LD driven by DATA.faqs —
+  Question.name byte-identical to visible FAQ q. tsc clean. next build clean
+  (41 routes).
+- files: app/industries/hospitality-events/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: No forbidden schema added. No invented stats, ratings, testimonials,
+  client names, timelines, guarantees, or tool names. canonical unchanged.
+
 ## 2026-05-31 — Add content visibility strategy and blog writing workflow
 - type: docs
 - changes: Added two new strategy documents. (1) docs/seo/content-visibility-strategy.md — master strategy covering all content visibility channels: SEO, GEO, AEO, LLM search (Perplexity, ChatGPT, Claude, Bing AI), local intent, rich results, featured snippets, PAA, Knowledge Panel, GBP, Apple Search, GSC, topical authority, customer engagement, and conversion. Defines on-page requirements, schema strategy per post type, topical authority execution order, sitemap linking as a per-post requirement, GBP content strategy, AI engine citation rules, Bing/Apple setup, GSC measurement, intent-matched CTA framework, and a full per-post visibility checklist. (2) docs/content/blog-writing-workflow.md — end-to-end 6-stage writing workflow. Adds Stage 2 (keyword research and classification) as a required step before briefing, with keyword type reference (primary, secondary, LSI, long-tail, PAA, local intent). Stage 2D defines all four internal link types: service pages, industry pages, service × industry intersection pages, and blog posts. Stage 6 cross-linking covers reciprocal blog links, intersection page gap tracking, and content plan updates. Sitemap linking quick reference rebuilt for all four link types with link count targets by post age.
