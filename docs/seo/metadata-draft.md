@@ -131,8 +131,8 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/industries/beauty-wellness`
 - **Title:** `Beauty & Wellness Booking & Reviews | Sirius Systems`
-- **Description:** `Appointment booking automation, rebooking flows, review systems, and AI chatbots for salons, med spas, personal trainers, day spas, and other beauty and wellness businesses.`
-- **Notes:** Pre-Level 5 copy. Pending SEO rebuild. Title refreshed 2026-05-27 (trimmed under 60 chars).
+- **Description:** `Booking automation, rebooking reminders, no-show reduction, and review systems for hair salons, med spas, day spas, fitness studios, and beauty businesses.`
+- **Notes:** Level 5 copy shipped 2026-05-31. Title 52 chars (retained); description 153 chars (updated). Featured set is Hair Salons/Med Spas/Personal Training & Fitness/Day Spas & Massage; compact set expanded from 8 to 12 (Barbershops, Nail Salons, Tattoo & Piercing, Eyebrow & Lash, Tanning, Yoga & Pilates, Nutrition & Wellness Coaching, Acupuncture & Holistic, Waxing, Aesthetic & Cosmetic Clinics, Permanent Makeup & Microblading, Stretch Therapy & Recovery).
 
 ### `/industries/healthcare-medical`
 - **Title:** `Medical Practice Scheduling & Reviews | Sirius Systems`
