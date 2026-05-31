@@ -9,7 +9,7 @@ import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
 const DATA: IndustryPageData = {
   slug: 'hospitality-events',
 
-  metaTitle: 'Hospitality Automation: Booking & Reviews | Sirius Systems',
+  metaTitle: 'Hospitality & Events Automation | Sirius Systems',
 
   metaDescription:
     'Inquiry capture, booking automation, and review systems for restaurants, event venues, wedding planners, hotels, caterers, and event service providers.',
@@ -17,14 +17,14 @@ const DATA: IndustryPageData = {
   eyebrow: 'Hospitality & Events',
 
   headline:
-    'The Inquiry That Goes Unanswered on a Friday Night Is the Booking Someone Else Gets',
+    'The inquiry that goes unanswered on a Friday night is the booking someone else gets',
 
   subheadline:
-    'Hospitality and events businesses run on timing. A venue inquiry that comes in at 9 PM and gets a response Monday morning is already gone. A wedding or event that leaves the client thrilled but produces no review is a missed acquisition. The system that captures every inquiry, confirms every booking, and asks for the review at the right moment is the one that compounds.',
+    'Hospitality and events businesses run on timing. A venue inquiry that arrives at 9 PM and gets a reply Monday morning is already booked somewhere else. An event that leaves a client thrilled but produces no review is a missed acquisition. The system that captures every inquiry, confirms every booking, and asks for the review at the right moment is the one that grows.',
 
   heroHighlights: [
     'After-hours inquiry capture — every lead acknowledged within minutes',
-    'Booking confirmation and reminder sequences that reduce no-shows',
+    'Booking confirmation and reminder sequences that cut no-shows',
     'Post-event review requests sent at the right moment on Google',
     'AI-drafted review responses so no review goes unanswered',
   ],
@@ -32,16 +32,16 @@ const DATA: IndustryPageData = {
   problemHeadline: 'Where hospitality and events businesses lose revenue',
 
   problems: [
-    'Venue and event inquiries arrive on evenings and weekends when no one is available. The lead books the next venue that responds.',
-    'A great event or guest experience produces no review because no one asked. The reputation stays flat while competitors collect reviews from every job.',
-    'Booking confirmations and reminders are handled manually. Last-minute no-shows and miscommunications fill the gaps with emergencies instead of bookings.',
-    'Negative reviews accumulate without responses. Unanswered reviews signal to every future customer that service stops after checkout.',
+    'Venue and event inquiries arrive on evenings and weekends when no one is available. The lead books the next venue that responds first.',
+    'A great event or guest experience produces no review because no one asked. The reputation stays flat while competitors collect reviews after every job.',
+    'Booking confirmations and reminders are handled manually. Last-minute no-shows and miscommunications crowd out real bookings.',
+    'Negative reviews accumulate without responses. Unanswered reviews signal to every future guest that service stops after checkout.',
   ],
 
-  systemsHeadline: 'Inquiry, booking, and reputation automation for hospitality',
+  systemsHeadline: 'Inquiry, booking, and reputation automation for hospitality and events',
 
   systemsCopy:
-    'Hospitality businesses live and die on inquiry response speed and reputation. These are the six systems that protect both — from the moment a lead comes in to the review that brings the next one.',
+    'The gap between a full calendar and a half-empty one is usually not marketing — it is response speed and reputation. These are the six systems that close that gap, from the moment an inquiry lands to the review that brings the next booking.',
 
   serviceSlugs: [
     'appointment-booking-automation',
@@ -52,31 +52,31 @@ const DATA: IndustryPageData = {
     'lead-generation-automation',
   ],
 
-  subVerticalsHeadline: 'Built for the way hospitality businesses actually run',
+  subVerticalsHeadline: 'Built for every corner of the hospitality and events industry',
 
   subVerticalsCopy:
-    'The automation work — capturing inquiries, confirming bookings, following up after an event, requesting reviews — is operational, not creative. The system fits around your workflow, whether you run a restaurant, a venue, or a solo event planning business.',
+    'The work — capturing inquiries, confirming bookings, following up after an event, requesting reviews — is operational, not creative. The system fits around your workflow whether you run a 300-seat venue or a solo planning business.',
 
   featured: [
     {
       name: 'Event & Wedding Venues',
       blurb:
-        'Inquiry capture, booking confirmation, and post-event review generation for event spaces and wedding venues.',
+        'Inquiry capture, booking confirmation, and post-event review generation for event spaces and wedding venues of all sizes.',
     },
     {
       name: 'Restaurants & Catering',
       blurb:
-        'Reservation follow-up, inquiry automation, and review systems for restaurants and catering businesses.',
+        'Reservation follow-up, after-hours inquiry automation, and review systems for restaurants, catering companies, and private dining operations.',
     },
     {
       name: 'Wedding & Event Planners',
       blurb:
-        'Lead follow-up and client communication automation for wedding and event planning businesses.',
+        'Lead follow-up, client communication automation, and review generation for solo planners and small planning agencies.',
     },
     {
       name: 'Hotels & Boutique Properties',
       blurb:
-        'Guest communication automation and reputation management for hotels and boutique lodging.',
+        'Guest communication automation and reputation management for hotels, inns, and boutique lodging properties.',
     },
   ],
 
@@ -89,72 +89,72 @@ const DATA: IndustryPageData = {
     {
       name: 'DJs & Live Entertainment',
       blurb:
-        'Booking automation and review systems for DJs and live entertainment providers.',
+        'Booking confirmation, reminder sequences, and review systems for DJs and live entertainment providers.',
     },
     {
       name: 'Florists & Event Decorators',
       blurb:
-        'Inquiry follow-up and review generation for florists and event decorators.',
+        'Inquiry follow-up, booking confirmation, and post-event review requests for florists and event decorators.',
     },
     {
       name: 'Party Rental Companies',
       blurb:
-        'Booking automation and review systems for party and event rental businesses.',
+        'Booking automation, delivery confirmation, and review systems for party and event rental businesses.',
     },
     {
       name: 'Food Trucks & Specialty Bakeries',
       blurb:
-        'Inquiry response and review generation for food trucks and specialty bakeries.',
+        'Inquiry response, event booking follow-up, and review generation for food trucks and specialty bakeries.',
     },
     {
       name: 'Bartending & Bar Services',
       blurb:
-        'Booking automation and follow-up for event bartending and mobile bar businesses.',
+        'Booking automation and post-event review follow-up for event bartending and mobile bar businesses.',
     },
     {
       name: 'Photo Booth Companies',
       blurb:
-        'Inquiry capture and booking automation for photo booth rental businesses.',
+        'Inquiry capture, booking confirmation, and review requests for photo booth rental businesses.',
     },
     {
       name: 'Tour Operators & Experiences',
       blurb:
-        'Booking follow-up and review systems for tourism and experience-based businesses.',
+        'Booking follow-up, guest communication, and review systems for tourism operators and experience-based businesses.',
     },
     {
       name: 'Conference Centers & Banquet Halls',
       blurb:
-        'Inquiry automation and reputation management for conference and banquet facilities.',
+        'Inquiry automation, booking management, and reputation management for conference facilities and banquet halls.',
     },
   ],
 
   faqs: [
     {
       q: 'What types of hospitality and events businesses do you work with?',
-      a: 'We work with restaurants, event venues, wedding planners, hotels, caterers, photographers, and event service providers. If your business depends on inquiry response, bookings, and reviews, the system applies.',
+      a: 'We work with restaurants, event venues, wedding planners, hotels, caterers, photographers, DJs, florists, and event rental companies. If your business takes bookings, hosts guests, or runs events — and relies on reviews and referrals to grow — the system applies.',
     },
     {
-      q: 'Can you automate responses to venue and event inquiries?',
-      a: 'Yes. When an inquiry comes in through your website or contact form, an automated response goes out within minutes. A follow-up sequence keeps the lead engaged until they book or opt out — without you touching it manually.',
+      q: 'How does inquiry automation work for a venue or restaurant?',
+      a: 'When a lead submits an inquiry form, sends a message, or calls outside business hours, an automated response goes out within minutes — acknowledging the inquiry, collecting key event details, and moving the conversation forward without anyone on your team being available. Qualified leads are flagged for follow-up or routed directly to your booking calendar.',
     },
     {
-      q: 'How does review generation work after an event?',
-      a: 'After the event or service is complete, an automated message asks the guest or client to leave a review on Google. Timing and messaging are configured around your workflow. The system asks real customers for real reviews — it does not fabricate them.',
+      q: 'Can you automate review requests after an event or guest experience?',
+      a: 'Yes. The review request sequence fires automatically at the right moment after an event closes or a guest checks out — typically within 24 hours while the experience is still fresh. Requests go to Google Business Profile. Timing and messaging are scoped to your operation during setup.',
     },
     {
-      q: 'Can you help with negative reviews?',
-      a: 'We build systems that monitor your incoming reviews and generate AI-drafted responses — for positive and negative reviews — for your approval or direct posting. Every review gets a response, which signals attentiveness to future customers reading your profile.',
+      q: 'How does this system handle no-shows and last-minute cancellations?',
+      a: 'The booking confirmation and reminder sequence sends automated confirmations at booking, then reminder messages in the days and hours before the event. This reduces the manual back-and-forth and catches conflicts early. It does not replace your cancellation policy — it enforces it by keeping every booking in communication.',
     },
     {
-      q: 'Do you work with solo event planners and small venues, or only larger operations?',
-      a: 'The system scales. A solo wedding planner and a multi-room event venue have the same core problem — inquiry response and post-event reviews. We scope the system to what actually applies to your operation size and workflow.',
+      q: 'Do you work with solo event planners and small venues as well as larger operations?',
+      a: 'Yes. The system scales to operation size. A solo wedding planner and a multi-room venue have the same core problem — inquiry response speed and post-event reviews. We scope the setup to what actually fits your workflow and team size during the discovery call.',
     },
   ],
 
   ctaHeadline: 'Book a 20-minute revenue leak audit for your hospitality business.',
 
   ctaBody:
-    "We'll map where inquiries, bookings, or reviews are leaking and show you the order of operations. Walk away with the plan, whether or not we work together.",
+    'We will map where inquiries, bookings, or reviews are leaking and show you the order of operations to fix it. Walk away with the plan whether or not we work together.',
 
   ctaPrimaryLabel: 'Get a Free Audit',
 }
