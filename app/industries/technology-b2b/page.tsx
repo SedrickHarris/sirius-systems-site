@@ -17,10 +17,10 @@ const DATA: IndustryPageData = {
   eyebrow: 'Technology & B2B Services',
 
   headline:
-    'The Lead That Sits Unanswered Over a Weekend Is Already Talking to a Competitor',
+    'The lead that sits unanswered over a weekend is already talking to a competitor',
 
   subheadline:
-    'B2B technology sales cycles are longer, which makes the first-response window more expensive to lose. The firms that close more business are the ones that respond within minutes, follow up across multiple touches, and have a review record that builds trust before the discovery call even happens. We build the pipeline and reputation system that makes that the default, not the exception.',
+    'B2B technology buyers move fast even when sales cycles run long. The firm that responds first wins the discovery call. The firm with the stronger review record wins the shortlist comparison. The automation gap between those two outcomes is a first-response system, a multi-touch follow-up sequence, and a post-engagement review request. We build all three.',
 
   heroHighlights: [
     'Instant lead response — no inbound inquiry sits unanswered over nights or weekends',
@@ -33,16 +33,16 @@ const DATA: IndustryPageData = {
 
   problems: [
     'Inbound leads from your website or campaigns go unanswered for hours or over weekends. By the time someone follows up, the prospect has already had a discovery call with a competitor.',
-    'Prospects that do not convert on the first contact fall out of the pipeline because there is no automated follow-up sequence moving them through a longer sales cycle.',
+    'Prospects that do not convert on first contact fall out of the pipeline because there is no automated follow-up sequence moving them through a longer sales cycle.',
     'The CRM has contacts in it but no automated sequences. Pipeline movement depends on a salesperson remembering to follow up — which means it does not happen consistently.',
-    'Satisfied clients who would leave a positive review are never asked. The Google profile is thinner than the quality of the work warrants, which costs credibility in pre-sale research.',
+    'Satisfied clients who would leave a positive review are never asked. The Google profile is thinner than the quality of the work warrants, which costs credibility before every discovery call.',
   ],
 
   systemsHeadline:
     'Lead, pipeline, and reputation automation for technology and B2B firms',
 
   systemsCopy:
-    'B2B pipelines have three automation gaps most firms leave open: the first-response window, the multi-touch follow-up sequence, and the post-project review request. These are the six systems that close all three.',
+    'Three gaps sit open in most B2B pipelines: the first-response window, the multi-touch follow-up sequence, and the post-project review request. These six systems close all three — so more leads convert, fewer go cold, and your reputation reflects the work you actually do.',
 
   serviceSlugs: [
     'lead-generation-automation',
@@ -57,13 +57,13 @@ const DATA: IndustryPageData = {
     'Built for technology firms and B2B service businesses',
 
   subVerticalsCopy:
-    'The automation work — capturing and responding to inbound leads, running follow-up sequences, keeping the CRM current, requesting reviews after engagements — is operational. It runs alongside your delivery work without requiring your team to manage it manually.',
+    'The automation work — capturing and responding to inbound leads, running follow-up sequences, keeping the CRM current, requesting reviews after engagements — runs alongside your delivery work. Your team does not manage it manually. It runs because the system is built to run.',
 
   featured: [
     {
       name: 'IT Consulting & Managed Service Providers',
       blurb:
-        'Lead follow-up automation, CRM pipeline management, and review systems for IT consulting and MSP businesses.',
+        'Lead follow-up automation, CRM pipeline management, and review systems for IT consulting firms and MSPs.',
     },
     {
       name: 'SaaS & Software Development Firms',
@@ -114,48 +114,48 @@ const DATA: IndustryPageData = {
         'Lead follow-up and CRM automation for systems integration and IT infrastructure firms.',
     },
     {
-      name: 'Compliance Technology Firms',
+      name: 'IT Staffing & Recruiting Firms',
       blurb:
-        'Lead nurture and review systems for compliance and regulatory technology businesses.',
+        'Lead response automation and review systems for technology staffing and recruiting companies.',
     },
     {
-      name: 'B2B Lead Generation Companies',
+      name: 'VoIP & Telecom Service Providers',
       blurb:
-        'CRM automation and review systems for B2B lead generation service providers.',
+        'Inquiry capture and follow-up automation for VoIP and business telecom service providers.',
     },
     {
-      name: 'Help Desk & Technical Support',
+      name: 'E-Commerce Technology Agencies',
       blurb:
-        'Inquiry response and review generation for help desk and technical support providers.',
+        'Lead nurture and CRM pipeline automation for e-commerce technology and platform agencies.',
     },
     {
-      name: 'Network Support Companies',
+      name: 'Business Intelligence & Reporting Firms',
       blurb:
-        'Lead follow-up and reputation management for network support and IT infrastructure firms.',
+        'Lead follow-up and review systems for BI, reporting, and data visualization firms.',
     },
     {
-      name: 'Workflow Automation Consultants',
+      name: 'Technology Training & Certification Providers',
       blurb:
-        'Lead capture and follow-up automation for workflow and process automation consulting businesses.',
+        'Enrollment follow-up and review automation for technology training and certification programs.',
     },
   ],
 
   faqs: [
     {
-      q: 'What types of technology and B2B businesses do you work with?',
-      a: 'We work with IT consulting firms, MSPs, SaaS companies, software development firms, AI agencies, cybersecurity companies, and other B2B service businesses. If your business generates inbound leads and depends on a pipeline of prospects moving toward a sale, the system applies.',
+      q: 'What types of technology and B2B service businesses do you work with?',
+      a: 'We work with IT consulting firms, MSPs, SaaS companies, software development shops, cybersecurity providers, AI agencies, and other B2B service businesses that depend on inbound leads and referrals to grow. If your business has a pipeline and sells a service, the automation system applies.',
     },
     {
-      q: 'How does lead follow-up automation work for a longer B2B sales cycle?',
-      a: 'The follow-up sequences are configured around your sales cycle length and typical buyer journey. Rather than a single follow-up, the system sends a multi-touch sequence across email and SMS on a defined schedule — staying in contact until the prospect responds, books a call, or opts out. No manual tracking required.',
+      q: 'How does lead response automation work for a B2B technology firm?',
+      a: 'When a lead submits a form, sends a message, or reaches out through any connected channel, an automated response goes out within minutes — acknowledging the inquiry and moving the conversation toward a discovery call. If the lead does not respond, a follow-up sequence continues reaching out across multiple touches so the prospect does not go cold while your team is focused on delivery.',
     },
     {
-      q: 'Can you work with the CRM we already have?',
-      a: 'Integration capability depends on which CRM and tools you currently use. We evaluate your stack during onboarding and recommend the best path — whether that is integrating with your existing platform or moving to a better fit. We confirm compatibility before any build begins.',
+      q: 'Can you integrate with the CRM our firm is already using?',
+      a: 'We evaluate your existing stack during onboarding and recommend the best path — whether that is integrating with your current platform or moving to a better fit for automation. We confirm compatibility before any build begins.',
     },
     {
       q: 'How does review generation work for a B2B services firm?',
-      a: 'After a project milestone, contract renewal, or completed engagement, an automated follow-up asks the client to leave a Google review. For B2B firms, timing and messaging are configured around your client relationship rhythm. The system requests reviews from real clients — it does not fabricate them.',
+      a: 'After a project milestone, contract renewal, or completed engagement, an automated follow-up sequence asks the client to leave a Google review. For B2B firms, timing and messaging are configured around your client relationship rhythm. The system requests reviews from real clients — it does not fabricate them.',
     },
     {
       q: 'Do you work with solo consultants or only larger technology firms?',
@@ -166,7 +166,7 @@ const DATA: IndustryPageData = {
   ctaHeadline: 'Book a 20-minute pipeline audit for your technology or B2B firm.',
 
   ctaBody:
-    "We'll map where leads, follow-up, or client reviews are leaking and show you the order of operations. Walk away with the plan, whether or not we work together.",
+    'We will map where leads, follow-up, or client reviews are leaking and show you the order of operations to fix it. Walk away with the plan whether or not we work together.',
 
   ctaPrimaryLabel: 'Get a Free Audit',
 }
