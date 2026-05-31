@@ -94,7 +94,9 @@ Draft `<title>` and `<meta name="description">` for every Phase 1 page. These ar
 
 ### `/competitor-review-benchmarking`
 - **Title:** `Competitor Review Benchmarking | Sirius Systems`
-- **Description:** `See how your reviews stack up against your top local competitors — and where to push next. Competitor review benchmarking by Sirius Systems.`
+- **Description:** `See how your review volume, rating, recency, and response rate compare to your top local competitors — and get a gap analysis that shows where to push next.`
+- **Notes:** Level 4 copy shipped 2026-05-31. Service page. metaDescription rewritten (156 chars — trimmed from the 164-char approved draft to fit the 140–160 gate; "exactly" dropped, client approved). headline (trailing period removed), subheadline, definition, and problems upgraded to Level 4. faqs expanded 5 → 9 (the file's actual existing Q1–Q5 preserved byte-for-byte, 4 new appended). metaTitle, eyebrow, glyphVariant unchanged.
+- **Status:** Level 4 shipped
 
 ### `/all-in-one-business-growth-system`
 - **Title:** `All-in-One Business Growth System | Sirius Systems`

@@ -8,19 +8,19 @@ const PAGE = {
   metaTitle:
     'Competitor Review Benchmarking | Sirius Systems',
   metaDescription:
-    'See how your reviews stack up against your top local competitors: volume, rating, recency, and response rate: and know exactly where to push next.',
+    'See how your review volume, rating, recency, and response rate compare to your top local competitors — and get a gap analysis that shows where to push next.',
   eyebrow: 'Competitor Benchmarking',
-  headline: 'Know exactly where you stand against your local competition.',
+  headline: 'Most businesses guess at their competitive review position — this shows you the numbers',
   subheadline:
-    'Most businesses guess at their competitive position. Competitor review benchmarking shows you the real numbers: how your review volume, rating, recency, and response rate compare to the businesses competing for the same customers.',
+    'Your review profile does not exist in a vacuum. It competes against every other business Google shows when someone searches for what you offer. Competitor review benchmarking tells you exactly where you stand on volume, rating, recency, and response rate — and what it would take to move into a leading position.',
   glyphVariant: 'grid' as const,
   definition:
-    'Competitor review benchmarking for local service businesses means systematically comparing your review profile: volume, rating, recency, and response rate: against your top local competitors, so you know where the gaps are and what it would take to close them.',
+    'Competitor review benchmarking for local service businesses means systematically comparing your Google review profile against the businesses ranking for your primary service terms — measuring volume, rating, recency, and response rate side by side. The output is a gap analysis that maps directly to your reputation system: where to accelerate acquisition, where recency is the vulnerability, and which competitors are within reach.',
   problems: [
-    "You don't know whether your review count and rating are competitive or whether you're falling behind.",
-    "You're investing in review acquisition without knowing how much ground you need to make up.",
-    "A competitor is outranking you in local search and you don't know whether reviews are the reason.",
-    'You have no baseline to measure your reputation progress against: just an absolute number with no context.',
+    'You do not know whether your review count and rating are competitive or whether you are falling behind the businesses Google is already showing your customers.',
+    'You are investing in review acquisition without knowing how much ground you need to make up — no target, no baseline, just an absolute number with no context.',
+    'A competitor is outranking you in local search and you do not know whether reviews are the reason or where the gap actually lives.',
+    'Progress has no measure. Without a benchmark, you cannot tell whether your reputation system is closing the gap or whether competitors are pulling ahead faster than you are catching up.',
   ],
   steps: [
     {
@@ -84,6 +84,22 @@ const PAGE = {
     {
       q: 'How often should I benchmark against competitors?',
       a: 'Quarterly is a reasonable cadence for most businesses: frequent enough to catch meaningful shifts, not so frequent that noise obscures the signal. We configure the tracking so the comparison updates automatically rather than requiring a manual pull each time.',
+    },
+    {
+      q: 'How many Google reviews do I need to be competitive in my market?',
+      a: 'It depends entirely on your specific competitors in your specific location and service category. There is no universal number. Benchmarking tells you what the leading businesses in your local pack actually have — which is the only number that matters for your market. The goal is not an arbitrary count; it is a position relative to the businesses competing for the same customers.',
+    },
+    {
+      q: 'Can benchmarking tell me why a competitor is outranking me?',
+      a: 'Reviews are one factor in local search ranking, not the only one. Benchmarking shows you whether your review profile is a liability compared to competitors who are outranking you — volume deficit, rating gap, recency lag, or unanswered reviews. If the review profile looks comparable and the ranking gap persists, that points to other factors outside the reputation system.',
+    },
+    {
+      q: 'Does this work for businesses competing in multiple service categories or locations?',
+      a: 'Yes. We benchmark against the competitors ranking for each primary service term and location you want to compete in. A business with multiple service lines or a service-area operation covering multiple cities gets a benchmark set that reflects each competitive context, not a single aggregate that obscures where the real gaps are.',
+    },
+    {
+      q: 'How does competitor benchmarking connect to the rest of the reputation system?',
+      a: 'Benchmarking is the diagnostic layer that tells the reputation system where to focus. If volume is the gap, review acquisition cadence increases. If recency is the issue, trigger timing tightens. If response rate is low, the response workflow gets prioritized. Without the benchmark, the system runs blind. With it, every action has a specific target it is working toward.',
     },
   ],
 }
