@@ -26,6 +26,8 @@ Four posts minimum. Fifth is optional but recommended.
 | L4 | What an all-in-one business growth system actually means | `what-all-in-one-business-growth-system-means` | `growth-systems` | Capstone | all in one growth system | Pillar deep-dive | 1,500–2,000 |
 | L5 | Why I built Sirius Systems the way I did *(optional)* | `why-i-built-sirius-systems` | `founders-notes` | Capstone | brand-specific / non-SEO | Opinion | 1,000–1,500 |
 
+**Byline rule:** All posts use `author: "Sirius Systems"` and `authorRole: "Editor"` except posts in the `founders-notes` category, which use `author: "Sedrick Harris"` and `authorRole: "Founder"`.
+
 Each launch post must:
 - Link to its cluster hub in the first 2 paragraphs
 - Have a featured image per `image-prompt-bank.md`
