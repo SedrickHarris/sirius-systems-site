@@ -6,6 +6,10 @@
 .env.local
 .env.*.local
 
+# Cloudflare Pages local secrets (never commit — set in CF dashboard for deploys)
+.dev.vars
+.dev.vars.*
+
 # Node
 node_modules/
 npm-debug.log*
