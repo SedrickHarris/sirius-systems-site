@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit",
     "fetch-reviews": "ts-node scripts/fetch-reviews.ts",
     "curate-reviews": "ts-node scripts/curate-reviews.ts",
-    "indexnow-submit": "ts-node scripts/indexnow-submit.ts"
+    "indexnow-submit": "tsx scripts/indexnow-submit.ts"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
@@ -40,6 +40,7 @@
     "postcss": "^8.5.0",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
+    "tsx": "^4.22.4",
     "typescript": "^5.7.2"
   },
   "ts-node": {
