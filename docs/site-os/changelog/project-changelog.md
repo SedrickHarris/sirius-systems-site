@@ -15,6 +15,24 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/home-services/ai-chatbots
+- type: feat
+- changes: Created intersection page for home-services × ai-chatbots.
+  Level 5 copy package. Schema: WebPage + BreadcrumbList (4-item) +
+  Service + FAQPage. No AggregateRating / Review / LocalBusiness schema.
+  openGraph.images set to the shared /og/default.webp card (consistent with
+  the other two home-services intersection pages). tsc clean. next build
+  clean. Route count: 46 → 47.
+- files: app/industries/home-services/ai-chatbots/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaDescription trimmed from the spec's 171-char DATA value to 150–160
+  per the spec's own instruction. Final string (151 chars): "Home service
+  websites lose leads after hours. An AI chatbot qualifies visitors, answers
+  service questions, and books appointments 24/7 — in your voice." Opener
+  tightened ("...after hours when no one answers" → "...after hours") while
+  keeping the "in your voice" differentiator. metaTitle 39 chars. This
+  completes Batch 1 Group 1 (all three home-services intersection pages).
+
 ## 2026-06-06 — feat: /industries/home-services/appointment-booking-automation
 - type: feat
 - changes: Created intersection page for home-services ×
