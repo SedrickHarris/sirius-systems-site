@@ -15,6 +15,25 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/home-services/reputation-management
+- type: feat
+- changes: Created intersection page for home-services × reputation-management.
+  Level 5 copy package. Schema: WebPage + BreadcrumbList (4-item) + Service +
+  FAQPage. No AggregateRating / Review / LocalBusiness schema. tsc clean.
+  next build clean. Route count: 41 → 42.
+- files: app/industries/home-services/reputation-management/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: Two items surfaced and resolved with the user. (1) metaDescription:
+  the originally provided copy was 161 chars and a follow-up "155" fix
+  actually measured 164 (both over the 140–160 gate); shipped an approved
+  in-gate variant at 151 chars ("...earns reviews, responds to every one, and
+  monitors your reputation automatically."). (2) og:image: added
+  openGraph.images pointing to the existing shared default card
+  /og/default.webp (the initially proposed /images/og/default.webp does not
+  exist — that folder holds only per-page cards), so this page matches the
+  site-wide og:image convention. A per-page / intersection-specific OG card
+  remains a possible future enhancement.
+
 ## 2026-06-06 — feat: IntersectionPageTemplate + Batch 1 sitemap stubs
 
 - type: feat
