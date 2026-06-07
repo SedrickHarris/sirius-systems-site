@@ -15,6 +15,21 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/beauty-wellness/reputation-management
+- type: feat
+- changes: Created intersection page beauty-wellness × reputation-management.
+  Level 5. Schema: WebPage + BreadcrumbList (4-item) + Service + FAQPage.
+  No AggregateRating / Review / LocalBusiness schema. openGraph.images set to
+  the shared /og/default.webp card. tsc clean. build clean.
+  Route count: 50 → 51.
+- files: app/industries/beauty-wellness/reputation-management/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 54 chars. metaDescription 153 chars (within 140–160). Copy
+  superseded by the finalized Group C revision in a follow-up commit ("Salons
+  and spas compete on reviews. ... tracks competitors automatically"); earlier
+  draft used a "live and die by reviews / protects your chair" variant that was
+  replaced before push. First page of Batch 1 Group C (beauty-wellness).
+
 ## 2026-06-06 — feat: /industries/construction-contractors/ai-chatbots
 - type: feat
 - changes: Created intersection page construction-contractors × ai-chatbots.
