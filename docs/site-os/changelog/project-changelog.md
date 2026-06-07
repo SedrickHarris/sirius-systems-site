@@ -15,6 +15,21 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/beauty-wellness/appointment-booking-automation
+- type: feat
+- changes: Created intersection page beauty-wellness × appointment-booking-automation.
+  Level 5. Schema: WebPage + BreadcrumbList (4-item) + Service + FAQPage.
+  No AggregateRating / Review / LocalBusiness schema. openGraph.images set to
+  the shared /og/default.webp card. tsc clean. build clean.
+  Route count: 51 → 52.
+- files: app/industries/beauty-wellness/appointment-booking-automation/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 51 chars. metaDescription 151 chars (within 140–160). Copy
+  superseded by the finalized Group C revision in a follow-up commit ("full
+  loop" headline + "Booking automation for salons and spas — ... running
+  automatically." description); earlier draft used a "calendar full —
+  automatically" headline and a 160-char description, replaced before push.
+
 ## 2026-06-06 — feat: /industries/beauty-wellness/reputation-management
 - type: feat
 - changes: Created intersection page beauty-wellness × reputation-management.
