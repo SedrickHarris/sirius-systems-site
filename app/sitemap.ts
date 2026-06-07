@@ -52,6 +52,21 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/retail-local-commerce',    priority: 0.7, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b',           priority: 0.7, changeFrequency: 'monthly' },
 
+  // Intersection pages — Batch 1 (Industry × Service)
+  // Priority 0.8 — same as service pages (Level 5, high-intent buyers)
+  { path: '/industries/home-services/reputation-management',              priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/home-services/appointment-booking-automation',     priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/home-services/ai-chatbots',                        priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/construction-contractors/reputation-management',   priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/construction-contractors/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/construction-contractors/ai-chatbots',             priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/beauty-wellness/reputation-management',            priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/beauty-wellness/appointment-booking-automation',   priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/beauty-wellness/ai-chatbots',                      priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/healthcare-medical/reputation-management',         priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/healthcare-medical/appointment-booking-automation',priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/healthcare-medical/ai-chatbots',                   priority: 0.8, changeFrequency: 'monthly' },
+
   // Blog index
   { path: '/blog',                                priority: 0.8, changeFrequency: 'weekly'  },
 

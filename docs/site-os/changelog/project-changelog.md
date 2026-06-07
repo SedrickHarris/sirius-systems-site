@@ -15,6 +15,39 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: IntersectionPageTemplate + Batch 1 sitemap stubs
+
+- type: feat
+- changes: Created components/site/IntersectionPageTemplate.tsx — shared
+  template for all industry × service intersection pages. Interface:
+  IntersectionPageData with fields for hubSlug, serviceSlug, hubName,
+  serviceName, eyebrow, headline, subheadline, heroHighlights,
+  definitionHeadline, definition, problemHeadline, problems (4), steps
+  (3-4), features (6-8), relatedServiceSlugs, faqs (5), and optional
+  ctaHeadline/ctaBody/ctaPrimaryLabel/howItWorksHeadline/featuresHeadline.
+  Section rhythm: S00 dark hero + glass card → S01 light definition
+  (AEO border-left) → S02 soft problems (card-solid 2-col grid) → S03
+  slate how-it-works (system-node steps) → S04 light features checklist
+  (card-solid 3-col grid) → S05 soft related services (RelatedServicesGrid
+  + hub + service links) → S06 light FAQ (native details, same array as
+  FAQPage JSON-LD) → S07 light section wrapping cta-deep panel. Template
+  emits no schema — schema emitted by each page file via JsonLdScript.
+  Updated app/sitemap.ts STATIC_ROUTES with 12 Batch 1 intersection page
+  paths at priority 0.8 / changeFrequency monthly. tsc clean. next build
+  clean.
+- files: components/site/IntersectionPageTemplate.tsx,
+         app/sitemap.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: No page files created this session. All 12 Batch 1 sitemap
+  entries point to routes that do not yet exist — they will 404 until
+  the page files ship. This is intentional and matches the pattern used
+  when industry hub routes were added to sitemap.ts before the hub pages
+  were built. The template carries a 'use client' directive per the build
+  spec's literal source (the sibling IndustryPageTemplate has none; the
+  directive is harmless here — no client-only APIs are used — and was
+  kept to match the spec exactly). Next: 12 Batch 1 page files in 4
+  groups of 3.
+
 ## 2026-06-06 — docs: register intersection page pattern across Site OS docs
 
 - type: docs
