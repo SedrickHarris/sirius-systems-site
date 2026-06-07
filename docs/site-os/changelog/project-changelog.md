@@ -15,6 +15,23 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/beauty-wellness/ai-chatbots
+- type: feat
+- changes: Created intersection page beauty-wellness × ai-chatbots.
+  Level 5. Schema: WebPage + BreadcrumbList (4-item) + Service + FAQPage.
+  No AggregateRating / Review / LocalBusiness schema. openGraph.images set to
+  the shared /og/default.webp card. tsc clean. build clean.
+  Route count: 52 → 53.
+- files: app/industries/beauty-wellness/ai-chatbots/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 44 chars. metaDescription 150 chars (within 140–160). Copy
+  superseded by the finalized Group C revision in a follow-up commit
+  ("behind the chair" headline + "four hours into a colour service" problem
+  scenario + "...in your voice, 24/7, while you are behind the chair."
+  description); earlier draft used a 149-char "can't answer every message"
+  description, replaced before push. Completes Batch 1 Group C
+  (beauty-wellness); 9 of 12 Batch 1 intersection pages built.
+
 ## 2026-06-06 — feat: /industries/beauty-wellness/appointment-booking-automation
 - type: feat
 - changes: Created intersection page beauty-wellness × appointment-booking-automation.
