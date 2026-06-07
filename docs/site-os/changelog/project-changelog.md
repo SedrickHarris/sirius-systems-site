@@ -15,6 +15,32 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/healthcare-medical/ai-chatbots
+- type: feat
+- changes: Created intersection page healthcare-medical × ai-chatbots.
+  Level 5. Schema: WebPage + BreadcrumbList (4-item) + Service + FAQPage.
+  No AggregateRating / Review / LocalBusiness schema. openGraph.images set to
+  the shared /og/default.webp card. tsc clean. build clean.
+  Route count: 54 → 55. Completes Batch 1 Group D (healthcare-medical);
+  all 12 Batch 1 intersection pages now built.
+- files: app/industries/healthcare-medical/ai-chatbots/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 45 chars. metaDescription 150 chars (within 140–160); the
+  build spec's DATA value was 164 (over the "target 160") with no approved trim,
+  so user approved an in-gate variant ("...qualifies visitors, and books them —
+  in your practice voice."). HIPAA-aware framing throughout — no PHI in visible
+  copy or schema. Two forced corrections vs the build prompt: (1) did NOT edit
+  app/sitemap.ts — route already stubbed (line 68, path: form), so the prompt's
+  {url:...} add would duplicate it / use the wrong key; actual route delta is
+  54→55 within this session's build, not the prompt's 52→53. (2) WebPage schema
+  name set to DATA.metaTitle (no "| Sirius Systems" suffix) to match the page
+  <title> and stay consistent with all prior intersection pages; the prompt's
+  schema block had added the suffix to the WebPage name only. serviceSchema used
+  as written, with the prompt's service name + HIPAA-aware description + slug.
+  FINAL PAGE OF BATCH 1 — all 12 intersection pages (home-services,
+  construction-contractors, beauty-wellness, healthcare-medical × reputation-
+  management / appointment-booking-automation / ai-chatbots) now built.
+
 ## 2026-06-06 — feat: /industries/healthcare-medical/appointment-booking-automation
 - type: feat
 - changes: Created intersection page healthcare-medical ×
