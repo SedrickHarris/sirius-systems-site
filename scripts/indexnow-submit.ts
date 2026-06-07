@@ -69,6 +69,19 @@ const STATIC_ROUTES: readonly string[] = [
   '/industries/community-faith-nonprofit',
   '/industries/retail-local-commerce',
   '/industries/technology-b2b',
+  // Intersection pages — Batch 1 (Industry × Service)
+  '/industries/home-services/reputation-management',
+  '/industries/home-services/appointment-booking-automation',
+  '/industries/home-services/ai-chatbots',
+  '/industries/construction-contractors/reputation-management',
+  '/industries/construction-contractors/appointment-booking-automation',
+  '/industries/construction-contractors/ai-chatbots',
+  '/industries/beauty-wellness/reputation-management',
+  '/industries/beauty-wellness/appointment-booking-automation',
+  '/industries/beauty-wellness/ai-chatbots',
+  '/industries/healthcare-medical/reputation-management',
+  '/industries/healthcare-medical/appointment-booking-automation',
+  '/industries/healthcare-medical/ai-chatbots',
   // Blog index
   '/blog',
   // Utility
