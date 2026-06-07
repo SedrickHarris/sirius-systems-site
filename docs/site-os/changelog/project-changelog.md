@@ -15,6 +15,18 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/construction-contractors/appointment-booking-automation
+- type: feat
+- changes: Created intersection page construction-contractors ×
+  appointment-booking-automation. Level 5. Schema: WebPage + BreadcrumbList
+  (4-item) + Service + FAQPage. No AggregateRating / Review / LocalBusiness
+  schema. openGraph.images set to the shared /og/default.webp card.
+  tsc clean. build clean. Route count: 48 → 49.
+- files: app/industries/construction-contractors/appointment-booking-automation/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaDescription shipped at 159 chars (within 140–160) using the spec's
+  approved trim. metaTitle 46 chars.
+
 ## 2026-06-06 — feat: /industries/construction-contractors/reputation-management
 - type: feat
 - changes: Created intersection page construction-contractors ×
