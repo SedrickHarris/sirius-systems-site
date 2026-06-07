@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — IndexNow post-deploy submission script
+- type: feat
+- author: Sedrick Harris
+- changes: Added scripts/indexnow-submit.ts — a post-deploy script that submits
+  all static + blog URLs (35 static routes mirrored from app/sitemap.ts + 1
+  published blog slug = 36 URLs) to api.indexnow.org in a single bulk POST. Key
+  read from INDEXNOW_KEY env var (never hardcoded); exits with code 1 and a clear
+  message if unset. STATIC_ROUTES mirrored inline and blog slugs read directly
+  from content/blog/*.mdx via gray-matter, because the project's ts-node config
+  does not resolve the `@/` path alias (importing app/sitemap.ts or lib/blog.ts
+  would fail at runtime). Native Node fetch (Node >= 20); no axios/node-fetch.
+  All documented response codes (200/202/400/403/422/429/other) handled with
+  meaningful log messages. Updated package.json with indexnow-submit script.
+  Added docs/site-os/indexnow-setup.md (8 sections: manual run, GitHub Actions
+  wiring, Cloudflare Workers alternative outline, re-run guidance, syndication).
+- files: scripts/indexnow-submit.ts, docs/site-os/indexnow-setup.md,
+         package.json, docs/site-os/changelog/project-changelog.md,
+         public/dcbb85c533c9491395476352f729396b.txt
+- notes: No server runtime needed — script runs at deploy time only. INDEXNOW_KEY
+  must be set as a GitHub Actions secret before CI wiring works. DEVIATION FROM
+  SPEC: the key .txt file was in public/dcbb85/ (a subfolder), not directly in
+  /public/ as the spec assumed. IndexNow scopes a key to URLs at or below the
+  key file's folder, so a key at /dcbb85/<key>.txt would 422 every root URL. Per
+  user decision, copied the file to public/<key>.txt (root) so it serves at
+  https://siriussys.io/<key>.txt and authorizes the whole host; the dcbb85/
+  original was left untouched. keyLocation is derived as SITE_URL/<key>.txt. The
+  root key file must return 200 or IndexNow returns 403.
+
 ## 2026-05-31 — /competitor-review-benchmarking Level 4 SEO/AEO copy upgrade
 - type: seo
 - changes: Upgraded from scaffold to Level 4 (committed in 51a02fd). Updated
