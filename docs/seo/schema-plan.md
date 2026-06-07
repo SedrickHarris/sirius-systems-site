@@ -225,6 +225,19 @@ The breadcrumb trail per page (used to generate the JSON-LD above):
 - `/blog/<slug>`: Home → Blog → <Post Headline>
 - `/privacy`: Home → Privacy
 - `/terms`: Home → Terms
+- `/industries/<hub-slug>/<service-slug>`: Home → Industries → &lt;Hub Name&gt; → &lt;Service Name&gt;
+
+## 9a. Intersection page schema stack
+
+Each intersection page at `/industries/[hub]/[service]` emits four blocks:
+
+1. **`WebPage`** — `url`, `name`, `description` derived from the page's metaTitle and metaDescription.
+2. **`BreadcrumbList`** — 4-item trail: Home → Industries → Hub Name → Service Name.
+3. **`Service`** — `serviceType` = service display name, `provider` = Organization `@id`, `description` = metaDescription, `url` = canonical intersection URL.
+4. **`FAQPage`** — only when 5 visible FAQ items are present on the page. `Question.name` strings must be byte-identical to visible FAQ text. Same array drives both visible render and JSON-LD.
+
+**Blocked on all intersection pages (zero exceptions):**
+`AggregateRating` / `Review` / `LocalBusiness` / `Organization` (inline) / `Product` / `Offer`
 
 ## 10. What we are explicitly NOT publishing in Phase 1 schema
 
@@ -244,3 +257,4 @@ Schema is checked in `docs/site-os/qa/prelaunch-checklist.md` Section 5. Validat
 | Date | Change |
 |------|--------|
 | 2026-05-20 | Initial plan: Organization, WebSite, BreadcrumbList, LocalBusiness (blocked), Person (founder), Service (×14), Article (per blog post). AggregateRating/Review gated on confirmed data. |
+| 2026-06-06 | Intersection page schema stack registered. BreadcrumbList slug map extended with `/industries/<hub>/<service>` 4-item trail. New section 9a added: intersection page schema stack (WebPage + 4-item BreadcrumbList + Service + FAQPage). Blocked types listed explicitly. |

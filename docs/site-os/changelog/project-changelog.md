@@ -15,6 +15,30 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — docs: register intersection page pattern across Site OS docs
+
+- type: docs
+- changes: Registered the intersection page (Industry × Service) pattern
+  formally across three Site OS docs.
+  (1) docs/seo/url-strategy.md — new section added above Reserved/future:
+  URL pattern `/industries/[hub-slug]/[service-slug]`, hub/service dependency
+  rules, sitemap requirement, per-page file location, shared template
+  component reference, Level 5 AI depth confirmed, Batch 1–4 plan table.
+  Changelog row appended.
+  (2) docs/seo/schema-plan.md — BreadcrumbList slug map extended with
+  4-item intersection trail. New section 9a added: intersection page schema
+  stack (WebPage + 4-item BreadcrumbList + Service + FAQPage). Blocked
+  schema types listed explicitly. Changelog row appended.
+  (3) docs/site-os/inputs/site-build-plan.md — post-launch intersection
+  section rewritten with full spec: Level 5 AI depth, URL pattern, template,
+  schema, sitemap rule, Batch 1–4 table with page counts and status, Batch 1
+  trigger condition confirmed met. Changelog row appended.
+  No code changes. No page files touched. tsc/build not required.
+- files: docs/seo/url-strategy.md,
+         docs/seo/schema-plan.md,
+         docs/site-os/inputs/site-build-plan.md,
+         docs/site-os/changelog/project-changelog.md
+
 ## 2026-06-06 — GitHub Actions IndexNow workflow
 - type: feat
 - author: Sedrick Harris

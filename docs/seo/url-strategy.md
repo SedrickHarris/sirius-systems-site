@@ -103,6 +103,32 @@ The authoritative URL map for the site. Every slug listed here is the **only** v
 | `/privacy` | Privacy Policy |
 | `/terms` | Terms of Service |
 
+### Intersection pages (Industry × Service)
+
+| Pattern | Example |
+|---|---|
+| `/industries/[hub-slug]/[service-slug]` | `/industries/home-services/reputation-management` |
+
+**Rules:**
+- `hub-slug` must match a canonical slug from the Industries table above.
+- `service-slug` must match a canonical slug from the Service (14, flat) table above.
+- No intersection page ships without a corresponding hub page at `/industries/[hub-slug]`.
+- All intersection pages are added to `app/sitemap.ts` on the same commit they ship.
+- Each intersection page has its own page file at:
+  `app/industries/[hub-slug]/[service-slug]/page.tsx`
+- A shared template component handles rendering:
+  `components/site/IntersectionPageTemplate.tsx`
+- AI depth: **Level 5** — all intersection pages, no exceptions.
+
+**Batch plan:**
+
+| Batch | Industries | Services | Pages | Status |
+|---|---|---|---|---|
+| 1 | home-services, construction-contractors, beauty-wellness, healthcare-medical | reputation-management, appointment-booking-automation, ai-chatbots | 12 | In progress |
+| 2 | professional-services, auto-services, real-estate-property, hospitality-events, technology-b2b, retail-local-commerce | reputation-management, appointment-booking-automation, ai-chatbots | 18 | Planned |
+| 3 | Batch 1 hubs | review-automation, crm-automation, ai-voicebots | 12 | Planned |
+| 4 | Remaining hubs | google-business-profile-optimization, lead-generation-automation, local-seo-aeo | 20–30 | Planned |
+
 ### Reserved / future (do NOT publish in Phase 1 unless explicitly green-lit)
 
 | Slug | Reason held |
@@ -139,3 +165,4 @@ When any doc references a URL — page copy plan, metadata draft, schema plan, i
 | 2026-05-20 | Industry taxonomy confirmed: collapsed from 7 industry slugs to 5 hubs (`home-services`, `contractors`, `professional-services`, `auto-services`, `beauty-wellness`). Deprecated `cleaning-companies`, `junk-removal`, `real-estate`, `coaches-consultants` — none published, so no 301 redirects required. |
 | 2026-05-23 | Industry taxonomy expanded from 5 hubs to 12 (added `healthcare-medical`, `real-estate-property`, `hospitality-events`, `education-childcare`, `community-faith-nonprofit`, `retail-local-commerce`, `technology-b2b`). `contractors` renamed to `construction-contractors`; **active 301 redirect** required and shipped in `public/_redirects`. Blog system deferred to a separate project, so the blog section of this map describes the eventual structure but is not in Phase 1 launch scope. |
 | 2026-05-23 | Redirect convention recorded: project uses `output: 'export'`, so all redirects must be defined in `public/_redirects`. Next.js `redirects()` in `next.config.mjs` is silently ignored under static export — do not use it. |
+| 2026-06-06 | Intersection page URL pattern registered. New section added above Reserved/future: pattern `/industries/[hub-slug]/[service-slug]`, hub/service dependency rules, sitemap requirement, per-page file location, shared template component, Level 5 AI depth confirmed. Batch 1–4 plan table added. |

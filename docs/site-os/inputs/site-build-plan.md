@@ -104,7 +104,23 @@ This project uses `output: 'export'` in `next.config.mjs` for Cloudflare Pages. 
 
 ### Post-launch: Industry × Service intersection pages
 
-Planned post-launch content layer building ~70–80 intersection pages across 4 batches. **Batch 1** targets `home-services`, `construction-contractors`, `beauty-wellness`, and `healthcare-medical` paired with `reputation-management`, `appointment-booking-automation`, and `ai-chatbots`. Build prompts to be written after all hub-page Level 5 SEO rebuilds are complete.
+Planned content layer building ~70–80 intersection pages across 4 batches.
+AI depth: **Level 5 — all pages, no exceptions.**
+
+**URL pattern:** `/industries/[hub-slug]/[service-slug]`
+**Template:** `components/site/IntersectionPageTemplate.tsx`
+**Per-page file:** `app/industries/[hub-slug]/[service-slug]/page.tsx`
+**Schema:** WebPage + BreadcrumbList (4-item) + Service + FAQPage
+**Sitemap:** each page added to `app/sitemap.ts` on the same commit it ships
+
+| Batch | Industries | Services | Pages | Status |
+|---|---|---|---|---|
+| 1 | home-services, construction-contractors, beauty-wellness, healthcare-medical | reputation-management, appointment-booking-automation, ai-chatbots | 12 | **In progress** |
+| 2 | professional-services, auto-services, real-estate-property, hospitality-events, technology-b2b, retail-local-commerce | reputation-management, appointment-booking-automation, ai-chatbots | 18 | Planned |
+| 3 | Batch 1 hubs | review-automation, crm-automation, ai-voicebots | 12 | Planned |
+| 4 | Remaining hubs | google-business-profile-optimization, lead-generation-automation, local-seo-aeo | 20–30 | Planned |
+
+**Trigger condition for Batch 1:** All hub-page Level 5 SEO rebuilds complete. ✅ Met 2026-06-06.
 
 ## 5. Phase plan
 
@@ -223,4 +239,5 @@ content/blog-publishing-checklist.md ─► every post before publish
 | 2026-05-23 | **Phase 5 deferred** to a separate Claude Project. **Phase 5b** added and marked complete: `QualificationForm` rebuilt with 12-industry selector + conditional sub-category step, nurture path hardened (book-anyway removed, confirmation swap state added), webhook payload extended (`industry`, `subCategory`, `qualificationResult`, `score`), second webhook on magnet button click. **Phase 6** in progress. **Phase 7** pending. |
 | 2026-05-23 | **Redirect convention recorded.** Static export means `next.config.mjs.redirects()` is a no-op; `public/_redirects` is the canonical place for 301/302 rules. |
 | 2026-05-23 | **Post-launch intersection pages noted.** Batch 1 = home-services / construction-contractors / beauty-wellness / healthcare-medical paired with reputation-management / appointment-booking-automation / ai-chatbots. Build prompts to follow after hub Level 5 rebuilds. |
+| 2026-06-06 | **Intersection page plan formalised.** URL pattern `/industries/[hub]/[service]` confirmed. AI depth set to Level 5 all pages. Template component `IntersectionPageTemplate.tsx` registered. Schema stack documented (WebPage + 4-item BreadcrumbList + Service + FAQPage). Batch 1–4 plan table expanded with page counts and status. Batch 1 trigger condition met. Post-launch section rewritten with full spec. |
 | 2026-05-29 | **Phase 7 COMPLETE — site live at https://siriussys.io** on Cloudflare Pages (verified via production curl: homepage/service/industry 200, contractors 301 at edge, branded 404, sitemap 36 entries, HTTPS valid). Outstanding non-blockers: `www → apex` 301 not yet configured (www returns 200); GSC/Bing sitemap submission and GBP NAP cross-check pending. Phase 6 prelaunch QA not separately re-verified this session — deploy-log pre-deploy gate (tsc/build/artifact checks + Phase 6 metaTitle hard-FAIL resolution) is PASS. |
