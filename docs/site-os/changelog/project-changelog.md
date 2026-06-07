@@ -15,6 +15,19 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/construction-contractors/ai-chatbots
+- type: feat
+- changes: Created intersection page construction-contractors × ai-chatbots.
+  Level 5. Schema: WebPage + BreadcrumbList (4-item) + Service + FAQPage.
+  No AggregateRating / Review / LocalBusiness schema. openGraph.images set to
+  the shared /og/default.webp card. tsc clean. build clean.
+  Route count: 49 → 50.
+- files: app/industries/construction-contractors/ai-chatbots/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaDescription shipped at 158 chars (within 140–160) using the spec's
+  approved trim. metaTitle 54 chars. Completes Batch 1 Group B
+  (construction-contractors); 6 of 12 Batch 1 intersection pages now built.
+
 ## 2026-06-06 — feat: /industries/construction-contractors/appointment-booking-automation
 - type: feat
 - changes: Created intersection page construction-contractors ×
