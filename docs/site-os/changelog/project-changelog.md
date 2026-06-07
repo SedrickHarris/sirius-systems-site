@@ -15,6 +15,19 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/construction-contractors/reputation-management
+- type: feat
+- changes: Created intersection page construction-contractors ×
+  reputation-management. Level 5 copy. Schema: WebPage + BreadcrumbList
+  (4-item) + Service + FAQPage. No AggregateRating / Review / LocalBusiness
+  schema. openGraph.images set to the shared /og/default.webp card.
+  tsc clean. build clean. Route count: 47 → 48.
+- files: app/industries/construction-contractors/reputation-management/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaDescription shipped at 152 chars (within 140–160) using the spec's
+  approved trim. metaTitle 37 chars. First page of Batch 1 Group B
+  (construction-contractors).
+
 ## 2026-06-06 — feat: /industries/home-services/ai-chatbots
 - type: feat
 - changes: Created intersection page for home-services × ai-chatbots.
