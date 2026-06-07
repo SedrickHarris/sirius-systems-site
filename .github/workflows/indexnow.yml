@@ -20,7 +20,8 @@
 #   IndexNow tries to verify the key (a not-yet-deployed key file → 403).
 
 name: IndexNow submit
-
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 on:
   push:
     branches: [main]
