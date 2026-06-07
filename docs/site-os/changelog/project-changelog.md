@@ -15,6 +15,21 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/home-services/appointment-booking-automation
+- type: feat
+- changes: Created intersection page for home-services ×
+  appointment-booking-automation. Level 5 copy package. Schema: WebPage +
+  BreadcrumbList (4-item) + Service + FAQPage. No AggregateRating / Review /
+  LocalBusiness schema. openGraph.images set to the shared /og/default.webp
+  card (consistent with the reputation-management page). tsc clean. next build
+  clean. Route count: 45 → 46.
+- files: app/industries/home-services/appointment-booking-automation/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaDescription shipped at 150 chars (within the 140–160 gate). The
+  build spec's DATA value was 171 chars and instructed a trim; the spec's
+  "157-char" approved trim actually measures 150 — used verbatim since it
+  passes the gate. metaTitle 48 chars.
+
 ## 2026-06-06 — feat: /industries/home-services/reputation-management
 - type: feat
 - changes: Created intersection page for home-services × reputation-management.
