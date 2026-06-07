@@ -15,6 +15,19 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — GitHub Actions IndexNow workflow
+- type: feat
+- author: Sedrick Harris
+- changes: Added .github/workflows/indexnow.yml — fires on every push to main,
+  waits 60 seconds for Cloudflare Pages to finish deploying, then runs
+  npm run indexnow-submit to POST all site URLs to api.indexnow.org. Requires
+  INDEXNOW_KEY secret set in GitHub repository settings.
+- files: .github/workflows/indexnow.yml,
+         docs/site-os/changelog/project-changelog.md
+- notes: Companion to the prior 2026-06-06 indexnow-submit script entry.
+  INDEXNOW_KEY must be added at GitHub → Settings → Secrets and variables →
+  Actions before the workflow can succeed; without it the script exits 1.
+
 ## 2026-06-06 — IndexNow post-deploy submission script
 - type: feat
 - author: Sedrick Harris

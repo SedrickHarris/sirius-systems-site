@@ -1,0 +1,49 @@
+# IndexNow auto-submit
+#
+# What this does:
+#   On every push to `main`, Cloudflare Pages auto-deploys the static site.
+#   This workflow runs right after the push, waits for that deploy to go live,
+#   then submits all site URLs to IndexNow (Bing, Yandex, Seznam, Naver, …) via
+#   `npm run indexnow-submit` (scripts/indexnow-submit.ts).
+#
+# Required secret:
+#   INDEXNOW_KEY — the IndexNow key string. Set it at
+#   GitHub → Settings → Secrets and variables → Actions → New repository secret.
+#   It must match the ownership-proof .txt file served at
+#   https://siriussys.io/<INDEXNOW_KEY>.txt. The script exits 1 (no request)
+#   if this is missing.
+#
+# Why the 60-second sleep:
+#   GitHub Actions starts as soon as the push lands, but Cloudflare Pages builds
+#   and propagates the deploy independently and asynchronously. The sleep gives
+#   Pages time to finish so the new pages and the key file are live before
+#   IndexNow tries to verify the key (a not-yet-deployed key file → 403).
+
+name: IndexNow submit
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  indexnow-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Wait for Cloudflare Pages deploy to propagate
+        run: sleep 60
+
+      - name: Submit URLs to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: npm run indexnow-submit
