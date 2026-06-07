@@ -15,6 +15,29 @@ Format per entry:
 
 ---
 
+## 2026-06-06 — feat: /industries/healthcare-medical/reputation-management
+- type: feat
+- changes: Created intersection page healthcare-medical × reputation-management.
+  Level 5. Schema: WebPage + BreadcrumbList (4-item) + Service + FAQPage.
+  No AggregateRating / Review / LocalBusiness schema. openGraph.images set to
+  the shared /og/default.webp card. tsc clean. build clean.
+  Route count: 53 → 54.
+- files: app/industries/healthcare-medical/reputation-management/page.tsx,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 60 chars (includes "| Sirius Systems"; layout title template
+  is "%s" so it renders once — this is the only intersection page carrying the
+  brand suffix). metaDescription 156 chars (within 140–160); the build spec's
+  DATA value was 166 (mislabeled "160") with no approved trim, so user approved
+  an in-gate variant ("...automate reviews, respond to feedback, and protect
+  local search rankings."). Three forced corrections vs the build prompt, all to
+  avoid a broken build: (1) used serviceSchema() — the prompt's service() helper
+  does not exist in lib/schema.ts; honored the prompt's service name/description
+  and added the required slug (serviceType auto-derives from name); (2) did NOT
+  edit app/sitemap.ts — the route was already stubbed (line 66, path: form) in
+  the IntersectionPageTemplate commit, so adding the prompt's {url:...} entry
+  would duplicate it and use the wrong key; (3) route count is 53→54, not the
+  prompt's stale 50→51. First page of Batch 1 Group D (healthcare-medical).
+
 ## 2026-06-06 — feat: /industries/beauty-wellness/ai-chatbots
 - type: feat
 - changes: Created intersection page beauty-wellness × ai-chatbots.
