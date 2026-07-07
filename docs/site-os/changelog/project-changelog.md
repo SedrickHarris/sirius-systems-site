@@ -15,6 +15,35 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/technology-b2b/appointment-booking-automation
+- type: feat
+- changes: Created intersection page technology-b2b × appointment-booking-automation.
+  Batch 2, Level 5 copy (4 steps, 8 features). B2B-specific discovery-call / demo-
+  booking angle (speed-to-lead for inbound), with sub-vertical coverage for IT
+  consulting firms, MSPs, SaaS companies, software development firms, and AI/
+  automation agencies. Booking automation wins the first call; CRM automation handles
+  the longer 60–180 day nurture. Schema stack: WebPage + BreadcrumbList (4-item) +
+  Service (name 'Appointment Booking Automation for B2B Technology Firms', slug
+  industries/technology-b2b/appointment-booking-automation) + FAQPage. Forbidden
+  schema grep (AggregateRating / Review / LocalBusiness / Organization / Product /
+  Offer) on emitted JSON-LD: 0 matches. og:image = shared /og/default.webp card.
+  metaTitle 49 chars (<=50). metaDescription 156 chars (in-gate, shipped verbatim —
+  no trim needed). tsc --noEmit: clean. next build: clean. Route count (next build
+  static pages): 84 → 85.
+- files: app/industries/technology-b2b/appointment-booking-automation/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: No metaDescription trim required (156, in-gate as provided). No schema
+  correction needed — the prompt specified the correct 'industries/'-prefixed
+  serviceSchema slug; serviceSchema name uses the full descriptive form per the
+  prompt ('... for B2B Technology Firms', which differs from the metaTitle's
+  'B2B Tech Firms' — intentional per the build spec). sitemap.ts + indexnow-submit.ts:
+  added after the technology-b2b/reputation-management entry in the Batch 2 block.
+  FAQ byte-identity confirmed (faqPage sets Question.name = item.q, no transformation;
+  5 questions). The build prompt called this the "eighth Batch 2 page"; by actual
+  build order it is the eleventh Batch 2 intersection page shipped this session
+  (route count 84 → 85 is the authoritative metric). Not pushed.
+
 ## 2026-07-07 — feat: /industries/hospitality-events/appointment-booking-automation
 - type: feat
 - changes: Created intersection page hospitality-events × appointment-booking-
