@@ -1,0 +1,823 @@
+{
+  "generatedAt": "2026-07-07T00:48:59.741Z",
+  "routeCount": 51,
+  "routes": [
+    {
+      "route": "/",
+      "sourceFile": "app/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "AI Automation for Local Service Businesses | Sirius Systems",
+        "Leads call when you’re on a job.",
+        "Reviews build up faster than you can respond.",
+        "Your CRM has 8,000 contacts and nothing on autopilot.",
+        "AI &amp; Automation",
+        "Smart Websites &amp; Local SEO",
+        "Reputation Systems",
+        "Audit",
+        "Build",
+        "Run"
+      ],
+      "possibleH1s": [
+        "Stop losing leads, reviews, and revenue to manual work."
+      ],
+      "possibleH2s": [
+        "Three problems most local service businesses live with. Until they don&rsquo;t.",
+        "The three pieces every local service business is missing.",
+        "One connected workflow. Six things that stop slipping.",
+        "The lead came in. Now what happens?",
+        "A site that does work, not just one that looks good.",
+        "More reviews. Better responses. Real benchmarking.",
+        "Built for local service businesses.",
+        "Three steps. No surprises.",
+        "No fake testimonials. No inflated claims.",
+        "Common ones, real answers.",
+        "Book a 20-minute revenue leak audit."
+      ],
+      "internalHrefs": [
+        "/contact",
+        "/services",
+        "/ai-automation",
+        "/${s.slug}",
+        "/local-seo-aeo",
+        "/reputation-management",
+        "/industries/${industry.slug}"
+      ],
+      "schemaTypeHints": [
+        "LocalBusiness",
+        "PostalAddress",
+        "AggregateRating",
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 561
+    },
+    {
+      "route": "/about",
+      "sourceFile": "app/about/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "About | Sirius Systems",
+        "Audit",
+        "Build",
+        "Run"
+      ],
+      "possibleH1s": [
+        "A growth system, not an agency layer."
+      ],
+      "possibleH2s": [
+        "Most local service businesses don&rsquo;t need another tool. They need fewer tools, doing more of the work.",
+        "Sedrick Harris.",
+        "Help local service businesses grow without adding headcount, taking out loans, or buying tools they&rsquo;ll never use.",
+        "Owner-operators of local service businesses.",
+        "Three steps. No surprises.",
+        "Sister brands, not the same brand.",
+        "Twenty minutes. A real audit. No pitch."
+      ],
+      "internalHrefs": [
+        "/contact",
+        "/services"
+      ],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 606
+    },
+    {
+      "route": "/ai-automation",
+      "sourceFile": "app/ai-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 214
+    },
+    {
+      "route": "/ai-chatbots",
+      "sourceFile": "app/ai-chatbots/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 210
+    },
+    {
+      "route": "/ai-review-responses",
+      "sourceFile": "app/ai-review-responses/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 170
+    },
+    {
+      "route": "/ai-voicebots",
+      "sourceFile": "app/ai-voicebots/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 200
+    },
+    {
+      "route": "/all-in-one-business-growth-system",
+      "sourceFile": "app/all-in-one-business-growth-system/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 261
+    },
+    {
+      "route": "/appointment-booking-automation",
+      "sourceFile": "app/appointment-booking-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 167
+    },
+    {
+      "route": "/blog",
+      "sourceFile": "app/blog/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Blog | ${SITE.name}"
+      ],
+      "possibleH1s": [
+        "Guides for service businesses that run on automation"
+      ],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 114
+    },
+    {
+      "route": "/blog/:slug",
+      "sourceFile": "app/blog/[slug]/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "${frontmatter.title} | ${SITE.name}"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [
+        "Related posts"
+      ],
+      "internalHrefs": [
+        "/blog",
+        "/"
+      ],
+      "schemaTypeHints": [
+        "FAQPage",
+        "Article"
+      ],
+      "wordEstimate": 308
+    },
+    {
+      "route": "/booking",
+      "sourceFile": "app/booking/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Book a Strategy Call | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Book Your Strategy Call"
+      ],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 10
+    },
+    {
+      "route": "/competitor-review-benchmarking",
+      "sourceFile": "app/competitor-review-benchmarking/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 179
+    },
+    {
+      "route": "/contact",
+      "sourceFile": "app/contact/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Contact | Sirius Systems",
+        "Reply within one business day",
+        "The audit, on a real call",
+        "Decide on your own time"
+      ],
+      "possibleH1s": [
+        "Twenty minutes. A real audit. No pitch."
+      ],
+      "possibleH2s": [
+        "Book the audit, or reach out directly.",
+        "Three steps from here.",
+        "Before you book."
+      ],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 161
+    },
+    {
+      "route": "/crm-automation",
+      "sourceFile": "app/crm-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 181
+    },
+    {
+      "route": "/google-business-profile-optimization",
+      "sourceFile": "app/google-business-profile-optimization/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 215
+    },
+    {
+      "route": "/industries",
+      "sourceFile": "app/industries/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Industries We Serve | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Built for the Businesses That Show Up and Do the Work"
+      ],
+      "possibleH2s": [
+        "Twelve industry groups. Hundreds of sub-verticals.",
+        "Same system. Tuned to your industry.",
+        "Common questions",
+        "Book a 20-minute revenue leak audit."
+      ],
+      "internalHrefs": [
+        "/services",
+        "/industries/${industry.slug}",
+        "/contact"
+      ],
+      "schemaTypeHints": [],
+      "wordEstimate": 218
+    },
+    {
+      "route": "/industries/auto-services",
+      "sourceFile": "app/industries/auto-services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 64
+    },
+    {
+      "route": "/industries/beauty-wellness",
+      "sourceFile": "app/industries/beauty-wellness/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 66
+    },
+    {
+      "route": "/industries/beauty-wellness/ai-chatbots",
+      "sourceFile": "app/industries/beauty-wellness/ai-chatbots/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 158
+    },
+    {
+      "route": "/industries/beauty-wellness/appointment-booking-automation",
+      "sourceFile": "app/industries/beauty-wellness/appointment-booking-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 140
+    },
+    {
+      "route": "/industries/beauty-wellness/reputation-management",
+      "sourceFile": "app/industries/beauty-wellness/reputation-management/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 147
+    },
+    {
+      "route": "/industries/community-faith-nonprofit",
+      "sourceFile": "app/industries/community-faith-nonprofit/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 65
+    },
+    {
+      "route": "/industries/construction-contractors",
+      "sourceFile": "app/industries/construction-contractors/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 60
+    },
+    {
+      "route": "/industries/construction-contractors/ai-chatbots",
+      "sourceFile": "app/industries/construction-contractors/ai-chatbots/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 153
+    },
+    {
+      "route": "/industries/construction-contractors/appointment-booking-automation",
+      "sourceFile": "app/industries/construction-contractors/appointment-booking-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 162
+    },
+    {
+      "route": "/industries/construction-contractors/reputation-management",
+      "sourceFile": "app/industries/construction-contractors/reputation-management/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 144
+    },
+    {
+      "route": "/industries/education-childcare",
+      "sourceFile": "app/industries/education-childcare/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 64
+    },
+    {
+      "route": "/industries/healthcare-medical",
+      "sourceFile": "app/industries/healthcare-medical/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 77
+    },
+    {
+      "route": "/industries/healthcare-medical/ai-chatbots",
+      "sourceFile": "app/industries/healthcare-medical/ai-chatbots/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 165
+    },
+    {
+      "route": "/industries/healthcare-medical/appointment-booking-automation",
+      "sourceFile": "app/industries/healthcare-medical/appointment-booking-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 162
+    },
+    {
+      "route": "/industries/healthcare-medical/reputation-management",
+      "sourceFile": "app/industries/healthcare-medical/reputation-management/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 160
+    },
+    {
+      "route": "/industries/home-services",
+      "sourceFile": "app/industries/home-services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 70
+    },
+    {
+      "route": "/industries/home-services/ai-chatbots",
+      "sourceFile": "app/industries/home-services/ai-chatbots/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 159
+    },
+    {
+      "route": "/industries/home-services/appointment-booking-automation",
+      "sourceFile": "app/industries/home-services/appointment-booking-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 167
+    },
+    {
+      "route": "/industries/home-services/reputation-management",
+      "sourceFile": "app/industries/home-services/reputation-management/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 163
+    },
+    {
+      "route": "/industries/hospitality-events",
+      "sourceFile": "app/industries/hospitality-events/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 68
+    },
+    {
+      "route": "/industries/professional-services",
+      "sourceFile": "app/industries/professional-services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 73
+    },
+    {
+      "route": "/industries/real-estate-property",
+      "sourceFile": "app/industries/real-estate-property/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 75
+    },
+    {
+      "route": "/industries/retail-local-commerce",
+      "sourceFile": "app/industries/retail-local-commerce/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 66
+    },
+    {
+      "route": "/industries/technology-b2b",
+      "sourceFile": "app/industries/technology-b2b/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 70
+    },
+    {
+      "route": "/lead-generation-automation",
+      "sourceFile": "app/lead-generation-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 181
+    },
+    {
+      "route": "/local-seo-aeo",
+      "sourceFile": "app/local-seo-aeo/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "LocalBusiness"
+      ],
+      "wordEstimate": 172
+    },
+    {
+      "route": "/privacy",
+      "sourceFile": "app/privacy/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Privacy Policy | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Privacy Policy"
+      ],
+      "possibleH2s": [
+        "Who We Are",
+        "What Information We Collect",
+        "How We Use Your Information",
+        "How We Share Your Information",
+        "Cookies and Tracking",
+        "Data Retention",
+        "Your Rights",
+        "Third-Party Links",
+        "Children&rsquo;s Privacy",
+        "Changes to This Policy",
+        "Contact Us"
+      ],
+      "internalHrefs": [
+        "/terms"
+      ],
+      "schemaTypeHints": [
+        "Service"
+      ],
+      "wordEstimate": 446
+    },
+    {
+      "route": "/reputation-management",
+      "sourceFile": "app/reputation-management/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 196
+    },
+    {
+      "route": "/revenue-leak-audit",
+      "sourceFile": "app/revenue-leak-audit/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Free Revenue Leak Audit | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Find where your business is losing leads, bookings, reviews, and revenue."
+      ],
+      "possibleH2s": [
+        "What the audit checks",
+        "How it works"
+      ],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Review"
+      ],
+      "wordEstimate": 67
+    },
+    {
+      "route": "/revenue-leak-audit/book",
+      "sourceFile": "app/revenue-leak-audit/book/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Book Your Revenue Leak Audit | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Pick a time for your Revenue Leak Audit."
+      ],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 7
+    },
+    {
+      "route": "/revenue-leak-audit/thank-you",
+      "sourceFile": "app/revenue-leak-audit/thank-you/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Audit Request Received | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Your Revenue Leak Audit request was received."
+      ],
+      "possibleH2s": [],
+      "internalHrefs": [
+        "/revenue-leak-audit/book"
+      ],
+      "schemaTypeHints": [],
+      "wordEstimate": 7
+    },
+    {
+      "route": "/review-automation",
+      "sourceFile": "app/review-automation/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 186
+    },
+    {
+      "route": "/services",
+      "sourceFile": "app/services/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Services | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Fourteen services. One operator. One system."
+      ],
+      "possibleH2s": [
+        "Capture, qualify, book, follow up.",
+        "Get found. Get chosen.",
+        "More reviews. Better responses. Real signal.",
+        "The whole engine, running as one system.",
+        "Built for these five.",
+        "Common questions",
+        "Book a 20-minute revenue leak audit."
+      ],
+      "internalHrefs": [
+        "/contact",
+        "/${capstone.slug}",
+        "/industries/${i.slug}",
+        "/industries"
+      ],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 301
+    },
+    {
+      "route": "/smart-websites",
+      "sourceFile": "app/smart-websites/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 210
+    },
+    {
+      "route": "/terms",
+      "sourceFile": "app/terms/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Terms of Service | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Terms of Service"
+      ],
+      "possibleH2s": [
+        "Agreement to Terms",
+        "Use of the Site",
+        "Intellectual Property",
+        "Services and Consultations",
+        "Disclaimer of Warranties",
+        "Limitation of Liability",
+        "Third-Party Links",
+        "Privacy",
+        "Changes to These Terms",
+        "Governing Law",
+        "Contact Us"
+      ],
+      "internalHrefs": [
+        "/privacy"
+      ],
+      "schemaTypeHints": [
+        "Service",
+        "Review"
+      ],
+      "wordEstimate": 461
+    }
+  ],
+  "warnings": []
+}

@@ -11,7 +11,11 @@
     "typecheck": "tsc --noEmit",
     "fetch-reviews": "ts-node scripts/fetch-reviews.ts",
     "curate-reviews": "ts-node scripts/curate-reviews.ts",
-    "indexnow-submit": "tsx scripts/indexnow-submit.ts"
+    "indexnow-submit": "tsx scripts/indexnow-submit.ts",
+    "seo:scan": "node seo-automation/scripts/scan-routes.mjs",
+    "seo:parse": "node seo-automation/scripts/parse-keyword-csv.mjs",
+    "seo:cluster": "node seo-automation/scripts/cluster-keywords.mjs",
+    "seo:score": "node seo-automation/scripts/score-opportunities.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
