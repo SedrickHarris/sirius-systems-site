@@ -1,7 +1,8 @@
 # Cloudflare: force www → apex (301)
 
-**Status as of 2026-07-07:** ⚠️ Manual dashboard step still required. Code/canonical
-is already correct; the only gap is a hard 301 from `www` to the apex domain.
+**Status:** ✅ Done and verified on 2026-07-07. The Cloudflare Redirect Rule is live;
+`www` now 301-redirects to the apex domain and the fix has been verified end to end
+(see "Verified behavior" below).
 
 ## Goal
 
@@ -18,19 +19,29 @@ has to be done at the zone (dashboard) level, not in the build output.
 
 See the guard comment in `public/_redirects`.
 
-## Current live behavior (verified 2026-07-07)
+## Verified behavior (2026-07-07, after the Redirect Rule went live)
 
 | Request | Result |
 |---|---|
-| `https://siriussys.io/` | `200` — current full site ✅ |
-| `https://www.siriussys.io/` | `200` — **serves identical current site**, no redirect ⚠️ |
-| `http://siriussys.io/` | `301` → `https://siriussys.io/` (auto HTTPS) ✅ |
-| `http://www.siriussys.io/` | `301` → `https://www.siriussys.io/` (HTTPS only, stays on www) ⚠️ |
+| `https://www.siriussys.io/` | `301` → `https://siriussys.io/` ✅ |
+| `https://www.siriussys.io/services` | `301` → `https://siriussys.io/services` ✅ (path preserved) |
+| `https://siriussys.io/` | `200` — remains the live canonical site ✅ |
 
-The old one-page version ("Get More Local Business Leads…") is **no longer served** on `www` —
-both hostnames now serve the current site off the same Pages project, and every `www` page's
-`<link rel="canonical">` already points at the apex. So Google will consolidate on the apex
-regardless; the 301 below makes it unambiguous and removes the duplicate crawlable copy.
+Confirmed:
+
+- `https://www.siriussys.io/` redirects with **301** to `https://siriussys.io/`.
+- `https://www.siriussys.io/services` redirects with **301** to `https://siriussys.io/services`.
+- `https://siriussys.io/` remains **200** (the apex is never redirected away).
+- The redirect **preserves paths** (`/services` → `/services`), so no service or industry URLs break.
+- **No redirect loop and no redirect chain** — `www` → 301 → apex → 200, a single hop.
+- The final landed page is the **current Sirius Systems site**
+  (title *"AI Automation for Local Service Businesses | Sirius Systems"*,
+  h1 *"Stop losing leads, reviews, and revenue to manual work."*), **not** the old one-page
+  version ("Get More Local Business Leads…").
+- Canonical tags, `metadataBase`, sitemap, and robots remain **apex-only** — unchanged by this fix.
+
+`www` and the apex serve off the same Pages project; the 301 removes the duplicate crawlable
+copy so Google consolidates unambiguously on the apex.
 
 ## Fix — add a Redirect Rule (recommended, free, one rule)
 
