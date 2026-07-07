@@ -201,6 +201,15 @@ export function Footer() {
                   Guides
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/revenue-leak-audit"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  Revenue Leak Audit
+                </Link>
+              </li>
             </ul>
           </div>
 
