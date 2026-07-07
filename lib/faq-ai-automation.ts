@@ -14,7 +14,7 @@ export const AI_FAQ_HUB = {
   eyebrow: 'AI Automation FAQ',
   title: 'AI Automation FAQ for Local Service Businesses | Sirius Systems',
   description:
-    'Find plain-language answers about AI automation, missed-call text-back, CRM follow-up, appointment booking, chatbots, voicebots, reviews, and local business lead capture.',
+    'Learn how AI automation helps local service businesses capture missed leads, respond faster, connect CRM follow-up, support booking, request reviews, and reduce revenue leaks.',
 } as const
 
 export type ServiceLink = { label: string; href: string }
