@@ -15,6 +15,32 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/technology-b2b/reputation-management
+- type: feat
+- changes: Created intersection page technology-b2b × reputation-management.
+  Fifth Batch 2 intersection page. Level 5 copy. Platform coverage names Google,
+  Clutch, G2, Trustpilot, and Capterra; B2B buying-committee framing and
+  post-engagement/milestone review-request timing included. AI discovery framing in
+  the definition (review profile as an AI citation signal for ChatGPT/Perplexity).
+  Schema: WebPage + BreadcrumbList (4-item) + Service + FAQPage. No AggregateRating
+  / Review / LocalBusiness / Organization / Product / Offer schema (grep of emitted
+  JSON-LD: 0 matches). openGraph.images set to the shared /og/default.webp card.
+  tsc clean. build clean. Route count (next build static pages): 78 → 79.
+- files: app/industries/technology-b2b/reputation-management/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 47 chars. metaDescription shipped at 151 chars (in-gate) — the
+  build spec's DATA value was 165 (5 over the 160 ceiling; the spec claimed 158).
+  Applied the established in-gate trim for this template's trailing phrase: dropped
+  "automatically" ("...monitors your reputation." vs "...monitors your reputation
+  automatically."), consistent with professional-services (Page 1), real-estate-
+  property (Page 3), and hospitality-events (Page 4); no other field altered.
+  4th occurrence of this exact overflow/trim; auto-applied under standing precedent,
+  flagged. No schema correction needed — the prompt specified the correct
+  'industries/'-prefixed serviceSchema slug. sitemap.ts + indexnow-submit.ts: added
+  under the existing Batch 2 block. FAQ byte-identity confirmed (faqPage sets
+  Question.name = item.q, no transformation; 5 questions). Not pushed.
+
 ## 2026-07-07 — feat: /industries/hospitality-events/reputation-management
 - type: feat
 - changes: Created intersection page hospitality-events × reputation-management.
