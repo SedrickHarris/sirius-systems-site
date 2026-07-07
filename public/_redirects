@@ -1,5 +1,11 @@
 # Cloudflare Pages redirect rules.
 # Format: <source> <destination> <status>
 # https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# NOTE: This file matches ROOT-RELATIVE PATHS ONLY. Domain/hostname redirects
+# (e.g. www.siriussys.io -> siriussys.io) are NOT supported here and MUST NOT be
+# added — a path-only catch-all would also match the apex and cause a redirect
+# loop. The www -> apex 301 is a Cloudflare dashboard Redirect Rule; see
+# docs/site-os/cloudflare-www-redirect.md.
 
 /industries/contractors  /industries/construction-contractors  301
