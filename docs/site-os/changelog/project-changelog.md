@@ -15,6 +15,33 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/professional-services/appointment-booking-automation
+- type: feat
+- changes: Created intersection page professional-services × appointment-booking-
+  automation. Seventh Batch 2 intersection page, and the first Batch 2 page for the
+  appointment-booking-automation service. Level 5 copy (3 steps, 8 features).
+  Speed-to-lead / consultation-race framing; after-hours self-scheduling, intake
+  capture at booking, multi-step reminders (24-hour + same-day) to cut no-shows,
+  CRM sync from inquiry to closed engagement. Schema stack: WebPage + BreadcrumbList
+  (4-item) + Service (name 'Appointment Booking Automation', slug industries/
+  professional-services/appointment-booking-automation) + FAQPage. No AggregateRating
+  / Review / LocalBusiness / Organization / Product / Offer schema (emitted JSON-LD
+  grep: 0 matches). og:image = shared /og/default.webp card. metaTitle 56 chars
+  (<=60). metaDescription 147 chars (in 140–160). tsc --noEmit: clean. next build:
+  clean, 81/81 static pages. Route count (next build static pages): 80 → 81.
+- files: app/industries/professional-services/appointment-booking-automation/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaDescription trim performed per the build prompt's explicit instruction
+  (DATA value was 161, 1 over the 160 ceiling; prompt authorized rewording the end
+  without altering meaning). Dropped the trailing "automatically" ("...cuts
+  no-shows." vs "...cuts no-shows automatically."); the sentence still describes an
+  automated system, so meaning is intact. No approval prompt needed — the build spec
+  required the trim. sitemap.ts + indexnow-submit.ts: added after the existing
+  professional-services/reputation-management entry in the Batch 2 block. FAQ
+  byte-identity confirmed (faqPage reads DATA.faqs directly, no manual override;
+  5 questions). Not pushed.
+
 ## 2026-07-07 — feat: /industries/retail-local-commerce/reputation-management
 - type: feat
 - changes: Created intersection page retail-local-commerce × reputation-management.

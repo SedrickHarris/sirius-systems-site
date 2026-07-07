@@ -71,6 +71,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   // Intersection pages — Batch 2 (Industry × Service)
   // Priority 0.8 — same as service pages (Level 5, high-intent buyers)
   { path: '/industries/professional-services/reputation-management',      priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/professional-services/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/auto-services/reputation-management',              priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/real-estate-property/reputation-management',       priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/hospitality-events/reputation-management',         priority: 0.8, changeFrequency: 'monthly' },
