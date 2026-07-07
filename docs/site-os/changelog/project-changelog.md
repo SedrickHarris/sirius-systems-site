@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/hospitality-events/appointment-booking-automation
+- type: feat
+- changes: Created intersection page hospitality-events × appointment-booking-
+  automation. Batch 2, Level 5 copy (4 steps, 8 features). Sub-vertical coverage for
+  event/wedding venues (tour booking), restaurants (reservation + private dining),
+  event planners (on-site unavailability), and catering-style quote-to-book flows.
+  After-hours inquiry capture, self-scheduling, reminder sequences to cut no-shows,
+  CRM sync, and post-event review trigger. Schema stack: WebPage + BreadcrumbList
+  (4-item) + Service (name 'Appointment Booking Automation for Restaurants and Event
+  Venues', slug industries/hospitality-events/appointment-booking-automation) +
+  FAQPage. Forbidden schema grep (AggregateRating / Review / LocalBusiness /
+  Organization / Product / Offer) on emitted JSON-LD: 0 matches. og:image = shared
+  /og/default.webp card. metaTitle 51 chars (<=51). metaDescription 154 chars
+  (in-gate, shipped verbatim — no trim needed). tsc --noEmit: clean. next build:
+  clean. Route count (next build static pages): 83 → 84.
+- files: app/industries/hospitality-events/appointment-booking-automation/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: No metaDescription trim required (154, in-gate as provided). No schema
+  correction needed — the prompt specified the correct 'industries/'-prefixed
+  serviceSchema slug; serviceSchema name uses the full descriptive form per the
+  prompt. sitemap.ts + indexnow-submit.ts: added after the hospitality-events/
+  reputation-management entry in the Batch 2 block. FAQ byte-identity confirmed
+  (faqPage sets Question.name = item.q, no transformation; 5 questions). The build
+  prompt called this the "seventh Batch 2 page"; by actual build order it is the
+  tenth Batch 2 intersection page shipped this session (route count 83 → 84 is the
+  authoritative metric). Not pushed.
+
 ## 2026-07-07 — feat: /industries/real-estate-property/appointment-booking-automation
 - type: feat
 - changes: Created intersection page real-estate-property × appointment-booking-
