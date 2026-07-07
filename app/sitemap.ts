@@ -72,6 +72,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   // Priority 0.8 — same as service pages (Level 5, high-intent buyers)
   { path: '/industries/professional-services/reputation-management',      priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/auto-services/reputation-management',              priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/real-estate-property/reputation-management',       priority: 0.8, changeFrequency: 'monthly' },
 
   // Resources hub + sub-hubs
   { path: '/resources',                           priority: 0.7, changeFrequency: 'monthly' },
