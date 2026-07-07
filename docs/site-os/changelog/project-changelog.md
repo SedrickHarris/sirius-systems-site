@@ -15,6 +15,35 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/real-estate-property/appointment-booking-automation
+- type: feat
+- changes: Created intersection page real-estate-property × appointment-booking-
+  automation. Batch 2, Level 5 copy (4 steps, 8 features). Speed-to-lead / after-
+  hours booking framing for both agents and property managers (tenant showing
+  requests, pre-qualification, no-show reduction). Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'Appointment Booking Automation for Real
+  Estate', slug industries/real-estate-property/appointment-booking-automation) +
+  FAQPage. Forbidden schema grep (AggregateRating / Review / LocalBusiness /
+  Organization / Product / Offer) on emitted JSON-LD: 0 matches. og:image = shared
+  /og/default.webp card. metaTitle 46 chars (<=46). metaDescription 159 chars
+  (in-gate, shipped verbatim — no trim needed; the "automatically" tail fit this
+  time). tsc --noEmit: clean. next build: clean. Route count (next build static
+  pages): 82 → 83.
+- files: app/industries/real-estate-property/appointment-booking-automation/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: No metaDescription trim required (159, in-gate as provided). Two corrections
+  vs the build prompt: (1) sitemap entry written in this file's actual STATIC_ROUTES
+  shape { path, priority, changeFrequency } — the prompt's suggested { url,
+  lastModified, changeFrequency as const, priority } object does not match the
+  STATIC_ROUTES type and would fail tsc; lastModified is applied in the map function.
+  (2) The prompt called this the "sixth Batch 2 page"; by actual build order it is the
+  ninth Batch 2 intersection page shipped this session (route count is the
+  authoritative metric: 82 → 83). sitemap.ts + indexnow-submit.ts: added after the
+  real-estate-property/reputation-management entry in the Batch 2 block. serviceSchema
+  name uses the full descriptive form per the prompt. FAQ byte-identity confirmed
+  (faqPage sets Question.name = item.q, no transformation; 5 questions). Not pushed.
+
 ## 2026-07-07 — feat: /industries/auto-services/appointment-booking-automation
 - type: feat
 - changes: Created intersection page auto-services × appointment-booking-automation.
