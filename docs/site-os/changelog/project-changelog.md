@@ -15,6 +15,37 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/professional-services/reputation-management
+- type: feat
+- changes: Created intersection page professional-services × reputation-management.
+  First Batch 2 intersection page. Level 5 copy, SERP-informed keyword set.
+  Definition sharpened with AI discovery framing (review profile as an AI citation
+  signal for engines like ChatGPT and Perplexity, not just a review count).
+  Platform coverage expanded to name Avvo, Lawyers.com, and FindLaw across the
+  hero highlight, features line, monitor-and-report step, and platform FAQ.
+  Schema: WebPage + BreadcrumbList (4-item) + Service + FAQPage. No AggregateRating
+  / Review / LocalBusiness / Organization / Product / Offer schema (grep of emitted
+  JSON-LD: 0 matches). openGraph.images set to the shared /og/default.webp card.
+  tsc clean. build clean. Route count (next build static pages): 74 → 75.
+- files: app/industries/professional-services/reputation-management/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 47 chars. metaDescription shipped at 160 chars (in-gate) —
+  the build spec's DATA value was 174 (over the 160 ceiling; the strategy package
+  mislabeled it 152). User approved the in-gate trim: dropped the trailing adverb
+  "automatically" ("...monitors your reputation." vs "...monitors your reputation
+  automatically."), no other copy altered. Two corrections vs the build prompt:
+  (1) serviceSchema slug set to 'industries/professional-services/reputation-
+  management' (the prompt's 'professional-services/reputation-management' omitted
+  the 'industries/' prefix, which would have emitted a Service url/@id at a non-
+  existent path); corrected to match the Batch 1 reference and produce a valid URL.
+  (2) Route count reported as next-build static-page count (74→75); prior changelog
+  entries used a count from before this session's Phase 0–5 resources/FAQ/funnel
+  additions, so the sequence is not directly continuous. sitemap.ts: added a new
+  "Batch 2" section with the route at priority 0.8. indexnow-submit.ts: mirrored
+  the route under a new Batch 2 comment. FAQ byte-identity confirmed (faqPage sets
+  Question.name = item.q with no transformation). Not pushed.
+
 ## 2026-06-06 — feat: /industries/healthcare-medical/ai-chatbots
 - type: feat
 - changes: Created intersection page healthcare-medical × ai-chatbots.
