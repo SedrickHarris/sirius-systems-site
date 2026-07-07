@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/hospitality-events/reputation-management
+- type: feat
+- changes: Created intersection page hospitality-events × reputation-management.
+  Fourth Batch 2 intersection page. Level 5 copy. Platform coverage names Google,
+  Yelp, TripAdvisor, The Knot, WeddingWire, and Facebook; post-event/post-visit
+  review-request timing windows and wedding/venue workflows included. AI discovery
+  framing in the definition (review profile as an AI citation signal for
+  ChatGPT/Perplexity). Schema: WebPage + BreadcrumbList (4-item) + Service +
+  FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product /
+  Offer schema (grep of emitted JSON-LD: 0 matches). openGraph.images set to the
+  shared /og/default.webp card. tsc clean. build clean. Route count (next build
+  static pages): 77 → 78.
+- files: app/industries/hospitality-events/reputation-management/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 54 chars. metaDescription shipped at 152 chars (in-gate) — the
+  build spec's DATA value was 166 (6 over the 160 ceiling; the spec claimed 158).
+  Applied the established in-gate trim for this template's trailing phrase: dropped
+  "automatically" ("...monitors your reputation." vs "...monitors your reputation
+  automatically."), consistent with the professional-services (Page 1) and
+  real-estate-property (Page 3) trims of the identical phrase; no other field
+  altered. Trim applied under standing precedent without a fresh approval prompt,
+  per the user's request to reduce per-page approval friction; flagged for reversal.
+  No schema correction needed — the prompt specified the correct 'industries/'-
+  prefixed serviceSchema slug. sitemap.ts + indexnow-submit.ts: added under the
+  existing Batch 2 block. FAQ byte-identity confirmed (faqPage sets Question.name =
+  item.q, no transformation; 5 questions). Not pushed.
+
 ## 2026-07-07 — feat: /industries/real-estate-property/reputation-management
 - type: feat
 - changes: Created intersection page real-estate-property × reputation-management.
