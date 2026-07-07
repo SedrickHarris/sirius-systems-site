@@ -15,6 +15,38 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/auto-services/reputation-management
+- type: feat
+- changes: Created intersection page auto-services × reputation-management.
+  Second Batch 2 intersection page. Level 5 copy, SERP-informed keyword set
+  (yelp auto repair cluster + auto shop review management signals). Trust-deficit
+  framing throughout — reviews as the trust equalizer that wins the walk-in
+  against dealers and chains. Platform coverage names Google, Yelp, Facebook, and
+  RepairPal (Yelp weighted higher than in professional services, per SERP). AI
+  discovery framing in the definition (review profile as an AI citation signal for
+  ChatGPT/Perplexity). SMS-first request sequencing at RO close noted. Schema:
+  WebPage + BreadcrumbList (4-item) + Service + FAQPage. No AggregateRating /
+  Review / LocalBusiness / Organization / Product / Offer schema (grep of emitted
+  JSON-LD: 0 matches). openGraph.images set to the shared /og/default.webp card.
+  tsc clean. build clean. Route count (next build static pages): 75 → 76.
+- files: app/industries/auto-services/reputation-management/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 43 chars. metaDescription shipped at 155 chars (in-gate) — the
+  build spec's DATA value was 180 (over the 160 ceiling; the strategy package
+  mislabeled it 154, and the summary-table variant was ~175). User approved the
+  in-gate trim (Option B): dropped the filler "We build the system that" and
+  tightened the verbs ("We earn reviews after every job, respond to every one, and
+  keep you ahead of competitors"), preserving the trust-deficit "before a driver
+  walks in" hook; no body copy altered. One correction vs the build prompt:
+  serviceSchema slug set to 'industries/auto-services/reputation-management' (the
+  prompt's 'auto-services/reputation-management' omitted the 'industries/' prefix,
+  which would emit a Service url/@id at a non-existent path); corrected to match
+  the reference and produce a valid URL. sitemap.ts + indexnow-submit.ts: added
+  under the existing Batch 2 block. FAQ byte-identity confirmed (faqPage sets
+  Question.name = item.q, no transformation). Not pushed by build; pushed on
+  explicit user request after commit.
+
 ## 2026-07-07 — feat: /industries/professional-services/reputation-management
 - type: feat
 - changes: Created intersection page professional-services × reputation-management.

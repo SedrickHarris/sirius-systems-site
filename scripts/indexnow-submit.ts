@@ -84,6 +84,7 @@ const STATIC_ROUTES: readonly string[] = [
   '/industries/healthcare-medical/ai-chatbots',
   // Intersection pages — Batch 2 (Industry × Service)
   '/industries/professional-services/reputation-management',
+  '/industries/auto-services/reputation-management',
   // Blog index
   '/blog',
   // Utility
