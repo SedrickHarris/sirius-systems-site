@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 // Planned checklists. The full checklist landing pages ship in a later phase,
 // so every card is "Coming soon" (no href) for now. Add an href as each ships.
 const CHECKLISTS: ResourceCardData[] = [
-  { title: 'Local Business Revenue Leak Checklist', blurb: 'Walk your lead flow end to end and find the points where jobs quietly slip away.', Icon: Gauge },
+  { title: 'Local Business Revenue Leak Checklist', blurb: 'Walk your lead flow end to end and find the points where jobs quietly slip away.', href: '/resources/checklists/local-business-revenue-leak-checklist', Icon: Gauge },
   { title: 'Smart Website Conversion Checklist', blurb: 'Check whether your site actually captures, qualifies, books, and follows up.', Icon: MousePointerClick },
   { title: 'Review Automation Readiness Checklist', blurb: 'See whether your review requests go out consistently at the right moment.', Icon: Star },
   { title: 'Google Business Profile Signal Checklist', blurb: 'Confirm the categories, services, posts, and signals that drive local visibility.', Icon: MapPin },

@@ -72,6 +72,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/resources',                           priority: 0.7, changeFrequency: 'monthly' },
   { path: '/resources/faq',                       priority: 0.6, changeFrequency: 'monthly' },
   { path: '/resources/checklists',                priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/resources/checklists/local-business-revenue-leak-checklist', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/resources/guides',                    priority: 0.6, changeFrequency: 'monthly' },
 
   // Conversion / funnel (the /book and /thank-you steps stay out of the sitemap)

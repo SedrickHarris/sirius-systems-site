@@ -184,9 +184,12 @@ export default async function AiAutomationFaqDetailPage({
 
           {/* Lead magnet + audit CTAs */}
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link href="/resources/checklists" className="btn-link">
+            <Link
+              href="/resources/checklists/local-business-revenue-leak-checklist"
+              className="btn-link"
+            >
               <ListChecks className="h-4 w-4" aria-hidden />
-              View the local business growth checklists
+              Use the Local Business Revenue Leak Checklist
             </Link>
             <Link href="/revenue-leak-audit" className="btn-link">
               <Gauge className="h-4 w-4" aria-hidden />
