@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 // built in a later phase, so every card is "Coming soon" (no href) for now.
 // Add an href here as each cluster ships.
 const TOPICS: ResourceCardData[] = [
-  { title: 'AI Automation', blurb: 'How trigger-based systems capture leads, follow up, and book jobs without manual work.', Icon: Workflow },
+  { title: 'AI Automation', blurb: 'How trigger-based systems capture leads, follow up, and book jobs without manual work.', href: '/resources/faq/ai-automation', Icon: Workflow },
   { title: 'Review Automation', blurb: 'How to earn more reviews at the right moment without spamming or sounding scripted.', Icon: Star },
   { title: 'Local SEO and AEO', blurb: 'How to get found in Google and in AI answer engines like ChatGPT and Perplexity.', Icon: Search },
   { title: 'Smart Websites', blurb: 'How a site should capture, qualify, book, and follow up, not just look good.', Icon: LayoutDashboard },

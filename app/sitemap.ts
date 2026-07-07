@@ -8,6 +8,7 @@
 import type { MetadataRoute } from 'next'
 import { SITE } from '@/lib/site'
 import { getAllPosts } from '@/lib/blog'
+import { AI_AUTOMATION_FAQS, AI_FAQ_HUB } from '@/lib/faq-ai-automation'
 
 export const dynamic = 'force-static'
 
@@ -76,6 +77,9 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   // Conversion / funnel (the /book and /thank-you steps stay out of the sitemap)
   { path: '/revenue-leak-audit',                  priority: 0.8, changeFrequency: 'monthly' },
 
+  // AI Automation FAQ cluster hub (detail pages appended below from data)
+  { path: `/${AI_FAQ_HUB.slug}`,                  priority: 0.7, changeFrequency: 'monthly' },
+
   // Blog index
   { path: '/blog',                                priority: 0.8, changeFrequency: 'weekly'  },
 
@@ -102,5 +106,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:        0.7,
   }))
 
-  return [...staticEntries, ...postEntries]
+  // AI Automation FAQ detail pages: one entry per question, from the cluster data
+  const aiFaqEntries: MetadataRoute.Sitemap = AI_AUTOMATION_FAQS.map((faq) => ({
+    url:             `${SITE.url}/${AI_FAQ_HUB.slug}/${faq.slug}`,
+    lastModified:    new Date(),
+    changeFrequency: 'monthly' as Freq,
+    priority:        0.6,
+  }))
+
+  return [...staticEntries, ...postEntries, ...aiFaqEntries]
 }
