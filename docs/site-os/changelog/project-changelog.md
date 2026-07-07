@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/auto-services/appointment-booking-automation
+- type: feat
+- changes: Created intersection page auto-services × appointment-booking-automation.
+  Eighth Batch 2 intersection page. Level 5 copy (3 steps, 8 features). Missed-call /
+  answers-first framing; after-hours online booking, vehicle intake at booking (make/
+  model/year/service), reminder sequences to cut no-shows, service-interval follow-up
+  to bring customers back, CRM sync; mobile-mechanic/detailer coverage in FAQ. Schema
+  stack: WebPage + BreadcrumbList (4-item) + Service (name 'Appointment Booking
+  Automation', slug industries/auto-services/appointment-booking-automation) +
+  FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product /
+  Offer schema (emitted JSON-LD grep: 0 matches). og:image = shared /og/default.webp
+  card. metaTitle 45 chars (<=60). metaDescription 159 chars (in 140–160). tsc
+  --noEmit: clean. next build: clean, 82/82 static pages. Route count (next build
+  static pages): 81 → 82.
+- files: app/industries/auto-services/appointment-booking-automation/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaDescription trim performed per the build prompt's explicit instruction
+  (DATA value was 168, 8 over the 160 ceiling; prompt authorized rewording without
+  altering meaning). To preserve the "brings customers back on schedule" retention/
+  timing meaning intact, tightened the front rather than the end: "the booking system
+  that captures every inquiry, confirms the appointment" -> "a booking system that
+  captures inquiries, confirms appointments"; end phrase kept verbatim. Result 159,
+  in-gate. No approval prompt needed — the build spec required the trim. sitemap.ts +
+  indexnow-submit.ts: added directly after the auto-services/reputation-management
+  entry in the Batch 2 block. FAQ byte-identity confirmed (faqPage reads DATA.faqs
+  directly, no manual override; 5 questions). Not pushed.
+
 ## 2026-07-07 — feat: /industries/professional-services/appointment-booking-automation
 - type: feat
 - changes: Created intersection page professional-services × appointment-booking-

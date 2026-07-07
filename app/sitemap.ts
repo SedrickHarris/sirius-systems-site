@@ -73,6 +73,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/professional-services/reputation-management',      priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/professional-services/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/auto-services/reputation-management',              priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/auto-services/appointment-booking-automation',     priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/real-estate-property/reputation-management',       priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/hospitality-events/reputation-management',         priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b/reputation-management',             priority: 0.8, changeFrequency: 'monthly' },
