@@ -75,6 +75,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/real-estate-property/reputation-management',       priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/hospitality-events/reputation-management',         priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b/reputation-management',             priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/retail-local-commerce/reputation-management',      priority: 0.8, changeFrequency: 'monthly' },
 
   // Resources hub + sub-hubs
   { path: '/resources',                           priority: 0.7, changeFrequency: 'monthly' },

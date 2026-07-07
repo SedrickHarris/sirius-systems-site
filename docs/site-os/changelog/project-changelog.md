@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-07-07 — feat: /industries/retail-local-commerce/reputation-management
+- type: feat
+- changes: Created intersection page retail-local-commerce × reputation-management.
+  Sixth Batch 2 intersection page. Level 5 copy (3 steps, 7 features). Local-pack /
+  foot-traffic framing; platform coverage names Google, Yelp, and Facebook; 24–72h
+  post-purchase review-request timing. AI discovery framing in the definition
+  (review profile as an AI citation signal for ChatGPT/Perplexity). relatedServices
+  include competitor-review-benchmarking (verified existing slug).
+  Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'Reputation
+  Management', slug industries/retail-local-commerce/reputation-management) +
+  FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product /
+  Offer schema (emitted JSON-LD grep: 0 matches). og:image = shared /og/default.webp
+  card (not a per-page path). metaTitle 45 chars (<=60). metaDescription 141 chars
+  (in 140–160). tsc --noEmit: clean. next build: clean, 80/80 static pages.
+  Route count (next build static pages): 79 → 80.
+- files: app/industries/retail-local-commerce/reputation-management/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts,
+         docs/site-os/changelog/project-changelog.md
+- notes: metaDescription trim performed per the build prompt's explicit instruction
+  (DATA value was 166, over the 160 ceiling; prompt authorized rewording the end to
+  land in 140–160 without truncating meaning). Applied a verb-tightening reword
+  that preserved the full meaning and the "before they walk in" hook: "We build the
+  system that earns them..." -> "We earn them after every purchase, respond to every
+  one, and keep you ranking." (141 chars). No approval prompt needed — the build
+  spec required the trim. sitemap.ts + indexnow-submit.ts: added under the existing
+  Batch 2 block. FAQ byte-identity confirmed (faqPage reads DATA.faqs directly, no
+  manual schema override; 5 questions). Not pushed.
+
 ## 2026-07-07 — feat: /industries/technology-b2b/reputation-management
 - type: feat
 - changes: Created intersection page technology-b2b × reputation-management.
