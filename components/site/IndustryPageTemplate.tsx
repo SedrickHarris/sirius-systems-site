@@ -3,6 +3,8 @@ import { ArrowRight, ArrowUpRight, Check, ShieldCheck } from 'lucide-react'
 import { FAQ } from './FAQ'
 import { RelatedServicesGrid } from './RelatedServicesGrid'
 import { IndustrySubCard } from './IndustrySubCard'
+import { Breadcrumbs } from './Breadcrumbs'
+import { INDUSTRIES } from '@/lib/industries'
 
 // Shared template behind every industry hub page (/industries/<slug>).
 // Section rhythm per the brief's industry-page guidance:
@@ -38,6 +40,9 @@ export interface IndustryPageData {
 }
 
 export function IndustryPageTemplate(data: IndustryPageData) {
+  // Breadcrumb leaf name: prefer the canonical catalog name, fall back to eyebrow.
+  const crumbName = INDUSTRIES.find((i) => i.slug === data.slug)?.name ?? data.eyebrow
+
   return (
     <>
       {/* ───────── S00: Hero (dark deep + selective glass card) ───────── */}
@@ -45,6 +50,14 @@ export function IndustryPageTemplate(data: IndustryPageData) {
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
           <div>
+            <Breadcrumbs
+              className="mb-6"
+              trail={[
+                { name: 'Home', url: '/' },
+                { name: 'Industries', url: '/industries' },
+                { name: crumbName, url: `/industries/${data.slug}` },
+              ]}
+            />
             <span className="section-eyebrow">{data.eyebrow}</span>
             <h1 className="mt-6 hero-heading">{data.headline}</h1>
             <p className="mt-7 hero-copy">{data.subheadline}</p>

@@ -9,6 +9,8 @@ import {
 import { FAQ } from './FAQ'
 import { RelatedServicesGrid } from './RelatedServicesGrid'
 import { IndustryFitStrip } from './IndustryFitStrip'
+import { Breadcrumbs } from './Breadcrumbs'
+import { SERVICES } from '@/lib/services'
 
 // Shared template behind every service page. Section rhythm follows the
 // brief's service-page guidance:
@@ -57,6 +59,9 @@ export function ServicePageTemplate(data: ServicePageData) {
   // card so the visitor sees what they get without scrolling.
   const heroHighlights = data.features.slice(0, 4)
 
+  // Breadcrumb leaf name: prefer the canonical catalog name, fall back to eyebrow.
+  const crumbName = SERVICES.find((s) => s.slug === data.slug)?.name ?? data.eyebrow
+
   return (
     <>
       {/* ───────── S00: Hero (dark deep + selective glass card) ───────── */}
@@ -64,6 +69,14 @@ export function ServicePageTemplate(data: ServicePageData) {
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
           <div>
+            <Breadcrumbs
+              className="mb-6"
+              trail={[
+                { name: 'Home', url: '/' },
+                { name: 'Services', url: '/services' },
+                { name: crumbName, url: `/${data.slug}` },
+              ]}
+            />
             <span className="section-eyebrow">{data.eyebrow}</span>
             <h1 className="mt-6 hero-heading">{data.headline}</h1>
             <p className="mt-7 hero-copy">{data.subheadline}</p>

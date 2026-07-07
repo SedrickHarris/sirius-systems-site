@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 import { FAQ } from './FAQ'
 import { RelatedServicesGrid } from './RelatedServicesGrid'
+import { Breadcrumbs } from './Breadcrumbs'
 
 // Shared template behind every industry × service intersection page.
 // URL pattern: /industries/[hub-slug]/[service-slug]
@@ -78,6 +79,18 @@ export function IntersectionPageTemplate(data: IntersectionPageData) {
         <div aria-hidden className="glow-accent absolute inset-0 -z-10" />
         <div className="site-container grid items-start gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
           <div>
+            <Breadcrumbs
+              className="mb-6"
+              trail={[
+                { name: 'Home', url: '/' },
+                { name: 'Industries', url: '/industries' },
+                { name: data.hubName, url: `/industries/${data.hubSlug}` },
+                {
+                  name: data.serviceName,
+                  url: `/industries/${data.hubSlug}/${data.serviceSlug}`,
+                },
+              ]}
+            />
             <span className="section-eyebrow">{data.eyebrow}</span>
             <h1 className="mt-6 hero-heading">{data.headline}</h1>
             <p className="mt-7 hero-copy">{data.subheadline}</p>

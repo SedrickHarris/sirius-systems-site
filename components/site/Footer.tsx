@@ -174,6 +174,33 @@ export function Footer() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/resources/faq"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  FAQ Library
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/checklists"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  Checklists
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resources/guides"
+                  className="transition-colors hover:[color:var(--text)]"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  Guides
+                </Link>
+              </li>
             </ul>
           </div>
 

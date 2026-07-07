@@ -67,6 +67,12 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/healthcare-medical/appointment-booking-automation',priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/healthcare-medical/ai-chatbots',                   priority: 0.8, changeFrequency: 'monthly' },
 
+  // Resources hub + sub-hubs
+  { path: '/resources',                           priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/resources/faq',                       priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/resources/checklists',                priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/resources/guides',                    priority: 0.6, changeFrequency: 'monthly' },
+
   // Blog index
   { path: '/blog',                                priority: 0.8, changeFrequency: 'weekly'  },
 
