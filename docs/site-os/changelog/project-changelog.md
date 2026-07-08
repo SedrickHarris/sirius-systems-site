@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/hospitality-events/lead-generation-automation
+- type: feat
+- changes: Created intersection page hospitality-events × lead-generation-automation. Batch 2,
+  Level 5 copy (4 steps, 8 features, 5 FAQs, 4 problems). Fourth lead-generation-automation
+  intersection page (after professional-services, auto-services, real-estate-property).
+  Response-speed / first-to-respond-wins framing for hospitality & events — inquiry lands at
+  9pm Saturday mid-event and goes to whoever replies first; couples contact 5 venues at once,
+  corporate planners shortlist in 48h. Unify website/directories/social/GBP/referral into one
+  CRM intake; immediate response + qualification (event type/date/guest count/budget);
+  after-hours & mid-event capture; nurture through the decision window; re-engagement; source-
+  to-booked-event attribution. Directory-leads (The Knot/WeddingWire) still need automation, and
+  applicability to restaurants/caterers/planners (not just venues) covered in FAQ.
+  relatedServiceSlugs: 5 entries (appointment-booking-automation, reputation-management,
+  ai-chatbots, review-automation, all-in-one-business-growth-system). Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'Lead Generation Automation for Hospitality & Events',
+  slug industries/hospitality-events/lead-generation-automation, description = metaDescription) +
+  FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product / Offer schema
+  (page-file grep: 0 matches / NONE_FOUND). openGraph.images = shared /og/default.webp card.
+  tsc clean. next build clean. Route count (next build "Generating static pages"): 106 → 107.
+  sitemap.ts + indexnow-submit.ts both updated (hospitality-events/lead-generation-automation
+  inserted after the hospitality-events/ai-voicebots entry, at the end of the hospitality block).
+- files: app/industries/hospitality-events/lead-generation-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 51 chars (package stated 50; actual 51) — ≤60 gate passes, shipped verbatim.
+  metaDescription 159 chars (package stated 160; actual 159) — 140–160 gate passes, shipped
+  verbatim (in-gate, no trim needed). UNSUPPORTED-FIELDS DECISION (map + omit, per the
+  user-approved convention): the build prompt set stepsHeadline, outcomesHeadline, and outcomes —
+  none present in IntersectionPageData. stepsHeadline → howItWorksHeadline ('How we build your
+  lead generation system'); featuresHeadline is a real interface field and was kept ('What the
+  system includes'); outcomesHeadline and the 5 outcomes strings OMITTED (no template slot).
+  tsc clean confirms. steps use { label, body }; features are a flat string array. No
+  apostrophe-escaping needed (copy contains none). serviceSchema used { slug, name, description }
+  (no url param). FAQ byte-identity confirmed by construction. Commit scoped to this page only;
+  the pre-existing uncommitted auto-services/ai-voicebots entry in sitemap.ts + indexnow-submit.ts
+  was left unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/real-estate-property/lead-generation-automation
 - type: feat
 - changes: Created intersection page real-estate-property × lead-generation-automation.
