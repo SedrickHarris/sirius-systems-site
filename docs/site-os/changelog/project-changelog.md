@@ -15,6 +15,46 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/auto-services/review-automation
+- type: feat
+- changes: Created intersection page auto-services × review-automation. Batch 2, Level 5 copy
+  (3 steps [not 4 — package provided three], 8 features, 5 FAQs, 4 problems). Second
+  review-automation intersection page (after professional-services). Missed-review / review-count
+  ranking-gap framing for auto shops — competitor with more Google reviews wins the local pack;
+  job-completion trigger with timing configured by job type (same day for repair/detail/tire
+  install, next day for body work); SMS with direct Google review link (highest-converting
+  channel) + email follow-up; AI review responses closing the loop (positive + negative);
+  negative-review intercept flagged before posting. AI-Mode / local-summary angle in FAQ.
+  relatedServiceSlugs: 4 entries (reputation-management, ai-review-responses,
+  google-business-profile-optimization, all-in-one-business-growth-system) — all verified valid
+  service slugs (app/ dirs exist). Schema stack: WebPage + BreadcrumbList (4-item) + Service
+  (name 'Review Automation for Auto Services', slug industries/auto-services/review-automation,
+  description = metaDescription) + FAQPage. No AggregateRating / Review / LocalBusiness /
+  Organization / Product / Offer schema — verified BOTH page-file grep AND emitted-JSON-LD grep
+  on the exported HTML (out/industries/auto-services/review-automation.html): NONE_FOUND for both.
+  og:image = /og/default.webp (shared card). tsc clean. next build clean. Route count (next build
+  "Generating static pages"): 110 → 111. sitemap.ts + indexnow-submit.ts both updated
+  (auto-services/review-automation inserted after the auto-services/appointment-booking-automation
+  entry, before the previously committed crm-automation entry).
+- files: app/industries/auto-services/review-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 49 chars — FIRST page this session to carry a ' | Sirius Systems' brand
+  suffix. The build prompt's gate check stated "46 characters or fewer" but the verbatim title it
+  provided ('Review Automation for Auto Shops | Sirius Systems') is actually 49. Shipped verbatim
+  because (a) 49 is within the real site metaTitle ceiling of 60 (the actual gate, consistent all
+  session), and (b) the prompt explicitly says "do not alter, shorten, or extend any field" —
+  trimming to hit the mis-stated 46 would contradict that. So the prompt's own 46-char gate check
+  is internally inconsistent with its provided value; resolved in favor of the verbatim field +
+  real 60 ceiling. metaDescription 154 chars — 140–160 gate passes, shipped verbatim. CTA
+  CORRECTION: the build prompt did NOT provide ctaHeadline/ctaBody/ctaPrimaryLabel; per its
+  "leave optional fields unset rather than inventing values" instruction, those three fields were
+  left UNSET (a first draft invented them; removed before gate) — template renders its default
+  CTA. steps use { label, body } (3 of them); features are a flat string array. Prompt's escaped
+  apostrophes in steps[1]/steps[2]/features[6]/faqs[3]/faqs[5] ("shop's", "Google's") written as
+  \' in the TS source. serviceSchema used { slug, name, description } (no url param). FAQ
+  byte-identity confirmed by construction (exactly 5). Commit scoped to this page only; unrelated
+  SEO-pipeline outputs and assets deliberately excluded. Not pushed.
+
 ## 2026-07-08 — feat: /industries/professional-services/review-automation
 - type: feat
 - changes: Created intersection page professional-services × review-automation. Batch 2,
