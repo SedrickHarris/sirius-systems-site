@@ -104,6 +104,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/technology-b2b/ai-chatbots',                       priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b/lead-generation-automation',        priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b/ai-voicebots',                      priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/technology-b2b/review-automation',                 priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/retail-local-commerce/reputation-management',      priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/retail-local-commerce/ai-chatbots',                priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/retail-local-commerce/lead-generation-automation', priority: 0.8, changeFrequency: 'monthly' },

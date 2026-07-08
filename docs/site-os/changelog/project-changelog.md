@@ -15,6 +15,53 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/technology-b2b/review-automation
+- type: feat
+- changes: Created intersection page technology-b2b × review-automation. Batch 2, Level 5 copy
+  (4 steps, 7 features, 5 FAQs, 4 problems). Fifth review-automation intersection page (after
+  professional-services, auto-services, real-estate-property, hospitality-events). B2B
+  buying-committee framing — 70–80% of the decision is made during pre-contact research; thin
+  review profile loses the prospect before the first call. Milestone triggers (project close /
+  ticket resolution / contract renewal / onboarding handoff) from CRM or PSA rather than a single
+  transaction; multi-platform routing to B2B-specific platforms (Google, Clutch, G2, Trustpilot,
+  Capterra, Goodfirms); B2B-cadence follow-up; monitoring + response coverage; AI-tool
+  (ChatGPT/Perplexity) surfacing angle in FAQ. relatedServiceSlugs: 4 entries
+  (reputation-management, ai-review-responses, competitor-review-benchmarking [verified valid
+  slug — app/competitor-review-benchmarking exists], google-business-profile-optimization).
+  Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'Review Automation for IT
+  Companies and MSPs', slug industries/technology-b2b/review-automation, description =
+  metaDescription) + FAQPage. No AggregateRating / Review / LocalBusiness / Organization /
+  Product / Offer schema — verified BOTH page-file grep AND emitted-JSON-LD grep on exported HTML
+  (out/industries/technology-b2b/review-automation.html): NONE_FOUND for both. og:image =
+  /og/default.webp (shared card). tsc clean. next build clean. Route count (next build
+  "Generating static pages"): 113 → 114. sitemap.ts + indexnow-submit.ts both updated
+  (technology-b2b/review-automation grouped after the technology-b2b/ai-voicebots entry).
+- files: app/industries/technology-b2b/review-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: THREE corrections vs the build prompt, all verified against the repo:
+  (1) ROUTE COUNT: the prompt's premise ("current route count is 92", gate "92 → 93") was badly
+  stale — the actual next-build count was 113, so this page is 113 → 114. Used the real numbers in
+  changelog + commit. (2) TEMPLATE PROP: the prompt instructed rendering
+  '<IntersectionPageTemplate data={DATA} />', but the template signature is
+  IntersectionPageTemplate(data: IntersectionPageData) — it takes the fields as SPREAD props, and
+  the sibling renders '<IntersectionPageTemplate {...DATA} />'. Passing data={DATA} would fail tsc
+  (props would be { data: DATA }, missing every required field). Used {...DATA}, matching the
+  sibling (which the prompt says to match exactly). tsc-clean confirms. (3) SITEMAP PLACEMENT: the
+  prompt said "append after the last existing Batch 2 entry" but its read instruction said "the
+  last entry before this one"; the tech-b2b block is no longer last in Batch 2 (retail entries
+  follow). Grouped the new route with the technology-b2b entries (after ai-voicebots) rather than
+  stranding a tech-b2b route at the very end after the retail block — consistent with the
+  hub-grouped structure maintained across all prior pages. Order is functionally irrelevant.
+  metaTitle 43 chars (prompt target 47; actual 43 — ≤60 real ceiling passes). metaDescription
+  159 chars (prompt target 160; actual 159 — 140–160 gate passes, safely under ceiling). Both
+  shipped verbatim. This prompt DID set howItWorksHeadline + featuresHeadline (both valid interface
+  fields), 4 steps, 7 features (template allows 6–8) — no map/omit needed. No CTA fields provided →
+  ctaHeadline/ctaBody/ctaPrimaryLabel left UNSET (template defaults). Prompt's escaped apostrophe
+  in features[1] ("firm's") written as \' in the TS source. serviceSchema used { slug, name,
+  description } (no url param, per the prompt's own note). FAQ byte-identity confirmed by
+  construction (exactly 5). Commit scoped to this page only; unrelated SEO-pipeline outputs and
+  assets deliberately excluded. Not pushed.
+
 ## 2026-07-08 — feat: /industries/hospitality-events/review-automation
 - type: feat
 - changes: Created intersection page hospitality-events × review-automation. Batch 2, Level 5
