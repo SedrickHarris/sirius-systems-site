@@ -15,6 +15,36 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/real-estate-property/ai-voicebots
+- type: feat
+- changes: Created intersection page real-estate-property × ai-voicebots. Level 5 copy
+  (4 steps, 8 features, 5 FAQs). Phone/call-channel differentiation from the same-hub
+  ai-chatbots sibling (0.6 keyword overlap treated as a differentiation signal, not a
+  blocker): voice, inbound, missed-call handling — not website chat. Dual buyer types —
+  real estate agents/brokerages (speed-to-lead, missed calls during showings, after-hours
+  coverage) and property managers (tenant inquiry volume, maintenance intake, leasing
+  questions). Core fear framing: missing a call while in a showing or at a closing.
+  Buyer/seller/tenant voice qualification, showing & consultation booking from the call,
+  urgency triage (maintenance emergencies escalated), concurrent call handling, CRM
+  routing with full call summary. Schema stack: WebPage + BreadcrumbList (4-item) +
+  Service (name 'AI Voicebots for Real Estate & Property Services', slug
+  industries/real-estate-property/ai-voicebots) + FAQPage. No AggregateRating / Review /
+  LocalBusiness / Organization / Product / Offer schema (page-file grep: 0 matches /
+  NONE_FOUND). openGraph.images = shared /og/default.webp card. tsc clean. next build
+  clean. Route count (next build "Generating static pages"): 93 → 94.
+- files: app/industries/real-estate-property/ai-voicebots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 55 chars (package stated 54; actual 55) — ≤60 gate passes, shipped
+  verbatim, no trim. metaDescription 157 chars (package stated 159; actual 157) —
+  140–160 gate passes, shipped verbatim, no trim. Copy package was complete (both section
+  headlines, 4 steps, 8 features, relatedServiceSlugs, exactly 5 FAQs). problems array is
+  3 items (the template type comment suggests 4, but the type is string[] and the package
+  provided 3 — compiles clean, rendered as-is per package). No schema corrections needed
+  this time: the build prompt's serviceSchema call already used the { slug, name,
+  description } signature and the sitemap entry used this file's { path, priority,
+  changeFrequency } shape. FAQ byte-identity confirmed by construction — DATA.faqs is the
+  single array passed to both faqPage() and the template render (no transform). Not pushed.
+
 ## 2026-07-08 — feat: /industries/professional-services/ai-voicebots
 - type: feat
 - changes: Created intersection page professional-services × ai-voicebots. Batch 2,
