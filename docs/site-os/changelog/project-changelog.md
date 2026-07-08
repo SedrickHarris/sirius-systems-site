@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/real-estate-property/lead-generation-automation
+- type: feat
+- changes: Created intersection page real-estate-property × lead-generation-automation.
+  Batch 2, Level 5 copy (4 steps, 8 features, 5 FAQs, 4 problems). Third
+  lead-generation-automation intersection page (after professional-services and auto-services).
+  Speed-to-lead / first-to-respond-wins framing for real estate — lead comes in during a
+  showing and goes to whoever responds first; unify website/portals/paid ads/open-house/
+  referral into one CRM intake; immediate first response; long-term nurture across 3–12 month
+  real-estate decision cycles; after-hours/weekend capture; source-to-closed-deal attribution;
+  re-engagement of dormant leads. Portal-leads (Zillow) still need automation, and applicability
+  to property managers + mortgage companies covered in FAQ. relatedServiceSlugs: 5 entries
+  (crm-automation, appointment-booking-automation, ai-chatbots, reputation-management,
+  all-in-one-business-growth-system). Schema stack: WebPage + BreadcrumbList (4-item) + Service
+  (name 'Lead Generation Automation for Real Estate & Property Services', slug
+  industries/real-estate-property/lead-generation-automation, description = metaDescription) +
+  FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product / Offer schema
+  (page-file grep: 0 matches / NONE_FOUND). openGraph.images = shared /og/default.webp card.
+  tsc clean. next build clean. Route count (next build "Generating static pages"): 105 → 106.
+  sitemap.ts + indexnow-submit.ts both updated (real-estate-property/lead-generation-automation
+  inserted after the real-estate-property/ai-voicebots entry, at the end of the real-estate block).
+- files: app/industries/real-estate-property/lead-generation-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 49 chars (matches package) — ≤60 gate passes, shipped verbatim.
+  metaDescription 152 chars (matches package) — 140–160 gate passes, shipped verbatim. First
+  lead-gen build this session where both stated counts matched actual exactly. UNSUPPORTED-FIELDS
+  DECISION (map + omit, per the user-approved convention): the build prompt set stepsHeadline,
+  outcomesHeadline, and outcomes — none present in IntersectionPageData. stepsHeadline →
+  howItWorksHeadline ('How we build your lead generation system'); featuresHeadline is a real
+  interface field and was kept ('What the system includes'); outcomesHeadline and the 5 outcomes
+  strings OMITTED (no template slot). tsc clean confirms. steps use { label, body }; features are
+  a flat string array. Prompt's escaped apostrophe in problems[1] ("quarter's") written as \' in
+  the TS source. serviceSchema used { slug, name, description } (no url param). FAQ byte-identity
+  confirmed by construction. Commit scoped to this page only; the pre-existing uncommitted
+  auto-services/ai-voicebots entry in sitemap.ts + indexnow-submit.ts was left unstaged,
+  untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/auto-services/lead-generation-automation
 - type: feat
 - changes: Created intersection page auto-services × lead-generation-automation. Batch 2,
