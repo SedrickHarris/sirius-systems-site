@@ -15,6 +15,41 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/professional-services/lead-generation-automation
+- type: feat
+- changes: Created intersection page professional-services × lead-generation-automation.
+  Batch 2, Level 5 copy (4 steps, 8 features, 5 FAQs, 4 problems). First
+  lead-generation-automation intersection page. Framing: firms lose clients between inquiry
+  and consultation (response-time gap), not to better competitors — immediate inquiry
+  response, lead qualification/triage before practitioner time, multi-touch nurture across
+  60–180 day cycles, consultation-booking integration, referral follow-up automation,
+  content-driven capture, re-engagement of dormant leads. Reduce-referral-dependence angle
+  in FAQ; buying-leads vs lead-gen-automation distinction. relatedServiceSlugs: 5 entries
+  (appointment-booking-automation, crm-automation, ai-chatbots, reputation-management,
+  all-in-one-business-growth-system). Schema stack: WebPage + BreadcrumbList (4-item) +
+  Service (name 'Lead Generation Automation for Professional Services Firms', slug
+  industries/professional-services/lead-generation-automation, description = metaDescription)
+  + FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product / Offer
+  schema (page-file grep: 0 matches / NONE_FOUND). openGraph.images = shared /og/default.webp
+  card. tsc clean. next build clean. Route count (next build "Generating static pages"):
+  103 → 104. sitemap.ts + indexnow-submit.ts both updated (professional-services/
+  lead-generation-automation inserted after the professional-services/crm-automation entry).
+- files: app/industries/professional-services/lead-generation-automation/page.tsx,
+         app/sitemap.ts, scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 58 chars (package stated 57; actual 58) — ≤60 gate passes, shipped
+  verbatim. metaDescription 158 chars (package stated 155; actual 158) — 140–160 gate passes,
+  shipped verbatim. UNSUPPORTED-FIELDS DECISION (map + omit, per the user-approved convention
+  from the technology-b2b/crm-automation page): the build prompt again set systemsHeadline,
+  systemsCopy, and outcomes — none in IntersectionPageData. systemsHeadline →
+  howItWorksHeadline ('How lead generation automation works for a professional services
+  practice'); systemsCopy and the 5 outcomes strings OMITTED (no template slot). tsc clean
+  confirms. Insertion anchor (professional-services/crm-automation) existed, so the prompt's
+  primary placement was used (no fallback needed). steps use { label, body }; features are a
+  flat string array. serviceSchema used { slug, name, description } (no url param). FAQ
+  byte-identity confirmed by construction. Commit scoped to this page only; the pre-existing
+  uncommitted auto-services/ai-voicebots entry in sitemap.ts + indexnow-submit.ts was left
+  unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/retail-local-commerce/crm-automation
 - type: feat
 - changes: Created intersection page retail-local-commerce × crm-automation. Batch 2, Level 5
