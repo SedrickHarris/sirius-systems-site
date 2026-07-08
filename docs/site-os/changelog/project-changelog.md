@@ -15,6 +15,41 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/professional-services/review-automation
+- type: feat
+- changes: Created intersection page professional-services × review-automation. Batch 2,
+  Level 5 copy (4 steps, 8 features, 5 FAQs, 4 problems). First review-automation intersection
+  page. Framing: firms close engagements that never turn into reviews — a system problem, not a
+  client problem. Engagement-event trigger (matter close / file settlement / project delivery /
+  final invoice) rather than a job-completion trigger; ethics/compliance-aware copy (no
+  incentives, no gating, no steering toward positive outcomes — permitted by bar/professional
+  bodies); privacy-aware requests (feedback on the firm, not the sensitive matter); Google-first
+  routing with practice-type platform matching (Avvo / Martindale-Hubbell / FindLaw for law,
+  Yelp/Google for accounting & advisory); single follow-up then stop; opt-out handling.
+  relatedServiceSlugs: 4 entries (reputation-management, ai-review-responses,
+  google-business-profile-optimization, crm-automation) — all verified as valid service slugs
+  (app/ dirs exist). Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'Review
+  Automation for Professional Services Firms', slug industries/professional-services/
+  review-automation, description = metaDescription) + FAQPage. No AggregateRating / Review /
+  LocalBusiness / Organization / Product / Offer schema (page-file grep: 0 matches / NONE_FOUND
+  — note the heavy use of the word "review" in copy is all single-quoted strings, so the
+  double-quoted "Review" schema-type pattern correctly does not match). openGraph.images = shared
+  /og/default.webp card. tsc clean. next build clean. Route count (next build "Generating static
+  pages"): 109 → 110. sitemap.ts + indexnow-submit.ts both updated
+  (professional-services/review-automation inserted after the professional-services/ai-voicebots
+  entry, before the previously committed crm-automation entry).
+- files: app/industries/professional-services/review-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 49 chars (package stated 50; actual 49) — ≤60 gate passes, shipped verbatim.
+  metaDescription 151 chars (matches package) — 140–160 gate passes, shipped verbatim. Clean
+  prompt (no unsupported fields — no stepsHeadline/outcomes); howItWorksHeadline/featuresHeadline
+  unset → template default headings. Verified sibling (professional-services/reputation-management)
+  has NO 'use client' (server component exporting metadata), none added. steps use { label, body };
+  features are a flat string array. Prompt's escaped apostrophes in steps[1] and faqs[4]
+  ("firm's") written as \' in the TS source. serviceSchema used { slug, name, description } (no
+  url param). FAQ byte-identity confirmed by construction (exactly 5). Commit scoped to this page
+  only; unrelated SEO-pipeline outputs and assets deliberately excluded. Not pushed.
+
 ## 2026-07-08 — feat: /industries/auto-services/ai-voicebots (commit of pre-existing page)
 - type: feat
 - changes: Committed the auto-services × ai-voicebots intersection page (Batch 2, Level 5:
