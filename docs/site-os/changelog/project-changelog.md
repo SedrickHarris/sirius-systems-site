@@ -15,6 +15,37 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/retail-local-commerce/ai-voicebots
+- type: feat
+- changes: Created intersection page retail-local-commerce × ai-voicebots. Hub 'Retail &
+  Local Commerce', service 'AI Voicebots'. Level 5 copy (4 steps, 8 features, 5 FAQs).
+  Missed-call framing for local/boutique retail — store closes at 6pm but the calls keep
+  coming; staff on the floor can't also field the phone. Call types specific to local
+  retail: store hours/location, product & size availability, return/exchange policy, local
+  pickup/delivery, after-hours lead capture. Staff-focus benefit (voicebot absorbs
+  repetitive calls so associates stay on the floor) and does-not-replace-staff FAQ
+  boundary. relatedServiceSlugs: ai-automation, ai-chatbots, crm-automation,
+  all-in-one-business-growth-system. Schema stack: WebPage + BreadcrumbList (4-item) +
+  Service (name 'AI Voicebots for Local Retail & Commerce Shops', slug
+  industries/retail-local-commerce/ai-voicebots) + FAQPage. No AggregateRating / Review /
+  LocalBusiness / Organization / Product / Offer schema (page-file grep: 0 matches /
+  NONE_FOUND). openGraph.images = shared /og/default.webp card. tsc clean. next build clean.
+  Route count (next build "Generating static pages"): 96 → 97. sitemap.ts + indexnow-submit.ts
+  both updated (retail-local-commerce/ai-voicebots appended after the ai-chatbots sibling).
+- files: app/industries/retail-local-commerce/ai-voicebots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 46 chars (package stated 44; actual 46) — ≤60 gate passes, shipped
+  verbatim, no trim. metaDescription 155 chars (matches package's stated 155) — 140–160 gate
+  passes, shipped verbatim. Copy package complete (both section headlines, 4 steps, 8
+  features, relatedServiceSlugs, exactly 5 FAQs, 4 problems). This page used a dedicated
+  Service schema description string (provided in the build prompt) rather than reusing
+  metaDescription, matching the prompt. No schema corrections needed — serviceSchema call
+  used { slug, name, description }; the prompt's double-escaped \\' in strings converted to
+  single \' for the TS source. FAQ byte-identity confirmed by construction — DATA.faqs is the
+  single array passed to both faqPage() and the template render. Commit scoped to this page
+  only; the pre-existing uncommitted auto-services/ai-voicebots entry in sitemap.ts +
+  indexnow-submit.ts was left unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/technology-b2b/ai-voicebots
 - type: feat
 - changes: Created intersection page technology-b2b × ai-voicebots. Level 5 copy (4 steps,
