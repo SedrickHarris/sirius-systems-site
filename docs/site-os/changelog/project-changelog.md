@@ -15,6 +15,41 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/retail-local-commerce/crm-automation
+- type: feat
+- changes: Created intersection page retail-local-commerce × crm-automation. Batch 2, Level 5
+  copy (4 steps, 8 features, 5 FAQs, 4 problems). Repeat-revenue / "lose customers to silence
+  not competitors" framing for local retail & boutiques — post-purchase follow-up, win-back on
+  45/60-day inactivity, VIP/first-time/seasonal/product-category segmentation, inquiry response
+  within minutes, POS+website data consolidation, review-request triggers, repeat-purchase
+  reminders. relatedServiceSlugs: 5 entries (reputation-management, review-automation,
+  lead-generation-automation, appointment-booking-automation, all-in-one-business-growth-system).
+  Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'CRM Automation for Local
+  Retail Stores', slug industries/retail-local-commerce/crm-automation, description =
+  metaDescription) + FAQPage. No AggregateRating / Review / LocalBusiness / Organization /
+  Product / Offer schema (page-file grep: 0 matches / NONE_FOUND). openGraph.images = shared
+  /og/default.webp card. tsc clean. next build clean. Route count (next build "Generating static
+  pages"): 102 → 103.
+- files: app/industries/retail-local-commerce/crm-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 50 chars (package stated 49; actual 50) — ≤60 gate passes, shipped verbatim.
+  metaDescription 147 chars (package stated 142; actual 147) — 140–160 gate passes, shipped
+  verbatim. UNSUPPORTED-FIELDS DECISION (map + omit, per the user-approved convention set on the
+  prior technology-b2b/crm-automation page): the build prompt again set systemsHeadline,
+  systemsCopy, and outcomes — none present in IntersectionPageData. systemsHeadline →
+  howItWorksHeadline ('How CRM automation works for a local retail store or boutique');
+  systemsCopy and the 5 outcomes strings OMITTED (no template slot). tsc clean confirms.
+  SITEMAP/INDEXNOW ANCHOR CORRECTION: the build prompt said place the new route after the
+  'retail-local-commerce/appointment-booking-automation' entry, but that entry DOES NOT EXIST —
+  the retail-local-commerce block only has reputation-management, ai-chatbots, and ai-voicebots.
+  Appended the crm-automation route after the last existing retail entry
+  (retail-local-commerce/ai-voicebots) instead, at the end of the Batch 2 block. steps use
+  { label, body }; features are a flat string array. Prompt's escaped apostrophes in problems[1]
+  ("someone's") and features[4] ("store's") written as \' in the TS source. serviceSchema used
+  { slug, name, description } (no url param). FAQ byte-identity confirmed by construction. Commit
+  scoped to this page only; the pre-existing uncommitted auto-services/ai-voicebots entry in
+  sitemap.ts + indexnow-submit.ts was left unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/technology-b2b/crm-automation
 - type: feat
 - changes: Created intersection page technology-b2b × crm-automation. Batch 2, Level 5 copy
