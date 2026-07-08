@@ -15,6 +15,37 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/auto-services/ai-chatbots
+- type: feat
+- changes: Created intersection page auto-services × ai-chatbots. Batch 2, Level 5
+  copy (4 steps, 8 features). Bay-and-phone framing specific to the auto shop workflow
+  (techs in the bays, unanswered phone, after-hours/weekend website traffic). Scope
+  boundary enforced in the definition and FAQ: the chatbot captures inquiries and books
+  appointments but does NOT diagnose vehicle faults or generate repair estimates —
+  those stay with the technicians. Urgent-situation escalation path (breakdown, no-
+  start, tow) described in an FAQ and a feature. Website/messaging-channel framing with
+  the voicebot noted as the complementary phone layer (relatedServiceSlugs includes
+  ai-voicebots). Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'AI
+  Chatbots for Auto Service Businesses', slug industries/auto-services/ai-chatbots) +
+  FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product / Offer
+  schema (emitted JSON-LD grep: 0 matches). openGraph.images = shared /og/default.webp
+  card. tsc clean. build clean. Route count (next build static pages): 86 → 87.
+- files: app/industries/auto-services/ai-chatbots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 41 chars (the build prompt stated 42; actual is 41 — within the
+  <=60 gate either way). metaDescription: the build prompt asserted 153 chars and
+  "do not trim / shipped verbatim", but the provided string was 173 chars (over the
+  160 ceiling; the prompt's premise was wrong, identical to the professional-services
+  ai-chatbots page). Applied the same in-gate variant established there: tightened
+  "We build an AI chatbot that captures" -> "Our AI chatbot captures", preserving the
+  "while your techs work" tail hook and all other meaning; result 160 (in-gate,
+  inclusive). No other field altered. serviceSchema description explicitly scopes the
+  chatbot to inquiry capture and excludes diagnosis and repair estimates. serviceSchema
+  slug carries the 'industries/' prefix (no correction needed). sitemap.ts +
+  indexnow-submit.ts: added immediately after the auto-services/reputation-management
+  entry. FAQ byte-identity confirmed (faqPage sets Question.name = item.q, no
+  transformation; 5 questions). Not pushed.
+
 ## 2026-07-08 — feat: /industries/professional-services/ai-chatbots
 - type: feat
 - changes: Created intersection page professional-services × ai-chatbots. Batch 2,
