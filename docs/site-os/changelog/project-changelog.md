@@ -15,6 +15,41 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/hospitality-events/crm-automation
+- type: feat
+- changes: Created intersection page hospitality-events × crm-automation. Batch 2, Level 5
+  copy (4 steps, 8 features, 5 FAQs, 4 problems). Dual-track framing: restaurant guest
+  database + repeat-visit automation (guest profiles from reservations/visits, win-back
+  sequences for lapsed diners, post-visit review requests) held distinct from the venue &
+  event inquiry pipeline (immediate inquiry response, stage-based follow-up, tour scheduling,
+  proposal reminders). Post-event follow-up and rebooking sequences; catering/private-dining,
+  wedding-planner, and hotel/boutique-property sub-verticals each addressed as their own
+  feature. relatedServiceSlugs: 5 entries (appointment-booking-automation,
+  reputation-management, ai-chatbots, review-automation, all-in-one-business-growth-system).
+  Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'CRM Automation for
+  Restaurants and Event Venues', slug industries/hospitality-events/crm-automation,
+  description = metaDescription) + FAQPage. No AggregateRating / Review / LocalBusiness /
+  Organization / Product / Offer schema (page-file grep: 0 matches / NONE_FOUND).
+  openGraph.images = shared /og/default.webp card. tsc clean. next build clean. Route count
+  (next build "Generating static pages"): 100 → 101. sitemap.ts + indexnow-submit.ts both
+  updated (hospitality-events/crm-automation inserted directly after the
+  hospitality-events/ai-chatbots entry, per the build prompt — sits before the previously
+  committed hospitality-events/ai-voicebots entry).
+- files: app/industries/hospitality-events/crm-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 47 chars (package stated 44; actual 47) — ≤60 gate passes, shipped
+  verbatim. metaDescription 158 chars (matches package's stated 158) — 140–160 gate passes,
+  shipped verbatim. steps use { label, body }; features are a flat string array — both
+  correct in the supplied copy, no remap needed. howItWorksHeadline and featuresHeadline were
+  NOT specified in the build prompt, so those optional fields were OMITTED (not invented) —
+  template falls back to its defaults. relatedServiceSlugs has 5 entries (interface type is
+  string[]). No apostrophe-escaping needed (copy contains no contractions/possessives with
+  apostrophes). serviceSchema used { slug, name, description } (no url param). FAQ
+  byte-identity confirmed by construction — DATA.faqs is the single array passed to both
+  faqPage() and the template render. Commit scoped to this page only; the pre-existing
+  uncommitted auto-services/ai-voicebots entry in sitemap.ts + indexnow-submit.ts was left
+  unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/real-estate-property/crm-automation
 - type: feat
 - changes: Created intersection page real-estate-property × crm-automation. Batch 2, Level 5
