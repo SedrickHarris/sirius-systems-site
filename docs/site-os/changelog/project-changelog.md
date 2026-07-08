@@ -15,6 +15,44 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/retail-local-commerce/review-automation
+- type: feat
+- changes: Created intersection page retail-local-commerce × review-automation. Batch 2, Level 5
+  copy (4 steps, 8 features, 5 FAQs, 4 problems). Sixth and FINAL review-automation intersection
+  page — COMPLETES review-automation across all six hubs (professional-services, auto-services,
+  real-estate-property, hospitality-events, technology-b2b, retail-local-commerce). Local-pack /
+  decide-before-leaving-home framing for local retail — shoppers pick the store with more reviews
+  before walking in; POS/CRM-triggered requests 24–48h post-purchase (SMS in-store, email online),
+  single follow-up then stop, multi-platform monitoring (Google/Yelp/Facebook), response coverage,
+  competitor review benchmarking, unanswered-negative-review cost. relatedServiceSlugs: 4 entries
+  (reputation-management, ai-review-responses, google-business-profile-optimization,
+  competitor-review-benchmarking). Schema stack: WebPage + BreadcrumbList (4-item) + Service (name
+  'Review Automation for Local Retail Stores', slug industries/retail-local-commerce/
+  review-automation, description = metaDescription) + FAQPage. No AggregateRating / Review /
+  LocalBusiness / Organization / Product / Offer schema — verified BOTH page-file grep AND
+  emitted-JSON-LD grep on exported HTML (out/industries/retail-local-commerce/
+  review-automation.html): NONE_FOUND for both. og:image = /og/default.webp (shared card). tsc
+  clean. next build clean. Route count (next build "Generating static pages"): 114 → 115. sitemap.ts
+  + indexnow-submit.ts both updated (retail-local-commerce/review-automation appended after the
+  retail-local-commerce/crm-automation entry — the last Batch 2 entry, which also keeps it
+  hub-grouped since retail is the final hub).
+- files: app/industries/retail-local-commerce/review-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: TWO corrections vs the build prompt (both verified, both recurring): (1) TEMPLATE PROP —
+  prompt said '<IntersectionPageTemplate data={DATA} />' but the template takes SPREAD props
+  (IntersectionPageTemplate(data: IntersectionPageData)) and the sibling renders '{...DATA}';
+  data={DATA} would fail tsc. Used {...DATA}. tsc-clean confirms. (2) ROUTE COUNT — prompt's premise
+  ("93 → 94") was stale; actual next-build count was 114, so this page is 114 → 115. Used real
+  numbers. metaTitle 41 chars (prompt said 39; actual 41 — ≤60 ceiling passes). metaDescription 145
+  chars (matches prompt) — 140–160 gate passes. Both shipped verbatim. This prompt DID set
+  howItWorksHeadline + featuresHeadline (valid fields), 4 steps, 8 features. No CTA fields provided →
+  ctaHeadline/ctaBody/ctaPrimaryLabel left UNSET (template defaults). No apostrophe-escaping needed.
+  serviceSchema used { slug, name, description } (no url param, per prompt's own note). Placement:
+  retail is the last hub so "append after last Batch 2 entry" and hub-grouping coincided (no conflict
+  this time, unlike the technology-b2b review-automation page). FAQ byte-identity confirmed by
+  construction (exactly 5). Commit scoped to this page only; unrelated SEO-pipeline outputs and assets
+  deliberately excluded. Not pushed.
+
 ## 2026-07-08 — feat: /industries/technology-b2b/review-automation
 - type: feat
 - changes: Created intersection page technology-b2b × review-automation. Batch 2, Level 5 copy

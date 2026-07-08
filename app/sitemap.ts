@@ -110,6 +110,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/retail-local-commerce/lead-generation-automation', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/retail-local-commerce/ai-voicebots',               priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/retail-local-commerce/crm-automation',             priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/retail-local-commerce/review-automation',          priority: 0.8, changeFrequency: 'monthly' },
 
   // Resources hub + sub-hubs
   { path: '/resources',                           priority: 0.7, changeFrequency: 'monthly' },
