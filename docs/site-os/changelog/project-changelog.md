@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/hospitality-events/review-automation
+- type: feat
+- changes: Created intersection page hospitality-events × review-automation. Batch 2, Level 5
+  copy (3 steps, 8 features, 5 FAQs, 4 problems). Fourth review-automation intersection page
+  (after professional-services, auto-services, real-estate-property). Core framing: dissatisfied
+  guests review unprompted, satisfied ones need the prompt — profile skews to the exceptions
+  without a system. Sub-vertical timing (2h dining, 6–8h hotel checkout, 24–48h events/venues);
+  trigger from POS close / PMS checkout / event booking date; SMS-first with platform routing by
+  business type (Google+Yelp restaurants, Google+TripAdvisor hotels, Google+The Knot/WeddingWire
+  wedding venues); email follow-up; AI review responses closing the loop (75%-response ranking
+  angle). relatedServiceSlugs: 4 entries (reputation-management, ai-review-responses,
+  google-business-profile-optimization, all-in-one-business-growth-system). Schema stack: WebPage
+  + BreadcrumbList (4-item) + Service (name 'Review Automation for Restaurants and Event Venues',
+  slug industries/hospitality-events/review-automation, description = metaDescription) + FAQPage.
+  No AggregateRating / Review / LocalBusiness / Organization / Product / Offer schema — verified
+  BOTH page-file grep AND emitted-JSON-LD grep on exported HTML
+  (out/industries/hospitality-events/review-automation.html): NONE_FOUND for both. og:image =
+  /og/default.webp (shared card). tsc clean. next build clean. Route count (next build "Generating
+  static pages"): 112 → 113. sitemap.ts + indexnow-submit.ts both updated
+  (hospitality-events/review-automation inserted after the hospitality-events/
+  appointment-booking-automation entry, before the previously committed ai-chatbots entry).
+- files: app/industries/hospitality-events/review-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 48 chars (prompt gate stated ≤48; actual 48 — passes exactly, and within the
+  real 60 ceiling). metaDescription 153 chars — 140–160 gate passes. Both shipped verbatim. No CTA
+  fields provided by the prompt → ctaHeadline/ctaBody/ctaPrimaryLabel left UNSET (template
+  defaults), per the prompt's "leave optional fields unset rather than inventing values"
+  instruction. Clean prompt otherwise (no unsupported fields; howItWorksHeadline/featuresHeadline
+  unset → template default headings). Verified sibling (hospitality-events/
+  appointment-booking-automation) has NO 'use client' (server component exporting metadata), none
+  added. steps use { label, body } (3 of them); features are a flat string array. No
+  apostrophe-escaping needed (copy contains no contractions/possessives with apostrophes).
+  serviceSchema used { slug, name, description } (no url param). FAQ byte-identity confirmed by
+  construction (exactly 5). Commit scoped to this page only; unrelated SEO-pipeline outputs and
+  assets deliberately excluded. Not pushed.
+
 ## 2026-07-08 — feat: /industries/real-estate-property/review-automation
 - type: feat
 - changes: Created intersection page real-estate-property × review-automation. Batch 2, Level 5
