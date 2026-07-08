@@ -15,6 +15,36 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/technology-b2b/ai-voicebots
+- type: feat
+- changes: Created intersection page technology-b2b × ai-voicebots. Level 5 copy (4 steps,
+  8 features, 5 FAQs). Phone-channel differentiation from the same-hub ai-chatbots sibling:
+  chatbot = website visitors browsing, voicebot = inbound phone callers who are higher
+  intent (a B2B buyer who calls instead of filling a form is the most valuable inbound
+  lead). Dual buyer types — new business inbound (primary: qualification by company size /
+  use case / tech environment / timeline / decision-maker status, discovery-call & demo
+  booking) and existing client support calls (secondary: Tier-1 FAQ, identify & route to
+  the right team member with context). Speed-to-lead framing shifted from web form to phone
+  line. 'Firm uses the AI it sells' credibility angle in the FAQ. Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'AI Voicebots for Technology & B2B Services', slug
+  industries/technology-b2b/ai-voicebots) + FAQPage. No AggregateRating / Review /
+  LocalBusiness / Organization / Product / Offer schema (page-file grep: 0 matches /
+  NONE_FOUND). openGraph.images = shared /og/default.webp card. tsc clean. next build clean.
+  Route count (next build "Generating static pages"): 95 → 96.
+- files: app/industries/technology-b2b/ai-voicebots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 50 chars (package stated 51; actual 50) — ≤60 gate passes, shipped
+  verbatim, no trim. metaDescription 142 chars (package stated 144; actual 142) — 140–160
+  gate passes, shipped verbatim, no trim. Copy package complete (both section headlines,
+  4 steps, 8 features, relatedServiceSlugs, exactly 5 FAQs). problems array is 3 items
+  (template type comment suggests 4, but type is string[] and the package provided 3 —
+  compiles clean, rendered as-is). No schema corrections needed: serviceSchema call already
+  used { slug, name, description } and the sitemap entry used this file's { path, priority,
+  changeFrequency } shape. FAQ byte-identity confirmed by construction — DATA.faqs is the
+  single array passed to both faqPage() and the template render. Commit scoped to this page
+  only; the pre-existing uncommitted auto-services/ai-voicebots entry in sitemap.ts +
+  indexnow-submit.ts was left unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/hospitality-events/ai-voicebots
 - type: feat
 - changes: Created intersection page hospitality-events × ai-voicebots. Level 5 copy
