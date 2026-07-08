@@ -99,6 +99,7 @@ const STATIC_ROUTES: readonly string[] = [
   '/industries/technology-b2b/appointment-booking-automation',
   '/industries/technology-b2b/ai-chatbots',
   '/industries/retail-local-commerce/reputation-management',
+  '/industries/retail-local-commerce/ai-chatbots',
   // Blog index
   '/blog',
   // Utility

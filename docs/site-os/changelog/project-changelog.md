@@ -15,6 +15,32 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/retail-local-commerce/ai-chatbots
+- type: feat
+- changes: Created intersection page retail-local-commerce × ai-chatbots. Batch 2,
+  Level 5 copy (4 steps, 8 features). After-hours website lead-capture framing for
+  local retail (product/availability/policy questions, contact-form-vs-chatbot,
+  high-intent visitor capture). Trained-on-your-store / brand-voice angle. Schema
+  stack: WebPage + BreadcrumbList (4-item) + Service (name 'AI Chatbots for Retail &
+  Local Commerce', slug industries/retail-local-commerce/ai-chatbots) + FAQPage. No
+  AggregateRating / Review / LocalBusiness / Organization / Product / Offer schema
+  (emitted JSON-LD grep + app-dir grep: 0 matches / NONE_FOUND). openGraph.images =
+  shared /og/default.webp card. tsc clean. next build clean. Route count (next build
+  static pages): 90 → 91.
+- files: app/industries/retail-local-commerce/ai-chatbots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 39 chars, metaDescription 157 chars — both exact to the package's
+  stated counts and in-gate; shipped verbatim, no trim. Copy package was complete
+  (steps, features, relatedServiceSlugs, howItWorksHeadline, featuresHeadline, and
+  exactly 5 FAQs all provided). Two corrections vs the build prompt: (1) serviceSchema
+  called with slug 'industries/retail-local-commerce/ai-chatbots' — the prompt passed
+  a `url: '/industries/...'` param, but the helper signature is { slug, name,
+  description } and builds url/@id from slug; passing `url` would fail tsc and emit no
+  Service url. Corrected; emitted Service url verified. (2) sitemap entry written in
+  this file's STATIC_ROUTES shape { path, priority, changeFrequency } — the prompt's
+  { url, lastModified, changeFrequency as const, priority } object does not match the
+  type. FAQ byte-identity confirmed (5 questions). Not pushed.
+
 ## 2026-07-08 — feat: /industries/technology-b2b/ai-chatbots
 - type: feat
 - changes: Created intersection page technology-b2b × ai-chatbots. Batch 2, Level 5
