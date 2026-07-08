@@ -15,6 +15,41 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/real-estate-property/review-automation
+- type: feat
+- changes: Created intersection page real-estate-property × review-automation. Batch 2, Level 5
+  copy (3 steps, 8 features, 5 FAQs, 4 problems). Third review-automation intersection page
+  (after professional-services and auto-services). 24–48-hour post-closing review-window framing —
+  the review window closes fast and most agents let it pass without a system; CRM close-event
+  trigger, SMS-first with direct link, Google/Zillow/Realtor.com routing by client type, email
+  follow-up, AI review responses closing the loop. Property-manager variant (triggers on lease
+  signing / renewal / resolved maintenance; satisfied-tenants-don't-review problem) handled as a
+  distinct track. relatedServiceSlugs: 4 entries (reputation-management, ai-review-responses,
+  google-business-profile-optimization, all-in-one-business-growth-system). Schema stack: WebPage
+  + BreadcrumbList (4-item) + Service (name 'Review Automation for Real Estate & Property
+  Services', slug industries/real-estate-property/review-automation, description =
+  metaDescription) + FAQPage. No AggregateRating / Review / LocalBusiness / Organization /
+  Product / Offer schema — verified BOTH page-file grep AND emitted-JSON-LD grep on exported HTML
+  (out/industries/real-estate-property/review-automation.html): NONE_FOUND for both. og:image =
+  /og/default.webp (shared card). tsc clean. next build clean. Route count (next build
+  "Generating static pages"): 111 → 112. sitemap.ts + indexnow-submit.ts both updated
+  (real-estate-property/review-automation inserted after the real-estate-property/
+  appointment-booking-automation entry, before the previously committed crm-automation entry).
+- files: app/industries/real-estate-property/review-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 46 chars (prompt gate stated ≤47; actual 46 — passes both the prompt's gate
+  and the real 60 ceiling; no brand suffix this time, unlike the auto-services review-automation
+  page). metaDescription 151 chars — 140–160 gate passes. Both shipped verbatim. No CTA fields
+  provided by the prompt → ctaHeadline/ctaBody/ctaPrimaryLabel left UNSET (template defaults), per
+  the prompt's "leave optional fields unset rather than inventing values" instruction. Clean
+  prompt otherwise (no unsupported fields; howItWorksHeadline/featuresHeadline unset → template
+  default headings). Verified sibling (real-estate-property/appointment-booking-automation) has NO
+  'use client' (server component exporting metadata), none added. steps use { label, body } (3 of
+  them); features are a flat string array. Prompt's escaped apostrophe in faqs[5] ("agent's")
+  written as \' in the TS source. serviceSchema used { slug, name, description } (no url param).
+  FAQ byte-identity confirmed by construction (exactly 5). Commit scoped to this page only;
+  unrelated SEO-pipeline outputs and assets deliberately excluded. Not pushed.
+
 ## 2026-07-08 — feat: /industries/auto-services/review-automation
 - type: feat
 - changes: Created intersection page auto-services × review-automation. Batch 2, Level 5 copy
