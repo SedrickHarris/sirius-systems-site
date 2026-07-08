@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/auto-services/ai-voicebots (commit of pre-existing page)
+- type: feat
+- changes: Committed the auto-services × ai-voicebots intersection page (Batch 2, Level 5:
+  4 steps, 8 features, 5 FAQs, 4 problems) together with its sitemap.ts + indexnow-submit.ts
+  route entries. NOTE: this page.tsx was authored in a prior session (file dated 2026-07-08
+  07:13, before this session's build sprint began) and had been sitting UNTRACKED the entire
+  session, while its sitemap/indexnow route lines sat unstaged — the one loose end carried
+  across every commit this session. Now committed as a single dedicated commit at the user's
+  explicit request to clean up the working tree. Copy: missed-call-to-voicemail framing for
+  auto shops (techs mid-repair, advisor at the counter), 24/7 call coverage, vehicle intake
+  (make/model/year/service need), service-appointment booking from the call, status-update
+  ("is my car ready?") handling, urgent breakdown escalation, after-hours/overflow coverage.
+  Configured-for-specialty-shops angle (tire shops, body shops, detailers). Schema stack:
+  WebPage + BreadcrumbList (4-item) + Service (name 'AI Voicebots for Auto Repair & Service
+  Shops', slug industries/auto-services/ai-voicebots, dedicated Service description string) +
+  FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product / Offer schema
+  (page-file grep: NONE_FOUND). openGraph.images = shared /og/default.webp card. Part of every
+  clean tsc/next-build this session; last build with it present = 109 static pages. Reviewed
+  the untracked page before committing — structurally identical to the other intersection
+  pages, serviceSchema uses { slug, name, description }, no forbidden schema.
+- files: app/industries/auto-services/ai-voicebots/page.tsx (new), app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 44 chars, metaDescription 154 chars — both in gate. This does NOT change the
+  static page count (the page was already building; it was only ever missing from version
+  control). After this commit the working tree's remaining changes are unrelated SEO-pipeline
+  outputs (docs/seo/*, keyword-export archive) and asset files — deliberately excluded from this
+  commit. Not pushed.
+
 ## 2026-07-08 — feat: /industries/retail-local-commerce/lead-generation-automation
 - type: feat
 - changes: Created intersection page retail-local-commerce × lead-generation-automation.
