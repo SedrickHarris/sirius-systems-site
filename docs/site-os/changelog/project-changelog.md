@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/technology-b2b/crm-automation
+- type: feat
+- changes: Created intersection page technology-b2b × crm-automation. Batch 2, Level 5 copy
+  (4 steps, 8 features, 5 FAQs, 4 problems). Pipeline-discipline framing for IT firms / MSPs /
+  B2B tech — deals lost not to better competitors but to disorganized pipelines and missed
+  follow-ups while the team is in delivery. Long B2B cycle handling (60–180 days), pipeline
+  stages that reflect buyer decisions (not seller actions), multi-touch proposal follow-up
+  (day 3/7/14), inbound lead routing, multi-stakeholder deal tracking (IT director / business
+  owner / procurement), dormant-deal escalation, renewal/upsell triggers set at close.
+  relatedServiceSlugs: 5 entries (appointment-booking-automation, lead-generation-automation,
+  ai-chatbots, review-automation, all-in-one-business-growth-system). Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'CRM Automation for B2B Technology Firms', slug
+  industries/technology-b2b/crm-automation, description = metaDescription) + FAQPage. No
+  AggregateRating / Review / LocalBusiness / Organization / Product / Offer schema (page-file
+  grep: 0 matches / NONE_FOUND). openGraph.images = shared /og/default.webp card. tsc clean.
+  next build clean. Route count (next build "Generating static pages"): 101 → 102. sitemap.ts
+  + indexnow-submit.ts both updated (technology-b2b/crm-automation inserted after the
+  technology-b2b/appointment-booking-automation entry).
+- files: app/industries/technology-b2b/crm-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 54 chars (matches package) — ≤60 gate passes, shipped verbatim.
+  metaDescription 151 chars (package stated 154; actual 151) — 140–160 gate passes, shipped
+  verbatim. UNSUPPORTED-FIELDS DECISION (user-approved): the build prompt set three fields not
+  present in the IntersectionPageData interface — systemsHeadline, systemsCopy, and outcomes.
+  Adding them to the typed DATA object would fail tsc (excess-property check) and the shared
+  template renders no sections for them. Surfaced to the user; approved resolution = "map +
+  omit": systemsHeadline → howItWorksHeadline (its exact interface equivalent, value 'How CRM
+  automation works for a B2B technology or IT firm'); systemsCopy and the 5 outcomes strings
+  were OMITTED (no template slot — not rendered). Chose not to extend the shared template
+  (would affect all 100+ intersection pages). All other copy shipped verbatim. steps use
+  { label, body }; features are a flat string array. serviceSchema used { slug, name,
+  description } (no url param). FAQ byte-identity confirmed by construction — DATA.faqs is the
+  single array passed to both faqPage() and the template render. Commit scoped to this page
+  only; the pre-existing uncommitted auto-services/ai-voicebots entry in sitemap.ts +
+  indexnow-submit.ts was left unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/hospitality-events/crm-automation
 - type: feat
 - changes: Created intersection page hospitality-events × crm-automation. Batch 2, Level 5
