@@ -15,6 +15,35 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/professional-services/ai-voicebots
+- type: feat
+- changes: Created intersection page professional-services × ai-voicebots. Batch 2,
+  Level 5 copy (4 steps, 8 features). First and only Batch 2 page for the ai-voicebots
+  service. Missed-call-to-voicemail framing; 24/7 inbound call answering, voice intake,
+  consultation booking, CRM routing, urgent-call escalation; advice-boundary copy
+  (law-firm intake without legal advice) in the FAQ. Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'AI Voicebots for Professional Services
+  Firms', slug industries/professional-services/ai-voicebots) + FAQPage. No
+  AggregateRating / Review / LocalBusiness / Organization / Product / Offer schema
+  (emitted JSON-LD grep + app-dir grep: 0 matches / NONE_FOUND). openGraph.images =
+  shared /og/default.webp card. tsc clean. next build clean. Route count (next build
+  static pages): 91 → 92. COMPLETES BATCH 2 — all 18 intersection pages built
+  (6 industries × reputation-management/appointment-booking-automation/ai-chatbots
+  where applicable, plus this ai-voicebots page).
+- files: app/industries/professional-services/ai-voicebots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 44 chars (exact to package). metaDescription 153 chars (the package
+  stated 155; actual 153) — in-gate, shipped verbatim, no trim. Copy package complete
+  (steps, features, relatedServiceSlugs, both section headlines, 5 FAQs all provided).
+  Two corrections vs the build prompt, identical to the retail ai-chatbots page:
+  (1) serviceSchema called with slug 'industries/professional-services/ai-voicebots' —
+  the prompt passed a `url` param, but the helper signature is { slug, name, description }
+  and builds url/@id from slug; passing `url` would fail tsc and emit no Service url.
+  Corrected; emitted Service url verified. (2) sitemap entry written in this file's
+  STATIC_ROUTES shape { path, priority, changeFrequency } — the prompt's { url,
+  lastModified, changeFrequency as const, priority } object does not match the type.
+  FAQ byte-identity confirmed (5 questions). Not pushed.
+
 ## 2026-07-08 — feat: /industries/retail-local-commerce/ai-chatbots
 - type: feat
 - changes: Created intersection page retail-local-commerce × ai-chatbots. Batch 2,

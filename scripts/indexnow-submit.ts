@@ -86,6 +86,7 @@ const STATIC_ROUTES: readonly string[] = [
   '/industries/professional-services/reputation-management',
   '/industries/professional-services/appointment-booking-automation',
   '/industries/professional-services/ai-chatbots',
+  '/industries/professional-services/ai-voicebots',
   '/industries/auto-services/reputation-management',
   '/industries/auto-services/ai-chatbots',
   '/industries/auto-services/appointment-booking-automation',
