@@ -15,6 +15,41 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/technology-b2b/lead-generation-automation
+- type: feat
+- changes: Created intersection page technology-b2b × lead-generation-automation. Batch 2,
+  Level 5 copy (4 steps, 8 features, 5 FAQs, 4 problems). Fifth lead-generation-automation
+  intersection page (after professional-services, auto-services, real-estate-property,
+  hospitality-events). Speed-to-lead framing for IT firms / MSPs / SaaS — inbound inquiries
+  sit in an inbox while engineers are on tickets and the firm that responds first wins the
+  discovery call. Intake-layer positioning (does not replace the sales process); unify
+  website/chatbot/referral/LinkedIn/paid/organic into one CRM intake; immediate response +
+  qualification; multi-touch nurture across 3–12 month B2B cycles; discovery-call self-booking;
+  source-to-booked-call attribution; after-hours coverage. Fifth FAQ ties lead-gen to the wider
+  growth stack (CRM automation, appointment booking, AI chatbots). relatedServiceSlugs: 4
+  entries (crm-automation, ai-chatbots, appointment-booking-automation, reputation-management).
+  Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'Lead Generation Automation
+  for IT Firms and B2B Tech Companies', slug industries/technology-b2b/lead-generation-automation,
+  description = metaDescription) + FAQPage. No AggregateRating / Review / LocalBusiness /
+  Organization / Product / Offer schema (page-file grep: 0 matches / NONE_FOUND).
+  openGraph.images = shared /og/default.webp card. tsc clean. next build clean. Route count
+  (next build "Generating static pages"): 107 → 108. sitemap.ts + indexnow-submit.ts both updated
+  (technology-b2b/lead-generation-automation inserted after the technology-b2b/ai-chatbots entry).
+- files: app/industries/technology-b2b/lead-generation-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 50 chars (package stated 52; actual 50) — ≤60 gate passes, shipped verbatim.
+  metaDescription 142 chars (package stated 144; actual 142) — 140–160 gate passes, shipped
+  verbatim. CLEANEST lead-gen prompt so far — NO unsupported fields: this prompt did NOT set
+  stepsHeadline/outcomesHeadline/outcomes (unlike the four prior lead-gen builds), so no map+omit
+  was needed. howItWorksHeadline and featuresHeadline were not specified either, so both optional
+  fields were left unset and the template renders its default section headings. Verified the
+  sibling (technology-b2b/ai-chatbots) has NO 'use client' directive (server component exporting
+  metadata), so none was added. steps use { label, body }; features are a flat string array.
+  relatedServiceSlugs has 4 entries this time. serviceSchema used { slug, name, description }
+  (no url param). FAQ byte-identity confirmed by construction. Commit scoped to this page only;
+  the pre-existing uncommitted auto-services/ai-voicebots entry in sitemap.ts + indexnow-submit.ts
+  was left unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/hospitality-events/lead-generation-automation
 - type: feat
 - changes: Created intersection page hospitality-events × lead-generation-automation. Batch 2,
