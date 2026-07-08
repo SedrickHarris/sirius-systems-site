@@ -80,6 +80,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/auto-services/ai-chatbots',                        priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/auto-services/appointment-booking-automation',     priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/auto-services/crm-automation',                     priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/auto-services/lead-generation-automation',         priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/real-estate-property/reputation-management',       priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/real-estate-property/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/real-estate-property/crm-automation',              priority: 0.8, changeFrequency: 'monthly' },

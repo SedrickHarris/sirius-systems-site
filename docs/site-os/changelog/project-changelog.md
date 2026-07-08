@@ -15,6 +15,45 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/auto-services/lead-generation-automation
+- type: feat
+- changes: Created intersection page auto-services × lead-generation-automation. Batch 2,
+  Level 5 copy (4 steps, 8 features, 5 FAQs, 4 problems). Sibling of the
+  professional-services/lead-generation-automation page (same service, different hub).
+  Speed-to-lead / unified-intake framing for auto shops — capture every inquiry across GBP,
+  website, paid ads, and referral into one CRM intake; immediate follow-up within seconds;
+  source attribution to booked jobs (not just form fills); after-hours capture; re-engagement
+  of non-responders; duplicate detection. Buying-leads vs lead-gen-automation distinction in
+  FAQ. relatedServiceSlugs: 5 entries (appointment-booking-automation, crm-automation,
+  ai-chatbots, reputation-management, all-in-one-business-growth-system). Schema stack: WebPage
+  + BreadcrumbList (4-item) + Service (name 'Lead Generation Automation for Auto Services',
+  slug industries/auto-services/lead-generation-automation, description = metaDescription) +
+  FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product / Offer schema
+  (page-file grep: 0 matches / NONE_FOUND). openGraph.images = shared /og/default.webp card.
+  tsc clean. next build clean. Route count (next build "Generating static pages"): 104 → 105.
+  sitemap.ts + indexnow-submit.ts both updated (auto-services/lead-generation-automation
+  inserted after the auto-services/crm-automation entry, at the end of the auto-services block).
+- files: app/industries/auto-services/lead-generation-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 41 chars (package stated 42; actual 41) — ≤60 gate passes, shipped verbatim.
+  metaDescription 158 chars (package stated 159; actual 158) — 140–160 gate passes, shipped
+  verbatim. UNSUPPORTED-FIELDS DECISION (map + omit, per the user-approved convention): the
+  build prompt set stepsHeadline, outcomesHeadline, and outcomes — none present in
+  IntersectionPageData (note: this prompt used stepsHeadline as the section-headline variant,
+  distinct from the systemsHeadline used by earlier crm-automation prompts). stepsHeadline →
+  howItWorksHeadline ('How we build your lead generation system'); featuresHeadline is a real
+  interface field and was kept ('What the system includes'); outcomesHeadline and the 5 outcomes
+  strings OMITTED (no template slot). tsc clean confirms. PREMISE CORRECTION: the build
+  prompt's setup asserted the professional-services/lead-generation-automation page does not
+  exist and directed using appointment-booking-automation as the structural reference — but
+  that page DOES exist (committed 0fde8e1 in the prior step). Build is structurally identical
+  regardless of sibling reference, so no functional impact; noted for accuracy. steps use
+  { label, body }; features are a flat string array. serviceSchema used { slug, name,
+  description } (no url param). FAQ byte-identity confirmed by construction. Commit scoped to
+  this page only; auto-services/lead-generation-automation inserted after crm-automation, clear
+  of the still-uncommitted auto-services/ai-voicebots entry (same hub) which remains unstaged,
+  untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/professional-services/lead-generation-automation
 - type: feat
 - changes: Created intersection page professional-services × lead-generation-automation.
