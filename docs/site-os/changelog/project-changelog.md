@@ -15,6 +15,35 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/professional-services/ai-chatbots
+- type: feat
+- changes: Created intersection page professional-services × ai-chatbots. Batch 2,
+  Level 5 copy (4 steps, 8 features). First Batch 2 page for the ai-chatbots service.
+  After-hours lead-capture framing; advice-boundary copy built into the definition and
+  FAQ (chatbot handles intake, not legal/tax/financial advice — professional judgment
+  stays with the licensed team). Intake-only scope also enforced in the serviceSchema
+  description. Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'AI
+  Chatbots for Professional Services Firms', slug industries/professional-services/
+  ai-chatbots) + FAQPage. No AggregateRating / Review / LocalBusiness / Organization /
+  Product / Offer schema (emitted JSON-LD grep: 0 matches). openGraph.images = shared
+  /og/default.webp card. tsc clean. build clean. Route count (next build static
+  pages): 85 → 86.
+- files: app/industries/professional-services/ai-chatbots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 42 chars (the build prompt stated 43; actual is 42 — within the
+  <=60 gate either way). metaDescription: the build prompt asserted 154 chars and
+  "do not trim / shipped verbatim", but the provided string was 171 chars (over the
+  160 ceiling; the prompt's premise was wrong). Per user decision, shipped an in-gate
+  variant at 158 chars (Option C): tightened "We build an AI chatbot that captures" ->
+  "Our AI chatbot captures", preserving the "day or night" 24/7 hook and all other
+  meaning; no other field altered. serviceSchema description explicitly scopes the
+  chatbot to intake and excludes legal and financial advice. serviceSchema slug carries
+  the 'industries/' prefix (no correction needed — prompt specified it correctly).
+  sitemap.ts + indexnow-submit.ts: added after the professional-services/appointment-
+  booking-automation entry (which follows professional-services/reputation-management),
+  before the auto-services entries. FAQ byte-identity confirmed (faqPage sets
+  Question.name = item.q, no transformation; 5 questions). Not pushed.
+
 ## 2026-07-07 — feat: /industries/technology-b2b/appointment-booking-automation
 - type: feat
 - changes: Created intersection page technology-b2b × appointment-booking-automation.
