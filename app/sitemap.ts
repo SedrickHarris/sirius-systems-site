@@ -81,6 +81,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/real-estate-property/ai-chatbots',                 priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/hospitality-events/reputation-management',         priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/hospitality-events/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/industries/hospitality-events/ai-chatbots',                   priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b/reputation-management',             priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b/appointment-booking-automation',    priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/retail-local-commerce/reputation-management',      priority: 0.8, changeFrequency: 'monthly' },

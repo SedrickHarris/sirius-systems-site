@@ -15,6 +15,33 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/hospitality-events/ai-chatbots
+- type: feat
+- changes: Created intersection page hospitality-events × ai-chatbots. Batch 2, Level 5
+  copy (4 steps, 7 features). Reply-sensitivity / first-to-respond framing across two
+  sub-verticals: restaurants + catering (reservations, menu/dietary questions, catering
+  intake) and event venues + wedding planners (qualification by date/guest count/budget,
+  tour and consultation booking). Schema stack: WebPage + BreadcrumbList (4-item) +
+  Service (name 'AI Chatbots for Restaurants and Event Venues', slug industries/
+  hospitality-events/ai-chatbots) + FAQPage. No AggregateRating / Review / LocalBusiness
+  / Organization / Product / Offer schema (emitted JSON-LD grep: 0 matches).
+  openGraph.images = shared /og/default.webp card. tsc clean. build clean. Route count
+  (next build static pages): 88 → 89.
+- files: app/industries/hospitality-events/ai-chatbots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 44 chars (the copy package stated 46; actual 44). metaDescription
+  149 chars (the package stated 152; actual 149) — in-gate, shipped verbatim, no trim.
+  Same as the real-estate ai-chatbots page, the SERP-format package was missing the
+  required IntersectionPageData fields steps/features/relatedServiceSlugs; user supplied
+  steps (4), features (7), and relatedServiceSlugs (appointment-booking-automation,
+  reputation-management, review-automation, ai-review-responses). Package had 6 FAQs;
+  per user instruction FAQ 5 ("Will the chatbot replace my front-of-house team or event
+  coordinator?") was dropped to ship exactly 5. howItWorksHeadline and featuresHeadline
+  not provided, so the template defaults render. serviceSchema slug carries the
+  'industries/' prefix. FAQ byte-identity confirmed (5 questions). Changelog path is
+  docs/site-os/changelog/... (build prompt said docs/changelog.md — corrected to match
+  all prior Batch 2 entries). Not pushed.
+
 ## 2026-07-08 — feat: /industries/real-estate-property/ai-chatbots
 - type: feat
 - changes: Created intersection page real-estate-property × ai-chatbots. Batch 2,
