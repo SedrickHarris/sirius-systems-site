@@ -15,6 +15,30 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/technology-b2b/ai-chatbots
+- type: feat
+- changes: Created intersection page technology-b2b × ai-chatbots. Batch 2, Level 5
+  copy (4 steps, 7 features). Speed-to-lead / contact-form-vs-chatbot framing for B2B
+  tech, dual buyer types (IT firms & MSPs + SaaS/software), lead qualification by
+  company size / use case / timeline / decision-maker status, discovery-call and demo
+  booking, after-hours capture, pre-sales FAQ deflection. Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'AI Chatbots for IT Companies and B2B Firms',
+  slug industries/technology-b2b/ai-chatbots) + FAQPage. No AggregateRating / Review /
+  LocalBusiness / Organization / Product / Offer schema (emitted JSON-LD grep: 0
+  matches). openGraph.images = shared /og/default.webp card. tsc clean. build clean.
+  Route count (next build static pages): 89 → 90.
+- files: app/industries/technology-b2b/ai-chatbots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 49 chars (the copy package stated 53; actual 49). metaDescription
+  153 chars (the package stated 155; actual 153) — in-gate, shipped verbatim, no trim.
+  Copy package was complete this time — steps (4), features (7), relatedServiceSlugs
+  (lead-generation-automation, crm-automation, appointment-booking-automation,
+  reputation-management) all provided, and exactly 5 FAQs (no drop needed).
+  howItWorksHeadline and featuresHeadline not provided, so the template defaults
+  render. serviceSchema name uses the shorter descriptive form per the prompt (differs
+  from the metaTitle). serviceSchema slug carries the 'industries/' prefix. FAQ
+  byte-identity confirmed (5 questions). Not pushed.
+
 ## 2026-07-08 — feat: /industries/hospitality-events/ai-chatbots
 - type: feat
 - changes: Created intersection page hospitality-events × ai-chatbots. Batch 2, Level 5
