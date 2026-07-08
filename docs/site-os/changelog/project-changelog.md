@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/auto-services/crm-automation
+- type: feat
+- changes: Created intersection page auto-services × crm-automation. Hub 'Auto Services',
+  service 'CRM Automation'. Level 5 copy (4 steps, 8 features, 5 FAQs, 4 problems).
+  Retention/repeat-business framing (distinct from professional-services long-sales-cycle
+  angle) — auto customers don't leave on a bad experience, they drift away when service
+  reminders and follow-ups stop after the car leaves. Core failure modes: deferred/declined
+  work never followed up, customers lost between service intervals, review requests that
+  never fire post-service. Vertical nuance in FAQ: bring-customers-back mechanics, deferred
+  work recovery, small/independent shop fit, and CRM-automation vs shop-management-software
+  distinction. relatedServiceSlugs: reputation-management, review-automation,
+  appointment-booking-automation, all-in-one-business-growth-system. Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'CRM Automation for Auto Repair & Service Shops',
+  slug industries/auto-services/crm-automation, dedicated Service description string per the
+  build prompt) + FAQPage. No AggregateRating / Review / LocalBusiness / Organization /
+  Product / Offer schema (page-file grep: 0 matches / NONE_FOUND). openGraph.images = shared
+  /og/default.webp card. tsc clean. next build clean. Route count (next build "Generating
+  static pages"): 98 → 99. sitemap.ts + indexnow-submit.ts both updated
+  (auto-services/crm-automation appended after the auto-services appointment-booking-automation
+  entry).
+- files: app/industries/auto-services/crm-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 46 chars (package stated 44; actual 46) — ≤60 gate passes, shipped
+  verbatim, no trim. metaDescription 160 chars (package stated 158; actual 160) — sits exactly
+  at the 140–160 ceiling, in-gate, shipped verbatim, no trim (contrast with the prior
+  professional-services/crm-automation page whose provided description was 168 and required a
+  user-approved trim; this one needed none). Copy package complete (both section headlines,
+  4 steps, 8 features, relatedServiceSlugs, exactly 5 FAQs, 4 problems). Prompt's
+  double-escaped \\' in problems[2] and features[0] ("customer's") converted to single \' for
+  the TS source. serviceSchema used { slug, name, description } (no url param). FAQ
+  byte-identity confirmed by construction — DATA.faqs is the single array passed to both
+  faqPage() and the template render. Commit scoped to this page only; the pre-existing
+  uncommitted auto-services/ai-voicebots entry in sitemap.ts + indexnow-submit.ts (same hub)
+  was left unstaged, untouched — crm-automation inserted after appointment-booking-automation,
+  clear of that line. Not pushed.
+
 ## 2026-07-08 — feat: /industries/professional-services/crm-automation
 - type: feat
 - changes: Created intersection page professional-services × crm-automation. Hub
