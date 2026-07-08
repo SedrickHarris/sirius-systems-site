@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/real-estate-property/crm-automation
+- type: feat
+- changes: Created intersection page real-estate-property × crm-automation. Batch 2, Level 5
+  copy (4 steps, 8 features, 5 FAQs, 4 problems). Copy angle: CRM-as-database vs
+  CRM-as-running-system framing — most agents have a CRM but the follow-up still depends on
+  someone remembering to act. Dual buyer track handled as distinct sections: residential
+  agents/teams (separate buyer vs seller pipelines, instant lead response, past-client &
+  sphere nurture) and property managers/leasing teams (rental inquiry auto-response, tour
+  scheduling, prospect-to-lease, lease-renewal sequences at 90/60/30 days). Database
+  reactivation of dormant contacts as its own feature. relatedServiceSlugs: 5 entries
+  (appointment-booking-automation, ai-chatbots, lead-generation-automation,
+  reputation-management, all-in-one-business-growth-system). Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'CRM Automation for Real Estate & Property
+  Services', slug industries/real-estate-property/crm-automation, description = metaDescription)
+  + FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product / Offer
+  schema (page-file grep: 0 matches / NONE_FOUND). openGraph.images = shared /og/default.webp
+  card. tsc clean. next build clean. Route count (next build "Generating static pages"):
+  99 → 100. sitemap.ts + indexnow-submit.ts both updated (real-estate-property/crm-automation
+  inserted after the real-estate-property/appointment-booking-automation entry).
+- files: app/industries/real-estate-property/crm-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 57 chars (package stated 58; actual 57) — ≤60 gate passes, shipped
+  verbatim. metaDescription 158 chars (package stated 159; actual 158) — 140–160 gate passes,
+  shipped verbatim. Build prompt's stated steps/features shape corrections were already
+  correct in the supplied copy (steps use { label, body }; features are flat strings) — no
+  remap needed. One correction vs the supplied DATA: the prompt did NOT specify
+  howItWorksHeadline or featuresHeadline, so those optional fields were OMITTED (not invented)
+  — the template falls back to its defaults ('How CRM Automation works for Real Estate &
+  Property Services businesses' / 'What CRM Automation includes for …'). relatedServiceSlugs
+  has 5 entries (interface type is string[], not capped at 4). Prompt's escaped apostrophe in
+  steps[3] ("team's") written as \' in the TS source. serviceSchema used { slug, name,
+  description } (no url param). FAQ byte-identity confirmed by construction — DATA.faqs is the
+  single array passed to both faqPage() and the template render. Commit scoped to this page
+  only; the pre-existing uncommitted auto-services/ai-voicebots entry in sitemap.ts +
+  indexnow-submit.ts was left unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/auto-services/crm-automation
 - type: feat
 - changes: Created intersection page auto-services × crm-automation. Hub 'Auto Services',
