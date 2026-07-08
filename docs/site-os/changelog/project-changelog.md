@@ -15,6 +15,44 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/retail-local-commerce/lead-generation-automation
+- type: feat
+- changes: Created intersection page retail-local-commerce × lead-generation-automation.
+  Batch 2, Level 5 copy (4 steps, 8 features, 5 FAQs, 4 problems). Sixth and FINAL
+  lead-generation-automation intersection page — COMPLETES lead-gen across all six hubs
+  (professional-services, auto-services, real-estate-property, hospitality-events,
+  technology-b2b, retail-local-commerce). Slow-response / storefront framing for local retail —
+  shopper reaches out via website/GBP/social while staff are on the floor and walks into the
+  competitor who answered first. Unify website form/GBP messages/social DMs/chatbot into one
+  intake; immediate response in store voice; multi-touch follow-up until visit/purchase;
+  after-hours coverage; GBP high-intent message capture; source-to-visit/purchase attribution;
+  lead filtering. Fifth FAQ ties lead-gen to GBP optimization + review automation + reputation
+  management. relatedServiceSlugs: 4 entries (reputation-management, ai-chatbots,
+  google-business-profile-optimization [verified valid service slug — app/
+  google-business-profile-optimization exists], review-automation). Schema stack: WebPage +
+  BreadcrumbList (4-item) + Service (name 'Lead Generation Automation for Local Retail Shops',
+  slug industries/retail-local-commerce/lead-generation-automation, description =
+  metaDescription) + FAQPage. No AggregateRating / Review / LocalBusiness / Organization /
+  Product / Offer schema (page-file grep: 0 matches / NONE_FOUND). openGraph.images = shared
+  /og/default.webp card. tsc clean. next build clean. Route count (next build "Generating static
+  pages"): 108 → 109. sitemap.ts + indexnow-submit.ts both updated
+  (retail-local-commerce/lead-generation-automation inserted directly after the
+  retail-local-commerce/ai-chatbots entry per the build prompt — sits before the previously
+  committed ai-voicebots and crm-automation retail entries).
+- files: app/industries/retail-local-commerce/lead-generation-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 49 chars (package stated 50; actual 49) — ≤60 gate passes, shipped verbatim.
+  metaDescription 146 chars (matches package) — 140–160 gate passes, shipped verbatim. Clean
+  prompt (no unsupported fields — no stepsHeadline/outcomesHeadline/outcomes), like the
+  technology-b2b lead-gen prompt; howItWorksHeadline/featuresHeadline unset → template default
+  headings. Verified sibling (retail-local-commerce/ai-chatbots) has NO 'use client' (server
+  component exporting metadata), none added. steps use { label, body }; features are a flat
+  string array. Prompt's escaped apostrophe in features[1] ("store's") written as \' in the TS
+  source. serviceSchema used { slug, name, description } (no url param). FAQ byte-identity
+  confirmed by construction (exactly 5). Commit scoped to this page only; the pre-existing
+  uncommitted auto-services/ai-voicebots entry in sitemap.ts + indexnow-submit.ts was left
+  unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/technology-b2b/lead-generation-automation
 - type: feat
 - changes: Created intersection page technology-b2b × lead-generation-automation. Batch 2,
