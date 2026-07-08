@@ -15,6 +15,42 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/professional-services/crm-automation
+- type: feat
+- changes: Created intersection page professional-services × crm-automation. Hub
+  'Professional Services', service 'CRM Automation'. Level 5 copy (4 steps, 8 features,
+  5 FAQs, 4 problems). First crm-automation intersection page. Long-sales-cycle framing —
+  leads lost not because the prospect left but because follow-up stopped; consistent
+  follow-up across 60–90+ day decision windows, pipeline stages that update on real events,
+  re-engagement of leads who went quiet, intake-to-CRM sync. Vertical nuance in FAQ: law
+  firm intake automation without crossing into legal advice; long-cycle nurture; 'CRM vs
+  CRM automation' distinction. relatedServiceSlugs: ai-chatbots,
+  appointment-booking-automation, lead-generation-automation, all-in-one-business-growth-system.
+  Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'CRM Automation for
+  Professional Services Firms', slug industries/professional-services/crm-automation, with a
+  dedicated Service description string per the build prompt) + FAQPage. No AggregateRating /
+  Review / LocalBusiness / Organization / Product / Offer schema (page-file grep: 0 matches
+  / NONE_FOUND). openGraph.images = shared /og/default.webp card. tsc clean. next build clean.
+  Route count (next build "Generating static pages"): 97 → 98. sitemap.ts + indexnow-submit.ts
+  both updated (professional-services/crm-automation appended after the ai-voicebots sibling).
+- files: app/industries/professional-services/crm-automation/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 46 chars (matches package) — ≤60 gate passes, shipped verbatim.
+  metaDescription: GATE EXCEPTION HANDLED — the package's provided string measured 168 chars
+  (package claimed 160), which EXCEEDS the 140–160 ceiling. Rather than ship a gate-violating
+  description or silently rewrite provided copy, surfaced the conflict to the user and got an
+  approved trim. Shipped value: 'Professional service firms lose leads after intake — not
+  because the prospect left, but because follow-up stopped. CRM automation keeps the pipeline
+  moving.' = 156 chars (140–160 gate passes). Only edit vs package: 'between intake and close'
+  → 'after intake' (user-selected, preserves full 'Professional service firms' branding). All
+  other copy shipped verbatim. Copy package otherwise complete (both section headlines, 4
+  steps, 8 features, relatedServiceSlugs, exactly 5 FAQs, 4 problems). Prompt's double-escaped
+  \\' in the features string converted to single \' for the TS source. serviceSchema used
+  { slug, name, description } (no url param). FAQ byte-identity confirmed by construction —
+  DATA.faqs is the single array passed to both faqPage() and the template render. Commit
+  scoped to this page only; the pre-existing uncommitted auto-services/ai-voicebots entry in
+  sitemap.ts + indexnow-submit.ts was left unstaged, untouched. Not pushed.
+
 ## 2026-07-08 — feat: /industries/retail-local-commerce/ai-voicebots
 - type: feat
 - changes: Created intersection page retail-local-commerce × ai-voicebots. Hub 'Retail &
