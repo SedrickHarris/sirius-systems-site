@@ -15,6 +15,34 @@ Format per entry:
 
 ---
 
+## 2026-07-08 — feat: /industries/real-estate-property/ai-chatbots
+- type: feat
+- changes: Created intersection page real-estate-property × ai-chatbots. Batch 2,
+  Level 5 copy (4 steps, 7 features). Speed-to-lead / contact-form-vs-chatbot framing;
+  dual buyer types (agents + property managers), buyer/seller qualification (budget,
+  timeline, pre-approval, property type), showing/consultation booking, tenant inquiry
+  handling. Schema stack: WebPage + BreadcrumbList (4-item) + Service (name 'AI Chatbots
+  for Real Estate & Property Services', slug industries/real-estate-property/ai-chatbots)
+  + FAQPage. No AggregateRating / Review / LocalBusiness / Organization / Product /
+  Offer schema (emitted JSON-LD grep: 0 matches). openGraph.images = shared
+  /og/default.webp card. tsc clean. build clean. Route count (next build static
+  pages): 87 → 88.
+- files: app/industries/real-estate-property/ai-chatbots/page.tsx, app/sitemap.ts,
+         scripts/indexnow-submit.ts, docs/site-os/changelog/project-changelog.md
+- notes: metaTitle 54 chars (the copy package stated 57; actual 54). metaDescription
+  149 chars (the package stated 141; actual 149) — in-gate, shipped verbatim, no trim.
+  The original SERP-format copy package was missing the required IntersectionPageData
+  fields steps/features/relatedServiceSlugs and included invalid systemsHeadline/
+  systemsCopy fields; user supplied steps (4), features (7), and relatedServiceSlugs
+  (lead-generation-automation, crm-automation, appointment-booking-automation,
+  reputation-management), and systemsHeadline/systemsCopy were dropped. Package had 6
+  FAQs; per user instruction FAQ 6 ("How does the chatbot connect to the rest of the
+  system...") was dropped to ship exactly 5. howItWorksHeadline and featuresHeadline
+  not provided, so the template defaults render. serviceSchema slug carries the
+  'industries/' prefix. FAQ byte-identity confirmed (5 questions). Changelog path is
+  docs/site-os/changelog/... (build prompt said docs/changelog.md — corrected to match
+  all prior Batch 2 entries). Not pushed.
+
 ## 2026-07-08 — feat: /industries/auto-services/ai-chatbots
 - type: feat
 - changes: Created intersection page auto-services × ai-chatbots. Batch 2, Level 5
