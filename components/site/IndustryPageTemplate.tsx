@@ -33,6 +33,9 @@ export interface IndustryPageData {
   compact:  { name: string; blurb: string }[]   // tier-2 sub-vertical cards
   subVerticalsHeadline?: string
   subVerticalsCopy?: string
+  // Optional contextual link to a Growth System product page, rendered inline
+  // within the "what we build" body copy (doc 21 §10.1).
+  productCallout?: { lead: string; linkLabel: string; href: string }
   faqs: { q: string; a: string }[]
   ctaHeadline?: string
   ctaBody?: string
@@ -123,6 +126,18 @@ export function IndustryPageTemplate(data: IndustryPageData) {
             </h2>
             {data.systemsCopy && (
               <p className="mt-5 section-copy">{data.systemsCopy}</p>
+            )}
+            {data.productCallout && (
+              <p className="mt-5 section-copy">
+                {data.productCallout.lead}{' '}
+                <Link
+                  href={data.productCallout.href}
+                  className="font-semibold text-[color:var(--blue-system)] underline underline-offset-4 hover:no-underline"
+                >
+                  {data.productCallout.linkLabel}
+                </Link>
+                .
+              </p>
             )}
           </div>
           <div className="mt-12">

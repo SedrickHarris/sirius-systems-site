@@ -38,6 +38,12 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/competitor-review-benchmarking',      priority: 0.8, changeFrequency: 'monthly' },
   { path: '/all-in-one-business-growth-system',   priority: 0.9, changeFrequency: 'monthly' },
 
+  // Growth System product pages (doc 21 §4.2). Indexed. Only PUBLISHED verticals
+  // belong here (§11) — add a vertical when its product page ships, not before.
+  // The funnel steps (/book, /watch, /get-started, /thank-you, /onboarding) are
+  // noindex and deliberately excluded.
+  { path: '/plumber-growth-system',               priority: 0.9, changeFrequency: 'monthly' },
+
   // Industry hub + pages
   { path: '/industries',                          priority: 0.8, changeFrequency: 'monthly' },
   { path: '/industries/home-services',            priority: 0.7, changeFrequency: 'monthly' },
