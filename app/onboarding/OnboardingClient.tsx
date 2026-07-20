@@ -20,6 +20,10 @@ import { resolveVertical } from '@/lib/verticals'
 
 const ONBOARDING_WEBHOOK_URL = '' // TODO: GHL intake webhook (fulfillment pipeline)
 
+// Version of the Terms accepted at submit (doc 28 §12 requires recording the
+// version + timestamp in GHL). Bump when the Terms materially change.
+const TOS_VERSION = '2026-07-20'
+
 type Field = {
   name: string
   label: string
@@ -54,8 +58,13 @@ export function OnboardingClient() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    // Record which Terms version was accepted and when (doc 28 §12). Captured
+    // here so GHL can store it with the intake once the webhook is wired.
+    const acceptedAt = new Date().toISOString()
     if (ONBOARDING_WEBHOOK_URL) {
       const data = new FormData(e.currentTarget)
+      data.append('tos_version', TOS_VERSION)
+      data.append('tos_accepted_at', acceptedAt)
       try {
         await fetch(ONBOARDING_WEBHOOK_URL, { method: 'POST', body: data })
       } catch {
@@ -140,11 +149,13 @@ export function OnboardingClient() {
               className="mt-1 h-4 w-4 shrink-0"
             />
             <span>
+              I have read and agree to the{' '}
+              <Link href="/terms" className="underline hover:no-underline">Terms of Service</Link>{' '}
+              and{' '}
+              <Link href="/privacy" className="underline hover:no-underline">Privacy Policy</Link>.
               I authorize Sirius Systems to use the information above to build and
-              manage my website, and I understand account connections will be made
-              through secure delegated access — not by sharing passwords. I agree to
-              the{' '}
-              <Link href="/privacy" className="underline hover:no-underline">privacy policy</Link>.
+              manage my website, and I understand account connections are made
+              through secure delegated access — never by sharing passwords.
             </span>
           </label>
 

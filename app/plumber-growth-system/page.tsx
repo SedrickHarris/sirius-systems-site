@@ -125,8 +125,10 @@ const FAQS = [
     a: 'Timeline depends on how quickly onboarding is completed — specifically, how quickly we receive your business information, approved content, and access to required accounts. We can walk you through what’s needed on the onboarding call. We build it, you approve it before launch.',
   },
   {
+    // Cancellation answer per doc 28 §7.4 (resolves COPY-001). The FAQ renders
+    // a single paragraph, so the doc's three paragraphs are joined here.
     q: 'What happens if I cancel?',
-    a: 'The subscription is month-to-month. You can cancel without a long-term penalty. When a subscription ends, access to the managed system and hosting ends with it. Your business information — contacts, conversations, and customer data — can be exported. The website template and automation system are agency-owned infrastructure and are not transferred automatically. If you need a transition package, that’s available as a separately scoped service.',
+    a: 'The subscription is month-to-month. Cancel anytime — cancellation takes effect at the end of your billing period with no penalty. When your subscription ends, website hosting ends. You have two options: purchase a static export of your website for $597 and host it anywhere, or continue on a hosting-only plan at $79/month to keep the site live without the managed system. Your domain and your customer data are always yours. The website template and automation infrastructure are Sirius Systems property and are not transferred at cancellation.',
   },
   {
     q: 'Do I have to sign a long-term contract?',

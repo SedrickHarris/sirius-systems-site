@@ -8,9 +8,10 @@ import { resolveVertical } from '@/lib/verticals'
 // renders the matching VSSL copy. Falls back to a generic state when the
 // parameter is absent or unrecognized — never errors.
 //
-// OPEN DECISION AGY-001: VSSL hosting platform + player are not finalized.
-// The block below is where the embedded player goes. Per doc §13 the video
-// MUST NOT auto-play — playback is user-initiated.
+// AGY-001 (Accepted): the VSSL is hosted on GHL native video. Each vertical's
+// embed URL lives on `vertical.vsslSrc` (lib/verticals.ts). When it's set we
+// render the GHL iframe; until then a placeholder shows. The iframe `allow`
+// list deliberately omits `autoplay` — playback is user-initiated (doc §13).
 
 export function WatchClient() {
   const params = useSearchParams()
@@ -34,13 +35,24 @@ export function WatchClient() {
 
         {/* VSSL player — user-initiated only, no autoplay (doc §13). */}
         <div className="mx-auto mt-12 aspect-video max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-black">
-          <div className="flex h-full w-full flex-col items-center justify-center gap-4 border border-dashed border-white/15 text-center text-white/60">
-            <PlayCircle className="h-14 w-14 text-white/40" aria-hidden />
-            <p className="px-8 text-sm">
-              VSSL video player goes here (AGY-001). Playback must be user-initiated —
-              do not enable autoplay.
-            </p>
-          </div>
+          {vertical?.vsslSrc ? (
+            <iframe
+              src={vertical.vsslSrc}
+              title={`${vertical.product} overview video`}
+              className="h-full w-full border-none"
+              // No `autoplay` in the allow list — playback is user-initiated (doc §13).
+              allow="fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          ) : (
+            <div className="flex h-full w-full flex-col items-center justify-center gap-4 border border-dashed border-white/15 text-center text-white/60">
+              <PlayCircle className="h-14 w-14 text-white/40" aria-hidden />
+              <p className="px-8 text-sm">
+                VSSL video goes here (AGY-001 — GHL native). Set the vertical&rsquo;s
+                <code className="mx-1">vsslSrc</code>; autoplay stays disabled.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="mx-auto mt-8 max-w-2xl text-center">

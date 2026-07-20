@@ -33,6 +33,18 @@ export type Vertical = {
   published: boolean
   /** VSSL headline fragment for /watch (doc §7.2). */
   watchHeadline: string
+  /**
+   * GHL-hosted VSSL embed URL for /watch (decision AGY-001 — GHL native video).
+   * Empty/undefined → /watch renders the placeholder, never a broken embed.
+   * Autoplay MUST stay disabled in the GHL embed settings (doc 21 §13).
+   */
+  vsslSrc?: string
+  /**
+   * GHL SaaS V1 direct payment (sale) link for /get-started (decision GHL-007).
+   * Empty/undefined → /get-started renders the placeholder. Card details are
+   * collected on GHL's hosted checkout, never on our page (doc 21 §16-5).
+   */
+  checkoutUrl?: string
 }
 
 export const VERTICALS: Record<VerticalKey, Vertical> = {
@@ -44,6 +56,10 @@ export const VERTICALS: Record<VerticalKey, Vertical> = {
     campaign: 'plumber-growth-system',
     published: true,
     watchHeadline: "Here's exactly what we build for plumbing companies",
+    // TODO(AGY-001): paste the GHL native video embed URL for the plumbing VSSL.
+    vsslSrc: '',
+    // TODO(GHL-007): paste the GHL SaaS V1 sale/payment link for the $297 plan.
+    checkoutUrl: '',
   },
   hvac: {
     key: 'hvac',

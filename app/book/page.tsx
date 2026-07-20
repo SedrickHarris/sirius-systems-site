@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { ShieldCheck } from 'lucide-react'
+import { SALES_CALENDAR_SRC } from '@/lib/funnel-config'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // /book — Growth System sales calendar (doc 21 §7.1).
@@ -14,12 +15,11 @@ import { ShieldCheck } from 'lucide-react'
 // and are captured by GHL's own tracking on the embedded calendar. No client
 // JS is needed on our side to read them.
 //
-// OPEN DECISION AGY-004: the Growth System sales calendar embed URL is not yet
-// finalized. The placeholder below is where that GHL calendar iframe goes —
-// it MUST be a distinct calendar from the /booking discovery calendar.
+// AGY-004 (Accepted): the sales calendar is a GHL personal calendar. Paste its
+// widget URL into SALES_CALENDAR_SRC (lib/funnel-config.ts) — until then this
+// renders a placeholder rather than a broken embed. The embed mirrors the
+// existing /booking discovery page (iframe + form_embed.js).
 // ─────────────────────────────────────────────────────────────────────────────
-
-const GROWTH_SYSTEM_CALENDAR_SRC = '' // TODO(AGY-004): GHL sales calendar embed URL
 
 export const metadata: Metadata = {
   title: 'Book Your Growth System Call | Sirius Systems',
@@ -43,10 +43,10 @@ export default function BookPage() {
         </div>
 
         <div className="mx-auto mt-12 max-w-3xl rounded-3xl border border-white/10 bg-white/[0.04] p-4 md:p-6">
-          {GROWTH_SYSTEM_CALENDAR_SRC ? (
+          {SALES_CALENDAR_SRC ? (
             <>
               <iframe
-                src={GROWTH_SYSTEM_CALENDAR_SRC}
+                src={SALES_CALENDAR_SRC}
                 title="Growth System booking calendar"
                 className="block w-full rounded-2xl border-none"
                 style={{ height: 900, background: '#050505' }}
