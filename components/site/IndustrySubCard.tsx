@@ -5,13 +5,20 @@ import { ArrowUpRight } from 'lucide-react'
 // within an industry: Plumbing, HVAC, etc. inside /industries/home-services.
 //
 // Behavior:
-//   - href + !comingSoon  → wraps in <Link>, card-hover styles
-//   - comingSoon || !href → static <div>, shows a neutral "Coming soon" pill
+//   - href + !comingSoon → wraps in <Link>, card-hover styles
+//   - otherwise          → static <div>, no badge
 //
-// The "Coming soon" pill is intentionally subdued (text-muted, no accent fill)
-// so it doesn't compete with primary actions or look like a CTA. Coming-soon
-// cards are placeholders for vertical pages that will be built later, not
-// invitations to click.
+// href and comingSoon are live plumbing, not dead code. IndustryPageTemplate
+// threads both through from IndustryPageData.featured / .compact, which type
+// them as optional per entry. No hub page sets either one today, so both
+// arrive undefined and every card renders as a plain static info card — no
+// link, no pill. Behavior is unchanged; the pipe is just connected.
+//
+// Sub-vertical pages ARE in scope (site-build-plan.md Phase 8, confirmed
+// 2026-08-12: /industries/[hub]/for/[sub-vertical], static directories). As
+// each one ships, set href on that entry and the card becomes a link. Reserve
+// comingSoon for a sub-vertical with a real href and a near-term ship date —
+// it is not a blanket state for unbuilt pages.
 
 export interface IndustrySubCardProps {
   name: string
