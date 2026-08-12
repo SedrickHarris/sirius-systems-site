@@ -160,7 +160,8 @@ scoping the build.
 
 **Scale note:** at one page per sub-vertical this phase is **183 pages** — more than double the
 ~70–80-page intersection program in the section above, and larger than the entire current site
-(115 routes). Batching is mandatory; a "build them all" prompt is not viable.
+(105 routes in `route-manifest.json`, 117 built HTML files as of 2026-08-12). Batching is
+mandatory; a "build them all" prompt is not viable. See the Batch plan below.
 
 #### URL pattern — **CONFIRMED 2026-08-12: Option B**
 
@@ -259,6 +260,59 @@ into `/industries/[hub]/*` and both would touch `IndustryPageTemplate` and `app/
 running them concurrently invites route and sitemap conflicts. Override only on explicit
 instruction.
 
+#### Batch plan — 13 batches, 183 pages
+
+Counts recounted from the live `featured` / `compact` array literals on 2026-08-12 (identical to
+the earlier count that session — no hub's arrays have changed). Every batch is one build-prompt
+unit.
+
+**Sequencing rules applied, in order of precedence:**
+
+1. **Hub priority inherits the intersection-page groups** — no new priority order was invented.
+   Group A = the Batch-1 intersection hubs (`home-services`, `construction-contractors`,
+   `beauty-wellness`, `healthcare-medical`). Group B = the Batch-2 hubs
+   (`professional-services`, `auto-services`, `real-estate-property`, `hospitality-events`,
+   `technology-b2b`, `retail-local-commerce`). Group C = the two hubs with no intersection pages
+   yet (`education-childcare`, `community-faith-nonprofit`).
+2. **Featured tier ships before compact within a hub.** Featured cards already carry fuller
+   blurbs, so there is less content gap to close per page.
+3. **Target 12–20 pages per batch**, matching the shipped intersection batches.
+4. **No batch mixes hub-priority groups.** Where a group's remainder does not fill a batch, the
+   batch stays small rather than borrowing from the next group.
+
+| Batch | Group | Hub(s) | Tier | Pages | Status |
+|---|---|---|---|---:|---|
+| 1 | A | home-services, construction-contractors, beauty-wellness, healthcare-medical | featured | 18 | Planned |
+| 2 | A | home-services | compact | 16 | Planned |
+| 3 | A | healthcare-medical | compact | 12 | Planned |
+| 4 | A | beauty-wellness | compact | 12 | Planned |
+| 5 | A | construction-contractors | compact | 11 | Planned |
+| 6 | B | professional-services, auto-services, real-estate-property | featured | 13 | Planned |
+| 7 | B | hospitality-events, technology-b2b, retail-local-commerce | featured | 13 | Planned |
+| 8 | B | professional-services, hospitality-events | compact | 20 | Planned |
+| 9 | B | auto-services, real-estate-property | compact | 20 | Planned |
+| 10 | B | technology-b2b | compact | 11 | Planned |
+| 11 | B | retail-local-commerce | compact | 11 | Planned |
+| 12 | C | education-childcare | mixed (4 featured + 10 compact) | 14 | Planned |
+| 13 | C | community-faith-nonprofit | mixed (4 featured + 8 compact) | 12 | Planned |
+| | | | **Total** | **183** | |
+
+**Reconciliation:** Group A 18+16+12+12+11 = 69 (= 4 hubs: 20+15+16+18). Group B 13+13+20+20+11+11
+= 88 (= 6 hubs: 15+14+15+13+15+16). Group C 14+12 = 26. 69+88+26 = **183**. Every sub-vertical
+appears in exactly one batch; no hub's tier is split across batches.
+
+**Notes on specific batches:**
+
+- **Batch 1 is deliberately all-featured across all four Group A hubs.** It gives every
+  top-priority hub its flagship sub-vertical pages before any hub gets its long tail, so early
+  coverage is broad rather than deep in one vertical.
+- **Batches 5, 10, 11 are 11 pages** — one under the 12 target. Padding them would require pulling
+  from the next priority group, which rule 4 forbids. Small batch preferred over broken
+  sequencing.
+- **Batches 12 and 13 are mixed-tier** because each Group C hub is 12–14 pages total, which fits a
+  single batch whole. Featured still builds before compact *within* the batch.
+- Batch size ranges 11–20, against the intersection program's 12–30.
+
 ## 5. Phase plan
 
 ### Phase 0 — Site OS foundation — **COMPLETE**
@@ -338,7 +392,8 @@ submissions (GSC/Bing sitemap, GBP NAP cross-check) also still pending per the d
   per-page copy, any schema, any sitemap entry.
 - Sequenced after intersection batches 1–4 — not in parallel (shared `IndustryPageTemplate`,
   shared `app/sitemap.ts`).
-- 183 pages means mandatory batching; batch table still to be defined.
+- ⬜ **Batch plan defined 2026-08-12:** 13 batches, 11–20 pages each, all `Planned`. Full table in
+  §4 "Post-launch: Sub-vertical pages" → Batch plan. No batch has started.
 
 ## 6. Out of scope for Phase 1
 
@@ -394,6 +449,7 @@ content/blog-publishing-checklist.md ─► every post before publish
 | 2026-05-23 | **Post-launch intersection pages noted.** Batch 1 = home-services / construction-contractors / beauty-wellness / healthcare-medical paired with reputation-management / appointment-booking-automation / ai-chatbots. Build prompts to follow after hub Level 5 rebuilds. |
 | 2026-06-06 | **Intersection page plan formalised.** URL pattern `/industries/[hub]/[service]` confirmed. AI depth set to Level 5 all pages. Template component `IntersectionPageTemplate.tsx` registered. Schema stack documented (WebPage + 4-item BreadcrumbList + Service + FAQPage). Batch 1–4 plan table expanded with page counts and status. Batch 1 trigger condition met. Post-launch section rewritten with full spec. |
 | 2026-08-12 | **Sub-vertical pages confirmed in scope — supersedes the earlier hub × service–only route scope.** Added §4 "Post-launch: Sub-vertical pages" and **Phase 8** to §5. Inventory counted from the `featured`/`compact` array literals in all 12 `app/industries/[hub]/page.tsx` files: **52 featured + 131 compact = 183 sub-verticals**; counts are uneven per hub (`healthcare-medical` 6 featured, `real-estate-property`/`retail-local-commerce` 5, compact ranges 8–16). **URL pattern left UNRESOLVED and flagged as blocking** — `/industries/[hub]/[sub-vertical]` shares a segment position with the shipping `/industries/[hub]/[service]` intersection pattern (53 pages live). Verified there is no literal slug collision today (0 matches vs the 14 service slugs, 0 in-hub duplicates, 0 cross-hub duplicates); the conflict is structural (breadcrumbs, sitemap grouping, linking rules, analytics). Options A/B/C documented for confirmation. Forward requirements recorded: `SubVerticalPageTemplate.tsx` (placeholder), unique H1 + meta + direct-answer + FAQ per page, proposed WebPage + BreadcrumbList + Service + FAQPage schema, sitemap-on-ship. Folded in the deferred sub-vertical `href` TODO from `project-changelog.md` (2026-05-27) — `href` threading through `IndustryPageData` → `IndustryPageTemplate` is now part of Phase 8 scope rather than a stray note. Sequenced after intersection batches 1–4. No application code changed by this entry. |
+| 2026-08-12 | **Phase 8 batch plan defined — 13 batches, 183 pages, all `Planned`.** Replaces the "batch table to be defined" placeholder. Counts recounted from the live `featured`/`compact` array literals (52 featured + 131 compact = 183, unchanged from the earlier count this session — no hub's arrays have shifted). Sequencing, in precedence order: (1) hub priority inherits the existing intersection-page groups rather than inventing a new order — Group A = Batch-1 hubs (home-services, construction-contractors, beauty-wellness, healthcare-medical, 69 pages), Group B = Batch-2 hubs (professional-services, auto-services, real-estate-property, hospitality-events, technology-b2b, retail-local-commerce, 88 pages), Group C = the two hubs with no intersection pages yet (education-childcare, community-faith-nonprofit, 26 pages); (2) featured tier before compact within a hub; (3) target 12–20 pages per batch; (4) no batch mixes priority groups. Batch 1 is all-featured across all four Group A hubs so early coverage is broad rather than deep. Batches 5/10/11 land at 11 pages — kept small rather than padded from the next group, per rule 4. Batches 12–13 are mixed-tier because each Group C hub fits a single batch whole. Also refreshed the scale note's stale "115 routes" to the current 105 manifest routes / 117 built HTML files. No page file, template, route, or schema created. |
 | 2026-08-12 | **Phase 8 routing architecture CONFIRMED: static directories, not a dynamic route.** Each of the 183 sub-verticals ships as a literal folder at `app/industries/[hub]/for/[sub-vertical-slug]/page.tsx`; no `generateStaticParams`-backed `[sub-vertical]` segment. Reasons recorded in §4 Forward requirements: (1) consistency with the proven intersection convention — all 53 live intersection pages are static folders and there are zero bracketed dynamic segments anywhere under `app/industries/` (verified 2026-08-12; the app's only dynamic routes are `app/blog/[slug]` and `app/resources/faq/ai-automation/[slug]`); (2) the 2026-08-12 route-count reconciliation confirmed `seo-automation/scripts/scan-routes.mjs` walks the filesystem without expanding `generateStaticParams`, so a dynamic route would appear in `docs/seo/route-manifest.json` as 1 entry standing in for 183 pages, under-reporting the largest content phase to every downstream SEO tool. Documentation only — no file created under `app/` or `components/`. |
 | 2026-08-12 | **Phase 8 URL pattern CONFIRMED: option B — `/industries/[hub]/for/[sub-vertical]`.** Resolves the blocking decision opened earlier the same day. `for` is a reserved segment: no service slug may be named `for`, and no sub-vertical page may live outside it. Options A and C retained in §4 as the record of what was considered and why B won (only option keeping the two page families structurally distinguishable; one keyword-less segment judged cheaper than permanently sharing a namespace between 14 service slugs and 183 sub-vertical slugs). Per-page file path set to `app/industries/[hub]/for/[sub-vertical]/page.tsx`. **Correction to the 2026-08-12 entry below:** BreadcrumbList under option B is **4 items** (Home → Industries → Hub → Sub-vertical), not 5 — `/industries/[hub]/for` is a routing-only segment with no page and gets no crumb. Phase 8 status changed from "BLOCKED ON URL DECISION" to "URL PATTERN LOCKED — page build not started". **Code prep (the only application change):** `IndustryPageData.featured` / `.compact` extended to `{ name; blurb; href?; comingSoon? }[]` and both props threaded through `IndustryPageTemplate` into `IndustrySubCard` on the featured and compact tiers — resolving the deferred sub-vertical `href` TODO from `project-changelog.md` (2026-05-27). Pipe only: no hub page supplies either value, so both arrive `undefined`, every sub-vertical card renders exactly as before (plain static card, no link, no pill), and the static route count is unchanged. No sub-vertical page, template, route, or schema created. |
 | 2026-05-29 | **Phase 7 COMPLETE — site live at https://siriussys.io** on Cloudflare Pages (verified via production curl: homepage/service/industry 200, contractors 301 at edge, branded 404, sitemap 36 entries, HTTPS valid). Outstanding non-blockers: `www → apex` 301 not yet configured (www returns 200); GSC/Bing sitemap submission and GBP NAP cross-check pending. Phase 6 prelaunch QA not separately re-verified this session — deploy-log pre-deploy gate (tsc/build/artifact checks + Phase 6 metaTitle hard-FAIL resolution) is PASS. |
