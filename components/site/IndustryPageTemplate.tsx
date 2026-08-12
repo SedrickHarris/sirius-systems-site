@@ -29,8 +29,12 @@ export interface IndustryPageData {
   serviceSlugs: string[]             // 6 services shown in "what we build"
   systemsHeadline?: string
   systemsCopy?: string
-  featured: { name: string; blurb: string }[]   // tier-1 sub-vertical cards
-  compact:  { name: string; blurb: string }[]   // tier-2 sub-vertical cards
+  // Sub-vertical cards. `href` / `comingSoon` are the Phase 8 pipe: the template
+  // threads them into IndustrySubCard, but no hub page supplies either today, so
+  // every card still renders as a plain static card (no link, no pill). Populate
+  // them per-entry only when a real /industries/[hub]/for/[sub-vertical] page ships.
+  featured: { name: string; blurb: string; href?: string; comingSoon?: boolean }[]  // tier-1
+  compact:  { name: string; blurb: string; href?: string; comingSoon?: boolean }[]  // tier-2
   subVerticalsHeadline?: string
   subVerticalsCopy?: string
   faqs: { q: string; a: string }[]
@@ -157,7 +161,8 @@ export function IndustryPageTemplate(data: IndustryPageData) {
                 key={trade.name}
                 name={trade.name}
                 blurb={trade.blurb}
-                comingSoon
+                href={trade.href}
+                comingSoon={trade.comingSoon}
                 size="featured"
               />
             ))}
@@ -171,7 +176,8 @@ export function IndustryPageTemplate(data: IndustryPageData) {
                   key={trade.name}
                   name={trade.name}
                   blurb={trade.blurb}
-                  comingSoon
+                  href={trade.href}
+                  comingSoon={trade.comingSoon}
                   size="compact"
                 />
               ))}
