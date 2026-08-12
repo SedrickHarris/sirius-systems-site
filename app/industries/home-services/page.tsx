@@ -52,6 +52,12 @@ const DATA: IndustryPageData = {
     'all-in-one-business-growth-system',
   ],
 
+  productCallout: {
+    lead: 'Run a plumbing business? We package the managed website and instant lead-response system into one flat-rate offer built specifically for plumbers:',
+    linkLabel: 'the Plumber Growth System',
+    href: '/plumber-growth-system',
+  },
+
   subVerticalsHeadline: 'Built for how your trade actually runs',
 
   subVerticalsCopy:
