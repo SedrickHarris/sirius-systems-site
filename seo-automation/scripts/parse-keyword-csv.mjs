@@ -140,21 +140,23 @@ async function newestCsv(dir) {
 }
 
 async function main() {
+  // Missing input is a hard failure, not a no-op. A clean exit here reads as
+  // "keyword parsing succeeded" to anyone running the pipeline in sequence,
+  // and the rest of the run then builds on stale JSON without a single warning.
   if (!(await exists(INPUT_DIR))) {
-    console.log(
-      `INFO: no keyword-exports folder at ${rel(INPUT_DIR)}. ` +
-        "Export a Google Keyword Planner CSV and drop it there, then re-run. Nothing written."
+    throw new Error(
+      `No keyword-exports folder at ${rel(INPUT_DIR)} — export from Keyword Planner ` +
+        "and place the CSV there before running this step."
     );
-    return;
   }
 
   const csv = await newestCsv(INPUT_DIR);
   if (!csv) {
-    console.log(
-      `INFO: no .csv file found in ${rel(INPUT_DIR)}. ` +
-        "Drop a Google Keyword Planner export there, then re-run. Nothing written."
+    throw new Error(
+      `No CSV found in ${rel(INPUT_DIR)} — export from Keyword Planner and place it here ` +
+        "before running this step. Prior exports are archived in keyword-exports/archive/, " +
+        "not read by this script."
     );
-    return;
   }
 
   const raw = await readCsvBuffer(csv);

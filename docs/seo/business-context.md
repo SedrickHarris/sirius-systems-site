@@ -1,25 +1,94 @@
 # Business Context
 
-<!-- Fill all fields from the real client brief before running any SEO prompts.
-     Do not invent services, locations, audience types, or differentiators. -->
-
-Business Name: [FILL FROM CLIENT BRIEF]
-Website: [FILL FROM CLIENT BRIEF]
-Primary Location: [FILL FROM CLIENT BRIEF]
-Service Areas: [FILL FROM CLIENT BRIEF]
-Business Type: [FILL FROM CLIENT BRIEF]
+Business Name: Sirius Systems
+Website: https://siriussys.io
+Primary Location: [NEEDS CONFIRMATION — not found in existing strategy docs]
+                  (No physical address stated anywhere; schema-plan.md explicitly
+                  blocks LocalBusiness/address until client-confirmed and says
+                  "Do NOT invent a physical address.")
+Service Areas: National / United States — remote services.
+               (content-visibility-strategy.md §7: "Sirius Systems is not a
+               location-dependent business — it serves clients nationally."
+               §4 Organization areaServed = "Worldwide" or "United States",
+               noted "confirmed — remote services." Exact areaServed string
+               (Worldwide vs United States) [NEEDS CONFIRMATION].)
+Business Type: AI automation, smart-website, and reputation-systems provider /
+               growth-system company for local service businesses.
+               ("A growth system, not an agency layer." — /about)
 
 ## What This Business Does
-[FILL FROM CLIENT BRIEF — describe the real services offered, in plain language]
+Sirius Systems builds AI automation, smart websites, and reputation systems for
+local service businesses, delivered as one connected growth system rather than
+separate tools with manual handoffs. Positioning line (metadata-draft.md, home):
+"One platform, end-to-end growth."
 
 ## Primary Services
-[FILL FROM CLIENT BRIEF — list real services only]
+Fourteen services, organized under three pillars (topical-authority-plan.md,
+url-strategy.md):
+
+Pillar 1 — AI Automation:
+- AI Automation (/ai-automation)
+- AI Chatbots (/ai-chatbots)
+- AI Voicebots (/ai-voicebots)
+- CRM Automation (/crm-automation)
+- Appointment Booking Automation (/appointment-booking-automation)
+- Lead Generation Automation (/lead-generation-automation)
+
+Pillar 2 — Reputation Systems:
+- Reputation Management (/reputation-management)
+- Review Automation (/review-automation)
+- AI Review Responses (/ai-review-responses)
+- Competitor Review Benchmarking (/competitor-review-benchmarking)
+
+Pillar 3 — Smart Websites + Local SEO / AEO / GBP:
+- Smart Websites (/smart-websites)
+- Google Business Profile Optimization (/google-business-profile-optimization)
+- Local SEO & AEO (/local-seo-aeo)
+
+Capstone:
+- All-in-One Business Growth System (/all-in-one-business-growth-system)
 
 ## Primary Audience
-[FILL FROM CLIENT BRIEF — who are the real customers]
+Local service businesses — specifically owner-operators. (/about: "Owner-operators
+of local service businesses.") Served across 12 industry verticals: home services,
+construction & contractors, professional services, auto services, beauty & wellness,
+healthcare & medical, real estate & property, hospitality & events, education &
+childcare, community/faith/nonprofit, retail & local commerce, technology/B2B.
 
 ## Key Differentiators
-[FILL FROM CLIENT BRIEF — real differentiators only, no invented claims]
+- One connected, integrated growth system — not separate tools with manual
+  handoffs, and "not an agency layer" (/about; metadata-draft.md capstone).
+- Do-not-invent discipline: no fake testimonials, no inflated claims, no invented
+  stats/ratings (home H2 "No fake testimonials. No inflated claims."; enforced by
+  do-not-invent-rules across all docs).
+- Built specifically for local service businesses (not generic/national SMB).
+- End-to-end coverage: AI automation + reputation + local SEO/AEO under one operator
+  ("Fourteen services. One operator. One system." — /services).
+- Founder-led: [NEEDS CONFIRMATION — founder named as differentiator not stated,
+  but founder identity is confirmed: Sedrick Harris, Founder (schema-plan.md,
+  metadata-draft.md /about).]
 
 ## Existing Pages (summary)
-[FILL AFTER scan-routes.mjs runs — summarise what route-manifest.json shows]
+route-manifest.json shows 99 routes (app router, regenerated 2026-08-12): 4 core
+(/, /about, /services, /contact) + 14 flat service pages + /industries index + 12
+industry hubs + 53 intersection pages (industry × service, Batches 1–2 complete)
++ blog system (/blog, /blog/:slug) + resources (/resources and its faq, checklists,
+guides sub-hubs, plus the /resources/faq/ai-automation cluster) + conversion funnel
+(/booking, /revenue-leak-audit and its /book and /thank-you steps) + utility
+(/privacy, /terms).
+
+Intersection pages cover 10 of the 12 hubs. community-faith-nonprofit and
+education-childcare have none yet. Per-hub counts: auto-services, hospitality-events,
+professional-services, real-estate-property, technology-b2b 7 each;
+retail-local-commerce 6; beauty-wellness, construction-contractors,
+healthcare-medical, home-services 3 each.
+
+Note: the manifest count is filesystem-derived and counts each dynamic route once —
+/blog/:slug and /resources/faq/ai-automation/:slug are 2 manifest entries but 13
+built pages, so `next build` emits 111 HTML files and the sitemap carries 108 <loc>
+entries. The three-way gap is fully reconciled and expected; see the 2026-08-12
+route-count reconciliation.
+
+Note: manifest shows several pages emitting AggregateRating/Review/LocalBusiness
+schema hints — cross-check against schema-plan.md gating (those types are blocked
+until verified data).
