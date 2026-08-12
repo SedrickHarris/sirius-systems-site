@@ -1,6 +1,11 @@
 export const metadata = {
   title: "Audit Request Received | Sirius Systems",
   description: "Your Sirius Systems Revenue Leak Audit request was received.",
+  // Funnel step — kept out of the sitemap AND out of the index. Sitemap omission
+  // alone is only a discovery hint; this page is reachable from the funnel and
+  // would otherwise be crawled and indexed. Matches /book, /watch,
+  // /get-started, /thank-you, /onboarding.
+  robots: { index: false, follow: false },
 };
 
 export default function ThankYouPage() {

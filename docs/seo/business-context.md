@@ -69,13 +69,14 @@ childcare, community/faith/nonprofit, retail & local commerce, technology/B2B.
   metadata-draft.md /about).]
 
 ## Existing Pages (summary)
-route-manifest.json shows 99 routes (app router, regenerated 2026-08-12): 4 core
+route-manifest.json shows 105 routes (app router, regenerated 2026-08-12): 4 core
 (/, /about, /services, /contact) + 14 flat service pages + /industries index + 12
 industry hubs + 53 intersection pages (industry × service, Batches 1–2 complete)
 + blog system (/blog, /blog/:slug) + resources (/resources and its faq, checklists,
-guides sub-hubs, plus the /resources/faq/ai-automation cluster) + conversion funnel
-(/booking, /revenue-leak-audit and its /book and /thank-you steps) + utility
-(/privacy, /terms).
+guides sub-hubs, plus the /resources/faq/ai-automation cluster) + the Growth System
+product page (/plumber-growth-system) and its funnel (/book, /watch, /get-started,
+/thank-you, /onboarding) + earlier conversion funnel (/booking, /revenue-leak-audit
+and its /book and /thank-you steps) + utility (/privacy, /terms).
 
 Intersection pages cover 10 of the 12 hubs. community-faith-nonprofit and
 education-childcare have none yet. Per-hub counts: auto-services, hospitality-events,
@@ -85,9 +86,15 @@ healthcare-medical, home-services 3 each.
 
 Note: the manifest count is filesystem-derived and counts each dynamic route once —
 /blog/:slug and /resources/faq/ai-automation/:slug are 2 manifest entries but 13
-built pages, so `next build` emits 111 HTML files and the sitemap carries 108 <loc>
-entries. The three-way gap is fully reconciled and expected; see the 2026-08-12
-route-count reconciliation.
+built pages, so `next build` emits 117 HTML files and the sitemap carries 109 <loc>
+entries. The three-way gap is fully reconciled and expected: 117 HTML = 109 sitemap
++ /404 + 7 noindex funnel steps, and 117 = 105 manifest − 2 dynamic patterns + 13
+concrete dynamic pages + /404.
+
+The 7 funnel steps (/book, /watch, /get-started, /thank-you, /onboarding,
+/revenue-leak-audit/book, /revenue-leak-audit/thank-you) are deliberately excluded
+from the sitemap AND marked noindex, nofollow. Sitemap omission alone is only a
+discovery hint, so both are required. Do not add any of them to app/sitemap.ts.
 
 Note: manifest shows several pages emitting AggregateRating/Review/LocalBusiness
 schema hints — cross-check against schema-plan.md gating (those types are blocked

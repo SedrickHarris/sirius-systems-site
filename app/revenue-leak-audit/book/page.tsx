@@ -1,6 +1,11 @@
 export const metadata = {
   title: "Book Your Revenue Leak Audit | Sirius Systems",
   description: "Choose a time for your Sirius Systems Revenue Leak Audit.",
+  // Funnel step — kept out of the sitemap AND out of the index. Sitemap omission
+  // alone is only a discovery hint; this page is linked from /revenue-leak-audit
+  // and would otherwise be crawled and indexed. Matches /book, /watch,
+  // /get-started, /thank-you, /onboarding.
+  robots: { index: false, follow: false },
 };
 
 export default function BookPage() {

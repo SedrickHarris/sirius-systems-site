@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-12T20:19:51.406Z",
-  "routeCount": 99,
+  "generatedAt": "2026-08-12T22:10:11.508Z",
+  "routeCount": 105,
   "routes": [
     {
       "route": "/",
@@ -200,6 +200,21 @@
       "wordEstimate": 308
     },
     {
+      "route": "/book",
+      "sourceFile": "app/book/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Book Your Growth System Call | Sirius Systems"
+      ],
+      "possibleH1s": [
+        "Pick a time for your 15-minute call."
+      ],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 132
+    },
+    {
       "route": "/booking",
       "sourceFile": "app/booking/page.tsx",
       "routerType": "app",
@@ -261,6 +276,19 @@
         "Service"
       ],
       "wordEstimate": 181
+    },
+    {
+      "route": "/get-started",
+      "sourceFile": "app/get-started/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Get Started | Sirius Systems"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 29
     },
     {
       "route": "/google-business-profile-optimization",
@@ -587,7 +615,7 @@
         "Service",
         "Review"
       ],
-      "wordEstimate": 70
+      "wordEstimate": 117
     },
     {
       "route": "/industries/home-services/ai-chatbots",
@@ -1131,6 +1159,50 @@
       "wordEstimate": 172
     },
     {
+      "route": "/onboarding",
+      "sourceFile": "app/onboarding/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Client Onboarding | Sirius Systems"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 37
+    },
+    {
+      "route": "/plumber-growth-system",
+      "sourceFile": "app/plumber-growth-system/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [],
+      "possibleH1s": [
+        "Turn More Plumbing Website Inquiries Into Real Conversations"
+      ],
+      "possibleH2s": [
+        "Most plumbing websites don’t work when you’re working.",
+        "A managed system that runs while you’re on the job.",
+        "Everything in the Plumber Growth System.",
+        "The difference between a website and a system.",
+        "One price. No surprises.",
+        "Built for established plumbing companies.",
+        "Common questions, real answers.",
+        "Ready to see how it works?"
+      ],
+      "internalHrefs": [
+        "/privacy",
+        "/terms"
+      ],
+      "schemaTypeHints": [
+        "FAQPage",
+        "Service",
+        "BreadcrumbList",
+        "WebPage",
+        "Review"
+      ],
+      "wordEstimate": 843
+    },
+    {
       "route": "/privacy",
       "sourceFile": "app/privacy/page.tsx",
       "routerType": "app",
@@ -1523,6 +1595,32 @@
         "Review"
       ],
       "wordEstimate": 461
+    },
+    {
+      "route": "/thank-you",
+      "sourceFile": "app/thank-you/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "You"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 33
+    },
+    {
+      "route": "/watch",
+      "sourceFile": "app/watch/page.tsx",
+      "routerType": "app",
+      "possibleTitles": [
+        "Watch: How the Growth System Works | Sirius Systems"
+      ],
+      "possibleH1s": [],
+      "possibleH2s": [],
+      "internalHrefs": [],
+      "schemaTypeHints": [],
+      "wordEstimate": 55
     }
   ],
   "warnings": []
