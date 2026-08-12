@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-07-06T00:00:00.000Z",
+  "opportunityId": "o-002",
+  "route": "/industries/real-estate-property/lead-generation-automation",
+  "pageType": "audience-service",
+  "metaTitle": "Lead Generation Automation for Real Estate Agents | Sirius Systems",
+  "metaDescription": "Automate your real estate lead generation with Sirius Systems. Capture, qualify, and follow up with leads automatically — no manual work required.",
+  "h1": "Lead Generation Automation for Real Estate Agents",
+  "headingOutline": [
+    {
+      "level": "h2",
+      "text": "Why Real Estate Agents Lose Leads Without Automation",
+      "keywordTargets": ["lead generation for real estate agents", "real estate leads"]
+    },
+    {
+      "level": "h2",
+      "text": "How Lead Generation Automation Works for Realtors",
+      "keywordTargets": ["realtor lead generation", "lead generation systems for realtors"]
+    },
+    {
+      "level": "h2",
+      "text": "What Sirius Systems Provides for Real Estate Lead Generation",
+      "keywordTargets": ["real estate lead generation agency", "lead gen for real estate agents"]
+    },
+    {
+      "level": "h2",
+      "text": "Who This Is For",
+      "keywordTargets": ["real estate broker lead generation", "online leads for real estate agents"]
+    },
+    {
+      "level": "h2",
+      "text": "Frequently Asked Questions",
+      "keywordTargets": []
+    }
+  ],
+  "directAnswerBlocks": [
+    {
+      "question": "What is lead generation automation for real estate?",
+      "shortAnswer": "Lead generation automation uses AI tools to capture, qualify, and follow up with potential buyers and sellers automatically — so real estate agents spend less time chasing cold leads and more time closing deals."
+    },
+    {
+      "question": "How do real estate agents automate lead generation?",
+      "shortAnswer": "Real estate agents automate lead generation by connecting an AI system that captures inquiries from their website and other channels, scores them, and triggers follow-up messages without manual input."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How does lead generation automation help real estate agents?",
+      "answerIntent": "Explain the time savings and lead capture benefits. Do not claim specific lead volume or conversion rates without confirmed data."
+    },
+    {
+      "question": "What types of real estate leads can be automated?",
+      "answerIntent": "Explain buyer and seller inquiry capture, website form submissions, and follow-up sequences. Use only confirmed service capabilities."
+    },
+    {
+      "question": "How quickly does an automated system follow up with real estate leads?",
+      "answerIntent": "Explain that automated systems respond immediately versus manual follow-up delays. Do not cite specific response-time statistics without a confirmed source."
+    },
+    {
+      "question": "Can lead generation automation work alongside my existing real estate tools?",
+      "answerIntent": "Explain integration and system compatibility in general terms. Do not list specific third-party tools unless confirmed integrations exist."
+    },
+    {
+      "question": "Is lead generation automation only for large real estate agencies?",
+      "answerIntent": "Position this as accessible for individual agents and small brokerages, not just large agencies. Aligns with the local service business audience."
+    }
+  ],
+  "schemaPlan": [
+    "WebPage",
+    "BreadcrumbList — 4 levels: Home > Industries > Real Estate and Property > Lead Generation Automation",
+    "Service — real service offered by Sirius Systems, confirmed in business-context.md",
+    "FAQPage — only if FAQ section content is fully visible on the page"
+  ],
+  "internalLinks": [
+    {
+      "anchor": "real estate and property industry hub",
+      "targetRoute": "/industries/real-estate-property"
+    },
+    {
+      "anchor": "lead generation automation",
+      "targetRoute": "/lead-generation-automation"
+    },
+    {
+      "anchor": "AI chatbots for real estate lead capture",
+      "targetRoute": "/ai-chatbots"
+    },
+    {
+      "anchor": "CRM automation",
+      "targetRoute": "/crm-automation"
+    },
+    {
+      "anchor": "all-in-one business growth system",
+      "targetRoute": "/all-in-one-business-growth-system"
+    }
+  ],
+  "primaryCta": {
+    "label": "Book a Strategy Call",
+    "targetRoute": "/contact"
+  },
+  "unsupportedClaimsToAvoid": [
+    "Do not claim specific lead volume numbers or conversion rates without confirmed data",
+    "Do not name specific real estate platforms as confirmed integrations without verification",
+    "Do not invent client testimonials, case studies, or results",
+    "Do not claim response-time guarantees or specific follow-up speeds without confirmed data",
+    "Do not claim awards, certifications, or rankings"
+  ]
+}

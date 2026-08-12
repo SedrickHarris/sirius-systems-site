@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-07-08T17:52:17.462Z",
+  "minScore": 4,
+  "opportunityCount": 2,
+  "filteredCount": 5,
+  "opportunities": [
+    {
+      "opportunityId": "o-001",
+      "clusterId": "c-001",
+      "recommendedPageTitle": "Auto Lead Generation Shops Shop Automation",
+      "recommendedSlug": "auto-repair-lead-generation",
+      "primaryKeyword": "auto repair lead generation",
+      "supportingKeywords": [
+        "lead generation for auto repair shops",
+        "auto repair shop lead generation",
+        "auto shop lead generation automation"
+      ],
+      "pageType": "guide",
+      "intent": "informational",
+      "existingRouteOverlap": {
+        "route": "/industries/professional-services/lead-generation-automation",
+        "sourceFile": "app/industries/professional-services/lead-generation-automation/page.tsx",
+        "matchedTokens": 2,
+        "baseTokenCount": 4,
+        "overlapRatio": 0.5
+      },
+      "score": 6,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 2,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -2,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 6. Signals: intent=informational, pageType=guide, keywords=4, volumeData=supplied, existingOverlap=0.5. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-002",
+      "clusterId": "c-005",
+      "recommendedPageTitle": "Get More Customers Auto Automatically",
+      "recommendedSlug": "get-more-auto-repair-customers-automatically",
+      "primaryKeyword": "get more auto repair customers automatically",
+      "supportingKeywords": [
+        "how to get more customers for auto repair"
+      ],
+      "pageType": "guide",
+      "intent": "informational",
+      "existingRouteOverlap": {
+        "route": "/industries/auto-services",
+        "sourceFile": "app/industries/auto-services/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 6,
+        "overlapRatio": 0.17
+      },
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 0
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=informational, pageType=guide, keywords=2, volumeData=none, existingOverlap=0.17. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    }
+  ],
+  "warnings": [
+    "Min-score filter (--min-score 4) removed 5 opportunity/opportunities scoring below 4."
+  ]
+}

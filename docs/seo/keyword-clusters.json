@@ -1,0 +1,204 @@
+{
+  "generatedAt": "2026-07-08T17:52:17.408Z",
+  "clusterCount": 7,
+  "clusters": [
+    {
+      "clusterId": "c-001",
+      "clusterName": "Auto Lead Generation Shops Shop Automation",
+      "primaryKeyword": "auto repair lead generation",
+      "keywords": [
+        "auto repair lead generation",
+        "lead generation for auto repair shops",
+        "auto repair shop lead generation",
+        "auto shop lead generation automation"
+      ],
+      "modifiers": [
+        "repair"
+      ],
+      "intentHints": [
+        "informational"
+      ],
+      "metricsSummary": {
+        "dataAvailable": true,
+        "keywordCount": 4,
+        "keywordsWithVolume": 1,
+        "totalAvgMonthlySearches": 50,
+        "maxAvgMonthlySearches": 50,
+        "note": "Aggregated only from supplied Keyword Planner volumes."
+      },
+      "notes": "Grouped on shared base tokens: auto, lead, generation, shops, shop, automation. Clustering is a deterministic heuristic, not a semantic model. Synonym and stem merge combined related clusters.",
+      "_categories": [
+        "problem"
+      ],
+      "synonymMergeApplied": true,
+      "mergedFrom": [
+        "c-001",
+        "c-002",
+        "c-003",
+        "c-004"
+      ]
+    },
+    {
+      "clusterId": "c-005",
+      "clusterName": "Get More Customers Auto Automatically",
+      "primaryKeyword": "get more auto repair customers automatically",
+      "keywords": [
+        "how to get more customers for auto repair",
+        "get more auto repair customers automatically"
+      ],
+      "modifiers": [
+        "how to",
+        "repair"
+      ],
+      "intentHints": [
+        "informational"
+      ],
+      "metricsSummary": {
+        "dataAvailable": false,
+        "keywordCount": 2,
+        "keywordsWithVolume": 0,
+        "totalAvgMonthlySearches": null,
+        "maxAvgMonthlySearches": null,
+        "note": "No numeric volume supplied. Volume is not estimated or invented."
+      },
+      "notes": "Grouped on shared base tokens: get, more, customers, auto, automatically. Clustering is a deterministic heuristic, not a semantic model. Synonym and stem merge combined related clusters.",
+      "_categories": [
+        "problem"
+      ],
+      "synonymMergeApplied": true,
+      "mergedFrom": [
+        "c-005",
+        "c-010"
+      ]
+    },
+    {
+      "clusterId": "c-006",
+      "clusterName": "More Leads Auto Service",
+      "primaryKeyword": "more leads for auto service business",
+      "keywords": [
+        "more leads for auto service business"
+      ],
+      "modifiers": [
+        "business"
+      ],
+      "intentHints": [
+        "audience-specific"
+      ],
+      "metricsSummary": {
+        "dataAvailable": false,
+        "keywordCount": 1,
+        "keywordsWithVolume": 0,
+        "totalAvgMonthlySearches": null,
+        "maxAvgMonthlySearches": null,
+        "note": "No numeric volume supplied. Volume is not estimated or invented."
+      },
+      "notes": "Grouped on shared base tokens: more, leads, auto, service. Clustering is a deterministic heuristic, not a semantic model.",
+      "_categories": [
+        "audience"
+      ]
+    },
+    {
+      "clusterId": "c-007",
+      "clusterName": "Auto Shop Customer Acquisition",
+      "primaryKeyword": "auto repair shop customer acquisition",
+      "keywords": [
+        "auto repair shop customer acquisition"
+      ],
+      "modifiers": [
+        "repair"
+      ],
+      "intentHints": [
+        "informational"
+      ],
+      "metricsSummary": {
+        "dataAvailable": false,
+        "keywordCount": 1,
+        "keywordsWithVolume": 0,
+        "totalAvgMonthlySearches": null,
+        "maxAvgMonthlySearches": null,
+        "note": "No numeric volume supplied. Volume is not estimated or invented."
+      },
+      "notes": "Grouped on shared base tokens: auto, shop, customer, acquisition. Clustering is a deterministic heuristic, not a semantic model.",
+      "_categories": [
+        "problem"
+      ]
+    },
+    {
+      "clusterId": "c-008",
+      "clusterName": "Lead Generation Car Shops",
+      "primaryKeyword": "lead generation for car repair shops",
+      "keywords": [
+        "lead generation for car repair shops"
+      ],
+      "modifiers": [
+        "repair"
+      ],
+      "intentHints": [
+        "informational"
+      ],
+      "metricsSummary": {
+        "dataAvailable": false,
+        "keywordCount": 1,
+        "keywordsWithVolume": 0,
+        "totalAvgMonthlySearches": null,
+        "maxAvgMonthlySearches": null,
+        "note": "No numeric volume supplied. Volume is not estimated or invented."
+      },
+      "notes": "Grouped on shared base tokens: lead, generation, car, shops. Clustering is a deterministic heuristic, not a semantic model.",
+      "_categories": [
+        "problem"
+      ]
+    },
+    {
+      "clusterId": "c-009",
+      "clusterName": "Automotive Service Lead Generation",
+      "primaryKeyword": "automotive service business lead generation",
+      "keywords": [
+        "automotive service business lead generation"
+      ],
+      "modifiers": [
+        "business"
+      ],
+      "intentHints": [
+        "audience-specific"
+      ],
+      "metricsSummary": {
+        "dataAvailable": false,
+        "keywordCount": 1,
+        "keywordsWithVolume": 0,
+        "totalAvgMonthlySearches": null,
+        "maxAvgMonthlySearches": null,
+        "note": "No numeric volume supplied. Volume is not estimated or invented."
+      },
+      "notes": "Grouped on shared base tokens: automotive, service, lead, generation. Clustering is a deterministic heuristic, not a semantic model.",
+      "_categories": [
+        "audience"
+      ]
+    },
+    {
+      "clusterId": "c-011",
+      "clusterName": "Auto Shop Online Lead Capture",
+      "primaryKeyword": "auto shop online lead capture",
+      "keywords": [
+        "auto shop online lead capture"
+      ],
+      "modifiers": [],
+      "intentHints": [
+        "general"
+      ],
+      "metricsSummary": {
+        "dataAvailable": false,
+        "keywordCount": 1,
+        "keywordsWithVolume": 0,
+        "totalAvgMonthlySearches": null,
+        "maxAvgMonthlySearches": null,
+        "note": "No numeric volume supplied. Volume is not estimated or invented."
+      },
+      "notes": "Grouped on shared base tokens: auto, shop, online, lead, capture. Clustering is a deterministic heuristic, not a semantic model.",
+      "_categories": []
+    }
+  ],
+  "warnings": [
+    "Synonym merge combined clusters: 11 -> 7 (2 merged cluster(s))."
+  ]
+}

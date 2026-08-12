@@ -1,0 +1,21 @@
+{
+  "selectedAt": "2026-07-06T00:00:00.000Z",
+  "opportunityId": "o-002",
+  "decision": "build-new",
+  "targetRoute": "/industries/real-estate-property/lead-generation-automation",
+  "primaryKeyword": "lead generation for real estate agents",
+  "supportingKeywords": [
+    "get leads for real estate",
+    "realtor lead generation",
+    "real estate lead generation agency",
+    "lead generation systems for realtors",
+    "real estate broker lead generation",
+    "lead gen for real estate agents",
+    "generate leads for real estate agents",
+    "online leads for real estate agents"
+  ],
+  "pageType": "audience-service",
+  "intent": "transactional",
+  "operatorNotes": "Selected from second opportunities.json o-002. Scorer recommended slug get-leads-for-real-estate (flat root) — overridden to /industries/real-estate-property/lead-generation-automation to match the site's confirmed Batch 1 intersection architecture (industry hub / service slug). /industries/real-estate-property exists with no intersection pages. /lead-generation-automation service page exists. Intersection is a direct build-new, not an expansion. Prompt 20 skipped per Core Mode efficiency rule. Visibility alignment confirmed: transactional intent, CTA to /contact, schema planned for visible content only.",
+  "visibilityAlignmentConfirmed": true
+}

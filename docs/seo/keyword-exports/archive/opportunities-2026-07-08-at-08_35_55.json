@@ -1,0 +1,202 @@
+{
+  "generatedAt": "2026-07-08T15:40:38.646Z",
+  "minScore": 4,
+  "opportunityCount": 6,
+  "filteredCount": 5,
+  "opportunities": [
+    {
+      "opportunityId": "o-001",
+      "clusterId": "c-005",
+      "recommendedPageTitle": "Event Management Crm Software",
+      "recommendedSlug": "event-management-crm",
+      "primaryKeyword": "event management crm",
+      "supportingKeywords": [
+        "best crm for event management",
+        "best crm software for event management",
+        "crm software for event management"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 8,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 2,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 8. Signals: intent=commercial-comparison, pageType=comparison, keywords=4, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-003",
+      "clusterId": "c-001",
+      "recommendedPageTitle": "Crm Wedding Planners Planner Automation",
+      "recommendedSlug": "crm-for-wedding-planners",
+      "primaryKeyword": "crm for wedding planners",
+      "supportingKeywords": [
+        "best crm for wedding planners",
+        "wedding planner crm",
+        "crm wedding planner",
+        "wedding planner crm automation"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 8,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 2,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 8. Signals: intent=commercial-comparison, pageType=comparison, keywords=5, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-002",
+      "clusterId": "c-003",
+      "recommendedPageTitle": "Crm Event Planners Planner",
+      "recommendedSlug": "event-planner-crm",
+      "primaryKeyword": "event planner crm",
+      "supportingKeywords": [
+        "crm for event planners",
+        "best crm for event planners"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 7,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 7. Signals: intent=commercial-comparison, pageType=comparison, keywords=3, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-005",
+      "clusterId": "c-009",
+      "recommendedPageTitle": "Hotel Crm Automation",
+      "recommendedSlug": "best-hotel-crm",
+      "primaryKeyword": "best hotel crm",
+      "supportingKeywords": [
+        "hotel crm automation"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 7,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 7. Signals: intent=commercial-comparison, pageType=comparison, keywords=2, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-004",
+      "clusterId": "c-002",
+      "recommendedPageTitle": "Catering Crm Software",
+      "recommendedSlug": "catering-crm-software",
+      "primaryKeyword": "catering crm software",
+      "supportingKeywords": [
+        "catering crm",
+        "crm for catering"
+      ],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 5,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 5. Signals: intent=general, pageType=pillar, keywords=3, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-006",
+      "clusterId": "c-010",
+      "recommendedPageTitle": "Wedding Planning Crm",
+      "recommendedSlug": "wedding-planning-crm",
+      "primaryKeyword": "wedding planning crm",
+      "supportingKeywords": [],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=general, pageType=pillar, keywords=1, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    }
+  ],
+  "warnings": [
+    "Min-score filter (--min-score 4) removed 5 opportunity/opportunities scoring below 4."
+  ]
+}

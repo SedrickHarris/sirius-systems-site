@@ -1,0 +1,142 @@
+{
+  "generatedAt": "2026-07-08T15:39:36.210Z",
+  "minScore": 4,
+  "opportunityCount": 4,
+  "filteredCount": 5,
+  "opportunities": [
+    {
+      "opportunityId": "o-001",
+      "clusterId": "c-002",
+      "recommendedPageTitle": "Hospitality Crm Software Industry Systems Solutions Sector Sas Examples Efficient Automation",
+      "recommendedSlug": "hospitality-crm-software",
+      "primaryKeyword": "hospitality crm software",
+      "supportingKeywords": [
+        "crm for hospitality industry",
+        "crm software for hospitality industry",
+        "crm for hospitality",
+        "best hospitality crm",
+        "hospitality crm systems",
+        "hospitality crm solutions",
+        "crm in hospitality sector",
+        "crm sas hospitality",
+        "examples of efficient crm in the hospitality industry",
+        "hospitality crm automation"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 12,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 2,
+        "clusterDepth": 3,
+        "modifierStrength": 2,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 12. Signals: intent=commercial-comparison, pageType=comparison, keywords=11, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-002",
+      "clusterId": "c-004",
+      "recommendedPageTitle": "Hotel Crm Software Systems Sales Management Solutions Examples System",
+      "recommendedSlug": "hotel-crm-software",
+      "primaryKeyword": "hotel crm software",
+      "supportingKeywords": [
+        "hotel crm systems",
+        "hotel sales crm",
+        "best hotel crm",
+        "crm hotel management",
+        "hotel crm solutions",
+        "hotel crm examples",
+        "hotel management system crm"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 9,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 3,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 9. Signals: intent=commercial-comparison, pageType=comparison, keywords=8, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-003",
+      "clusterId": "c-001",
+      "recommendedPageTitle": "Crm Event Venues Venue Software",
+      "recommendedSlug": "crm-for-event-venues",
+      "primaryKeyword": "crm for event venues",
+      "supportingKeywords": [
+        "event venue crm software"
+      ],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 5,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 5. Signals: intent=general, pageType=pillar, keywords=2, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-004",
+      "clusterId": "c-008",
+      "recommendedPageTitle": "Venueops Software",
+      "recommendedSlug": "venueops-software",
+      "primaryKeyword": "venueops software",
+      "supportingKeywords": [],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": null,
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 2,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": 0,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=general, pageType=pillar, keywords=1, volumeData=supplied, existingOverlap=0. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    }
+  ],
+  "warnings": [
+    "Min-score filter (--min-score 4) removed 5 opportunity/opportunities scoring below 4."
+  ]
+}

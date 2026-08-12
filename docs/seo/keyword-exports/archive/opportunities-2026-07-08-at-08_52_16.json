@@ -1,0 +1,129 @@
+{
+  "generatedAt": "2026-07-08T15:54:50.999Z",
+  "minScore": 4,
+  "opportunityCount": 4,
+  "filteredCount": 11,
+  "opportunities": [
+    {
+      "opportunityId": "o-001",
+      "clusterId": "c-003",
+      "recommendedPageTitle": "Netsuite Crm Sales Force Automation",
+      "recommendedSlug": "netsuite-crm-sales-force-automation",
+      "primaryKeyword": "netsuite crm sales force automation",
+      "supportingKeywords": [
+        "best crm for sales automation"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/",
+        "sourceFile": "app/page.tsx",
+        "matchedTokens": 2,
+        "baseTokenCount": 5,
+        "overlapRatio": 0.4
+      },
+      "score": 6,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -2,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 6. Signals: intent=commercial-comparison, pageType=comparison, keywords=2, volumeData=supplied, existingOverlap=0.4. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-002",
+      "clusterId": "c-001",
+      "recommendedPageTitle": "Crm Marketing Automation Small",
+      "recommendedSlug": "best-crm-and-marketing-automation-for-small-business",
+      "primaryKeyword": "best crm and marketing automation for small business",
+      "supportingKeywords": [],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq",
+        "sourceFile": "app/resources/faq/page.tsx",
+        "matchedTokens": 3,
+        "baseTokenCount": 6,
+        "overlapRatio": 0.5
+      },
+      "score": 6,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 2,
+        "existingOverlapPenalty": -2,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 6. Signals: intent=commercial-comparison, pageType=comparison, keywords=1, volumeData=supplied, existingOverlap=0.5. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-003",
+      "clusterId": "c-002",
+      "recommendedPageTitle": "Crm Networking",
+      "recommendedSlug": "best-crm-for-networking",
+      "primaryKeyword": "best crm for networking",
+      "supportingKeywords": [],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 6,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 6. Signals: intent=commercial-comparison, pageType=comparison, keywords=1, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-005",
+      "clusterId": "c-006",
+      "recommendedPageTitle": "Law Firm Marketing Automation",
+      "recommendedSlug": "law-firm-marketing-automation",
+      "primaryKeyword": "law firm marketing automation",
+      "supportingKeywords": [],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/",
+        "sourceFile": "app/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 4,
+        "overlapRatio": 0.25
+      },
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=general, pageType=pillar, keywords=1, volumeData=supplied, existingOverlap=0.25. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    }
+  ],
+  "warnings": [
+    "Min-score filter (--min-score 4) removed 11 opportunity/opportunities scoring below 4."
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "generatedAt": "2026-07-08T15:42:37.339Z",
+  "minScore": 4,
+  "opportunityCount": 11,
+  "filteredCount": 7,
+  "opportunities": [
+    {
+      "opportunityId": "o-001",
+      "clusterId": "c-001",
+      "recommendedPageTitle": "Restaurant Customer Relationship Management Food Industry",
+      "recommendedSlug": "restaurant-customer-relationship-management",
+      "primaryKeyword": "restaurant customer relationship management",
+      "supportingKeywords": [
+        "customer relationship management in food industry",
+        "customer relationship management in restaurant industry"
+      ],
+      "pageType": "service-location",
+      "intent": "local",
+      "existingRouteOverlap": {
+        "route": "/industries/auto-services/reputation-management",
+        "sourceFile": "app/industries/auto-services/reputation-management/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 4,
+        "overlapRatio": 0.25
+      },
+      "score": 8,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 2,
+        "clusterDepth": 1,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 8. Signals: intent=local, pageType=service-location, keywords=3, volumeData=supplied, existingOverlap=0.25. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-004",
+      "clusterId": "c-003",
+      "recommendedPageTitle": "Crm Travel Agency Free Zoho Outbound",
+      "recommendedSlug": "best-crm-for-travel-agency",
+      "primaryKeyword": "best crm for travel agency",
+      "supportingKeywords": [
+        "best travel agency crm",
+        "best free crm for travel agency",
+        "zoho crm travel agency",
+        "outbound crm for travel agency"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/",
+        "sourceFile": "app/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 4,
+        "overlapRatio": 0.25
+      },
+      "score": 8,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 2,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 8. Signals: intent=commercial-comparison, pageType=comparison, keywords=5, volumeData=supplied, existingOverlap=0.25. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-002",
+      "clusterId": "c-002",
+      "recommendedPageTitle": "Crm Tour Operators Software Operator",
+      "recommendedSlug": "crm-for-tour-operators",
+      "primaryKeyword": "crm for tour operators",
+      "supportingKeywords": [
+        "best crm for tour operators",
+        "crm software tour operator"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 7,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 7. Signals: intent=commercial-comparison, pageType=comparison, keywords=3, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-006",
+      "clusterId": "c-007",
+      "recommendedPageTitle": "Free Crm Software Travel Agents",
+      "recommendedSlug": "best-free-crm-software-for-travel-agents",
+      "primaryKeyword": "best free crm software for travel agents",
+      "supportingKeywords": [
+        "free crm software for travel agents",
+        "best crm software for travel agents"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/",
+        "sourceFile": "app/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 6,
+        "overlapRatio": 0.17
+      },
+      "score": 7,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 7. Signals: intent=commercial-comparison, pageType=comparison, keywords=3, volumeData=supplied, existingOverlap=0.17. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-010",
+      "clusterId": "c-014",
+      "recommendedPageTitle": "Crm Restaurant Industry",
+      "recommendedSlug": "crm-in-restaurant-industry",
+      "primaryKeyword": "crm in restaurant industry",
+      "supportingKeywords": [],
+      "pageType": "service-location",
+      "intent": "local",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 7,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 2,
+        "clusterDepth": 0,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 7. Signals: intent=local, pageType=service-location, keywords=1, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-007",
+      "clusterId": "c-017",
+      "recommendedPageTitle": "Customer Relationship Management Kfc",
+      "recommendedSlug": "customer-relationship-management-of-kfc",
+      "primaryKeyword": "customer relationship management of kfc",
+      "supportingKeywords": [
+        "kfc customer relationship management"
+      ],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/industries/auto-services/reputation-management",
+        "sourceFile": "app/industries/auto-services/reputation-management/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 4,
+        "overlapRatio": 0.25
+      },
+      "score": 5,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 1,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 5. Signals: intent=general, pageType=pillar, keywords=2, volumeData=supplied, existingOverlap=0.25. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-003",
+      "clusterId": "c-008",
+      "recommendedPageTitle": "Crm Travel Companies",
+      "recommendedSlug": "crm-for-travel-companies",
+      "primaryKeyword": "crm for travel companies",
+      "supportingKeywords": [],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/resources/faq/ai-automation",
+        "sourceFile": "app/resources/faq/ai-automation/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=general, pageType=pillar, keywords=1, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-005",
+      "clusterId": "c-004",
+      "recommendedPageTitle": "Catering Crm Software Management",
+      "recommendedSlug": "catering-crm",
+      "primaryKeyword": "catering crm",
+      "supportingKeywords": [
+        "crm for catering",
+        "catering crm software",
+        "catering crm management"
+      ],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/",
+        "sourceFile": "app/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 2,
+        "overlapRatio": 0.5
+      },
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 2,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 2,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -2,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=general, pageType=pillar, keywords=4, volumeData=supplied, existingOverlap=0.5. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-008",
+      "clusterId": "c-010",
+      "recommendedPageTitle": "Mcdonald S Customer Relationship Management",
+      "recommendedSlug": "mcdonald-s-customer-relationship-management",
+      "primaryKeyword": "mcdonald's customer relationship management",
+      "supportingKeywords": [],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/industries/auto-services/reputation-management",
+        "sourceFile": "app/industries/auto-services/reputation-management/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 5,
+        "overlapRatio": 0.2
+      },
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=general, pageType=pillar, keywords=1, volumeData=supplied, existingOverlap=0.2. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-009",
+      "clusterId": "c-011",
+      "recommendedPageTitle": "Burger King Customer Relationship Management",
+      "recommendedSlug": "burger-king-customer-relationship-management",
+      "primaryKeyword": "burger king customer relationship management",
+      "supportingKeywords": [],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/industries/auto-services/reputation-management",
+        "sourceFile": "app/industries/auto-services/reputation-management/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 5,
+        "overlapRatio": 0.2
+      },
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=general, pageType=pillar, keywords=1, volumeData=supplied, existingOverlap=0.2. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-011",
+      "clusterId": "c-018",
+      "recommendedPageTitle": "Dunkin Donuts Customer Relationship Management Strategy",
+      "recommendedSlug": "dunkin-donuts-customer-relationship-management-strategy",
+      "primaryKeyword": "dunkin donuts customer relationship management strategy",
+      "supportingKeywords": [],
+      "pageType": "pillar",
+      "intent": "general",
+      "existingRouteOverlap": {
+        "route": "/booking",
+        "sourceFile": "app/booking/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 6,
+        "overlapRatio": 0.17
+      },
+      "score": 4,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 0,
+        "localIntentHint": 0,
+        "clusterDepth": 0,
+        "modifierStrength": 0,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 4. Signals: intent=general, pageType=pillar, keywords=1, volumeData=supplied, existingOverlap=0.17. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    }
+  ],
+  "warnings": [
+    "Min-score filter (--min-score 4) removed 7 opportunity/opportunities scoring below 4."
+  ]
+}

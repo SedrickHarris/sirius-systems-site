@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-07-08T16:15:45.870Z",
+  "minScore": 4,
+  "opportunityCount": 1,
+  "filteredCount": 8,
+  "opportunities": [
+    {
+      "opportunityId": "o-001",
+      "clusterId": "c-001",
+      "recommendedPageTitle": "Lead Generation Insurance Agencies Leads Agents Company",
+      "recommendedSlug": "insurance-leads-company",
+      "primaryKeyword": "insurance leads company",
+      "supportingKeywords": [
+        "lead generation for insurance agencies",
+        "best insurance leads",
+        "best leads for insurance agents",
+        "best insurance leads for agents",
+        "best insurance leads company"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/revenue-leak-audit",
+        "sourceFile": "app/revenue-leak-audit/page.tsx",
+        "matchedTokens": 1,
+        "baseTokenCount": 3,
+        "overlapRatio": 0.33
+      },
+      "score": 9,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 3,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -1,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 9. Signals: intent=commercial-comparison, pageType=comparison, keywords=6, volumeData=supplied, existingOverlap=0.33. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    }
+  ],
+  "warnings": [
+    "Min-score filter (--min-score 4) removed 8 opportunity/opportunities scoring below 4."
+  ]
+}

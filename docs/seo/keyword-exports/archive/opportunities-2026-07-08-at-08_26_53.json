@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-07-08T15:27:09.145Z",
+  "minScore": 4,
+  "opportunityCount": 2,
+  "filteredCount": 6,
+  "opportunities": [
+    {
+      "opportunityId": "o-001",
+      "clusterId": "c-001",
+      "recommendedPageTitle": "Crm Real Estate Teams Agents Small Developers Free App Sales Software Force Market Leader Investor Automation Automated Follow Up Sequence",
+      "recommendedSlug": "best-crm-real-estate",
+      "primaryKeyword": "best crm real estate",
+      "supportingKeywords": [
+        "crm for real estate teams",
+        "best crm for real estate teams",
+        "best real estate crm for teams",
+        "best crm for real estate 2022",
+        "best crm for real estate agents 2022",
+        "best crm for small real estate business",
+        "best crm for real estate developers",
+        "best crm for real estate free",
+        "best free crm app for real estate",
+        "real estate sales crm software",
+        "sales force real estate crm",
+        "market leader real estate crm",
+        "real estate investor crm automation",
+        "real estate crm automated follow up sequence"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/industries/real-estate-property",
+        "sourceFile": "app/industries/real-estate-property/page.tsx",
+        "matchedTokens": 2,
+        "baseTokenCount": 4,
+        "overlapRatio": 0.5
+      },
+      "score": 9,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 3,
+        "modifierStrength": 2,
+        "existingOverlapPenalty": -2,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 9. Signals: intent=commercial-comparison, pageType=comparison, keywords=15, volumeData=supplied, existingOverlap=0.5. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    },
+    {
+      "opportunityId": "o-002",
+      "clusterId": "c-008",
+      "recommendedPageTitle": "Lead Management Software Real Estate System App Leads Team",
+      "recommendedSlug": "best-lead-management-software-for-real-estate",
+      "primaryKeyword": "best lead management software for real estate",
+      "supportingKeywords": [
+        "real estate lead management system",
+        "real estate lead management app",
+        "real estate leads management",
+        "real estate team lead management"
+      ],
+      "pageType": "comparison",
+      "intent": "commercial-comparison",
+      "existingRouteOverlap": {
+        "route": "/industries/real-estate-property/reputation-management",
+        "sourceFile": "app/industries/real-estate-property/reputation-management/page.tsx",
+        "matchedTokens": 3,
+        "baseTokenCount": 6,
+        "overlapRatio": 0.5
+      },
+      "score": 7,
+      "scoreBreakdown": {
+        "serviceFitHint": 3,
+        "buyerIntentHint": 1,
+        "localIntentHint": 0,
+        "clusterDepth": 2,
+        "modifierStrength": 1,
+        "existingOverlapPenalty": -2,
+        "dataCompleteness": 2
+      },
+      "rationale": "Priority heuristic 7. Signals: intent=commercial-comparison, pageType=comparison, keywords=5, volumeData=supplied, existingOverlap=0.5. Score ranks build priority only and is not an SEO difficulty estimate.",
+      "recommendedNextAction": "Create a new pillar page SEO brief for this cluster."
+    }
+  ],
+  "warnings": [
+    "Min-score filter (--min-score 4) removed 6 opportunity/opportunities scoring below 4."
+  ]
+}

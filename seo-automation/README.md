@@ -47,6 +47,7 @@ The scripts create `docs/seo/` automatically if it does not exist. They skip `no
 
 ## Run order
 
+0. **Archive the previous run's `opportunities.json`** (see below — required, do not skip)
 1. `scan-routes.mjs`
 2. manual CSV drop into `docs/seo/keyword-exports/`
 3. `parse-keyword-csv.mjs`
@@ -55,6 +56,50 @@ The scripts create `docs/seo/` automatically if it does not exist. They skip `no
 
 Steps 1 and 2 are independent and can happen in either order. Steps 3, 4, and 5 must run in
 sequence because each reads the previous step's JSON output.
+
+## Required archive-before-overwrite step
+
+**Before every pipeline run, copy the existing `docs/seo/opportunities.json` to
+`docs/seo/keyword-exports/archive/opportunities-[YYYY-MM-DD-at-HH_MM_SS].json`.**
+
+None of the scripts do this for you. `score-opportunities.mjs` writes `opportunities.json` with a
+plain overwrite (`fs.writeFile`, no backup, no prompt), so an un-archived prior run is gone the
+moment the script succeeds.
+
+PowerShell:
+
+```powershell
+$src = "docs/seo/opportunities.json"
+if (Test-Path $src) {
+  $stamp = Get-Date -Format "yyyy-MM-dd-at-HH_mm_ss"
+  Copy-Item $src "docs/seo/keyword-exports/archive/opportunities-$stamp.json"
+}
+```
+
+Bash:
+
+```bash
+[ -f docs/seo/opportunities.json ] && \
+  cp docs/seo/opportunities.json \
+     "docs/seo/keyword-exports/archive/opportunities-$(date +%Y-%m-%d-at-%H_%M_%S).json"
+```
+
+### Why this is mandatory
+
+Opportunity IDs (`o-001`, `o-002`, …) are **assigned per run and are not stable across runs**. The
+same ID routinely refers to a completely different opportunity in the next run's output. When a
+page ships, `selected-opportunity.json` records only the ID — so without the archived
+`opportunities.json` from that exact run, the ID cannot be resolved back to the opportunity that
+was actually chosen, and cross-referencing the current file returns a confident wrong answer.
+
+This already happened once. The 2026-07-06 run selected `o-002` and shipped
+`/industries/real-estate-property/lead-generation-automation`. The 2026-07-08 run overwrote
+`opportunities.json` without archiving first; the 07-06 file is unrecoverable, and today's `o-002`
+is an unrelated auto-repair opportunity. Full write-up in `docs/seo/seo-build-log.md`.
+
+Archived files are committed to git deliberately — Keyword Planner CSVs capture search metrics at
+the moment they were pulled and cannot be regenerated later, and the archived opportunity
+snapshots are the only lineage record for shipped pages. Never clear this folder.
 
 ## Required manual Keyword Planner export step
 

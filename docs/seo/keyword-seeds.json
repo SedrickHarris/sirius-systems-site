@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-07-06T00:00:00.000Z",
+  "business": {
+    "name": "Sirius Systems",
+    "primaryServices": [
+      "AI Automation", "AI Chatbots", "AI Voicebots", "CRM Automation",
+      "Appointment Booking Automation", "Lead Generation Automation",
+      "Smart Websites", "Google Business Profile Optimization", "Local SEO & AEO",
+      "Reputation Management", "Review Automation", "AI Review Responses",
+      "Competitor Review Benchmarking", "All-in-One Business Growth System"
+    ],
+    "serviceAreas": "National / United States — remote delivery"
+  },
+  "seedTopics": [
+    "AI automation for local service businesses",
+    "reputation and review management software",
+    "industry-specific AI chatbots",
+    "appointment and lead generation automation",
+    "smart websites vs DIY website builders",
+    "Google Business Profile and local SEO",
+    "AI voicebots and phone answering automation",
+    "CRM automation for service businesses"
+  ],
+  "seedKeywords": [
+    {
+      "keyword": "reputation management auto shop",
+      "reason": "/industries/auto-services has no intersection pages. Reputation management is Pillar 2 core. Auto shops have high review volume and strong commercial intent for this service.",
+      "intentType": "audience",
+      "relatedService": "Reputation Management",
+      "relatedLocation": "",
+      "priority": "high"
+    },
+    {
+      "keyword": "AI chatbots real estate agents",
+      "reason": "/industries/real-estate-property has no intersection pages. Real estate is a high-value vertical for AI lead capture. Strong commercial intent.",
+      "intentType": "audience",
+      "relatedService": "AI Chatbots",
+      "relatedLocation": "",
+      "priority": "high"
+    },
+    {
+      "keyword": "lead generation software contractors",
+      "reason": "/lead-generation-automation has no industry intersections. Construction contractors are a confirmed hub. Lead gen for contractors is a high-CPC category with strong buyer intent.",
+      "intentType": "audience",
+      "relatedService": "Lead Generation Automation",
+      "relatedLocation": "",
+      "priority": "high"
+    },
+    {
+      "keyword": "review management software",
+      "reason": "No comparison page exists. Surfaces competitor-comparison clusters. High commercial intent. Comparison post type is confirmed in blog-strategy.md.",
+      "intentType": "comparison",
+      "relatedService": "Review Automation",
+      "relatedLocation": "",
+      "priority": "high"
+    },
+    {
+      "keyword": "AI automation professional services",
+      "reason": "/industries/professional-services has no intersection pages and Batch 2 is starting. Surfaces the keyword cluster needed to prioritize which intersections to build first.",
+      "intentType": "audience",
+      "relatedService": "AI Automation",
+      "relatedLocation": "",
+      "priority": "high"
+    },
+    {
+      "keyword": "appointment booking software restaurant",
+      "reason": "/industries/hospitality-events has no intersection pages. Restaurant and hospitality booking automation is a high-volume category with strong commercial intent.",
+      "intentType": "audience",
+      "relatedService": "Appointment Booking Automation",
+      "relatedLocation": "",
+      "priority": "high"
+    },
+    {
+      "keyword": "CRM for service business",
+      "reason": "/crm-automation has no industry intersection pages. Service business CRM is a high-volume comparison category.",
+      "intentType": "service",
+      "relatedService": "CRM Automation",
+      "relatedLocation": "",
+      "priority": "medium"
+    },
+    {
+      "keyword": "AI voicebot small business",
+      "reason": "/ai-voicebots has no industry intersection pages. AI voice answering is an emerging category with low existing coverage on the site.",
+      "intentType": "comparison",
+      "relatedService": "AI Voicebots",
+      "relatedLocation": "",
+      "priority": "medium"
+    },
+    {
+      "keyword": "Google Business Profile management",
+      "reason": "/google-business-profile-optimization has no industry intersections and no supporting blog posts. High-volume local SEO category with strong informational-to-commercial intent arc.",
+      "intentType": "service",
+      "relatedService": "Google Business Profile Optimization",
+      "relatedLocation": "",
+      "priority": "medium"
+    },
+    {
+      "keyword": "smart website local business",
+      "reason": "/smart-websites has no industry intersections and no comparison content. Surfaces clusters comparing SEO-optimized sites versus Wix, Squarespace, and GoDaddy for local service businesses.",
+      "intentType": "comparison",
+      "relatedService": "Smart Websites",
+      "relatedLocation": "",
+      "priority": "medium"
+    }
+  ],
+  "notes": "Seeds prioritize the 8 industry hubs with no intersection pages and the 9 service pages with no industry-specific content. High-priority seeds target audience and service combinations with strong commercial intent. Medium-priority seeds target comparison and emerging categories. No location-specific seeds generated — Sirius Systems is a national remote business and the strategy docs explicitly block city-level targeting for the business itself."
+}
