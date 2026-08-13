@@ -73,11 +73,13 @@ const DATA: IndustryPageData = {
       name: 'Painting Contractors',
       blurb:
         'Quote follow-up, job booking, and post-job review automation for residential and commercial painters.',
+      href: '/industries/construction-contractors/for/painting-contractors',
     },
     {
       name: 'Flooring Installation',
       blurb:
         'Estimate automation, booking, and review requests for flooring contractors competing on responsiveness and reputation.',
+      href: '/industries/construction-contractors/for/flooring-installation',
     },
   ],
 

@@ -110,6 +110,18 @@ export interface SubVerticalPageData {
   // S06 Sibling sub-verticals in the same hub. Omit until siblings ship.
   siblings?: { name: string; slug: string }[]
 
+  // S06 Capstone pointer to the umbrella offer. Deliberately NOT a fourth
+  // servicePriority entry: servicePriority is a reasoned, leak-tied ranking of
+  // what to fix first, and adding a general link to it would dilute that into a
+  // link list. This renders separately and subordinately, near the CTA.
+  // `slug` must exist in lib/services.ts. `label` overrides the display name;
+  // omit it to use the catalog name, and never hardcode copy that duplicates
+  // the catalog.
+  capstoneLink?: {
+    slug:   string
+    label?: string
+  }
+
   // S07 CTA
   ctaHeadline?:     string
   ctaBody?:         string
@@ -127,6 +139,30 @@ export function SubVerticalPageTemplate(data: SubVerticalPageData) {
       return service ? { ...p, service } : null
     })
     .filter((p): p is NonNullable<typeof p> => p !== null)
+
+  // Capstone link resolves against the same canonical catalog, but its failure
+  // mode is deliberately the opposite of servicePriority's. servicePriority
+  // skips unknown slugs so that editing the catalog cannot break a shipped page.
+  // capstoneLink is optional, so the only reason it is present at all is that an
+  // author meant to link something: silently dropping it would hide the mistake.
+  // Throwing surfaces the typo during `next build`. Every page using this
+  // template is statically prerendered, so this can never reach a visitor.
+  const capstoneField = data.capstoneLink
+  let capstone: { href: string; label: string; oneLiner: string } | null = null
+  if (capstoneField) {
+    const service = SERVICES.find((s) => s.slug === capstoneField.slug)
+    if (!service) {
+      throw new Error(
+        `SubVerticalPageTemplate: capstoneLink.slug "${capstoneField.slug}" does not exist in lib/services.ts. ` +
+          `Page: ${basePath}. Fix the slug or remove capstoneLink.`
+      )
+    }
+    capstone = {
+      href:     `/${service.slug}`,
+      label:    capstoneField.label ?? service.name,
+      oneLiner: service.oneLiner,
+    }
+  }
 
   const reality: { label: string; body: string }[] = [
     { label: 'What starts the job', body: data.operatingReality.demandTrigger },
@@ -310,6 +346,31 @@ export function SubVerticalPageTemplate(data: SubVerticalPageData) {
               </ul>
             </>
           )}
+          {/* Capstone pointer. Intentionally plain: no system-node numbering,
+              no card-solid, no ranking. It must not read as a fourth ranked
+              fix. Name and target both come from lib/services.ts. */}
+          {capstone && (
+            <div className="mt-10 content-medium">
+              <Link
+                href={capstone.href}
+                className="card-subtle group flex items-start justify-between gap-4 p-5"
+              >
+                <span>
+                  <span className="font-display text-base leading-snug tracking-tight">
+                    {capstone.label}
+                  </span>
+                  <span className="mt-1 block text-sm leading-relaxed text-muted">
+                    {capstone.oneLiner}
+                  </span>
+                </span>
+                <ArrowUpRight
+                  className="mt-1 h-4 w-4 shrink-0 text-muted transition-transform duration-fast ease-out-soft group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
+                  aria-hidden
+                />
+              </Link>
+            </div>
+          )}
+
           <div className="mt-10 flex flex-wrap gap-6">
             <Link href={`/industries/${data.hubSlug}`} className="btn-link">
               Back to {data.hubName}

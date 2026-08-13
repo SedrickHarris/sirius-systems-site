@@ -249,6 +249,15 @@ between 14 service slugs and 183 sub-vertical slugs.
   reserved `for` segment has no page and gets no crumb.
 - **Sitemap:** each page added to `app/sitemap.ts` on the same commit it ships, per existing
   convention.
+- **`capstoneLink` is a standard field, not a per-page decision (confirmed 2026-08-12).** Every
+  sub-vertical page brief from Batch 1 onward carries
+  `capstoneLink: { slug: 'all-in-one-business-growth-system' }` by default. There is no case in
+  this site's structure where a sub-vertical page should not point up to the capstone offer, so
+  it is settled once here rather than re-argued 181 times. It renders separately from
+  `servicePriority` and must never be added as a fourth ranked entry: `servicePriority` is a
+  leak-tied ranking of what to fix first, and a general umbrella link would dilute it into a link
+  list. Omit `label` so the display name resolves from `lib/services.ts`. An unresolvable slug
+  throws during `next build` by design.
 - **Card wiring — ✅ DONE 2026-08-12** (this resolves the deferred TODO from
   `project-changelog.md`, 2026-05-27). `IndustryPageData.featured` / `.compact` now type as
   `{ name; blurb; href?; comingSoon? }[]`, and `IndustryPageTemplate` threads both props into
