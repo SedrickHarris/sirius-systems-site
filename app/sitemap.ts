@@ -20,7 +20,6 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/services',                     priority: 0.9, changeFrequency: 'monthly' },
   { path: '/about',                        priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact',                      priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/booking',                      priority: 0.8, changeFrequency: 'monthly' },
 
   // Service (14)
   { path: '/ai-automation',                       priority: 0.8, changeFrequency: 'monthly' },
@@ -121,8 +120,10 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   // Sub-vertical pages (Phase 8). URL pattern /industries/[hub]/for/[sub-vertical].
   // The /for/ segment is routing-only and has no page, so it is never listed here.
   // Add a sub-vertical on the same commit its page ships, not before.
-  { path: '/industries/construction-contractors/for/painting-contractors',  priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/industries/construction-contractors/for/flooring-installation', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/industries/construction-contractors/for/general-contractors',         priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/industries/construction-contractors/for/kitchen-bathroom-remodeling', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/industries/construction-contractors/for/painting-contractors',        priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/industries/construction-contractors/for/flooring-installation',       priority: 0.7, changeFrequency: 'monthly' },
 
   // Resources hub + sub-hubs
   { path: '/resources',                           priority: 0.7, changeFrequency: 'monthly' },
