@@ -63,11 +63,13 @@ const DATA: IndustryPageData = {
       name: 'General Contractors',
       blurb:
         'Lead qualification, estimate follow-up automation, and review systems for GCs managing multiple active jobs.',
+      href: '/industries/construction-contractors/for/general-contractors',
     },
     {
       name: 'Kitchen & Bathroom Remodeling',
       blurb:
         'High-ticket estimate follow-up, consultation booking automation, and review flows for remodelers.',
+      href: '/industries/construction-contractors/for/kitchen-bathroom-remodeling',
     },
     {
       name: 'Painting Contractors',

@@ -118,11 +118,12 @@ const DATA: SubVerticalPageData = {
     },
   ],
 
-  // Only list sub-verticals whose pages are actually live. Both pilot pages
-  // shipped together, so each links to the other. Add the remaining
-  // construction-contractors sub-verticals as their pages ship.
+  // All four construction-contractors sub-verticals are live, so each lists the
+  // other three. Add new entries only as their pages ship.
   siblings: [
-    { name: 'Painting Contractors', slug: 'painting-contractors' },
+    { name: 'General Contractors',           slug: 'general-contractors' },
+    { name: 'Kitchen & Bathroom Remodeling', slug: 'kitchen-bathroom-remodeling' },
+    { name: 'Painting Contractors',          slug: 'painting-contractors' },
   ],
 
   capstoneLink: { slug: 'all-in-one-business-growth-system' },

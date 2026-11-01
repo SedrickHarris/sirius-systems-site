@@ -4,6 +4,7 @@ import { FAQ } from './FAQ'
 import { RelatedServicesGrid } from './RelatedServicesGrid'
 import { IndustrySubCard } from './IndustrySubCard'
 import { Breadcrumbs } from './Breadcrumbs'
+import { HubChildLinks } from './InternalLinks'
 import { INDUSTRIES } from '@/lib/industries'
 
 // Shared template behind every industry hub page (/industries/<slug>).
@@ -200,6 +201,9 @@ export function IndustryPageTemplate(data: IndustryPageData) {
           )}
         </div>
       </section>
+
+      {/* ───────── S03b: Child pages (intersection + sub-vertical links) ───────── */}
+      <HubChildLinks hubSlug={data.slug} />
 
       {/* ───────── S04: FAQ (soft) ───────── */}
       <section className="section-soft section-padding">

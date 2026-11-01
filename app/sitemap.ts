@@ -9,6 +9,7 @@ import type { MetadataRoute } from 'next'
 import { SITE } from '@/lib/site'
 import { getAllPosts } from '@/lib/blog'
 import { AI_AUTOMATION_FAQS, AI_FAQ_HUB } from '@/lib/faq-ai-automation'
+import { getIntersectionPages, getSubVerticalPages } from '@/lib/internal-links'
 
 export const dynamic = 'force-static'
 
@@ -58,72 +59,9 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Freq }[]
   { path: '/industries/retail-local-commerce',    priority: 0.7, changeFrequency: 'monthly' },
   { path: '/industries/technology-b2b',           priority: 0.7, changeFrequency: 'monthly' },
 
-  // Intersection pages — Batch 1 (Industry × Service)
-  // Priority 0.8 — same as service pages (Level 5, high-intent buyers)
-  { path: '/industries/home-services/reputation-management',              priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/home-services/appointment-booking-automation',     priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/home-services/ai-chatbots',                        priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/construction-contractors/reputation-management',   priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/construction-contractors/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/construction-contractors/ai-chatbots',             priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/beauty-wellness/reputation-management',            priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/beauty-wellness/appointment-booking-automation',   priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/beauty-wellness/ai-chatbots',                      priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/healthcare-medical/reputation-management',         priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/healthcare-medical/appointment-booking-automation',priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/healthcare-medical/ai-chatbots',                   priority: 0.8, changeFrequency: 'monthly' },
-
-  // Intersection pages — Batch 2 (Industry × Service)
-  // Priority 0.8 — same as service pages (Level 5, high-intent buyers)
-  { path: '/industries/professional-services/reputation-management',      priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/professional-services/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/professional-services/ai-chatbots',                priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/professional-services/ai-voicebots',               priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/professional-services/review-automation',          priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/professional-services/crm-automation',             priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/professional-services/lead-generation-automation', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/auto-services/reputation-management',              priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/auto-services/ai-chatbots',                        priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/auto-services/ai-voicebots',                       priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/auto-services/appointment-booking-automation',     priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/auto-services/review-automation',                  priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/auto-services/crm-automation',                     priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/auto-services/lead-generation-automation',         priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/real-estate-property/reputation-management',       priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/real-estate-property/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/real-estate-property/review-automation',           priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/real-estate-property/crm-automation',              priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/real-estate-property/ai-chatbots',                 priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/real-estate-property/ai-voicebots',                priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/real-estate-property/lead-generation-automation',  priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/hospitality-events/reputation-management',         priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/hospitality-events/appointment-booking-automation', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/hospitality-events/review-automation',             priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/hospitality-events/ai-chatbots',                   priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/hospitality-events/crm-automation',                priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/hospitality-events/ai-voicebots',                  priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/hospitality-events/lead-generation-automation',    priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/technology-b2b/reputation-management',             priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/technology-b2b/appointment-booking-automation',    priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/technology-b2b/crm-automation',                    priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/technology-b2b/ai-chatbots',                       priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/technology-b2b/lead-generation-automation',        priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/technology-b2b/ai-voicebots',                      priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/technology-b2b/review-automation',                 priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/retail-local-commerce/reputation-management',      priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/retail-local-commerce/ai-chatbots',                priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/retail-local-commerce/lead-generation-automation', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/retail-local-commerce/ai-voicebots',               priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/retail-local-commerce/crm-automation',             priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/industries/retail-local-commerce/review-automation',          priority: 0.8, changeFrequency: 'monthly' },
-
-  // Sub-vertical pages (Phase 8). URL pattern /industries/[hub]/for/[sub-vertical].
-  // The /for/ segment is routing-only and has no page, so it is never listed here.
-  // Add a sub-vertical on the same commit its page ships, not before.
-  { path: '/industries/construction-contractors/for/general-contractors',         priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/industries/construction-contractors/for/kitchen-bathroom-remodeling', priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/industries/construction-contractors/for/painting-contractors',        priority: 0.7, changeFrequency: 'monthly' },
-  { path: '/industries/construction-contractors/for/flooring-installation',       priority: 0.7, changeFrequency: 'monthly' },
+  // Industry x service intersection pages and Phase 8 sub-vertical pages are NOT
+  // listed here: they are generated below from lib/internal-links.ts, which reads
+  // the route tree (and skips any page that declares noindex).
 
   // Resources hub + sub-hubs
   { path: '/resources',                           priority: 0.7, changeFrequency: 'monthly' },
@@ -172,5 +110,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:        0.6,
   }))
 
-  return [...staticEntries, ...postEntries, ...aiFaqEntries]
+  // Industry cluster pages, discovered from the route tree
+  const intersectionEntries: MetadataRoute.Sitemap = getIntersectionPages().map((p) => ({
+    url:             `${SITE.url}${p.href}`,
+    lastModified:    new Date(),
+    changeFrequency: 'monthly' as Freq,
+    priority:        0.8,
+  }))
+  const subVerticalEntries: MetadataRoute.Sitemap = getSubVerticalPages().map((p) => ({
+    url:             `${SITE.url}${p.href}`,
+    lastModified:    new Date(),
+    changeFrequency: 'monthly' as Freq,
+    priority:        0.7,
+  }))
+
+  return [
+    ...staticEntries,
+    ...intersectionEntries,
+    ...subVerticalEntries,
+    ...postEntries,
+    ...aiFaqEntries,
+  ]
 }

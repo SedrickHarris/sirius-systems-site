@@ -1,10 +1,9 @@
-'use client'
-
 import Link from 'next/link'
 import { ArrowRight, ArrowUpRight, Check } from 'lucide-react'
 import { FAQ } from './FAQ'
 import { RelatedServicesGrid } from './RelatedServicesGrid'
 import { Breadcrumbs } from './Breadcrumbs'
+import { IntersectionRelatedLinks } from './InternalLinks'
 
 // Shared template behind every industry × service intersection page.
 // URL pattern: /industries/[hub-slug]/[service-slug]
@@ -263,6 +262,9 @@ export function IntersectionPageTemplate(data: IntersectionPageData) {
           </div>
         </div>
       </section>
+
+      {/* ── S05b: Contextual links (hub, sibling services, same service elsewhere) ── */}
+      <IntersectionRelatedLinks hubSlug={data.hubSlug} serviceSlug={data.serviceSlug} />
 
       {/* ── S06: FAQ (light)
           CRITICAL: data.faqs drives both this visible render and the
