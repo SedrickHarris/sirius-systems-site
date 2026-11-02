@@ -10,7 +10,7 @@ import { FAQ } from './FAQ'
 import { RelatedServicesGrid } from './RelatedServicesGrid'
 import { IndustryFitStrip } from './IndustryFitStrip'
 import { Breadcrumbs } from './Breadcrumbs'
-import { ServiceIndustryLinks } from './InternalLinks'
+import { GrowthSystemLinks, ServiceFaqLinks, ServiceIndustryLinks } from './InternalLinks'
 import { SERVICES } from '@/lib/services'
 
 // Shared template behind every service page. Section rhythm follows the
@@ -283,6 +283,8 @@ export function ServicePageTemplate(data: ServicePageData) {
 
       {/* ───────── S07b: This service by industry (intersection page links) ───────── */}
       <ServiceIndustryLinks serviceSlug={data.slug} />
+      <ServiceFaqLinks serviceSlug={data.slug} />
+      {SERVICES.find((s) => s.slug === data.slug)?.group === 'capstone' && <GrowthSystemLinks />}
 
       {/* ───────── S08: FAQ (light)
           Visible Q text consumes the same `data.faqs` array as the

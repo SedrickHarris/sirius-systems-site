@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { LatestPostLinks } from '@/components/site/InternalLinks'
 import {
   ArrowRight,
   ShieldCheck,
@@ -136,6 +137,8 @@ export default function ResourcesPage() {
       </section>
 
       {/* ───────── CTA ───────── */}
+      <LatestPostLinks />
+
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="cta-deep">

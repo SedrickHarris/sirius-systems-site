@@ -16,6 +16,7 @@ import fs from 'fs'
 import path from 'path'
 import { INDUSTRIES } from '@/lib/industries'
 import { SERVICES } from '@/lib/services'
+import { AI_AUTOMATION_FAQS, AI_FAQ_HUB, type AiFaq } from '@/lib/faq-ai-automation'
 
 const INDUSTRIES_DIR = path.join(process.cwd(), 'app', 'industries')
 
@@ -141,4 +142,46 @@ export function getRelatedIntersections(hubSlug: string, serviceSlug: string, co
     otherServices: nextAfter(getIntersectionsForHub(hubSlug), isSelf, count),
     otherIndustries: nextAfter(getIntersectionsForService(serviceSlug), isSelf, count),
   }
+}
+
+// ─── Growth System product pages (/[trade]-growth-system) ───────────────────
+// Discovered from the route tree: any indexable top-level app/*-growth-system
+// route that is not a catalog service (the capstone has its own service page).
+
+export type GrowthSystemPage = { slug: string; name: string; href: string }
+
+let growthCache: GrowthSystemPage[] | null = null
+
+export function getGrowthSystemPages(): GrowthSystemPage[] {
+  if (growthCache) return growthCache
+  const serviceSlugs = new Set(SERVICES.map((s) => s.slug))
+  growthCache = subdirs(path.join(process.cwd(), 'app'))
+    .filter((d) => d.endsWith('-growth-system') && !serviceSlugs.has(d))
+    .sort()
+    .filter((d) => readIndexablePage(path.join(process.cwd(), 'app', d)))
+    .map((d) => ({
+      slug: d,
+      name: d.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+      href: `/${d}`,
+    }))
+  return growthCache
+}
+
+// ─── AI automation FAQ cluster ───────────────────────────────────────────────
+
+export type FaqLink = { href: string; label: string }
+
+const faqLink = (f: AiFaq): FaqLink => ({
+  href: `/${AI_FAQ_HUB.slug}/${f.slug}`,
+  label: f.question,
+})
+
+/** FAQ answers whose primary service is this service (service page -> FAQs). */
+export function getFaqsForService(serviceSlug: string): FaqLink[] {
+  return AI_AUTOMATION_FAQS.filter((f) => f.primary.href === `/${serviceSlug}`).map(faqLink)
+}
+
+/** The next `count` FAQ answers after this one, wrapping, so each gets inbound links. */
+export function getFaqRotation(slug: string, count = 3): FaqLink[] {
+  return nextAfter(AI_AUTOMATION_FAQS, (f) => f.slug === slug, count).map(faqLink)
 }

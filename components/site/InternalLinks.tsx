@@ -3,11 +3,14 @@ import { ArrowUpRight } from 'lucide-react'
 import { INDUSTRIES } from '@/lib/industries'
 import { SERVICES } from '@/lib/services'
 import {
+  getFaqsForService,
+  getGrowthSystemPages,
   getIntersectionsForHub,
   getIntersectionsForService,
   getRelatedIntersections,
   getSubVerticalsForHub,
 } from '@/lib/internal-links'
+import { getRecentPosts } from '@/lib/blog'
 
 // Contextual internal-link blocks for the industry cluster. Every list is built
 // from lib/internal-links.ts, which reads the route tree, so a page that ships
@@ -153,6 +156,76 @@ export function IntersectionRelatedLinks({
             </div>
           </div>
         )}
+      </div>
+    </section>
+  )
+}
+
+/** Growth System product pages (e.g. the trade-specific systems), discovered from the route tree. */
+export function GrowthSystemLinks() {
+  const pages = getGrowthSystemPages()
+  if (pages.length === 0) return null
+
+  return (
+    <section className="section-soft section-padding">
+      <div className="site-container">
+        <div className="content-medium">
+          <span className="section-eyebrow">Growth Systems</span>
+          <h2 className="mt-5 section-heading">Growth Systems built for a single trade</h2>
+        </div>
+        <div className="mt-10">
+          <LinkPills
+            ariaLabel="Growth Systems by trade"
+            items={pages.map((p) => ({ href: p.href, label: p.name }))}
+          />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/** Latest published blog posts, linked by title. */
+export function LatestPostLinks({ count = 3 }: { count?: number }) {
+  const posts = getRecentPosts(count)
+  if (posts.length === 0) return null
+
+  return (
+    <section className="section-soft section-padding">
+      <div className="site-container">
+        <div className="content-medium">
+          <span className="section-eyebrow">From the blog</span>
+          <h2 className="mt-5 section-heading">Latest from the Sirius Systems blog</h2>
+        </div>
+        <div className="mt-10">
+          <LinkPills
+            ariaLabel="Latest blog posts"
+            items={posts.map((p) => ({
+              href: `/blog/${p.slug}`,
+              label: p.frontmatter.title,
+            }))}
+          />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/** Service page: the FAQ answers whose primary service is this one. */
+export function ServiceFaqLinks({ serviceSlug }: { serviceSlug: string }) {
+  const service = SERVICES.find((s) => s.slug === serviceSlug)
+  const faqs = getFaqsForService(serviceSlug)
+  if (!service || faqs.length === 0) return null
+
+  return (
+    <section className="section-soft section-padding">
+      <div className="site-container">
+        <div className="content-medium">
+          <span className="section-eyebrow">Related questions</span>
+          <h2 className="mt-5 section-heading">Questions about {service.name}</h2>
+        </div>
+        <div className="mt-10">
+          <LinkPills ariaLabel={`${service.name} questions`} items={faqs} />
+        </div>
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { GrowthSystemLinks } from '@/components/site/InternalLinks'
 import {
   ArrowRight,
   ArrowUpRight,
@@ -309,6 +310,8 @@ export default function ServicesPage() {
       </section>
 
       {/* ───────── CTA ───────── */}
+      <GrowthSystemLinks />
+
       <section className="section-light section-padding">
         <div className="site-container">
           <div className="cta-deep">

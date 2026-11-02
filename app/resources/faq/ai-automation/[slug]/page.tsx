@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUpRight, ShieldCheck, ListChecks, Gauge } from 'lucide
 import { Breadcrumbs } from '@/components/site/Breadcrumbs'
 import { JsonLdScript } from '@/components/site/JsonLdScript'
 import { webPage, breadcrumbList, faqPage } from '@/lib/schema'
+import { getFaqRotation } from '@/lib/internal-links'
 import {
   AI_AUTOMATION_FAQS,
   AI_FAQ_HUB,
@@ -72,6 +73,13 @@ export default async function AiAutomationFaqDetailPage({
   const related = faq.related
     .map((s) => getAiFaqBySlug(s))
     .filter((f): f is NonNullable<typeof f> => Boolean(f))
+
+  // Plus the next 3 answers in rotation (not already listed), so every answer
+  // in the cluster receives inbound links from its siblings.
+  const listed = new Set(related.map((r) => r.slug))
+  const rotation = getFaqRotation(faq.slug, 3).filter(
+    (r) => !listed.has(r.href.slice(hubUrl.length + 1))
+  )
 
   return (
     <>
@@ -200,7 +208,7 @@ export default async function AiAutomationFaqDetailPage({
       </section>
 
       {/* ───────── Related questions (soft) ───────── */}
-      {related.length > 0 && (
+      {(related.length > 0 || rotation.length > 0) && (
         <section className="section-soft section-padding">
           <div className="site-container">
             <div className="content-medium">
@@ -215,6 +223,19 @@ export default async function AiAutomationFaqDetailPage({
                   className="card-solid hover-lift group flex items-start justify-between gap-4 p-6"
                 >
                   <span className="card-title text-base md:text-lg">{r.question}</span>
+                  <ArrowUpRight
+                    className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--text-muted)] transition-transform duration-fast group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[color:var(--text-charcoal)]"
+                    aria-hidden
+                  />
+                </Link>
+              ))}
+              {rotation.map((r) => (
+                <Link
+                  key={r.href}
+                  href={r.href}
+                  className="card-solid hover-lift group flex items-start justify-between gap-4 p-6"
+                >
+                  <span className="card-title text-base md:text-lg">{r.label}</span>
                   <ArrowUpRight
                     className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--text-muted)] transition-transform duration-fast group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[color:var(--text-charcoal)]"
                     aria-hidden

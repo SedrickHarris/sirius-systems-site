@@ -39,3 +39,6 @@ Thumbs.db
 credentials.json
 scripts/tokens.json
 data/google-reviews.staged.json
+
+# local SEO crawl audit output
+sitemap-audit.csv
